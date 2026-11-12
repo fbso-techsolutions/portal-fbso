@@ -11,7 +11,7 @@
 
 | Item | Dono | Tasks | Etapa | Evidência |
 |---|---|---|---|---|
-| [ENABLER-0001 — Repo e ambiente](../../prj-tecnico/enablers/ENABLER-0001-repositorio-ambiente-github.md) | Lourival Louro + Francisco Oliveira | [TASK-0001…0004](../../prj-tecnico/tasks/README.md) | ⬜ A fazer | — |
+| [ENABLER-0001 — Repo e ambiente](../../prj-tecnico/enablers/ENABLER-0001-repositorio-ambiente-github.md) | Lourival Louro + Francisco Oliveira | [TASK-0001…0004](../../prj-tecnico/tasks/README.md) | 🔄 Em execução | — |
 | [ENABLER-0002 — Cloudflare + domínio](../../prj-tecnico/enablers/ENABLER-0002-conta-cloudflare-dominio.md) | Lourival Louro | [TASK-0005…0007](../../prj-tecnico/tasks/README.md) | ⬜ A fazer | — |
 | [US-FEAT-0001.0001-0001 — Inicializar projeto](../user-stories/US-FEAT-0001.0001-0001-inicializar-projeto-vite.md) | Alfredo Bento | [TASK-0008…0011 · 0027](../../prj-tecnico/tasks/README.md) | ⬜ A fazer | — |
 | [US-FEAT-0001.0001-0002 — Lint/tsconfig](../user-stories/US-FEAT-0001.0001-0002-configurar-lint-tsconfig.md) | Alfredo Bento | [TASK-0012…0015](../../prj-tecnico/tasks/README.md) | ⬜ A fazer | — |
@@ -29,9 +29,9 @@
 
 | Check | Task | Origem | Status | Esforço (h) | Previsão | Dono | Evidência |
 |---|---|---|---|---|---|---|---|
-| 💡 | [TASK-0001 — Criar repo na org](../../prj-tecnico/tasks/TASK-0001-criar-repositorio-org-github.md) | [ENABLER-0001](../../prj-tecnico/enablers/ENABLER-0001-repositorio-ambiente-github.md) | ⬜ A fazer | 2 | S1 | Francisco Oliveira | — |
-| 💡 | [TASK-0002 — git/espelho/push](../../prj-tecnico/tasks/TASK-0002-inicializar-git-espelho-push.md) | [ENABLER-0001](../../prj-tecnico/enablers/ENABLER-0001-repositorio-ambiente-github.md) | ⬜ A fazer | 2 | S1 | Francisco Oliveira | — |
-| 💡 | [TASK-0003 — branch protection](../../prj-tecnico/tasks/TASK-0003-branch-protection-codeowners.md) | [ENABLER-0001](../../prj-tecnico/enablers/ENABLER-0001-repositorio-ambiente-github.md) | ⬜ A fazer | 2 | S1 | Lourival Louro | — |
+| 🏁 | [TASK-0001 — Criar repo na org](../../prj-tecnico/tasks/TASK-0001-criar-repositorio-org-github.md) | [ENABLER-0001](../../prj-tecnico/enablers/ENABLER-0001-repositorio-ambiente-github.md) | ✅ Entregue | 2 | S1 | Francisco Oliveira | [repo público](https://github.com/fbso-techsolutions/portal-fbso) |
+| 🏁 | [TASK-0002 — git/espelho/push](../../prj-tecnico/tasks/TASK-0002-inicializar-git-espelho-push.md) | [ENABLER-0001](../../prj-tecnico/enablers/ENABLER-0001-repositorio-ambiente-github.md) | ✅ Entregue | 2 | S1 | Francisco Oliveira | [commit 0d4f60e](https://github.com/fbso-techsolutions/portal-fbso/commit/0d4f60e) |
+| 🏁 | [TASK-0003 — branch protection](../../prj-tecnico/tasks/TASK-0003-branch-protection-codeowners.md) | [ENABLER-0001](../../prj-tecnico/enablers/ENABLER-0001-repositorio-ambiente-github.md) | ✅ Entregue | 2 | S1 | Lourival Louro | PR + 1 aprovação · enforce admins · CODEOWNERS |
 | 💡 | [TASK-0004 — secrets Cloudflare](../../prj-tecnico/tasks/TASK-0004-secrets-cloudflare-github.md) | [ENABLER-0001](../../prj-tecnico/enablers/ENABLER-0001-repositorio-ambiente-github.md) | ⬜ A fazer | 1 | S1 | Lourival Louro | — |
 | 💡 | [TASK-0005 — conta Cloudflare](../../prj-tecnico/tasks/TASK-0005-conta-cloudflare-zona-dominio.md) | [ENABLER-0002](../../prj-tecnico/enablers/ENABLER-0002-conta-cloudflare-dominio.md) | ⬜ A fazer | 2 | S1 | Lourival Louro | — |
 | 💡 | [TASK-0006 — nameservers/NS](../../prj-tecnico/tasks/TASK-0006-nameservers-delegacao-registro-br.md) | [ENABLER-0002](../../prj-tecnico/enablers/ENABLER-0002-conta-cloudflare-dominio.md) | ⬜ A fazer | 2 | S1 | Lourival Louro | — |
