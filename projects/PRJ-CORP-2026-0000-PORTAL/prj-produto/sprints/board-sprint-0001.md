@@ -12,7 +12,7 @@
 | Item | Dono | Tasks | Etapa | Evidência |
 |---|---|---|---|---|
 | [ENABLER-0001 — Repo e ambiente](../../prj-tecnico/enablers/ENABLER-0001-repositorio-ambiente-github.md) | Lourival Louro + Francisco Oliveira | [TASK-0001…0004](../../prj-tecnico/tasks/README.md) | ✅ Entregue | — |
-| [ENABLER-0002 — Cloudflare + domínio](../../prj-tecnico/enablers/ENABLER-0002-conta-cloudflare-dominio.md) | Lourival Louro | [TASK-0005…0007](../../prj-tecnico/tasks/README.md) | 🔄 Em execução | — |
+| [ENABLER-0002 — Cloudflare + domínio](../../prj-tecnico/enablers/ENABLER-0002-conta-cloudflare-dominio.md) | Lourival Louro | [TASK-0005…0007](../../prj-tecnico/tasks/README.md) | ✅ Entregue | — |
 | [US-FEAT-0001.0001-0001 — Inicializar projeto](../user-stories/US-FEAT-0001.0001-0001-inicializar-projeto-vite.md) | Alfredo Bento | [TASK-0008…0011 · 0027](../../prj-tecnico/tasks/README.md) | ⬜ A fazer | — |
 | [US-FEAT-0001.0001-0002 — Lint/tsconfig](../user-stories/US-FEAT-0001.0001-0002-configurar-lint-tsconfig.md) | Alfredo Bento | [TASK-0012…0015](../../prj-tecnico/tasks/README.md) | ⬜ A fazer | — |
 | [US-FEAT-0001.0001-0003 — Estrutura + Home](../user-stories/US-FEAT-0001.0001-0003-estruturar-pastas-home.md) | Alfredo Bento | [TASK-0016…0019](../../prj-tecnico/tasks/README.md) | ⬜ A fazer | — |
@@ -35,7 +35,7 @@
 | 🏁 | [TASK-0004 — secrets Cloudflare](../../prj-tecnico/tasks/TASK-0004-secrets-cloudflare-github.md) | [ENABLER-0001](../../prj-tecnico/enablers/ENABLER-0001-repositorio-ambiente-github.md) | ✅ Entregue | 1 | S1 | Lourival Louro | 5 secrets no Environment (ACCOUNT_ID · API_TOKEN · 3× S3/R2) |
 | 🏁 | [TASK-0005 — conta Cloudflare](../../prj-tecnico/tasks/TASK-0005-conta-cloudflare-zona-dominio.md) | [ENABLER-0002](../../prj-tecnico/enablers/ENABLER-0002-conta-cloudflare-dominio.md) | ✅ Entregue | 2 | S1 | Lourival Louro | conta ativada + zona fbso.com.br |
 | 🏁 | [TASK-0006 — nameservers/NS](../../prj-tecnico/tasks/TASK-0006-nameservers-delegacao-registro-br.md) | [ENABLER-0002](../../prj-tecnico/enablers/ENABLER-0002-conta-cloudflare-dominio.md) | ✅ Entregue | 2 | S1 | Lourival Louro | ray + tess.ns.cloudflare.com |
-| 💡 | [TASK-0007 — API token](../../prj-tecnico/tasks/TASK-0007-api-token-escopo-minimo.md) | [ENABLER-0002](../../prj-tecnico/enablers/ENABLER-0002-conta-cloudflare-dominio.md) | ⬜ A fazer | 1 | S1 | Lourival Louro | — |
+| 🏁 | [TASK-0007 — API token](../../prj-tecnico/tasks/TASK-0007-api-token-escopo-minimo.md) | [ENABLER-0002](../../prj-tecnico/enablers/ENABLER-0002-conta-cloudflare-dominio.md) | ✅ Entregue | 1 | S1 | Lourival Louro | token criado · rotação 30 dias |
 | 💡 | [TASK-0008 — scaffold Vite](../../prj-tecnico/tasks/TASK-0008-scaffold-vite-react-ts.md) | [US-0001.0001-0001](../user-stories/US-FEAT-0001.0001-0001-inicializar-projeto-vite.md) | ⬜ A fazer | 3 | S1 | Alfredo Bento | — |
 | 💡 | [TASK-0009 — Tailwind v4](../../prj-tecnico/tasks/TASK-0009-tailwind-css-v4.md) | [US-0001.0001-0001](../user-stories/US-FEAT-0001.0001-0001-inicializar-projeto-vite.md) | ⬜ A fazer | 3 | S1 | Alfredo Bento | — |
 | 💡 | [TASK-0010 — Router v7 prerender](../../prj-tecnico/tasks/TASK-0010-react-router-v7-prerender.md) | [US-0001.0001-0001](../user-stories/US-FEAT-0001.0001-0001-inicializar-projeto-vite.md) | ⬜ A fazer | 4 | S1 | Alfredo Bento | — |
