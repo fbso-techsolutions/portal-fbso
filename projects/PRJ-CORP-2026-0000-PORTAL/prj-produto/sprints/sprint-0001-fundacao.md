@@ -1,0 +1,85 @@
+# 🗓️ Sprint 1 — Fundação · 16/11/2026 – 27/11/2026
+
+> **Status:** `Planejada` · **Sprint Goal:** "Repo + scaffold + CI/CD publicando o 'hello world' na Cloudflare" ·
+> **Board:** [board-sprint-0001.md](board-sprint-0001.md) · **Roteiro:** [roteiro-execucao-sprint-0001.md](roteiro-execucao-sprint-0001.md) · **Tasks:** [prj-tecnico/tasks/](../../prj-tecnico/tasks/README.md) ·
+> **Verdade única do corte:** [escopo-release-1](../escopo-release-1.md)
+
+| Campo | Valor |
+|---|---|
+| Empresa / Marca | FBSO TechSolutions |
+| Projeto | FBSO Corporate Portal · PRJ-CORP-2026-0000-PORTAL |
+| Período | 16/11 (seg) → 27/11 (sex) · 2 semanas (10 dias úteis) |
+| Foco | Fundação (enablers + stories de scaffold/CI-CD) |
+| Capacidade | ver §3 — Disponibilidade bruta (sprint) |
+| Escopo | ver §2 — 2 enablers + 5 stories |
+| Dono do documento | Tech lead (Francisco Oliveira) + PM/PO (Alessandra Neves) |
+
+## 1. Sprint Goal
+
+**Objetivo:** fundação técnica — repo, scaffold da stack aprovada e pipeline publicando na Cloudflare.
+
+**Resultados esperados:**
+- [ ] Repo + espelho local + branch protection (ENABLER-0001).
+- [ ] Conta Cloudflare + domínio prontos (ENABLER-0002).
+- [ ] Scaffold Vite+TS+Tailwind+Router v7 com `dist/` pré-renderizado (0001.0001).
+- [ ] CI/CD publicando o "hello world" (0001.0003).
+
+## 2. Escopo (o corte)
+
+> **Tasks:** cada item foi decomposto em `TASK-{NNNN}` no Planning. A especificação mora em
+> [prj-tecnico/tasks/](../../prj-tecnico/tasks/README.md) (27 cards); aqui e no board só **apontamento**.
+
+| Item | SP | Tipo | Tasks | Depende de | Travada por |
+|---|---|---|---|---|---|
+| [ENABLER-0001 — Repo e ambiente](../../prj-tecnico/enablers/ENABLER-0001-repositorio-ambiente-github.md) | 2 | 🔧 Enabler | [TASK-0001…0004](../../prj-tecnico/tasks/README.md) | — | — |
+| [ENABLER-0002 — Cloudflare + domínio](../../prj-tecnico/enablers/ENABLER-0002-conta-cloudflare-dominio.md) | 2 | 🔧 Enabler | [TASK-0005…0007](../../prj-tecnico/tasks/README.md) | — | — |
+| [US-FEAT-0001.0001-0001 — Inicializar projeto](../user-stories/US-FEAT-0001.0001-0001-inicializar-projeto-vite.md) | 5 | 💬 Story | [TASK-0008…0011 · 0027](../../prj-tecnico/tasks/README.md) | [ENABLER-0001](../../prj-tecnico/enablers/ENABLER-0001-repositorio-ambiente-github.md) | — |
+| [US-FEAT-0001.0001-0002 — Lint/tsconfig](../user-stories/US-FEAT-0001.0001-0002-configurar-lint-tsconfig.md) | 3 | 💬 Story | [TASK-0012…0015](../../prj-tecnico/tasks/README.md) | [0001 — Inicializar projeto](../user-stories/US-FEAT-0001.0001-0001-inicializar-projeto-vite.md) | — |
+| [US-FEAT-0001.0001-0003 — Estrutura + Home](../user-stories/US-FEAT-0001.0001-0003-estruturar-pastas-home.md) | 3 | 💬 Story | [TASK-0016…0019](../../prj-tecnico/tasks/README.md) | [0001 — Inicializar projeto](../user-stories/US-FEAT-0001.0001-0001-inicializar-projeto-vite.md) | — |
+| [US-FEAT-0001.0003-0004 — Pipeline CI/CD](../user-stories/US-FEAT-0001.0003-0004-pipeline-cicd.md) | 3 | 💬 Story | [TASK-0020…0022](../../prj-tecnico/tasks/README.md) | [0003 — Estrutura + Home](../user-stories/US-FEAT-0001.0001-0003-estruturar-pastas-home.md) · [ENABLER-0001](../../prj-tecnico/enablers/ENABLER-0001-repositorio-ambiente-github.md) | — |
+| [US-FEAT-0001.0003-0005 — Deploy Cloudflare](../user-stories/US-FEAT-0001.0003-0005-deploy-cloudflare.md) | 3 | 💬 Story | [TASK-0023…0026](../../prj-tecnico/tasks/README.md) | [0004 — Pipeline CI/CD](../user-stories/US-FEAT-0001.0003-0004-pipeline-cicd.md) · [ENABLER-0002](../../prj-tecnico/enablers/ENABLER-0002-conta-cloudflare-dominio.md) | — |
+
+**Não incluído:** conteúdo institucional (S3/S4), design tokens finais (S2).
+
+## 3. Capacidade — Disponibilidade bruta (sprint) · fonte única
+
+> 📊 **Fonte única da capacidade bruta** ("aponta, não copia") — o [board](board-sprint-0001.md)
+> consome esta disponibilidade para calcular horas comprometidas × saldo; não duplica a tabela.
+
+| Recurso | Papel | Disponibilidade bruta (sprint) | Observação |
+|---|---|---|---|
+| Francisco Oliveira | Tech lead | 40h | — |
+| Lourival Louro | Infra / DevOps | 40h | — |
+| Alfredo Bento | Dev frontend | 80h | — |
+| Bolismar da Silva | Arquiteto | 40h | — |
+| Patricia Varra | QA | 40h | — |
+| Daniel Vini | Segurança | sob demanda | acionado sob demanda |
+
+> Disponibilidade = 10 dias úteis × 8h × alocação ([equipe.md](../../equipe.md)). A Sprint 1 é
+> **100% fundação**: a régua 70/20/10 de *capacity allocation* não se aplica literalmente (não há
+> story de valor de negócio neste corte).
+
+## 4. Riscos e dependências
+
+| ID | Risco | Impacto | Mitigação |
+|---|---|---|---|
+| RISK-0001 | Domínio/NS no registro.br atrasa | Baixo (não bloqueia deploy preview) | deploy em URL Cloudflare até NS propagar |
+| RISK-0002 | `coding-standards-react.md` ainda inexistente | Baixo | alinhar por referência; registrar pendência |
+
+## 5. Definition of Done
+
+- [ ] Stories com `✅ Entregue` no backlog (DoD + artefato verificável — PR/deploy).
+- [ ] `npm run build` verde no CI e deploy acessível.
+
+## 6. Decisões pendentes
+
+1. ✅ **Capacidade calibrada** no planning (2026-11-11) — ver §3.
+2. ✅ **Gate DoR aprovado** (2026-11-11) — 5 stories + 2 enablers marcados `✅ Revisado`
+   ([checklist DoR](checklist-dor-sprint-0001.md)).
+3. ✅ **PENDENCY-0007 resolvida** (2026-11-11) — dev frontend confirmado: Alfredo Bento (100%).
+
+---
+
+> 🔁 **Regra viva:** mudou o corte? Atualize este documento + [board](board-sprint-0001.md) +
+> [rastreabilidade](../rastreabilidade.md) + [backlog](../../../../docs/produto/backlog/BACKLOG-LIST.md) +
+> [tasks](../../prj-tecnico/tasks/README.md) no mesmo passo.
