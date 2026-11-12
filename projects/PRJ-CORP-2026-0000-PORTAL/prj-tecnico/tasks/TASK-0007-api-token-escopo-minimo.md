@@ -17,10 +17,10 @@ via `wrangler deploy` (princípio do menor privilégio).
 ## 2. O que implementar/entregar
 
 - Criar API token restrito ao escopo de **Workers/Static Assets (edit)** da conta/zona `fbso.com.br`.
-- Definir validade e rotação documentadas.
+- Definir validade e rotação documentadas — **rotação a cada 30 dias**.
 - Entregar o valor **somente** para configurar o secret `CLOUDFLARE_API_TOKEN` (TASK-0004).
 
 ## 3. Critério de saída (evidência)
 
-- [ ] Token criado com escopo mínimo (print da tela de permissões, valor oculto).
-- [ ] Valor disponível para o secret do GitHub (sem circular em chat/arquivo).
+- [x] Token criado com escopo mínimo (print da tela de permissões, valor oculto) — 2026-11-12.
+- [x] Valor disponível para o secret do GitHub (sem circular em chat/arquivo).
