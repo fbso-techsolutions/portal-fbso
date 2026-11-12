@@ -16,6 +16,6 @@ apontar NS (registro.br).
 
 ## 2. Critério de saída
 
-- [ ] Conta Cloudflare ativa com o site adicionado.
-- [ ] Nameservers da Cloudflare obtidos (para delegar no registro.br).
-- [ ] Domínio `fbso.com.br` registrado/apontado (ou roteiro de apontamento pronto).
+- [x] Conta Cloudflare ativa com o site adicionado (2026-11-12).
+- [x] Nameservers da Cloudflare obtidos — `ray.ns.cloudflare.com` · `tess.ns.cloudflare.com` (2026-11-12).
+- [ ] Domínio `fbso.com.br` registrado/apontado — roteiro pronto em [DEPLOYMENT.md](../../../../docs/tecnico/arquitetura/DEPLOYMENT.md) (a executar no go-live, FEATURE-0005.0003).

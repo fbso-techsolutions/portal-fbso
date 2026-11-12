@@ -23,6 +23,9 @@ Publicar o portal no domínio `fbso.com.br` com homologação.
 ### Fora
 - Analytics (Release 2).
 
+> ✅ **Nameservers já obtidos** (ENABLER-0002, 2026-11-12): `ray.ns.cloudflare.com` · `tess.ns.cloudflare.com`.
+> Roteiro de delegação em [DEPLOYMENT.md](../../../../docs/tecnico/arquitetura/DEPLOYMENT.md).
+
 ## 5. User stories desta feature
 
 | ID | História |
