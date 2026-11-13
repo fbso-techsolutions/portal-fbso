@@ -21,6 +21,45 @@ Comprovar o deploy contínuo: o "hello world" acessível via URL da Cloudflare, 
 
 ## 3. Critério de saída (evidência)
 
-- [ ] URL Cloudflare acessível (publicamente ou via preview).
-- [ ] Conteúdo da Home renderizado (print).
-- [ ] Link da URL registrado no [board](../../prj-produto/sprints/board-sprint-0001.md).
+- [x] URL Cloudflare acessível (publicamente ou via preview).
+- [x] Conteúdo da Home renderizado (print).
+- [x] Link da URL registrado no [board](../../prj-produto/sprints/board-sprint-0001.md).
+
+**Evidências** — deploy real do merge da PR #21 (run `43372504660`) e re-deploy pós-#22
+(run `43373328575`), ambos `success`:
+
+```text
+URL: https://portal-fbso.bolismar69.workers.dev
+
+$ curl -sS -o /dev/null -w "status=%{http_code} · type=%{content_type}"
+status=200 · type=text/html            (5133 bytes)
+
+$ grep "hello world"                    → hello world  ✅
+$ <title>…</title>                      → "FBSO TechSolutions | Tecnologia, Consultoria e Software"
+$ <meta name="description" …>           → presente (Open Graph incluso)
+$ header "FBSO" / footer "© 2026 FBSO Technology Solutions"  → presentes
+$ /assets/root-*.css                    → 200 · text/css
+$ /assets/entry.client-*.js             → 200 · text/javascript
+```
+
+> Aviso do wrangler no deploy: `preview_urls` ausente do `wrangler.jsonc` → preview URLs ligadas
+> por default. Sem ação para a R1 (a URL `workers.dev` já é o preview); se quiser desligar, adicionar
+> `"preview_urls": false` em `wrangler.jsonc`.
+
+## 4. Runbook
+
+### 4.1 Smoke test da URL publicada
+
+```bash
+URL=https://portal-fbso.bolismar69.workers.dev
+curl -sS -o /dev/null -w "status=%{http_code} · type=%{content_type}\n" "$URL"
+curl -sS "$URL" | grep -o "hello world"
+```
+
+### 4.2 Descobrir a URL após um deploy
+
+```bash
+gh run list --workflow=deploy.yml --limit 1
+gh run view <id> --log | grep -oE 'https://[a-z0-9.-]*workers\.dev'
+```
+

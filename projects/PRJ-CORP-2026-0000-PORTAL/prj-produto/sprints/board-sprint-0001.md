@@ -17,7 +17,7 @@
 | [US-FEAT-0001.0001-0002 — Lint/tsconfig](../user-stories/US-FEAT-0001.0001-0002-configurar-lint-tsconfig.md) | Alfredo Bento | [TASK-0012…0015](../../prj-tecnico/tasks/README.md) | ✅ Entregue | — |
 | [US-FEAT-0001.0001-0003 — Estrutura + Home](../user-stories/US-FEAT-0001.0001-0003-estruturar-pastas-home.md) | Alfredo Bento | [TASK-0016…0019](../../prj-tecnico/tasks/README.md) | ✅ Entregue | [PR #7](https://github.com/fbso-techsolutions/portal-fbso/pull/7) |
 | [US-FEAT-0001.0003-0004 — Pipeline CI/CD](../user-stories/US-FEAT-0001.0003-0004-pipeline-cicd.md) | Lourival Louro | [TASK-0020…0022](../../prj-tecnico/tasks/README.md) | ✅ Entregue | — |
-| [US-FEAT-0001.0003-0005 — Deploy Cloudflare](../user-stories/US-FEAT-0001.0003-0005-deploy-cloudflare.md) | Lourival Louro | [TASK-0023…0026](../../prj-tecnico/tasks/README.md) | 🔄 Em execução | — |
+| [US-FEAT-0001.0003-0005 — Deploy Cloudflare](../user-stories/US-FEAT-0001.0003-0005-deploy-cloudflare.md) | Lourival Louro | [TASK-0023…0026](../../prj-tecnico/tasks/README.md) | ✅ Entregue | [portal-fbso.bolismar69.workers.dev](https://portal-fbso.bolismar69.workers.dev) |
 
 > Evidência aponta para **PR/deploy** (artefato real), não planilha.
 
@@ -53,8 +53,8 @@
 | 🏁 | [TASK-0022 — status checks](../../prj-tecnico/tasks/TASK-0022-branch-protection-status-checks.md) | [US-0001.0003-0004](../user-stories/US-FEAT-0001.0003-0004-pipeline-cicd.md) | ✅ Entregue | 1 | S1 | Lourival Louro | [PR #18](https://github.com/fbso-techsolutions/portal-fbso/pull/18) |
 | 🏁 | [TASK-0023 — wrangler.jsonc](../../prj-tecnico/tasks/TASK-0023-wrangler-jsonc-static-assets.md) | [US-0001.0003-0005](../user-stories/US-FEAT-0001.0003-0005-deploy-cloudflare.md) | ✅ Entregue | 3 | S1 | Lourival Louro | [PR #20](https://github.com/fbso-techsolutions/portal-fbso/pull/20) |
 | 🏁 | [TASK-0024 — step deploy](../../prj-tecnico/tasks/TASK-0024-step-wrangler-deploy-secrets.md) | [US-0001.0003-0005](../user-stories/US-FEAT-0001.0003-0005-deploy-cloudflare.md) | ✅ Entregue | 3 | S1 | Lourival Louro | [PR #21](https://github.com/fbso-techsolutions/portal-fbso/pull/21) |
-| 💡 | [TASK-0025 — deploy preview](../../prj-tecnico/tasks/TASK-0025-deploy-preview-smoke-cloudflare.md) | [US-0001.0003-0005](../user-stories/US-FEAT-0001.0003-0005-deploy-cloudflare.md) | ⬜ A fazer | 2 | S1 | Lourival Louro | — |
-| 💡 | [TASK-0026 — QA smoke](../../prj-tecnico/tasks/TASK-0026-qa-smoke-test-deploy.md) | [US-0001.0003-0005](../user-stories/US-FEAT-0001.0003-0005-deploy-cloudflare.md) | ⬜ A fazer | 2 | S1 | Patricia Varra | — |
+| 🏁 | [TASK-0025 — deploy preview](../../prj-tecnico/tasks/TASK-0025-deploy-preview-smoke-cloudflare.md) | [US-0001.0003-0005](../user-stories/US-FEAT-0001.0003-0005-deploy-cloudflare.md) | ✅ Entregue | 2 | S1 | Lourival Louro | [PR #23](https://github.com/fbso-techsolutions/portal-fbso/pull/23) · [portal-fbso.bolismar69.workers.dev](https://portal-fbso.bolismar69.workers.dev) |
+| 🏁 | [TASK-0026 — QA smoke](../../prj-tecnico/tasks/TASK-0026-qa-smoke-test-deploy.md) | [US-0001.0003-0005](../user-stories/US-FEAT-0001.0003-0005-deploy-cloudflare.md) | ✅ Entregue | 2 | S1 | Patricia Varra | [PR #24](https://github.com/fbso-techsolutions/portal-fbso/pull/24) · smoke QA ✅ |
 | 🏁 | [TASK-0027 — revisão ADR-001](../../prj-tecnico/tasks/TASK-0027-revisao-aderencia-adr-001.md) | [US-0001.0001-0001](../user-stories/US-FEAT-0001.0001-0001-inicializar-projeto-vite.md) | ✅ Entregue | 2 | S1 | Bolismar da Silva | [PR #8](https://github.com/fbso-techsolutions/portal-fbso/pull/8) |
 
 **Total de esforço:** 59h.

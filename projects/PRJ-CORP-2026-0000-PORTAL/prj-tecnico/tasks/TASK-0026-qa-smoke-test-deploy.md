@@ -24,5 +24,35 @@ Validar de forma independente (QA) que o artefato publicado atende ao mínimo fu
 
 ## 3. Critério de saída (evidência)
 
-- [ ] Smoke test executado com resultado registrado (print/checklist).
-- [ ] `lang="pt-BR"` confirmado no HTML servido.
+- [x] Smoke test executado com resultado registrado (print/checklist).
+- [x] `lang="pt-BR"` confirmado no HTML servido.
+
+**Evidências** — URL `https://portal-fbso.bolismar69.workers.dev` (deploy do merge #21, run `43372504660`):
+
+| Check QA | Resultado |
+|---|---|
+| `hello world` visível (conteúdo renderizado) | ✅ inline no HTML |
+| Renderiza **sem JS** (prerender real) | ✅ corpo completo (`<header>`/`<main>`/`<footer>`) já no HTML servido |
+| `<html lang="pt-BR">` | ✅ `<html lang="pt-BR"` |
+| Recursos 404 (CSS/JS) | ✅ **0× 404** — 7 assets referenciados → todos `200` |
+| Erros de console | n/a via curl (sem runtime de navegador); HTML válido + assets 200 |
+
+**Limitação conhecida (não bloqueia a R1):** `/__manifest` (route discovery do React Router)
+retorna `404` no deploy estático — é um endpoint de servidor que só existe com Worker script. Com a
+rota única da R1 não há navegação cliente, então ele nunca é requisitado no load. **Ação para a R2**
+(adicionar o Worker/binding `ASSETS` ou desligar `routeDiscovery` lazy).
+
+## 4. Runbook
+
+### 4.1 Reexecutar o QA smoke
+
+```bash
+URL=https://portal-fbso.bolismar69.workers.dev
+curl -sS "$URL" -o /tmp/portal.html
+grep -oE '<html[^>]*lang="[^"]*"' /tmp/portal.html          # lang="pt-BR"
+grep -o "hello world" /tmp/portal.html                      # conteúdo inline (sem JS)
+grep -oE '/assets/[A-Za-z0-9_.-]+' /tmp/portal.html | sort -u | while read -r a; do
+  printf "%s  %s\n" "$(curl -sS -o /dev/null -w '%{http_code}' "$URL$a")" "$a"
+done                                                         # 0× 404 esperado
+```
+
