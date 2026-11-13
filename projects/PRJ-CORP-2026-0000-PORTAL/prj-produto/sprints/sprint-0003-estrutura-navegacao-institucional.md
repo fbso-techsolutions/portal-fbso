@@ -1,6 +1,6 @@
 # 🗓️ Sprint 3 — Estrutura, navegação e institucional · 14/12/2026 – 24/12/2026
 
-> **Status:** `📋 Planejada` · **Sprint Goal:** "Estrutura, navegação e páginas institucionais no ar, sobre o design system da S2" ·
+> **Status:** `✅ Concluída (executada antecipadamente em 2026-11-13; janela prevista 14/12–24/12)` · **Sprint Goal:** "Estrutura, navegação e páginas institucionais no ar, sobre o design system da S2" ·
 > **Board:** [board-sprint-0003.md](board-sprint-0003.md) · **Tasks:** [prj-tecnico/tasks/](../../prj-tecnico/tasks/README.md) ·
 > **Verdade única do corte:** [escopo-release-1](../escopo-release-1.md)
 
@@ -19,9 +19,9 @@
 **Objetivo:** estruturar a navegação e as páginas institucionais, consumindo os tokens e componentes `ui/` da S2 — o portal passa a ter identidade e conteúdo reais.
 
 **Resultados esperados:**
-- [ ] Header + navegação + footer presentes em todas as páginas (0002.0001).
-- [ ] Home institucional (hero → posicionamento → ecossistema SaaS → CTA) publicada (0002.0002).
-- [ ] Páginas Sobre, Contato e Legais acessíveis pela navegação/footer (0002.0003…0005).
+- [x] Header + navegação + footer presentes em todas as páginas (0002.0001).
+- [x] Home institucional (hero → posicionamento → ecossistema SaaS → CTA) publicada (0002.0002).
+- [x] Páginas Sobre, Contato e Legais acessíveis pela navegação/footer (0002.0003…0005).
 
 ## 2. Escopo (o corte)
 
@@ -63,9 +63,9 @@
 
 ## 5. Definition of Done
 
-- [ ] Stories `✅ Entregue` no backlog (DoD + artefato verificável — PR).
-- [ ] `npm run lint` · `format:check` · `typecheck` verdes no CI.
-- [ ] Navegação e footer presentes em **todas** as rotas; páginas institucionais acessíveis.
+- [x] Stories `✅ Entregue` no backlog (DoD + artefato verificável — PR).
+- [x] `npm run lint` · `format:check` · `typecheck` verdes no CI.
+- [x] Navegação e footer presentes em **todas** as rotas; páginas institucionais acessíveis.
 
 ## 6. Execução (log)
 
@@ -87,15 +87,68 @@
 
 ## 7. Sprint Review — `[Encerramento]`
 
-*A preencher no encerramento.*
+### 7.1 Demonstração das entregas
+
+Portal com header/nav/footer em todas as rotas, Home institucional (hero → posicionamento →
+ecossistema SaaS → CTA) e páginas `/sobre`, `/contato`, `/privacidade`, `/termos` — 5 rotas pré-renderizadas.
+
+### 7.2 Validação dos resultados
+
+| Item | Resultado | Observações |
+|---|---|---|
+| US-FEAT-0002.0001-0008 — Header + navegação | ✅ Aceito | topbar + marca + nav + CTA |
+| US-FEAT-0002.0001-0009 — Footer institucional | ✅ Aceito | links institucionais/legais + copyright dinâmico |
+| US-FEAT-0002.0001-0010 — Menu responsivo | ✅ Aceito | toggle acessível |
+| US-FEAT-0002.0002-0011/0012/0013 — Home | ✅ Aceito | hero + posicionamento + SaaS + CTA |
+| US-FEAT-0002.0003/0004/0005 — Sobre/Contato/Legais | ✅ Aceito | 4 páginas |
+
+### 7.3 Novas necessidades identificadas
+
+- [ ] TechServices (`/techservices`) e Portfólio SaaS (`/solucoes`, `/solucoes/:slug`) — S4.
+- [ ] SEO/a11y/go-live — S5.
+
+---
 
 ## 8. Retrospectiva — `[Encerramento]`
 
-*A preencher no encerramento.*
+### 8.1 Pontos positivos / de atenção / melhorias
+
+- **Positivos:** layout completo consumindo o design system da S2; conteúdo como dados; componentes `ui/` reutilizados (zero hardcoded).
+- **Atenção:** execução antecipada (13/11 × janela 14/12); links da nav apontam para rotas futuras (placeholder).
+- **Melhorias:** prerender dinâmico de rotas de produto (resolvido na S4); definir o logo.
+
+### 8.2 Plano de ação
+
+| Ação | ID | Responsável | Prazo | Status |
+|---|---|---|---|---|
+| Consumir catálogo como dados na Home | RETRO-ACTION-0006 | Alfredo Bento | S4 | ✅ Feito |
+| Resolver logo definitivo | RETRO-ACTION-0005 | Arquiteto + PM/PO | — | Pendente |
+
+---
 
 ## 9. Encerramento — `[Encerramento]`
 
-*A preencher no encerramento.*
+### 9.1 Resultado do Sprint Goal
+
+**Status:** `[x]` Alcançado — estrutura, navegação e páginas institucionais no ar.
+
+### 9.2 Indicadores finais
+
+| Indicador | Resultado |
+|---|---|
+| Story Points concluídos | 32 (9 stories) |
+| Itens concluídos / não concluídos | 9 / 0 |
+| Tasks concluídas | 11 / 11 (37h) |
+| Bugs identificados / corrigidos | 0 / 0 |
+
+### 9.3 Pendências para próximas sprints
+
+| ID | Descrição | Origem | Destino |
+|---|---|---|---|
+| TechServices + Portfólio SaaS | `/techservices`, `/solucoes`, `/solucoes/:slug` | Sprint 3 | S4 |
+| SEO + a11y + go-live | metadados, sitemap, responsividade, domínio | Sprint 3 | S5 |
+
+> **Nota de execução:** Sprint concluída **antecipadamente** (2026-11-13) — corte pronto e equipe disponível.
 
 ## 10. Decisões pendentes deste documento
 

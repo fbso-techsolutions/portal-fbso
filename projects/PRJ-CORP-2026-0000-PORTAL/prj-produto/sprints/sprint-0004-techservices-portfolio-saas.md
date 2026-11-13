@@ -1,6 +1,6 @@
 # 🗓️ Sprint 4 — TechServices e Portfólio SaaS · 11/01/2027 – 22/01/2027
 
-> **Status:** `📋 Planejada` · **Sprint Goal:** "Página TechServices + catálogo e páginas de produto SaaS no ar, a partir do layout da S3" ·
+> **Status:** `✅ Concluída (executada antecipadamente em 2026-11-13; janela prevista 11/01–22/01)` · **Sprint Goal:** "Página TechServices + catálogo e páginas de produto SaaS no ar, a partir do layout da S3" ·
 > **Board:** [board-sprint-0004.md](board-sprint-0004.md) · **Tasks:** [prj-tecnico/tasks/](../../prj-tecnico/tasks/README.md) ·
 > **Verdade única do corte:** [escopo-release-1](../escopo-release-1.md)
 
@@ -19,9 +19,9 @@
 **Objetivo:** expor a divisão TechServices e o portfólio SaaS (catálogo + página de produto) com conteúdo como dados.
 
 **Resultados esperados:**
-- [ ] Página `/techservices` com as frentes da divisão (0003.0001).
-- [ ] Catálogo SaaS como dados (`src/content/saas-catalog.ts`) + página `/solucoes` (0004.0001).
-- [ ] Página de detalhe `/solucoes/:slug` com conteúdo/link por produto (0004.0002).
+- [x] Página `/techservices` com as frentes da divisão (0003.0001).
+- [x] Catálogo SaaS como dados (`src/content/saas-catalog.ts`) + página `/solucoes` (0004.0001).
+- [x] Página de detalhe `/solucoes/:slug` com conteúdo/link por produto (0004.0002).
 
 ## 2. Escopo (o corte)
 
@@ -53,9 +53,9 @@
 
 ## 5. Definition of Done
 
-- [ ] Stories `✅ Entregue` no backlog (DoD + artefato verificável — PR).
-- [ ] `npm run lint` · `format:check` · `typecheck` verdes no CI.
-- [ ] Catálogo vem dos dados (`saas-catalog.ts`), não de JSX hardcoded.
+- [x] Stories `✅ Entregue` no backlog (DoD + artefato verificável — PR).
+- [x] `npm run lint` · `format:check` · `typecheck` verdes no CI.
+- [x] Catálogo vem dos dados (`saas-catalog.ts`), não de JSX hardcoded.
 
 ## 6. Execução (log)
 
@@ -72,15 +72,67 @@
 
 ## 7. Sprint Review — `[Encerramento]`
 
-*A preencher no encerramento.*
+### 7.1 Demonstração das entregas
+
+Página `/techservices` (5 frentes), catálogo SaaS como dados e páginas `/solucoes` + `/solucoes/:slug`
+(4 produtos, prerender dinâmico) — 11 rotas pré-renderizadas.
+
+### 7.2 Validação dos resultados
+
+| Item | Resultado | Observações |
+|---|---|---|
+| US-FEAT-0003.0001-0017 — Página TechServices | ✅ Aceito | 5 frentes |
+| US-FEAT-0004.0001-0018 — Catálogo (dados) | ✅ Aceito | `saas-catalog.ts` fonte única |
+| US-FEAT-0004.0001-0019 — Página /solucoes | ✅ Aceito | grid de cards |
+| US-FEAT-0004.0002-0020 — Rota /solucoes/:slug | ✅ Aceito | prerender dinâmico |
+| US-FEAT-0004.0002-0021 — Conteúdo/link | ✅ Aceito | link condicional |
+
+### 7.3 Novas necessidades identificadas
+
+- [ ] Sites próprios dos SaaS (link externo) — quando existirem.
+- [ ] SEO/a11y/go-live — S5.
+
+---
 
 ## 8. Retrospectiva — `[Encerramento]`
 
-*A preencher no encerramento.*
+### 8.1 Pontos positivos / de atenção / melhoresias
+
+- **Positivos:** catálogo como dados (fonte única, Home refatorada) · prerender dinâmico de rotas · componentes `ui/` reutilizados.
+- **Atenção:** links externos vazios (sites ainda não existem) · execução antecipada.
+- **Melhorias:** habilitar `link` quando os sites próprios existirem; SEO/a11y na S5.
+
+### 8.2 Plano de ação
+
+| Ação | ID | Responsável | Prazo | Status |
+|---|---|---|---|---|
+| SEO + a11y + go-live | RETRO-ACTION-0007 | Alfredo + Lourival + Patricia | S5 | Pendente |
+
+---
 
 ## 9. Encerramento — `[Encerramento]`
 
-*A preencher no encerramento.*
+### 9.1 Resultado do Sprint Goal
+
+**Status:** `[x]` Alcançado — TechServices + catálogo e páginas de produto SaaS no ar.
+
+### 9.2 Indicadores finais
+
+| Indicador | Resultado |
+|---|---|
+| Story Points concluídos | 18 (5 stories) |
+| Itens concluídos / não concluídos | 5 / 0 |
+| Tasks concluídas | 6 / 6 (20h) |
+| Bugs identificados / corrigidos | 0 / 0 |
+
+### 9.3 Pendências para próximas sprints
+
+| ID | Descrição | Origem | Destino |
+|---|---|---|---|
+| SEO + a11y + go-live | metadados, sitemap, responsividade, domínio/HTTPS | Sprint 4 | S5 |
+| PENDENCY-0011 | logo definitivo | — | pendencias |
+
+> **Nota de execução:** Sprint concluída **antecipadamente** (2026-11-13).
 
 ## 10. Decisões pendentes deste documento
 
