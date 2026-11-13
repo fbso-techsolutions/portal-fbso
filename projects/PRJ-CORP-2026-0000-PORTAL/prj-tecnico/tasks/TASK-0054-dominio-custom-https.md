@@ -19,12 +19,20 @@ Configurar o domínio custom `fbso.com.br` + HTTPS na Cloudflare (NS já apontad
 
 ## 3. Critério de saída (evidência)
 
-- [ ] Worker responde em `fbso.com.br`; HTTPS forçado.
+- [ ] Worker responde em `fbso.com.br`; HTTPS forçado. *(bloqueado — ação externa)*
 
-**Evidências**
+**Evidências (preparação)**
 
-*A preencher na execução.*
+- `DEPLOYMENT.md` §5: runbook de delegação NS (registro.br) + **Custom Domain** no Worker (Workers & Pages → `portal-fbso` → Settings → Domains & Routes → Custom Domains) + HTTPS (Full Strict).
+- Deploy automático já publicado em `https://portal-fbso.bolismar69.workers.dev`.
+- `npx tsc -b` ✅ · `npm run lint` ✅ · `npm run format:check` ✅ · `npm run build` ✅.
 
 ## 4. Runbook
 
-*A preencher se aplicável.*
+### 4.1 Configurar o domínio custom (ação manual — Lourival)
+
+1. **registro.br**: apontar os NS de `fbso.com.br` para `ray.ns.cloudflare.com` / `tess.ns.cloudflare.com`.
+2. **Cloudflare** (Workers & Pages → `portal-fbso` → Settings → Domains & Routes → **Custom Domains**): adicionar `fbso.com.br` e `www.fbso.com.br`.
+3. **Cloudflare** (zona `fbso.com.br` → SSL/TLS): **Full (Strict)**.
+
+> ⚠️ A delegação NS é **ação externa** (registro.br + dashboard Cloudflare) — não é executável via código. Detalhes completos em [DEPLOYMENT.md](../../../../docs/tecnico/arquitetura/DEPLOYMENT.md).

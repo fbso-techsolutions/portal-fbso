@@ -69,6 +69,7 @@
 | 2026-11-13 | [TASK-0051](../../prj-tecnico/tasks/TASK-0051-sitemap-robots.md) | `public/robots.txt` + hook `buildEnd` gerando `sitemap.xml` no build | sitemap gerado (11 URLs) via catálogo · US-0005.0001 concluída |
 | 2026-11-13 | [TASK-0052](../../prj-tecnico/tasks/TASK-0052-responsividade.md) | `AppLayout`: `overflow-x-hidden` · revisão de breakpoints responsivos nas páginas | páginas já responsivas (construídas mobile-first) · US-0005.0002-0024 concluída |
 | 2026-11-13 | [TASK-0053](../../prj-tecnico/tasks/TASK-0053-acessibilidade-basica.md) | `AppLayout`: skip link + `id="conteudo"` no main | semântica/foco/aria já presentes · US-0005.0002 concluída |
+| 2026-11-13 | [TASK-0054](../../prj-tecnico/tasks/TASK-0054-dominio-custom-https.md) | `DEPLOYMENT.md` §5: runbook de delegação NS + Custom Domain (Workers) + HTTPS | **bloqueada — ação externa** (registro.br + dashboard Cloudflare, Lourival) |
 
 ## 7. Sprint Review — `[Encerramento]`
 
