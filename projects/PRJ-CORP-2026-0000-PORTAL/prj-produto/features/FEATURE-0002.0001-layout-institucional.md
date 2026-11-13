@@ -6,7 +6,7 @@
 | Épico | [EPIC-0002 — Experiência Institucional](../epicos/EPIC-0002-experiencia-institucional.md) |
 | B-REQ dona | B-REQ-01 |
 | Prioridade | Onda 1-Must (MVP) |
-| 🔒 Travada por | FEATURE-0001.0002 (design tokens) |
+| 🔒 Travada por | — (livre) |
 | Status | 📝 Rascunho (2026-11-11) |
 
 ## 1. Objetivo de negócio
@@ -27,9 +27,9 @@ Estrutura comum (cabeçalho, navegação, rodapé) presente em todas as páginas
 
 | ID | História |
 |---|---|
-| (a detalhar) | Criar Header + navegação |
-| (a detalhar) | Criar Footer institucional |
-| (a detalhar) | Menu responsivo (mobile) |
+| [US-FEAT-0002.0001-0008](../user-stories/US-FEAT-0002.0001-0008-header-navegacao.md) | Criar Header + navegação |
+| [US-FEAT-0002.0001-0009](../user-stories/US-FEAT-0002.0001-0009-footer-institucional.md) | Criar Footer institucional |
+| [US-FEAT-0002.0001-0010](../user-stories/US-FEAT-0002.0001-0010-menu-responsivo.md) | Menu responsivo (mobile) |
 
 ## 7. Critérios de aceite (DoD)
 
