@@ -22,6 +22,14 @@ Criar o pipeline de **integração contínua** que valida todo push/PR, bloquean
 
 ## 3. Critério de saída (evidência)
 
-- [ ] Workflow versionado em `.github/workflows/ci.yml`.
-- [ ] Um PR de teste dispara o workflow e ele roda os 3 estágios.
-- [ ] Falha proposital (ex.: erro de lint) falha o check.
+- [x] Workflow versionado em `.github/workflows/ci.yml`.
+- [x] Um PR de teste dispara o workflow e ele roda os 3 estágios.
+- [x] Falha proposital (ex.: erro de lint) falha o check.
+
+**Evidências**
+
+- PR [#14](https://github.com/fbso-techsolutions/portal-fbso/pull/14) → run `43362460685`:
+  steps `Lint` · `Typecheck` · `Build` · `Verificar artefato de build` todos verdes (53s).
+- Teste negativo (branch descartável, PR [#15](https://github.com/fbso-techsolutions/portal-fbso/pull/15)
+  fechado) → run `43362583760`: `Lint` falhou (exit 1, `no-explicit-any` + `no-unused-vars`);
+  `Typecheck`, `Build` e `Verificar artefato` **não rodaram** (fail-fast).
