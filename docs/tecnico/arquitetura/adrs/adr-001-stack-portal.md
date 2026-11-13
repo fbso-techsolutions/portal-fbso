@@ -9,3 +9,11 @@
 | Alternativas rejeitadas | **HTML/CSS puro** — reescrita total na R2. **SPA + vite-plugin-prerender (puppeteer)** — prerender frágil e mais retrabalho. **Next.js (`output: export`)** — mais pesado para um MVP 100% estático. **Astro** — melhor fit técnico puro para site institucional, mas introduz framework novo fora da inércia React do time. **GitHub Pages/Hostinger** — GitHub Pages sem backend para R2; Hostinger desnecessária para estático. |
 | Consequências | Repo `portal-fbso` usa React/TS; CI/CD via GitHub Actions + `wrangler`; SEO por prerender; R2 adiciona Workers; R3 usa OIDC (Keycloak) sem monolitizar o portal. |
 | Assinatura | a definir (Tech lead + Arquiteto de Soluções) |
+
+## Revisão de aderência (2026-11-13 · TASK-0027)
+
+- **Veredito:** aderente — ver [parecer](../revisoes/revisao-2026-11-13-aderencia-adr-001.md).
+- **Emenda editorial (decisão inalterada):** o build em framework mode publica `dist/client/`
+  (HTML pré-renderizado + assets); `dist/server/` é artefato de build-time e não é publicado.
+  "Build estático → `dist/`" segue válido: `dist/` é o diretório de build.
+- **Pendente:** assinatura (Tech lead + Arquiteto) — status segue `📝 Proposta`.

@@ -13,7 +13,7 @@
 |---|---|---|---|---|
 | [ENABLER-0001 — Repo e ambiente](../../prj-tecnico/enablers/ENABLER-0001-repositorio-ambiente-github.md) | Lourival Louro + Francisco Oliveira | [TASK-0001…0004](../../prj-tecnico/tasks/README.md) | ✅ Entregue | — |
 | [ENABLER-0002 — Cloudflare + domínio](../../prj-tecnico/enablers/ENABLER-0002-conta-cloudflare-dominio.md) | Lourival Louro | [TASK-0005…0007](../../prj-tecnico/tasks/README.md) | ✅ Entregue | — |
-| [US-FEAT-0001.0001-0001 — Inicializar projeto](../user-stories/US-FEAT-0001.0001-0001-inicializar-projeto-vite.md) | Alfredo Bento | [TASK-0008…0011 · 0027](../../prj-tecnico/tasks/README.md) | 🔄 Em execução | — |
+| [US-FEAT-0001.0001-0001 — Inicializar projeto](../user-stories/US-FEAT-0001.0001-0001-inicializar-projeto-vite.md) | Alfredo Bento | [TASK-0008…0011 · 0027](../../prj-tecnico/tasks/README.md) | ✅ Entregue | [PR #8](https://github.com/fbso-techsolutions/portal-fbso/pull/8) |
 | [US-FEAT-0001.0001-0002 — Lint/tsconfig](../user-stories/US-FEAT-0001.0001-0002-configurar-lint-tsconfig.md) | Alfredo Bento | [TASK-0012…0015](../../prj-tecnico/tasks/README.md) | ⬜ A fazer | — |
 | [US-FEAT-0001.0001-0003 — Estrutura + Home](../user-stories/US-FEAT-0001.0001-0003-estruturar-pastas-home.md) | Alfredo Bento | [TASK-0016…0019](../../prj-tecnico/tasks/README.md) | ✅ Entregue | [PR #7](https://github.com/fbso-techsolutions/portal-fbso/pull/7) |
 | [US-FEAT-0001.0003-0004 — Pipeline CI/CD](../user-stories/US-FEAT-0001.0003-0004-pipeline-cicd.md) | Lourival Louro | [TASK-0020…0022](../../prj-tecnico/tasks/README.md) | ⬜ A fazer | — |
@@ -55,7 +55,7 @@
 | 💡 | [TASK-0024 — step deploy](../../prj-tecnico/tasks/TASK-0024-step-wrangler-deploy-secrets.md) | [US-0001.0003-0005](../user-stories/US-FEAT-0001.0003-0005-deploy-cloudflare.md) | ⬜ A fazer | 3 | S1 | Lourival Louro | — |
 | 💡 | [TASK-0025 — deploy preview](../../prj-tecnico/tasks/TASK-0025-deploy-preview-smoke-cloudflare.md) | [US-0001.0003-0005](../user-stories/US-FEAT-0001.0003-0005-deploy-cloudflare.md) | ⬜ A fazer | 2 | S1 | Lourival Louro | — |
 | 💡 | [TASK-0026 — QA smoke](../../prj-tecnico/tasks/TASK-0026-qa-smoke-test-deploy.md) | [US-0001.0003-0005](../user-stories/US-FEAT-0001.0003-0005-deploy-cloudflare.md) | ⬜ A fazer | 2 | S1 | Patricia Varra | — |
-| 💡 | [TASK-0027 — revisão ADR-001](../../prj-tecnico/tasks/TASK-0027-revisao-aderencia-adr-001.md) | [US-0001.0001-0001](../user-stories/US-FEAT-0001.0001-0001-inicializar-projeto-vite.md) | ⬜ A fazer | 2 | S1 | Bolismar da Silva | — |
+| 🏁 | [TASK-0027 — revisão ADR-001](../../prj-tecnico/tasks/TASK-0027-revisao-aderencia-adr-001.md) | [US-0001.0001-0001](../user-stories/US-FEAT-0001.0001-0001-inicializar-projeto-vite.md) | ✅ Entregue | 2 | S1 | Bolismar da Silva | [PR #8](https://github.com/fbso-techsolutions/portal-fbso/pull/8) |
 
 **Total de esforço:** 59h.
 

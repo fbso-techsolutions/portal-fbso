@@ -33,5 +33,5 @@ Subir o projeto com a stack aprovada (ADR-001) para dar início ao desenvolvimen
 
 ## 7. Critérios de aceite (DoD)
 
-- [ ] `npm run build` gera `dist/` com HTML pré-renderizado por rota.
+- [ ] `npm run build` gera `dist/client/` com HTML pré-renderizado por rota.
 - [ ] Lint/typecheck passam limpos no CI.

@@ -11,7 +11,7 @@
 
 ## 1. Objetivo
 
-Automatizar a publicação do `dist/` na Cloudflare no mesmo pipeline, sem nenhuma credencial
+Automatizar a publicação do `dist/client/` na Cloudflare no mesmo pipeline, sem nenhuma credencial
 versionada no repositório.
 
 ## 2. O que implementar/entregar

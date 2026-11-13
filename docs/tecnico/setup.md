@@ -40,26 +40,36 @@ npm install --save-dev --save-exact \
 ```bash
 npm install              # instala tudo
 npm run dev              # dev server → http://localhost:5173
-npm run build            # gera dist/ (tsc -b && vite build)
-npm run preview          # serve o build localmente
+npm run build            # gera dist/client/ (tsc -b && react-router build)
+npm run preview          # serve dist/client/ localmente
+npm run lint             # ESLint
+npm run typecheck        # tsc -b
 npm audit                # vulnerabilidades (total)
 npm audit --omit=dev     # vulnerabilidades só de produção
 ```
 
-## 4. Estrutura gerada (base)
+## 4. Estrutura atual (pós framework mode)
 
 ```
 .
-├── index.html
+├── react-router.config.ts   # ssr + prerender + buildDirectory (dist)
 ├── package.json · package-lock.json
-├── vite.config.ts
+├── vite.config.ts           # plugins: tailwindcss + reactRouter
 ├── tsconfig.json · tsconfig.app.json · tsconfig.node.json
 ├── eslint.config.js
 └── src/
-    ├── main.tsx
-    ├── App.tsx
-    └── index.css
+    ├── app/                 # root.tsx + routes.ts (React Router v8)
+    ├── components/layout/   # AppLayout (header/main/footer)
+    ├── components/ui/       # design system interno (.gitkeep até a feature)
+    ├── components/sections/ # seções de página (.gitkeep até a feature)
+    ├── content/             # site.ts · home.ts — conteúdo como dados
+    ├── lib/                 # utilidades (.gitkeep até a feature)
+    ├── pages/               # Home.tsx
+    └── styles/              # index.css (Tailwind v4)
 ```
+
+> A base do Vite SPA (`index.html`, `src/main.tsx`, `src/App.tsx`) foi substituída pelo framework mode
+> na TASK-0010; o HTML pré-renderizado sai em `dist/client/index.html`.
 
 ## 5. Observações
 

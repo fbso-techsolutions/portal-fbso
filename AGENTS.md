@@ -48,4 +48,4 @@ sprint quando `Status = ✅ Revisado/Aprovado` (gate de documentação). Fonte: 
 React + TS + Vite + Tailwind CSS v4 + React Router v8 (framework mode, `prerender: true`).
 Conteúdo institucional e catálogo SaaS são **dados** em `src/content/` (nunca JSX hardcoded).
 Pré-renderização por página (título, meta, Open Graph, `sitemap.xml`, `robots.txt`).
-Build estático → `dist/`; deploy via `wrangler` (Cloudflare Workers + Static Assets), domínio `fbso.com.br`.
+Build estático → `dist/client/`; deploy via `wrangler` (Cloudflare Workers + Static Assets), domínio `fbso.com.br`.
