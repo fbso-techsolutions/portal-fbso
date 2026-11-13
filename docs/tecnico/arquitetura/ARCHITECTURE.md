@@ -10,7 +10,7 @@
 
 | Release | Forma | Onde roda |
 |---|---|---|
-| **1 — Institucional (MVP)** | Frontend **estático** (React + Vite + Router v7, `prerender: true`) | Cloudflare Workers + Static Assets (`dist/`) |
+| **1 — Institucional (MVP)** | Frontend **estático** (React + Vite + Router v8, `prerender: true`) | Cloudflare Workers + Static Assets (`dist/`) |
 | **2 — Comercial** | + Cloudflare Workers (APIs, analytics, lead capture) | Cloudflare (Workers + KV/analytics) |
 | **3 — Plataforma** | + FBSO Identity (OIDC) federando os SaaS | Identidade central + SaaS independentes |
 
@@ -29,7 +29,7 @@ independentes**:
 
 ```
 src/
-├── app/           # router (React Router v7), layout raiz, loaders de conteúdo
+├── app/           # router (React Router v8), layout raiz, loaders de conteúdo
 ├── components/
 │   ├── layout/    # Header, Footer, Nav
 │   ├── ui/        # Button, Card, Section, Badge (design system interno)

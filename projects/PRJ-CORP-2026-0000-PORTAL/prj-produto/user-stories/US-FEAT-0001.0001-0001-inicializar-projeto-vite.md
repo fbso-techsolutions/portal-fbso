@@ -1,4 +1,4 @@
-# 💬 User Story: US-FEAT-0001.0001-0001 — Inicializar projeto Vite + TS + Tailwind + Router v7
+# 💬 User Story: US-FEAT-0001.0001-0001 — Inicializar projeto Vite + TS + Tailwind + Router v8
 
 | Campo | Valor |
 |---|---|
@@ -12,7 +12,7 @@
 ## 1. Declaração
 
 - **Como** time de engenharia, **quero** inicializar o projeto com Vite + React + TypeScript +
-  Tailwind CSS v4 + React Router v7 (framework mode, `prerender: true`), **para** ter a base da
+  Tailwind CSS v4 + React Router v8 (framework mode, `prerender: true`), **para** ter a base da
   stack aprovada no ADR-001.
 
 ## 2. Cenários (Gherkin)

@@ -21,7 +21,7 @@
 **Resultados esperados:**
 - [ ] Repo + espelho local + branch protection (ENABLER-0001).
 - [ ] Conta Cloudflare + domínio prontos (ENABLER-0002).
-- [ ] Scaffold Vite+TS+Tailwind+Router v7 com `dist/` pré-renderizado (0001.0001).
+- [ ] Scaffold Vite+TS+Tailwind+Router v8 com `dist/` pré-renderizado (0001.0001).
 - [ ] CI/CD publicando o "hello world" (0001.0003).
 
 ## 2. Escopo (o corte)
@@ -88,6 +88,7 @@
 | 2026-11-12 | [TASK-0007](../../prj-tecnico/tasks/TASK-0007-api-token-escopo-minimo.md) | API token criado | rotação a cada 30 dias |
 | 2026-11-12 | [TASK-0008](../../prj-tecnico/tasks/TASK-0008-scaffold-vite-react-ts.md) | `npm create vite@latest . -- --template react-ts` · deps pinadas (`--save-exact`) | scaffold na **raiz** (não `frontend/`) · PR #3 |
 | 2026-11-12 | [TASK-0009](../../prj-tecnico/tasks/TASK-0009-tailwind-css-v4.md) | `npm install --save-dev --save-exact tailwindcss @tailwindcss/vite` · plugin no `vite.config.ts` · entry `src/styles/index.css` | tokens em [design-tokens.md](../../../../docs/tecnico/ux-ui/design-tokens.md); tema `@theme` na S2 · PR #4 |
+| 2026-11-12 | [TASK-0010](../../prj-tecnico/tasks/TASK-0010-react-router-v8-prerender.md) | `npm install react-router @react-router/dev @react-router/node` · scripts `react-router dev/build` · `src/app/{root,routes}.tsx` + `src/pages/Home.tsx` | adotado **v8** (docs v7→v8); prerender → `dist/client/index.html` |
 
 ## 7. Decisões pendentes
 

@@ -34,7 +34,7 @@
 
 ### Onda 4 — ferramentas sobre o scaffold
 - [TASK-0009 — Tailwind v4](../../prj-tecnico/tasks/TASK-0009-tailwind-css-v4.md) · 3h
-- [TASK-0010 — Router v7 prerender](../../prj-tecnico/tasks/TASK-0010-react-router-v7-prerender.md) · 4h
+- [TASK-0010 — Router v8 prerender](../../prj-tecnico/tasks/TASK-0010-react-router-v8-prerender.md) · 4h
 - [TASK-0012 — ESLint flat](../../prj-tecnico/tasks/TASK-0012-eslint-flat-config.md) · 3h
 - [TASK-0014 — tsconfig alias](../../prj-tecnico/tasks/TASK-0014-tsconfig-strict-alias.md) · 2h
 - [TASK-0016 — pastas src/](../../prj-tecnico/tasks/TASK-0016-estrutura-pastas-src.md) · 2h

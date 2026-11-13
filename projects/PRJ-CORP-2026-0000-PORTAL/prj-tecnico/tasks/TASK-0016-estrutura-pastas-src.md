@@ -17,7 +17,7 @@ tenha um lugar claro nas próximas features.
 ## 2. O que implementar/entregar
 
 - Criar a estrutura definida na story:
-  - `src/app/` (rotas/root do Router v7)
+  - `src/app/` (rotas/root do Router v8)
   - `src/components/layout/`, `src/components/ui/`, `src/components/sections/`
   - `src/pages/` (páginas de rota)
   - `src/content/` (conteúdo como dados)
