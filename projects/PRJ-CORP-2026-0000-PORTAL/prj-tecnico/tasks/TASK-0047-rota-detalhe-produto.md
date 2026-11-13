@@ -19,12 +19,17 @@ Criar a rota dinâmica `/solucoes/:slug` para o detalhe de cada produto.
 
 ## 3. Critério de saída (evidência)
 
-- [ ] Cada produto tem sua página em `/solucoes/:slug`; slug inválido tratado.
+- [x] Cada produto tem sua página em `/solucoes/:slug`; slug inválido tratado.
 
 **Evidências**
 
-*A preencher na execução.*
+- `src/pages/Produto.tsx` (rota dinâmica, lê `:slug` do `saasCatalog`; 404/placeholder para slug inválido) + rota `solucoes/:slug`.
+- `react-router.config.ts`: `prerender` dinâmico (`getStaticPaths()` + slugs do catálogo).
+- `npm run build` → prerender de `/solucoes/educatio`, `/fiscalia`, `/mercator`, `/materiae`.
+- `npx tsc -b` ✅ · `npm run lint` ✅ · `npm run format:check` ✅.
 
 ## 4. Runbook
 
-*A preencher se aplicável.*
+### 4.1 Adicionar um produto (gera a página automaticamente)
+
+Adicione o item em `saasCatalog` (`src/content/saas-catalog.ts`) — o prerender dinâmico gera a rota `/solucoes/:slug`.

@@ -19,12 +19,16 @@ Criar a rota `/techservices` com as frentes da divisão (consultoria TI, engenha
 
 ## 3. Critério de saída (evidência)
 
-- [ ] `/techservices` acessível pela nav e com as frentes da divisão.
+- [x] `/techservices` acessível pela nav e com as frentes da divisão.
 
 **Evidências**
 
-*A preencher na execução.*
+- `src/pages/TechServices.tsx` + `src/content/techservices.ts` (5 frentes) + rota `techservices`.
+- `npm run build` → `Prerender (html): /techservices -> dist/client/techservices/index.html`.
+- `npx tsc -b` ✅ · `npm run lint` ✅ · `npm run format:check` ✅.
 
 ## 4. Runbook
 
-*A preencher se aplicável.*
+### 4.1 Alterar as frentes
+
+Edite `fronts` em `src/content/techservices.ts`.

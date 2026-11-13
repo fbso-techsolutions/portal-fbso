@@ -63,7 +63,12 @@
 
 | Data | Item | O que foi feito (comandos/ações) | Decisões/desvios |
 |---|---|---|---|
-| — | — | — | — |
+| 2026-11-13 | [TASK-0044](../../prj-tecnico/tasks/TASK-0044-pagina-techservices.md) | rota `/techservices` (`TechServices.tsx` + `techservices.ts`: 5 frentes) | prerender `/techservices` ok · US-0003.0001 concluída |
+| 2026-11-13 | [TASK-0045](../../prj-tecnico/tasks/TASK-0045-catalogo-saas-dados.md) | `src/content/saas-catalog.ts` (SaasProduct tipado + 4 produtos) · `Home.tsx` passou a consumir `saasCatalog` | fonte única do catálogo (removida a duplicação em `home.ts`) · US-0004.0001-0018 concluída |
+| 2026-11-13 | [TASK-0046](../../prj-tecnico/tasks/TASK-0046-pagina-solucoes.md) | rota `/solucoes` (`Solucoes.tsx`: grid de `Card` do `saasCatalog`) | prerender `/solucoes` ok · US-0004.0001 concluída |
+| 2026-11-13 | [TASK-0047](../../prj-tecnico/tasks/TASK-0047-rota-detalhe-produto.md) | rota dinâmica `/solucoes/:slug` (`Produto.tsx`) + `prerender` dinâmico no `react-router.config.ts` | 4 páginas de produto prerender · slug inválido → placeholder · US-0004.0002-0020 concluída |
+| 2026-11-13 | [TASK-0048](../../prj-tecnico/tasks/TASK-0048-conteudo-link-produto.md) | `saas-catalog.ts` ganhou `description` · `Produto.tsx` mostra descrição + link externo condicional | link omitido enquanto `link` vazio |
+| 2026-11-13 | [TASK-0049](../../prj-tecnico/tasks/TASK-0049-qa-smoke-portal.md) | QA smoke: 11 rotas prerender + conteúdo presente em todas | smoke aprovado · **Sprint 4 completa** |
 
 ## 7. Sprint Review — `[Encerramento]`
 

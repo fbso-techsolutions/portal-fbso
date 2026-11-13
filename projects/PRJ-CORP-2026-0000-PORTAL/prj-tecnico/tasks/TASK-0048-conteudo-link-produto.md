@@ -19,12 +19,16 @@ Exibir conteúdo (descritivo) por produto + link externo condicional (quando o s
 
 ## 3. Critério de saída (evidência)
 
-- [ ] Página do produto mostra descritivo; link externo condicional.
+- [x] Página do produto mostra descritivo; link externo condicional.
 
 **Evidências**
 
-*A preencher na execução.*
+- `saas-catalog.ts`: campo `description` (longa) adicionado aos 4 produtos.
+- `Produto.tsx`: mostra `description` + link externo **condicional** (`product.link` — omitido quando vazio).
+- `npx tsc -b` ✅ · `npm run lint` ✅ · `npm run format:check` ✅ · `npm run build` ✅.
 
 ## 4. Runbook
 
-*A preencher se aplicável.*
+### 4.1 Habilitar o link externo de um produto
+
+Preencha `link` no item correspondente em `src/content/saas-catalog.ts` — o botão "Acessar o produto" aparece automaticamente.

@@ -19,12 +19,19 @@ Smoke test do portal: TechServices e páginas SaaS acessíveis, catálogo vindo 
 
 ## 3. Critério de saída (evidência)
 
-- [ ] Rotas acessíveis; catálogo/detalhe corretos; checklist registrado.
+- [x] Rotas acessíveis; catálogo/detalhe corretos; checklist registrado.
 
 **Evidências**
 
-*A preencher na execução.*
+- `npm run build` → **11 rotas prerender** (incl. `/techservices`, `/solucoes`, `/solucoes/:slug` × 4).
+- Smoke: header/footer + conteúdo presente em todas as páginas (grep no `dist/client/*.html`).
+- Catálogo vem de `saas-catalog.ts` (fonte única); detalhe por produto com link condicional.
+- `npx tsc -b` ✅ · `npm run lint` ✅ · `npm run format:check` ✅.
 
 ## 4. Runbook
 
-*A preencher se aplicável.*
+### 4.1 Reexecutar o smoke
+
+```bash
+npm run build && grep -rli 'TechServices\|Materiae' dist/client/*/index.html
+```

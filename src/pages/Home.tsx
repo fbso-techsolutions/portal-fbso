@@ -1,5 +1,6 @@
 import type { MetaFunction } from 'react-router';
 import { homeContent } from '@/content/home';
+import { saasCatalog } from '@/content/saas-catalog';
 import { siteContent } from '@/content/site';
 import Button from '@/components/ui/Button';
 import Card from '@/components/ui/Card';
@@ -103,7 +104,7 @@ export default function Home() {
           </div>
 
           <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-            {products.products.map((product) => (
+            {saasCatalog.map((product) => (
               <Card key={product.slug} hoverable>
                 <div className="mb-4 grid h-12 w-12 place-items-center rounded-soft bg-paper text-lg font-extrabold text-blue">
                   {product.symbol}

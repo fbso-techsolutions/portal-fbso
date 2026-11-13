@@ -19,12 +19,16 @@ Modelar o catálogo dos 4 produtos (Educatio, Fiscalia, Mercator, Materiae) como
 
 ## 3. Critério de saída (evidência)
 
-- [ ] `saas-catalog.ts` tipado com os 4 produtos; fonte única (nada hardcoded no JSX).
+- [x] `saas-catalog.ts` tipado com os 4 produtos; fonte única (nada hardcoded no JSX).
 
 **Evidências**
 
-*A preencher na execução.*
+- `src/content/saas-catalog.ts`: `SaasProduct` tipado (slug/name/symbol/tagline/status/link) + 4 produtos.
+- **Refatoração**: `Home.tsx` passou a consumir `saasCatalog` (removida a duplicação em `home.ts` — fonte única).
+- `npx tsc -b` ✅ · `npm run lint` ✅ · `npm run format:check` ✅ · `npm run build` ✅.
 
 ## 4. Runbook
 
-*A preencher se aplicável (ex.: como adicionar um produto).*
+### 4.1 Adicionar um produto
+
+Edite `saasCatalog` em `src/content/saas-catalog.ts`.
