@@ -39,6 +39,10 @@ npm run preview      # valida localmente
 npx wrangler deploy
 ```
 
+> **MVP (Release 1): assets-only.** O `wrangler.jsonc` não declara `main` (sem Worker script): a
+> Cloudflare serve os arquivos de `dist/client/` diretamente; request sem asset correspondente
+> retorna `404`. O Worker script (binding `ASSETS`) entra na **Release 2**, quando houver APIs/SSR.
+
 ## 5. DNS no registro.br
 
 **Nameservers da Cloudflare** (zona `fbso.com.br` — obtidos via ENABLER-0002, 2026-11-12):

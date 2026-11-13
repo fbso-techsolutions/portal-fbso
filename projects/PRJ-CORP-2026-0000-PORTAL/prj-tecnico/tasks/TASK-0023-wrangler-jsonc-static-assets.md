@@ -23,5 +23,37 @@ Configurar o deploy como **Workers + Static Assets** servindo o `dist/client/` p
 
 ## 3. Critério de saída (evidência)
 
-- [ ] `wrangler.jsonc` versionado com `assets.directory = "./dist/client"`.
-- [ ] `wrangler deploy --dry-run` conclui sem erro.
+- [x] `wrangler.jsonc` versionado com `assets.directory = "./dist/client"`.
+- [x] `wrangler deploy --dry-run` conclui sem erro.
+
+**Evidências**
+
+```text
+$ npx wrangler deploy --dry-run
+⛅️ wrangler 4.161.0
+✨ Read 9 files from the assets directory .../dist/client
+Total Upload: 0.31 KiB / gzip: 0.22 KiB
+No bindings found.
+--dry-run: exiting now.        # exit 0
+```
+
+- `wrangler@4.161.0` (devDep, pinado) · `wrangler.jsonc` versionado.
+- **Decisão registrada (MVP):** config é **assets-only** (sem `main`/Worker script). Conforme a doc
+  Cloudflare Static Assets (2026-11-12), request que casa com asset é servido; request sem match
+  retorna `404`. O Worker script entra na R2 (junto do binding `ASSETS`).
+
+## 4. Runbook
+
+### 4.1 Validar a config localmente (sem autenticar)
+
+```bash
+npm run build                    # gera dist/client/ (pré-requisito do dry-run)
+npx wrangler deploy --dry-run    # valida assets + config; exit 0 = ok
+```
+
+### 4.2 Inspecionar o que será publicado
+
+```bash
+find dist/client -type f | sort  # index.html + assets/*.js + assets/*.css
+```
+

@@ -102,6 +102,7 @@
 | 2026-11-13 | [TASK-0020](../../prj-tecnico/tasks/TASK-0020-workflow-ci-github-actions.md) | `.github/workflows/ci.yml` (push/PR em `main`): `npm ci` → lint → typecheck → build → guarda `dist/client/index.html`; Node `24.x` + cache npm; `contents: read`; concorrência por ref | run `43362460685` verde (53s) · negativo `43362583760` falhou no lint e interrompeu typecheck/build |
 | 2026-11-13 | [TASK-0021](../../prj-tecnico/tasks/TASK-0021-setup-node-cache-steps.md) | `.nvmrc` `24.22.1` como fonte única (CI lê via `node-version-file`) · `engines` no `package.json` · cache npm | run `43363856972`: `node: v24.22.1` + `Cache restored from key: node-cache-Linux-x64-npm-…` (hit) |
 | 2026-11-13 | [TASK-0022](../../prj-tecnico/tasks/TASK-0022-branch-protection-status-checks.md) | branch protection da `main` exige o check `lint → typecheck → build` (`strict: true`) · `allow_force_pushes: false` · `enforce_admins: false` (bypass consciente do admin) | PR #17 (descartável) com CI vermelho → `mergeStateStatus: BLOCKED`; runbook de ligar/desligar no card · US-0001.0003-0004 concluída |
+| 2026-11-13 | [TASK-0023](../../prj-tecnico/tasks/TASK-0023-wrangler-jsonc-static-assets.md) | `wrangler@4.161.0` (dev, pinado) · `wrangler.jsonc` assets-only: `assets.directory = "./dist/client"` + `not_found_handling: none` + `compatibility_date 2026-11-13` | `wrangler deploy --dry-run` exit 0 (9 arquivos de `dist/client/`, 0.31 KiB); Worker script (binding ASSETS) fica para a R2 |
 
 ## 7. Decisões pendentes
 
