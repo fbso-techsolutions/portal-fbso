@@ -98,6 +98,7 @@
 | 2026-11-13 | [TASK-0012](../../prj-tecnico/tasks/TASK-0012-eslint-flat-config.md) | `eslint.config.js` flat reorganizado (app browser × tooling Node) · `lint:fix` · probe de lint (2 erros esperados) · removido `@vitejs/plugin-react` | `coding-standards-react.md` inexistente → PENDENCY-0010 (RISK-0002); `react-refresh` libera `meta`/`loader`/`action` |
 | 2026-11-13 | [TASK-0013](../../prj-tecnico/tasks/TASK-0013-prettier-eslint-config.md) | `prettier@3.10.1` + `eslint-config-prettier@10.1.8` · `.prettierrc` (single quote, semi, trailing all, 100) · `format`/`format:check` | `.prettierignore` cobre build + `*.md` (docs formatados à mão); `prettierConfig` é a última config do ESLint |
 | 2026-11-13 | [TASK-0014](../../prj-tecnico/tasks/TASK-0014-tsconfig-strict-alias.md) | `strict: true` nos dois tsconfigs · `paths @/* → src/*` · `resolve.alias` no Vite · imports da Home/root migrados para `@/` | alias validado no build; `tsc -b`/lint/format limpos |
+| 2026-11-13 | [TASK-0015](../../prj-tecnico/tasks/TASK-0015-lint-limpo-documentar.md) | gate `lint && format:check && typecheck` documentado no README · alias `@/` documentado · `isbot@^5` → `5.2.3` (**D-03** fechado) | 100% das deps pinadas; `lint`/`format:check`/`tsc -b` exit 0 · US-0001.0001-0002 concluída |
 
 ## 7. Decisões pendentes
 
