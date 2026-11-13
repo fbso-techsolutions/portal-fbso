@@ -21,13 +21,19 @@ consumo dos tokens definidos na TASK-0028.
 
 ## 3. Critério de saída (evidência)
 
-- [ ] Nenhum valor de cor/tipografia hardcoded nos componentes (`grep` limpo).
-- [ ] Build + preview local sem regressão visual óbvia.
+- [x] Nenhum valor de cor/tipografia hardcoded nos componentes (`grep` limpo).
+- [x] Build + preview local sem regressão visual óbvia.
 
 **Evidências**
 
-*A preencher na execução.*
+- `AppLayout.tsx` e `Home.tsx` passaram a consumir tokens (`bg-navy` · `text-mint` · `text-mist` · `border-blue` · `text-sky`).
+- `grep -rn '\[#' src/` → **vazio** (nenhum valor arbitrário de cor).
+- `npx tsc -b` ✅ · `npm run lint` ✅ · `npm run format:check` ✅ · `npm run build` ✅.
 
 ## 4. Runbook
 
-*A preencher se aplicável.*
+### 4.1 Conferir que não há cor hardcoded
+
+```bash
+grep -rn '\[#' src/   # deve retornar vazio
+```

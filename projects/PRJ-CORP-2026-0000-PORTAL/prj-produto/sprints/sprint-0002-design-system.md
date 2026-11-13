@@ -66,6 +66,7 @@
 | Data | Item | O que foi feito (comandos/ações) | Decisões/desvios |
 |---|---|---|---|
 | 2026-11-13 | [TASK-0028](../../prj-tecnico/tasks/TASK-0028-design-tokens.md) | `@theme` no `src/styles/index.css`: paleta (navy/blue/mint/ink/muted/paper/line/mist/sky) + `--font-sans` Inter + `--radius-soft`/`--shadow-soft` | tokens como fonte única; valores do molde = ponto de partida |
+| 2026-11-13 | [TASK-0029](../../prj-tecnico/tasks/TASK-0029-aplicar-tokens-app.md) | `AppLayout`/`Home` migrados para tokens (`bg-navy`/`text-mint`/`text-mist`/`border-blue`/`text-sky`) | grep `[#` limpo; US-0001.0002-0006 concluída |
 
 ## 7. Sprint Review — `[Encerramento]`
 

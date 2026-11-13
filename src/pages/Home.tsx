@@ -15,9 +15,9 @@ export default function Home() {
     <section className="max-w-3xl text-center">
       <h1 className="mb-4 text-4xl font-bold text-white md:text-6xl">{homeContent.title}</h1>
 
-      <p className="text-lg leading-relaxed text-[#b8c5d6]">{homeContent.lead}</p>
+      <p className="text-lg leading-relaxed text-mist">{homeContent.lead}</p>
 
-      <span className="mt-6 inline-block rounded-full border border-[#1e88e5] px-4 py-2 text-sm text-[#90caf9]">
+      <span className="mt-6 inline-block rounded-full border border-blue px-4 py-2 text-sm text-sky">
         {homeContent.badge}
       </span>
     </section>
