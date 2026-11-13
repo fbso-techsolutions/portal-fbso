@@ -27,8 +27,8 @@ Garantir encontrabilidade orgânica e compartilhamento correto.
 
 | ID | História |
 |---|---|
-| (a detalhar) | Metadados (title/description/OG) por página |
-| (a detalhar) | `sitemap.xml` + `robots.txt` |
+| [US-FEAT-0005.0001-0022](../user-stories/US-FEAT-0005.0001-0022-metadados-pagina.md) | Metadados (title/description/OG) por página |
+| [US-FEAT-0005.0001-0023](../user-stories/US-FEAT-0005.0001-0023-sitemap-robots.md) | `sitemap.xml` + `robots.txt` |
 
 ## 7. Critérios de aceite (DoD)
 

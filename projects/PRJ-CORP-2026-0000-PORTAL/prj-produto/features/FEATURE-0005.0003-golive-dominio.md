@@ -30,8 +30,8 @@ Publicar o portal no domínio `fbso.com.br` com homologação.
 
 | ID | História |
 |---|---|
-| (a detalhar) | Configurar domínio custom + HTTPS |
-| (a detalhar) | Homologação e go-live |
+| [US-FEAT-0005.0003-0026](../user-stories/US-FEAT-0005.0003-0026-dominio-custom-https.md) | Configurar domínio custom + HTTPS |
+| [US-FEAT-0005.0003-0027](../user-stories/US-FEAT-0005.0003-0027-homologacao-golive.md) | Homologação e go-live |
 
 ## 7. Critérios de aceite (DoD)
 

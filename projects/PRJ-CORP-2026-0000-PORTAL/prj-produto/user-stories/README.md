@@ -25,5 +25,9 @@
 | [US-FEAT-0004.0001-0019 — Página /solucoes](US-FEAT-0004.0001-0019-pagina-solucoes.md) | 0004.0001 | S6 | 📝 Rascunho |
 | [US-FEAT-0004.0002-0020 — Rota detalhe produto](US-FEAT-0004.0002-0020-rota-detalhe-produto.md) | 0004.0002 | S6 | 📝 Rascunho |
 | [US-FEAT-0004.0002-0021 — Conteúdo/link produto](US-FEAT-0004.0002-0021-conteudo-link-produto.md) | 0004.0002 | S6 | 📝 Rascunho |
-
-> Stories das demais features (S7–S8) são detalhadas no refinamento de cada sprint.
+| [US-FEAT-0005.0001-0022 — Metadados por página](US-FEAT-0005.0001-0022-metadados-pagina.md) | 0005.0001 | S7 | 📝 Rascunho |
+| [US-FEAT-0005.0001-0023 — sitemap + robots](US-FEAT-0005.0001-0023-sitemap-robots.md) | 0005.0001 | S7 | 📝 Rascunho |
+| [US-FEAT-0005.0002-0024 — Responsividade](US-FEAT-0005.0002-0024-responsividade.md) | 0005.0002 | S7 | 📝 Rascunho |
+| [US-FEAT-0005.0002-0025 — Acessibilidade básica](US-FEAT-0005.0002-0025-acessibilidade-basica.md) | 0005.0002 | S7 | 📝 Rascunho |
+| [US-FEAT-0005.0003-0026 — Domínio custom + HTTPS](US-FEAT-0005.0003-0026-dominio-custom-https.md) | 0005.0003 | S8 | 📝 Rascunho |
+| [US-FEAT-0005.0003-0027 — Homologação e go-live](US-FEAT-0005.0003-0027-homologacao-golive.md) | 0005.0003 | S8 | 📝 Rascunho |

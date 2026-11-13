@@ -26,8 +26,8 @@ Portal utilizável em qualquer dispositivo e por todos os públicos.
 
 | ID | História |
 |---|---|
-| (a detalhar) | Responsividade de todas as páginas |
-| (a detalhar) | Acessibilidade básica (semântica/contraste/foco) |
+| [US-FEAT-0005.0002-0024](../user-stories/US-FEAT-0005.0002-0024-responsividade.md) | Responsividade de todas as páginas |
+| [US-FEAT-0005.0002-0025](../user-stories/US-FEAT-0005.0002-0025-acessibilidade-basica.md) | Acessibilidade básica (semântica/contraste/foco) |
 
 ## 7. Critérios de aceite (DoD)
 
