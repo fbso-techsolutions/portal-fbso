@@ -72,8 +72,8 @@
 |---|---|
 | 🚩 | 2 |
 | 💡 | 11 |
-| 👷 | 2 |
-| 🏁 | 5 |
+| 👷 | 0 |
+| 🏁 | 7 |
 | 🚫 | 0 |
 
 > **Requisitos 🚩** (não-iniciado, sem épico): **B-REQ-08** (analytics/origem de acessos/leads) e

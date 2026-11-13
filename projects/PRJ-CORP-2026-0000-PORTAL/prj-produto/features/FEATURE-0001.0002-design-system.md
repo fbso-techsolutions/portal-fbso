@@ -7,7 +7,7 @@
 | B-REQ dona | B-REQ-02 |
 | Prioridade | Onda 1-Must (MVP) |
 | 🔒 Travada por | — (livre) |
-| Status | ✅ Revisado (2026-11-11) |
+| Status | ✅ Entregue (2026-11-13) |
 
 ## 1. Objetivo de negócio
 
@@ -32,5 +32,5 @@ Estabelecer a identidade visual (tokens) e os componentes base que darão consis
 
 ## 7. Critérios de aceite (DoD)
 
-- [ ] Tokens consumíveis via Tailwind theme, sem valores hardcoded nos componentes.
-- [ ] Componentes base `ui/` (Button, Card, Section, Badge) tipados, acessíveis e responsivos.
+- [x] Tokens consumíveis via Tailwind theme, sem valores hardcoded nos componentes.
+- [x] Componentes base `ui/` (Button, Card, Section, Badge) tipados, acessíveis e responsivos.
