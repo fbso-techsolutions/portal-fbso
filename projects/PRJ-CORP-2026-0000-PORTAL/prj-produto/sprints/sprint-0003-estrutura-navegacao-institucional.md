@@ -81,6 +81,7 @@
 | 2026-11-13 | [TASK-0038](../../prj-tecnico/tasks/TASK-0038-posicionamento-diferenciais.md) | `Home`: posicionamento (3 pilares em `Card`) + resumo TechServices (check-list) · `home.ts` ganhou `positioning`/`services` | usa `Card`/`Badge`; textos de `src/content/` |
 | 2026-11-13 | [TASK-0039](../../prj-tecnico/tasks/TASK-0039-ecossistema-saas-cta.md) | `Home`: ecossistema SaaS (4 `Card` de produto) + CTA "vamos conversar" · `home.ts` ganhou `products`/`cta` | cards linkam para `/solucoes/:slug` (rota da S4) · US-0002.0002 concluída |
 | 2026-11-13 | [TASK-0040](../../prj-tecnico/tasks/TASK-0040-pagina-sobre.md) | rota `/sobre` (`Sobre.tsx` + `sobre.ts`: quem somos/missão/valores) | prerender `/sobre` ok · US-0002.0003 concluída |
+| 2026-11-13 | [TASK-0041](../../prj-tecnico/tasks/TASK-0041-pagina-contato.md) | rota `/contato` (`Contato.tsx` + `contato.ts`: e-mail) | sem formulário (R2); prerender `/contato` ok · US-0002.0004 concluída |
 
 ## 7. Sprint Review — `[Encerramento]`
 

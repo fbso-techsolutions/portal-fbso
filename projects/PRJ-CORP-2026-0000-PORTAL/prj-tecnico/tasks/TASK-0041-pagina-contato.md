@@ -19,12 +19,16 @@ Criar a rota `/contato` com e-mail e canais comerciais (links), sem formulário 
 
 ## 3. Critério de saída (evidência)
 
-- [ ] `/contato` acessível pela nav; lista canais sem backend.
+- [x] `/contato` acessível pela nav; lista canais sem backend.
 
 **Evidências**
 
-*A preencher na execução.*
+- `src/pages/Contato.tsx` + `src/content/contato.ts` (canais: e-mail) + rota `contato`.
+- `npm run build` → `Prerender (html): /contato -> dist/client/contato/index.html`.
+- `npx tsc -b` ✅ · `npm run lint` ✅ · `npm run format:check` ✅.
 
 ## 4. Runbook
 
-*A preencher se aplicável.*
+### 4.1 Alterar canais
+
+Edite `channels` em `src/content/contato.ts`.
