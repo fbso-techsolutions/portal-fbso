@@ -28,7 +28,7 @@
 | [FEATURE-0004.0001](../features/FEATURE-0004.0001-catalogo-saas.md) | Catálogo SaaS (dados + cards) | a detalhar (S6) |
 | [FEATURE-0004.0002](../features/FEATURE-0004.0002-pagina-produto.md) | Página de produto (detalhe por SaaS) | a detalhar (S6) |
 
-> ⚠️ O catálogo já referencia **Materiae** (novo nome do `saas-rmr`) — renome do repo é
-> [PENDENCY-0006](../../pendencias.md), ação separada.
+> ✅ O catálogo já referencia **Materiae** — repo renomeado `saas-rmr` → `saas-materiae`
+> (2026-11-13, [PENDENCY-0006](../../pendencias.md) respondida).
 
 > 💡 **Rastreabilidade:** [matriz](../rastreabilidade.md) · **Backlog:** [BACKLOG-LIST](../../../../docs/produto/backlog/BACKLOG-LIST.md).

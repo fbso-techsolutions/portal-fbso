@@ -7,8 +7,8 @@ import tseslint from 'typescript-eslint';
 import { defineConfig, globalIgnores } from 'eslint/config';
 
 // Flat config (ESLint 10). Sem `.eslintrc`/`extends` de config legada.
-// Referência de estilo da org: platform-standards/standards/engineering
-// (`coding-standards-react.md` ainda não publicado — PENDENCY-0010 / RISK-0002).
+// Alinhada ao padrão da org:
+// https://github.com/fbso-techsolutions/platform-standards/blob/main/standards/engineering/coding-standards-react.md
 export default defineConfig([
   // Build, artefatos gerados e dependências.
   globalIgnores(['dist', 'build', '.react-router', 'coverage']),

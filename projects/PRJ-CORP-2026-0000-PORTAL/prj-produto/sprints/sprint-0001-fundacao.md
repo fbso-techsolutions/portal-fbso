@@ -64,7 +64,7 @@
 | ID | Risco | Impacto | Mitigação |
 |---|---|---|---|
 | RISK-0001 | Domínio/NS no registro.br atrasa | Baixo (não bloqueia deploy preview) | deploy em URL Cloudflare até NS propagar |
-| RISK-0002 | `coding-standards-react.md` ainda inexistente | Baixo | alinhar por referência; registrar pendência |
+| RISK-0002 | ~~`coding-standards-react.md` ainda inexistente~~ ✅ **criado** (2026-11-13, ADR-007) | Baixo | alinhar por referência; registrar pendência |
 
 ## 5. Definition of Done
 
@@ -128,11 +128,10 @@
 | Item | Descrição | Dono |
 |---|---|---|
 | PENDENCY-0009 | Assinatura do ADR-001 (Tech lead + Arquiteto) | Tech lead + Arquiteto |
-| PENDENCY-0010 | `coding-standards-react.md` inexistente na platform-standards (`RISK-0002`) | Arquiteto |
 | Limitação R2 | `/__manifest` (route discovery) retorna 404 no deploy estático — exige Worker/binding `ASSETS` | Infra |
 | Go-live | Delegação NS `fbso.com.br` no registro.br (FEATURE-0005.0003) | Infra/DevOps |
 
-> As pendências PENDENCY-0004/0006 seguem em [pendencias.md](../pendencias.md) (não pertencem à fundação).
+> As pendências PENDENCY-0004/0009 seguem em [pendencias.md](../pendencias.md) (não pertencem à fundação).
 
 ---
 
