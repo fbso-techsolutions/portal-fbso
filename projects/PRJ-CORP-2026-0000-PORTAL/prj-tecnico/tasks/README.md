@@ -59,8 +59,14 @@
 | [TASK-0041 — Página Contato](TASK-0041-pagina-contato.md) | US-FEAT-0002.0004-0015 | Alfredo Bento | 3h | TASK-0034 · TASK-0035 |
 | [TASK-0042 — Páginas legais](TASK-0042-paginas-legais.md) | US-FEAT-0002.0005-0016 | Alfredo Bento | 2h | TASK-0034 · TASK-0035 |
 | [TASK-0043 — QA smoke do portal](TASK-0043-qa-smoke-portal.md) | US-FEAT-0002.0001-0010 | Patricia Varra | 3h | TASK-0036 · TASK-0042 |
+| [TASK-0044 — Página TechServices](TASK-0044-pagina-techservices.md) | US-FEAT-0003.0001-0017 | Alfredo Bento | 4h | — |
+| [TASK-0045 — Catálogo SaaS (dados)](TASK-0045-catalogo-saas-dados.md) | US-FEAT-0004.0001-0018 | Alfredo Bento | 3h | — |
+| [TASK-0046 — Página /solucoes](TASK-0046-pagina-solucoes.md) | US-FEAT-0004.0001-0019 | Alfredo Bento | 4h | TASK-0045 |
+| [TASK-0047 — Rota /solucoes/:slug](TASK-0047-rota-detalhe-produto.md) | US-FEAT-0004.0002-0020 | Alfredo Bento | 5h | TASK-0045 |
+| [TASK-0048 — Conteúdo/link por produto](TASK-0048-conteudo-link-produto.md) | US-FEAT-0004.0002-0021 | Alfredo Bento | 2h | TASK-0047 |
+| [TASK-0049 — QA smoke do portal](TASK-0049-qa-smoke-portal.md) | US-FEAT-0004.0002-0021 | Patricia Varra | 2h | TASK-0044 · TASK-0048 |
 
-**Totais:** 43 tasks · ~109h de esforço estimado (a calibrar na execução).
+**Totais:** 49 tasks · ~129h de esforço estimado (a calibrar na execução).
 
 ## Formato do card
 

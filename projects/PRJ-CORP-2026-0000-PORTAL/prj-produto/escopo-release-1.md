@@ -21,17 +21,14 @@
 - Analytics e captura de leads (→ Release 2 — B-REQ-08).
 - SSO / acesso unificado (→ Release 3 — B-REQ-09).
 
-## 3. Ordem de entrega (8 sprints · 2 semanas · a partir de 16/11/2026)
+## 3. Ordem de entrega (5 sprints · 2 semanas · a partir de 16/11/2026)
 
 | Sprint | Período | Features |
 |---|---|---|
 | **S1 — Fundação** ✅ | 16/11 – 27/11 | FEATURE-0001.0001 (scaffold) · FEATURE-0001.0003 (CI/CD) |
 | **S2 — Design System** ✅ | 30/11 – 11/12 | FEATURE-0001.0002 |
 | **S3 — Estrutura, navegação e institucional** 📋 | 14/12 – 24/12 | FEATURE-0002.0001 (layout) + 0002.0002…0002.0005 (Home/Sobre/Contato/Legais) |
-| ~~**S4 — Home e institucional**~~ | — | → **absorvida pela S3** (escopo fundido, decisão de Planning 2026-11-13) |
-| **S5 — TechServices** | 11/01 – 22/01 | FEATURE-0003.0001 |
-| **S6 — Portfólio SaaS** | 25/01 – 05/02 | FEATURE-0004.0001 (catálogo) · 0004.0002 (página produto) |
-| **S7 — SEO/a11y/responsivo** | 08/02 – 19/02 | FEATURE-0005.0001 (SEO) · 0005.0002 (a11y) |
-| **S8 — Publicação e homologação** | 22/02 – 05/03 | FEATURE-0005.0003 (go-live) |
+| **S4 — TechServices e Portfólio SaaS** 📋 | 11/01 – 22/01 | FEATURE-0003.0001 · 0004.0001 (catálogo) · 0004.0002 (página produto) |
+| **S5 — SEO, a11y e go-live** | 25/01 – 05/02 | FEATURE-0005.0001 (SEO) · 0005.0002 (a11y) · 0005.0003 (go-live) |
 
-> ⚠️ S3/S4 cruzam feriados de fim de ano (Natal/Ano Novo) — ajustar capacidade no planning.
+> ⚠️ S3 (14/12–24/12) cruza o recesso de fim de ano (Natal/Ano Novo); S4 inicia em 11/01 após o retorno.
