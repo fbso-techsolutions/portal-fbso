@@ -36,6 +36,7 @@ React + TypeScript · Vite · Tailwind CSS v4 · React Router v8 (framework mode
 | `npm run preview` | serve o build de `dist/client/` localmente |
 | `npm run typecheck` | checa os tipos (`tsc -b`) |
 | `npm run lint` | roda o ESLint |
+| `npm run lint:fix` | aplica as correções automáticas do ESLint |
 | `npm audit` | checa vulnerabilidades (total) |
 | `npm audit --omit=dev` | checa vulnerabilidades só de produção |
 

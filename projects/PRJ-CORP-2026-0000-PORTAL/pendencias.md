@@ -10,6 +10,7 @@
 | PENDENCY-0004 | Subdomínio × domínio próprio para os SaaS (afeta B-REQ-05 e Release 3) | Arquiteto + PM/PO | — | 🟡 aberta |
 | PENDENCY-0006 | Renome `saas-rmr` → `saas-materiae` (ação separada, reflete no catálogo) | Arquiteto | — | 🟡 aberta |
 | PENDENCY-0009 | Assinatura do ADR-001 (Tech lead + Arquiteto) — status segue `📝 Proposta` | Francisco Oliveira + Bolismar da Silva | — | 🟡 aberta |
+| PENDENCY-0010 | `coding-standards-react.md` inexistente na platform-standards (`RISK-0002`) — ESLint alinhado ao preset `typescript-eslint` recomendado até a publicação | Arquiteto | — | 🟡 aberta |
 
 ## Respondidas
 

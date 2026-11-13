@@ -5,10 +5,16 @@ import reactRefresh from 'eslint-plugin-react-refresh'
 import tseslint from 'typescript-eslint'
 import { defineConfig, globalIgnores } from 'eslint/config'
 
+// Flat config (ESLint 10). Sem `.eslintrc`/`extends` de config legada.
+// Referência de estilo da org: platform-standards/standards/engineering
+// (`coding-standards-react.md` ainda não publicado — PENDENCY-0010 / RISK-0002).
 export default defineConfig([
-  globalIgnores(['dist', '.react-router']),
+  // Build, artefatos gerados e dependências.
+  globalIgnores(['dist', 'build', '.react-router', 'coverage']),
+
+  // Aplicação (browser): React + TypeScript + hooks.
   {
-    files: ['**/*.{ts,tsx}'],
+    files: ['src/**/*.{ts,tsx}'],
     extends: [
       js.configs.recommended,
       tseslint.configs.recommended,
@@ -18,15 +24,21 @@ export default defineConfig([
     languageOptions: {
       globals: globals.browser,
     },
-  },
-  {
-    // React Router: rotas exportam `meta`/`loader`/`action` além do componente.
-    files: ['src/**/*.{ts,tsx}'],
     rules: {
+      // React Router: rotas exportam `meta`/`links`/`loader`/`action` além do componente.
       'react-refresh/only-export-components': [
         'error',
         { allowExportNames: ['meta', 'links', 'headers', 'loader', 'action'] },
       ],
+    },
+  },
+
+  // Arquivos de tooling na raiz (Node).
+  {
+    files: ['*.config.{js,ts}', 'eslint.config.js'],
+    extends: [js.configs.recommended, ...tseslint.configs.recommended],
+    languageOptions: {
+      globals: globals.node,
     },
   },
 ])

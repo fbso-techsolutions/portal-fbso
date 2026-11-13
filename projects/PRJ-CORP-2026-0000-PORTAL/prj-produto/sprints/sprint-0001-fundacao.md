@@ -95,6 +95,7 @@
 | 2026-11-13 | [TASK-0018](../../prj-tecnico/tasks/TASK-0018-conteudo-src-content.md) | `src/content/site.ts` + `src/content/home.ts` com `SiteContent`/`HomeContent` | conteúdo como dados; meta da Home lê `siteContent` (sem literal no JSX) |
 | 2026-11-13 | [TASK-0019](../../prj-tecnico/tasks/TASK-0019-build-prerender-smoke-local.md) | `npm run build` → `dist/client/index.html` com "hello world"/header/footer · `npm run preview` (HTTP 200) | script `preview` = `vite preview --outDir dist/client`; sem erro no preview |
 | 2026-11-13 | [TASK-0027](../../prj-tecnico/tasks/TASK-0027-revisao-aderencia-adr-001.md) | revisão direta do repo vs ADR-001/ARCHITECTURE (stack, prerender, pastas, conteúdo-como-dados) | parecer em [revisões/](../../../../docs/tecnico/arquitetura/revisoes/revisao-2026-11-13-aderencia-adr-001.md); D-01 `dist/client` corrigido nos docs; D-02/D-03 → TASK-0012/0015; D-04 → TASK-0014; PENDENCY-0009 (assinatura ADR-001) |
+| 2026-11-13 | [TASK-0012](../../prj-tecnico/tasks/TASK-0012-eslint-flat-config.md) | `eslint.config.js` flat reorganizado (app browser × tooling Node) · `lint:fix` · probe de lint (2 erros esperados) · removido `@vitejs/plugin-react` | `coding-standards-react.md` inexistente → PENDENCY-0010 (RISK-0002); `react-refresh` libera `meta`/`loader`/`action` |
 
 ## 7. Decisões pendentes
 
