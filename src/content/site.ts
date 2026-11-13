@@ -28,6 +28,8 @@ export interface SiteContent {
   contactEmail: string;
   /** Texto do rodapé (nome). */
   footer: string;
+  /** Itens da navegação principal. */
+  navItems: NavItem[];
   /** Links institucionais do rodapé. */
   footerInstitutional: NavItem[];
   /** Links legais do rodapé. */
@@ -46,6 +48,13 @@ export const siteContent: SiteContent = {
     'FBSO Technology Solutions: tecnologia, consultoria e software para construir um futuro mais eficiente.',
   contactEmail: 'contato@fbso.com.br',
   footer: 'FBSO Technology Solutions',
+  navItems: [
+    { label: 'Home', href: '/' },
+    { label: 'Sobre', href: '/sobre' },
+    { label: 'TechServices', href: '/techservices' },
+    { label: 'Soluções', href: '/solucoes' },
+    { label: 'Contato', href: '/contato' },
+  ],
   footerInstitutional: [
     { label: 'A empresa', href: '/sobre' },
     { label: 'FBSO TechServices', href: '/techservices' },

@@ -37,6 +37,14 @@ export default function AppLayout({ children }: AppLayoutProps) {
             </span>
           </a>
 
+          <nav className="hidden items-center gap-7 text-sm font-semibold text-ink md:flex">
+            {siteContent.navItems.map((item) => (
+              <a key={item.href} href={item.href} className="hover:text-blue">
+                {item.label}
+              </a>
+            ))}
+          </nav>
+
           <Button variant="primary" href="/contato">
             {siteContent.navCta}
           </Button>
