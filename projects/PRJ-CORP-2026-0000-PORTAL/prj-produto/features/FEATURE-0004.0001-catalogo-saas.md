@@ -7,7 +7,7 @@
 | B-REQ dona | B-REQ-04 |
 | Prioridade | Onda 1-Must (MVP) |
 | 🔒 Travada por | FEATURE-0002.0002 (Home, seção ecossistema) |
-| Status | 📝 Rascunho (2026-11-11) |
+| Status | ✅ Revisado (2026-11-13) |
 
 ## 1. Objetivo de negócio
 
@@ -27,8 +27,8 @@ modelado **como dados** em `src/content/saas-catalog.ts`.
 
 | ID | História |
 |---|---|
-| (a detalhar) | Modelar catálogo SaaS como dados (`src/content/saas-catalog.ts`) |
-| (a detalhar) | Página `/solucoes` com cards |
+| [US-FEAT-0004.0001-0018](../user-stories/US-FEAT-0004.0001-0018-catalogo-saas-dados.md) | Modelar catálogo SaaS como dados (`src/content/saas-catalog.ts`) |
+| [US-FEAT-0004.0001-0019](../user-stories/US-FEAT-0004.0001-0019-pagina-solucoes.md) | Página `/solucoes` com cards |
 
 ## 7. Critérios de aceite (DoD)
 

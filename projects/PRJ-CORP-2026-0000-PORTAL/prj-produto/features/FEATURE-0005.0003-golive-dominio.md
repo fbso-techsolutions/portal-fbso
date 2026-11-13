@@ -7,7 +7,7 @@
 | B-REQ dona | B-REQ-07 |
 | Prioridade | Onda 1-Must (MVP) |
 | 🔒 Travada por | FEATURE-0005.0001 (SEO) · FEATURE-0005.0002 (a11y) |
-| Status | 📝 Rascunho (2026-11-11) |
+| Status | ✅ Revisado (2026-11-13) |
 
 ## 1. Objetivo de negócio
 
@@ -30,8 +30,8 @@ Publicar o portal no domínio `fbso.com.br` com homologação.
 
 | ID | História |
 |---|---|
-| (a detalhar) | Configurar domínio custom + HTTPS |
-| (a detalhar) | Homologação e go-live |
+| [US-FEAT-0005.0003-0026](../user-stories/US-FEAT-0005.0003-0026-dominio-custom-https.md) | Configurar domínio custom + HTTPS |
+| [US-FEAT-0005.0003-0027](../user-stories/US-FEAT-0005.0003-0027-homologacao-golive.md) | Homologação e go-live |
 
 ## 7. Critérios de aceite (DoD)
 

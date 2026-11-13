@@ -7,7 +7,7 @@
 | B-REQ dona | B-REQ-06 |
 | Prioridade | Onda 1-Must (MVP) |
 | 🔒 Travada por | FEATURE-0002.0001 (layout) |
-| Status | 📝 Rascunho (2026-11-11) |
+| Status | ✅ Revisado (2026-11-13) |
 
 ## 1. Objetivo de negócio
 
@@ -25,7 +25,7 @@ Dar ao visitante os canais de contato e comerciais.
 
 | ID | História |
 |---|---|
-| (a detalhar) | Página Contato (canais) |
+| [US-FEAT-0002.0004-0015](../user-stories/US-FEAT-0002.0004-0015-pagina-contato.md) | Página Contato (canais) |
 
 ## 7. Critérios de aceite (DoD)
 

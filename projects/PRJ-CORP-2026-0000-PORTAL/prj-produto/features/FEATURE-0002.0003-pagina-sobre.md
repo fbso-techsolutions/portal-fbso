@@ -7,7 +7,7 @@
 | B-REQ dona | B-REQ-01 |
 | Prioridade | Onda 1-Must (MVP) |
 | 🔒 Travada por | FEATURE-0002.0001 (layout) |
-| Status | 📝 Rascunho (2026-11-11) |
+| Status | ✅ Revisado (2026-11-13) |
 
 ## 1. Objetivo de negócio
 
@@ -25,7 +25,7 @@ Apresentar a FBSO Technology Solutions (quem somos, missão, valores).
 
 | ID | História |
 |---|---|
-| (a detalhar) | Página Sobre (quem somos) |
+| [US-FEAT-0002.0003-0014](../user-stories/US-FEAT-0002.0003-0014-pagina-sobre.md) | Página Sobre (quem somos) |
 
 ## 7. Critérios de aceite (DoD)
 

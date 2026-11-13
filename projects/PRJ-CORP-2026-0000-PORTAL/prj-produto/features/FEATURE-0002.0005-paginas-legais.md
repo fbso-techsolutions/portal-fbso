@@ -7,7 +7,7 @@
 | B-REQ dona | B-REQ-01 |
 | Prioridade | Onda 1-Must (MVP) |
 | 🔒 Travada por | FEATURE-0002.0001 (layout) |
-| Status | 📝 Rascunho (2026-11-11) |
+| Status | ✅ Revisado (2026-11-13) |
 
 ## 1. Objetivo de negócio
 
@@ -26,7 +26,7 @@ Atender transparência/conformidade com páginas legais.
 
 | ID | História |
 |---|---|
-| (a detalhar) | Páginas legais (privacidade/termos) |
+| [US-FEAT-0002.0005-0016](../user-stories/US-FEAT-0002.0005-0016-paginas-legais.md) | Páginas legais (privacidade/termos) |
 
 ## 7. Critérios de aceite (DoD)
 

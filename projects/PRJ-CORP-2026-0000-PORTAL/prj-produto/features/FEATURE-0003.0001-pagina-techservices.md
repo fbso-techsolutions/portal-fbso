@@ -7,7 +7,7 @@
 | B-REQ dona | B-REQ-03 |
 | Prioridade | Onda 1-Must (MVP) |
 | 🔒 Travada por | FEATURE-0002.0001 (layout) |
-| Status | 📝 Rascunho (2026-11-11) |
+| Status | ✅ Revisado (2026-11-13) |
 
 ## 1. Objetivo de negócio
 
@@ -26,7 +26,7 @@ Apresentar a divisão de consultoria **FBSO TechServices**.
 
 | ID | História |
 |---|---|
-| (a detalhar) | Página FBSO TechServices |
+| [US-FEAT-0003.0001-0017](../user-stories/US-FEAT-0003.0001-0017-pagina-techservices.md) | Página FBSO TechServices |
 
 ## 7. Critérios de aceite (DoD)
 

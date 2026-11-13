@@ -7,7 +7,7 @@
 | B-REQs atendidas | B-REQ-01 · B-REQ-02 · B-REQ-06 |
 | Features | 5 — `FEATURE-0002.0001` … `FEATURE-0002.0005` |
 | Prioridade | Onda 1-Must (MVP) |
-| Status | 📝 Rascunho (2026-11-11) |
+| Status | ✅ Revisado (2026-11-13) |
 
 ## 1. Objetivo
 

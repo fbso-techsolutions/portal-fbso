@@ -7,7 +7,7 @@
 | B-REQ dona | B-REQ-01 · B-REQ-02 |
 | Prioridade | Onda 1-Must (MVP) |
 | 🔒 Travada por | FEATURE-0002.0001 (layout) |
-| Status | 📝 Rascunho (2026-11-11) |
+| Status | ✅ Revisado (2026-11-11) |
 
 ## 1. Objetivo de negócio
 
@@ -27,9 +27,9 @@ diferenciais → CTA → rodapé.
 
 | ID | História |
 |---|---|
-| (a detalhar) | Hero institucional |
-| (a detalhar) | Seções de posicionamento e diferenciais |
-| (a detalhar) | Seção ecossistema SaaS + CTA |
+| [US-FEAT-0002.0002-0011](../user-stories/US-FEAT-0002.0002-0011-hero-institucional.md) | Hero institucional |
+| [US-FEAT-0002.0002-0012](../user-stories/US-FEAT-0002.0002-0012-posicionamento-diferenciais.md) | Seções de posicionamento e diferenciais |
+| [US-FEAT-0002.0002-0013](../user-stories/US-FEAT-0002.0002-0013-ecossistema-saas-cta.md) | Seção ecossistema SaaS + CTA |
 
 ## 7. Critérios de aceite (DoD)
 

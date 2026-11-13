@@ -7,7 +7,7 @@
 | B-REQ dona | B-REQ-07 |
 | Prioridade | Onda 1-Must (MVP) |
 | 🔒 Travada por | — (aplicado sobre as páginas existentes) |
-| Status | 📝 Rascunho (2026-11-11) |
+| Status | ✅ Revisado (2026-11-13) |
 
 ## 1. Objetivo de negócio
 
@@ -27,8 +27,8 @@ Garantir encontrabilidade orgânica e compartilhamento correto.
 
 | ID | História |
 |---|---|
-| (a detalhar) | Metadados (title/description/OG) por página |
-| (a detalhar) | `sitemap.xml` + `robots.txt` |
+| [US-FEAT-0005.0001-0022](../user-stories/US-FEAT-0005.0001-0022-metadados-pagina.md) | Metadados (title/description/OG) por página |
+| [US-FEAT-0005.0001-0023](../user-stories/US-FEAT-0005.0001-0023-sitemap-robots.md) | `sitemap.xml` + `robots.txt` |
 
 ## 7. Critérios de aceite (DoD)
 
