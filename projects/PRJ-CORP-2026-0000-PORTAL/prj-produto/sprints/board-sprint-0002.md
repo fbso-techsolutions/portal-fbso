@@ -23,7 +23,7 @@
 | 🏁 | [TASK-0028 — design tokens](../../prj-tecnico/tasks/TASK-0028-design-tokens.md) | [US-0001.0002-0006](../user-stories/US-FEAT-0001.0002-0006-design-tokens.md) | ✅ Entregue | 3 | S2 | Alfredo Bento | [PR #32](https://github.com/fbso-techsolutions/portal-fbso/pull/32) |
 | 🏁 | [TASK-0029 — aplicar tokens no app](../../prj-tecnico/tasks/TASK-0029-aplicar-tokens-app.md) | [US-0001.0002-0006](../user-stories/US-FEAT-0001.0002-0006-design-tokens.md) | ✅ Entregue | 2 | S2 | Alfredo Bento | [PR #32](https://github.com/fbso-techsolutions/portal-fbso/pull/32) |
 | 🏁 | [TASK-0030 — componente Button](../../prj-tecnico/tasks/TASK-0030-componente-button.md) | [US-0001.0002-0007](../user-stories/US-FEAT-0001.0002-0007-componentes-ui.md) | ✅ Entregue | 3 | S2 | Alfredo Bento | [PR #32](https://github.com/fbso-techsolutions/portal-fbso/pull/32) |
-| 💡 | [TASK-0031 — componentes Card + Section](../../prj-tecnico/tasks/TASK-0031-componentes-card-section.md) | [US-0001.0002-0007](../user-stories/US-FEAT-0001.0002-0007-componentes-ui.md) | ⬜ A fazer | 3 | S2 | Alfredo Bento | — |
+| 🏁 | [TASK-0031 — componentes Card + Section](../../prj-tecnico/tasks/TASK-0031-componentes-card-section.md) | [US-0001.0002-0007](../user-stories/US-FEAT-0001.0002-0007-componentes-ui.md) | ✅ Entregue | 3 | S2 | Alfredo Bento | [PR #32](https://github.com/fbso-techsolutions/portal-fbso/pull/32) |
 | 💡 | [TASK-0032 — Badge + responsividade + QA](../../prj-tecnico/tasks/TASK-0032-badge-responsividade-qa.md) | [US-0001.0002-0007](../user-stories/US-FEAT-0001.0002-0007-componentes-ui.md) | ⬜ A fazer | 2 | S2 | Alfredo Bento + Patricia Varra | — |
 
 **Total de esforço:** 13h.
