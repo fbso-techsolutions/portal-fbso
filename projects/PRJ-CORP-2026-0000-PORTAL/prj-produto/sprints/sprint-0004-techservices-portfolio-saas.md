@@ -63,7 +63,7 @@
 
 | Data | Item | O que foi feito (comandos/ações) | Decisões/desvios |
 |---|---|---|---|
-| — | — | — | — |
+| 2026-11-13 | [TASK-0044](../../prj-tecnico/tasks/TASK-0044-pagina-techservices.md) | rota `/techservices` (`TechServices.tsx` + `techservices.ts`: 5 frentes) | prerender `/techservices` ok · US-0003.0001 concluída |
 
 ## 7. Sprint Review — `[Encerramento]`
 
