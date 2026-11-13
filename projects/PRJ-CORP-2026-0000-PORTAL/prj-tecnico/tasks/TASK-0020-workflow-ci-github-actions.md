@@ -30,6 +30,7 @@ Criar o pipeline de **integração contínua** que valida todo push/PR, bloquean
 
 - PR [#14](https://github.com/fbso-techsolutions/portal-fbso/pull/14) → run `43362460685`:
   steps `Lint` · `Typecheck` · `Build` · `Verificar artefato de build` todos verdes (53s).
+  Runner **pinado** em `ubuntu-24.04` (evita a migração silenciosa do `ubuntu-latest`) — run `43362876539` verde.
 - Teste negativo (branch descartável, PR [#15](https://github.com/fbso-techsolutions/portal-fbso/pull/15)
   fechado) → run `43362583760`: `Lint` falhou (exit 1, `no-explicit-any` + `no-unused-vars`);
   `Typecheck`, `Build` e `Verificar artefato` **não rodaram** (fail-fast).
