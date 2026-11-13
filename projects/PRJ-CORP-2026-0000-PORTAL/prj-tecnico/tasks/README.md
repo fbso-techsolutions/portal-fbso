@@ -57,6 +57,10 @@
 2. **§1 Objetivo** — por que a task existe (uma frase).
 3. **§2 O que implementar/entregar** — passos concretos, detalhados o bastante para humano e IA saberem o "pronto".
 4. **§3 Critério de saída (evidência)** — checklist verificável + artefato real (commit/PR/deploy/print).
+5. **Evidências** — prova concreta de cada critério do §3 (ID de run/build, link de PR/deploy, output, print).
+6. **§4 Runbook (quando aplicável)** — comandos de ligar/desligar/recuperar o entregável; omitir se não houver operação.
+
+> Adoção dos itens 5–6 a partir da TASK-0020 (ADR-006, 2026-11-13): tasks novas **devem** trazê-los.
 
 > 🔁 **Regra viva:** criou/moveu task? Atualize este índice **e** o
 > [board](../prj-produto/sprints/board-sprint-0001.md) **e** o
