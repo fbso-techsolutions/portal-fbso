@@ -1,9 +1,8 @@
 name: CI
 
 # Gate de merge: nenhum PR entra em `main` com lint, tipos ou build quebrados.
+# Roda **só em PR** — no merge, quem valida/rebuild é o `deploy.yml` (evita run duplicado).
 on:
-  push:
-    branches: [main]
   pull_request:
     branches: [main]
 
