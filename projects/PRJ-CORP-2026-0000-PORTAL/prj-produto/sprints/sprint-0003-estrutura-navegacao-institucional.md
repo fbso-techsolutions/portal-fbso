@@ -73,7 +73,7 @@
 
 | Data | Item | O que foi feito (comandos/ações) | Decisões/desvios |
 |---|---|---|---|
-| — | — | — | — |
+| 2026-11-13 | [TASK-0033](../../prj-tecnico/tasks/TASK-0033-header-topbar.md) | `AppLayout`: topbar + header sticky (marca `FBSO TechSolutions` + CTA `Button`) · `site.ts` ganhou `brandAccent`/`topbarNote`/`navCta` | header consome tokens e `Button`; marca usa placeholder (`PENDENCY-0011`) |
 
 ## 7. Sprint Review — `[Encerramento]`
 

@@ -7,8 +7,14 @@ export interface SiteContent {
   name: string;
   /** Marca curta exibida no header. */
   shortName: string;
+  /** Complemento da marca (parte em destaque). */
+  brandAccent: string;
   /** Assinatura/slogan institucional. */
   tagline: string;
+  /** Texto do topbar. */
+  topbarNote: string;
+  /** Texto do CTA do header. */
+  navCta: string;
   /** `<title>` padrão das páginas. */
   title: string;
   /** `meta description` padrão das páginas. */
@@ -20,7 +26,10 @@ export interface SiteContent {
 export const siteContent: SiteContent = {
   name: 'FBSO Technology Solutions',
   shortName: 'FBSO',
-  tagline: 'Plataforma modular de soluções, para um futuro mais eficiente.',
+  brandAccent: 'TechSolutions',
+  tagline: 'Tecnologia para transformar desafios em soluções.',
+  topbarNote: 'Technology · Consulting · Software',
+  navCta: 'Fale com a FBSO',
   title: 'FBSO TechSolutions | Tecnologia, Consultoria e Software',
   description:
     'FBSO Technology Solutions: tecnologia, consultoria e software para construir um futuro mais eficiente.',
