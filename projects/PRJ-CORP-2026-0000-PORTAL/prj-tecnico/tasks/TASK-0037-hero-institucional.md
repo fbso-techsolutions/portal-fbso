@@ -19,12 +19,16 @@ Criar o hero institucional da Home (eyebrow + título + posicionamento + CTAs), 
 
 ## 3. Critério de saída (evidência)
 
-- [ ] Hero renderiza no topo da Home com CTAs; textos vêm de `src/content/`.
+- [x] Hero renderiza no topo da Home com CTAs; textos vêm de `src/content/`.
 
 **Evidências**
 
-*A preencher na execução.*
+- `Home.tsx`: hero (eyebrow + título + copy + CTAs) substituindo o "hello world".
+- `home.ts`: estrutura `hero` (eyebrow/title/highlight/copy/CTAs/note) — conteúdo como dados.
+- `npx tsc -b` ✅ · `npm run lint` ✅ · `npm run format:check` ✅ · `npm run build` ✅.
 
 ## 4. Runbook
 
-*A preencher se aplicável.*
+### 4.1 Alterar o hero
+
+Edite `hero` em `src/content/home.ts`.

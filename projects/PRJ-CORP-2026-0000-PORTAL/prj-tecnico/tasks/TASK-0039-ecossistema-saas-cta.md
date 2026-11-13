@@ -19,12 +19,16 @@ Criar a seção de ecossistema SaaS (cards dos 4 produtos) e o CTA "vamos conver
 
 ## 3. Critério de saída (evidência)
 
-- [ ] 4 cards renderizam; CTA aponta para contato; dados vêm de `src/content/`.
+- [x] 4 cards renderizam; CTA aponta para contato; dados vêm de `src/content/`.
 
 **Evidências**
 
-*A preencher na execução.*
+- `Home.tsx`: seção ecossistema SaaS (4 `Card` de produto) + CTA "vamos conversar" (painel navy + `Button`).
+- `home.ts`: `products` (4 produtos) e `cta` — conteúdo como dados.
+- `npx tsc -b` ✅ · `npm run lint` ✅ · `npm run format:check` ✅ · `npm run build` ✅.
 
 ## 4. Runbook
 
-*A preencher se aplicável.*
+### 4.1 Alterar produtos/CTA
+
+Edite `products` e `cta` em `src/content/home.ts`.

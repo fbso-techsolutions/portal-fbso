@@ -19,12 +19,16 @@ Criar o footer institucional (nome completo, domínio, links institucionais/lega
 
 ## 3. Critério de saída (evidência)
 
-- [ ] Footer presente em todas as rotas; copyright com ano dinâmico; links corretos.
+- [x] Footer presente em todas as rotas; copyright com ano dinâmico; links corretos.
 
 **Evidências**
 
-*A preencher na execução.*
+- `AppLayout.tsx`: footer institucional (marca + links institucionais/legais + e-mail + copyright com ano dinâmico).
+- `site.ts`: `contactEmail`, `footerInstitutional`, `footerLegal` adicionados (conteúdo como dados).
+- `npx tsc -b` ✅ · `npm run lint` ✅ · `npm run format:check` ✅ · `npm run build` ✅.
 
 ## 4. Runbook
 
-*A preencher se aplicável.*
+### 4.1 Alterar links do footer
+
+Edite `footerInstitutional`/`footerLegal` em `src/content/site.ts`.

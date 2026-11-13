@@ -20,13 +20,17 @@ Criar o header institucional (topbar + marca FBSO + CTA) no `AppLayout`, substit
 
 ## 3. Critério de saída (evidência)
 
-- [ ] Header institucional presente em todas as rotas (via `AppLayout`).
-- [ ] Marca usa placeholder; CTA com `Button`; consome tokens.
+- [x] Header institucional presente em todas as rotas (via `AppLayout`).
+- [x] Marca usa placeholder; CTA com `Button`; consome tokens.
 
 **Evidências**
 
-*A preencher na execução.*
+- `AppLayout.tsx`: topbar (marca + tagline) + header sticky (marca `FBSO` + `TechSolutions` em blue + CTA `Button`).
+- `site.ts`: campos `brandAccent`, `topbarNote`, `navCta` adicionados (conteúdo como dados).
+- `npx tsc -b` ✅ · `npm run lint` ✅ · `npm run format:check` ✅ · `npm run build` ✅.
 
 ## 4. Runbook
 
-*A preencher se aplicável.*
+### 4.1 Alterar o CTA do header
+
+Edite `navCta` em `src/content/site.ts` — o `Button` do header consome o valor.

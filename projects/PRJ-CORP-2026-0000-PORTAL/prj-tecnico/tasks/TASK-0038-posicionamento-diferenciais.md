@@ -19,12 +19,16 @@ Criar as seções de posicionamento ("quem somos") e diferenciais (pilares + res
 
 ## 3. Critério de saída (evidência)
 
-- [ ] Pilares e resumo TechServices renderizam; textos vêm de `src/content/`.
+- [x] Pilares e resumo TechServices renderizam; textos vêm de `src/content/`.
 
 **Evidências**
 
-*A preencher na execução.*
+- `Home.tsx`: seções de posicionamento (kicker + título + copy + 3 `Card`) e resumo TechServices (check-list de 6 serviços).
+- `home.ts`: `positioning` (pilares) e `services` — conteúdo como dados.
+- `npx tsc -b` ✅ · `npm run lint` ✅ · `npm run format:check` ✅ · `npm run build` ✅.
 
 ## 4. Runbook
 
-*A preencher se aplicável.*
+### 4.1 Alterar pilares/serviços
+
+Edite `positioning.pillars` e `services.services` em `src/content/home.ts`.

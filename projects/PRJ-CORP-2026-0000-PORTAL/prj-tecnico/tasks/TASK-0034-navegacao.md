@@ -19,12 +19,16 @@ Adicionar os links da navegação principal (Home, Sobre, TechServices, Soluçõ
 
 ## 3. Critério de saída (evidência)
 
-- [ ] Nav renderiza os 5 itens; links apontam para as rotas/âncoras corretas.
+- [x] Nav renderiza os 5 itens; links apontam para as rotas/âncoras corretas.
 
 **Evidências**
 
-*A preencher na execução.*
+- `AppLayout.tsx`: nav desktop com os 5 itens (Home/Sobre/TechServices/Soluções/Contato).
+- `site.ts`: `navItems` adicionado (conteúdo como dados).
+- `npx tsc -b` ✅ · `npm run lint` ✅ · `npm run format:check` ✅ · `npm run build` ✅.
 
 ## 4. Runbook
 
-*A preencher se aplicável.*
+### 4.1 Alterar itens da navegação
+
+Edite `navItems` em `src/content/site.ts`.

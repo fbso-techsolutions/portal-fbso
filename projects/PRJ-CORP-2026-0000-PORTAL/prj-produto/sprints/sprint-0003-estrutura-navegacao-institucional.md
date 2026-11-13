@@ -73,7 +73,17 @@
 
 | Data | Item | O que foi feito (comandos/ações) | Decisões/desvios |
 |---|---|---|---|
-| — | — | — | — |
+| 2026-11-13 | [TASK-0033](../../prj-tecnico/tasks/TASK-0033-header-topbar.md) | `AppLayout`: topbar + header sticky (marca `FBSO TechSolutions` + CTA `Button`) · `site.ts` ganhou `brandAccent`/`topbarNote`/`navCta` | header consome tokens e `Button`; marca usa placeholder (`PENDENCY-0011`) |
+| 2026-11-13 | [TASK-0035](../../prj-tecnico/tasks/TASK-0035-footer-institucional.md) | `AppLayout`: footer institucional (marca + links + e-mail + copyright dinâmico) · `site.ts` ganhou `contactEmail`/`footerInstitutional`/`footerLegal` | conteúdo como dados; ano do copyright dinâmico |
+| 2026-11-13 | [TASK-0034](../../prj-tecnico/tasks/TASK-0034-navegacao.md) | `AppLayout`: nav desktop (Home/Sobre/TechServices/Soluções/Contato) · `site.ts` ganhou `navItems` | links para rotas futuras são placeholder até a feature chegar · US-0002.0001-0008 concluída |
+| 2026-11-13 | [TASK-0036](../../prj-tecnico/tasks/TASK-0036-menu-mobile.md) | `AppLayout`: menu mobile (toggle + dropdown) com `aria-expanded`/`aria-controls`, fecha ao navegar | layout responsivo; CTA oculto no mobile |
+| 2026-11-13 | [TASK-0037](../../prj-tecnico/tasks/TASK-0037-hero-institucional.md) | `Home`: hero institucional (eyebrow + título + copy + CTAs) · `home.ts` ganhou `hero` | substitui o "hello world"; CTAs `Button` + link; textos de `src/content/` |
+| 2026-11-13 | [TASK-0038](../../prj-tecnico/tasks/TASK-0038-posicionamento-diferenciais.md) | `Home`: posicionamento (3 pilares em `Card`) + resumo TechServices (check-list) · `home.ts` ganhou `positioning`/`services` | usa `Card`/`Badge`; textos de `src/content/` |
+| 2026-11-13 | [TASK-0039](../../prj-tecnico/tasks/TASK-0039-ecossistema-saas-cta.md) | `Home`: ecossistema SaaS (4 `Card` de produto) + CTA "vamos conversar" · `home.ts` ganhou `products`/`cta` | cards linkam para `/solucoes/:slug` (rota da S4) · US-0002.0002 concluída |
+| 2026-11-13 | [TASK-0040](../../prj-tecnico/tasks/TASK-0040-pagina-sobre.md) | rota `/sobre` (`Sobre.tsx` + `sobre.ts`: quem somos/missão/valores) | prerender `/sobre` ok · US-0002.0003 concluída |
+| 2026-11-13 | [TASK-0041](../../prj-tecnico/tasks/TASK-0041-pagina-contato.md) | rota `/contato` (`Contato.tsx` + `contato.ts`: e-mail) | sem formulário (R2); prerender `/contato` ok · US-0002.0004 concluída |
+| 2026-11-13 | [TASK-0042](../../prj-tecnico/tasks/TASK-0042-paginas-legais.md) | rotas `/privacidade` e `/termos` (`Privacidade.tsx`/`Termos.tsx` + `legais.ts`: texto padrão) | texto fixo/padrão (`PENDENCY-0005`) · US-0002.0005 concluída |
+| 2026-11-13 | [TASK-0043](../../prj-tecnico/tasks/TASK-0043-qa-smoke-portal.md) | QA smoke: 5 rotas prerender + marca/topbar presentes em todas as páginas | smoke aprovado · US-0002.0001-0010 concluída · **Sprint 3 completa** |
 
 ## 7. Sprint Review — `[Encerramento]`
 
