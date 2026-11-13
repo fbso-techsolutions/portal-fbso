@@ -19,24 +19,20 @@ Homologar (smoke em produção) e fazer o go-live no `fbso.com.br`.
 
 ## 3. Critério de saída (evidência)
 
-- [ ] `https://fbso.com.br` no ar com smoke aprovado. *(bloqueado — depende da delegação NS)*
+- [x] `https://fbso.com.br` no ar com smoke aprovado.
 
-**Evidências (preparação)**
+**Evidências**
 
-- Smoke no deploy atual (`workers.dev`): 8 rotas respondem `200` (`curl -sSL` — o `307` é o trailing-slash da Cloudflare Static Assets).
-- Deploy automático (merge na `main`) funcionando.
+- Smoke em `https://fbso.com.br`: 8 rotas retornam `200` (`/`, `/sobre`, `/contato`, `/techservices`, `/solucoes`, `/solucoes/educatio`, `/privacidade`, `/termos`).
+- `https://www.fbso.com.br` → `200` (redirect/alias OK).
+- HTTPS ativo (certificado provisionado pela Cloudflare).
 
 ## 4. Runbook
 
-### 4.1 Smoke de homologação
+### 4.1 Reexecutar o smoke
 
 ```bash
-URL=https://portal-fbso.bolismar69.workers.dev
 for p in / /sobre /contato /techservices /solucoes /solucoes/educatio /privacidade /termos; do
-  printf "%s  %s\n" "$(curl -sSL -o /dev/null -w '%{http_code}' "$URL$p")" "$p"
+  printf "%s  %s\n" "$(curl -sSL -o /dev/null -w '%{http_code}' "https://fbso.com.br$p")" "$p"
 done
 ```
-
-### 4.2 Go-live
-
-Após a delegação NS (TASK-0054), repetir o smoke em `https://fbso.com.br` e registrar a evidência.

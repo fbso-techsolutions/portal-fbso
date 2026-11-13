@@ -29,6 +29,6 @@
 | **S2 — Design System** ✅ | 30/11 – 11/12 | FEATURE-0001.0002 |
 | **S3 — Estrutura, navegação e institucional** ✅ | 14/12 – 24/12 | FEATURE-0002.0001 (layout) + 0002.0002…0002.0005 (Home/Sobre/Contato/Legais) |
 | **S4 — TechServices e Portfólio SaaS** ✅ | 11/01 – 22/01 | FEATURE-0003.0001 · 0004.0001 (catálogo) · 0004.0002 (página produto) |
-| **S5 — SEO, a11y e go-live** 📋 | 25/01 – 05/02 | FEATURE-0005.0001 (SEO) · 0005.0002 (a11y) · 0005.0003 (go-live) |
+| **S5 — SEO, a11y e go-live** ✅ | 25/01 – 05/02 | FEATURE-0005.0001 (SEO) · 0005.0002 (a11y) · 0005.0003 (go-live) |
 
 > ⚠️ S3 (14/12–24/12) cruza o recesso de fim de ano (Natal/Ano Novo); S4 inicia em 11/01 após o retorno.

@@ -63,8 +63,7 @@ npx wrangler deploy
 5. Validar propagação (`dig fbso.com.br NS` deve retornar `ray`/`tess.ns.cloudflare.com`).
 
 > `.com.br` no free tier da Cloudflare é suportado (basta delegar o NS no registro.br).
-> ⚠️ A troca efetiva de NS é feita no **go-live** (FEATURE-0005.0003); até lá, o deploy usa a URL
-> preview da Cloudflare (`https://portal-fbso.bolismar69.workers.dev`).
+> ✅ NS delegados e domínio no ar (2026-11-13): `https://fbso.com.br` + `https://www.fbso.com.br`.
 
 ## 6. Evolução (Release 2/3)
 
