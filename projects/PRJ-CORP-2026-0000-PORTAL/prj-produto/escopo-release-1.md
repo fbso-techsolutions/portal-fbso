@@ -27,8 +27,8 @@
 |---|---|---|
 | **S1 — Fundação** ✅ | 16/11 – 27/11 | FEATURE-0001.0001 (scaffold) · FEATURE-0001.0003 (CI/CD) |
 | **S2 — Design System** ✅ | 30/11 – 11/12 | FEATURE-0001.0002 |
-| **S3 — Estrutura e navegação** | 14/12 – 24/12 | FEATURE-0002.0001 (layout) |
-| **S4 — Home e institucional** | 28/12 – 08/01 | FEATURE-0002.0002 (Home) · 0002.0003 (Sobre) · 0002.0004 (Contato) · 0002.0005 (Legais) |
+| **S3 — Estrutura, navegação e institucional** 📋 | 14/12 – 24/12 | FEATURE-0002.0001 (layout) + 0002.0002…0002.0005 (Home/Sobre/Contato/Legais) |
+| ~~**S4 — Home e institucional**~~ | — | → **absorvida pela S3** (escopo fundido, decisão de Planning 2026-11-13) |
 | **S5 — TechServices** | 11/01 – 22/01 | FEATURE-0003.0001 |
 | **S6 — Portfólio SaaS** | 25/01 – 05/02 | FEATURE-0004.0001 (catálogo) · 0004.0002 (página produto) |
 | **S7 — SEO/a11y/responsivo** | 08/02 – 19/02 | FEATURE-0005.0001 (SEO) · 0005.0002 (a11y) |

@@ -48,8 +48,19 @@
 | [TASK-0030 — Componente Button](TASK-0030-componente-button.md) | US-FEAT-0001.0002-0007 | Alfredo Bento | 3h | TASK-0028 |
 | [TASK-0031 — Componentes Card + Section](TASK-0031-componentes-card-section.md) | US-FEAT-0001.0002-0007 | Alfredo Bento | 3h | TASK-0028 |
 | [TASK-0032 — Badge + responsividade + QA](TASK-0032-badge-responsividade-qa.md) | US-FEAT-0001.0002-0007 | Alfredo Bento + Patricia Varra | 2h | TASK-0030 · TASK-0031 |
+| [TASK-0033 — Header + topbar](TASK-0033-header-topbar.md) | US-FEAT-0002.0001-0008 | Alfredo Bento | 4h | — |
+| [TASK-0034 — Navegação](TASK-0034-navegacao.md) | US-FEAT-0002.0001-0008 | Alfredo Bento | 2h | TASK-0033 |
+| [TASK-0035 — Footer institucional](TASK-0035-footer-institucional.md) | US-FEAT-0002.0001-0009 | Alfredo Bento | 3h | — |
+| [TASK-0036 — Menu mobile](TASK-0036-menu-mobile.md) | US-FEAT-0002.0001-0010 | Alfredo Bento | 3h | TASK-0034 |
+| [TASK-0037 — Hero institucional](TASK-0037-hero-institucional.md) | US-FEAT-0002.0002-0011 | Alfredo Bento | 5h | TASK-0034 · TASK-0035 |
+| [TASK-0038 — Posicionamento + diferenciais](TASK-0038-posicionamento-diferenciais.md) | US-FEAT-0002.0002-0012 | Alfredo Bento | 5h | TASK-0037 |
+| [TASK-0039 — Ecossistema SaaS + CTA](TASK-0039-ecossistema-saas-cta.md) | US-FEAT-0002.0002-0013 | Alfredo Bento | 4h | TASK-0038 |
+| [TASK-0040 — Página Sobre](TASK-0040-pagina-sobre.md) | US-FEAT-0002.0003-0014 | Alfredo Bento | 3h | TASK-0034 · TASK-0035 |
+| [TASK-0041 — Página Contato](TASK-0041-pagina-contato.md) | US-FEAT-0002.0004-0015 | Alfredo Bento | 3h | TASK-0034 · TASK-0035 |
+| [TASK-0042 — Páginas legais](TASK-0042-paginas-legais.md) | US-FEAT-0002.0005-0016 | Alfredo Bento | 2h | TASK-0034 · TASK-0035 |
+| [TASK-0043 — QA smoke do portal](TASK-0043-qa-smoke-portal.md) | US-FEAT-0002.0001-0010 | Patricia Varra | 3h | TASK-0036 · TASK-0042 |
 
-**Totais:** 32 tasks · ~72h de esforço estimado (a calibrar na execução).
+**Totais:** 43 tasks · ~109h de esforço estimado (a calibrar na execução).
 
 ## Formato do card
 
