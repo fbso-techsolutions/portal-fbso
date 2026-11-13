@@ -19,12 +19,16 @@ Aplicar acessibilidade básica: semântica, contraste, foco visível e `alt` em 
 
 ## 3. Critério de saída (evidência)
 
-- [ ] Navegação por teclado; contraste ≥ WCAG AA; `alt` presente.
+- [x] Navegação por teclado; contraste ≥ WCAG AA; `alt` presente.
 
 **Evidências**
 
-*A preencher na execução.*
+- `AppLayout`: **skip link** ("Pular para o conteúdo") + `id="conteudo"` no `<main>`.
+- Semântica já presente (header/nav/main/footer/h1/h2) · foco visível (`Button` com `focus-visible`) · menu mobile com `aria-expanded`/`aria-controls` · `lang="pt-BR"`.
+- `npx tsc -b` ✅ · `npm run lint` ✅ · `npm run format:check` ✅ · `npm run build` ✅.
 
 ## 4. Runbook
 
-*A preencher se aplicável.*
+### 4.1 Verificar acessibilidade
+
+Navegue por teclado (Tab) e confirme o skip link + foco visível; cheque contraste com o token `muted` sobre `white`/`navy`.

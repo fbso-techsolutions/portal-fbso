@@ -13,6 +13,14 @@ export default function AppLayout({ children }: AppLayoutProps) {
 
   return (
     <div className="flex min-h-screen flex-col overflow-x-hidden bg-white text-ink">
+      {/* Skip link (acessibilidade) */}
+      <a
+        href="#conteudo"
+        className="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-50 focus:rounded-soft focus:bg-blue focus:px-4 focus:py-2 focus:text-white"
+      >
+        Pular para o conteúdo
+      </a>
+
       {/* Topbar */}
       <div className="bg-navy text-sm text-mist">
         <div className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-5 py-2">
@@ -90,7 +98,9 @@ export default function AppLayout({ children }: AppLayoutProps) {
         ) : null}
       </header>
 
-      <main className="flex-1">{children}</main>
+      <main id="conteudo" className="flex-1">
+        {children}
+      </main>
 
       <footer className="bg-navy text-mist">
         <div className="mx-auto max-w-6xl px-5 pb-6 pt-12">
