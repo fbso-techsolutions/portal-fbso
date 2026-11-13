@@ -8,7 +8,6 @@
 | ID | Pendência | Dono | Prazo | Status |
 |---|---|---|---|---|
 | PENDENCY-0004 | Subdomínio × domínio próprio para os SaaS (afeta B-REQ-05 e Release 3) | Arquiteto + PM/PO | — | 🟡 aberta |
-| PENDENCY-0009 | Assinatura do ADR-001 (Tech lead + Arquiteto) — status segue `📝 Proposta` | Francisco Oliveira + Bolismar da Silva | — | 🟡 aberta |
 
 ## Respondidas
 
@@ -22,5 +21,6 @@
 | PENDENCY-0008 | Promover template de task + guia para a platform-standards | ✅ Promovido: `template-task-v1.md` + `guia-tasks-planning.md` criados na platform-standards (ADR-004) | 2026-11-11 |
 | PENDENCY-0006 | Renome `saas-rmr` → `saas-materiae` | ✅ repo renomeado no GitHub (`gh repo rename`); redirect do antigo para o novo | 2026-11-13 |
 | PENDENCY-0010 | `coding-standards-react.md` inexistente na platform-standards | ✅ criado `coding-standards-react.md` (ADR-007) alinhado ao ESLint/Prettier/tsconfig do portal; ressalva do `eslint.config.js` removida | 2026-11-13 |
+| PENDENCY-0009 | Assinatura do ADR-001 (Tech lead + Arquiteto) | ✅ assinado no próprio documento (Tech lead + Arquiteto) — status `✅ Decidida` | 2026-11-13 |
 
 > **Ritual:** atualizar a cada decisão; dono deve existir no [equipe.md](equipe.md).
