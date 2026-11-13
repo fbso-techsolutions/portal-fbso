@@ -43,8 +43,13 @@
 | [TASK-0025 — Deploy preview + smoke](TASK-0025-deploy-preview-smoke-cloudflare.md) | US-FEAT-0001.0003-0005 | Lourival Louro | 2h | TASK-0024 · TASK-0005 |
 | [TASK-0026 — QA: smoke test do deploy](TASK-0026-qa-smoke-test-deploy.md) | US-FEAT-0001.0003-0005 | Patricia Varra | 2h | TASK-0025 |
 | [TASK-0027 — Revisão de aderência ao ADR-001](TASK-0027-revisao-aderencia-adr-001.md) | US-FEAT-0001.0001-0001 | Bolismar da Silva | 2h | TASK-0019 |
+| [TASK-0028 — Design tokens](TASK-0028-design-tokens.md) | US-FEAT-0001.0002-0006 | Alfredo Bento | 3h | — |
+| [TASK-0029 — Aplicar tokens no app](TASK-0029-aplicar-tokens-app.md) | US-FEAT-0001.0002-0006 | Alfredo Bento | 2h | TASK-0028 |
+| [TASK-0030 — Componente Button](TASK-0030-componente-button.md) | US-FEAT-0001.0002-0007 | Alfredo Bento | 3h | TASK-0028 |
+| [TASK-0031 — Componentes Card + Section](TASK-0031-componentes-card-section.md) | US-FEAT-0001.0002-0007 | Alfredo Bento | 3h | TASK-0028 |
+| [TASK-0032 — Badge + responsividade + QA](TASK-0032-badge-responsividade-qa.md) | US-FEAT-0001.0002-0007 | Alfredo Bento + Patricia Varra | 2h | TASK-0030 · TASK-0031 |
 
-**Totais:** 27 tasks · ~59h de esforço estimado (a calibrar na execução).
+**Totais:** 32 tasks · ~72h de esforço estimado (a calibrar na execução).
 
 ## Formato do card
 
