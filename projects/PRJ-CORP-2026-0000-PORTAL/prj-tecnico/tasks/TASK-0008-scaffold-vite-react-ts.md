@@ -24,6 +24,6 @@ deixando `dev`/`build` funcionais.
 
 ## 3. Critério de saída (evidência)
 
-- [ ] `npm install` conclui sem erro.
-- [ ] `npm run dev` sobe o app localmente (print/console).
-- [ ] Commit do scaffold em branch de trabalho com PR aberto.
+- [x] `npm install` conclui sem erro.
+- [x] `npm run dev` sobe o app localmente (print/console).
+- [x] Commit do scaffold em branch de trabalho com PR aberto.

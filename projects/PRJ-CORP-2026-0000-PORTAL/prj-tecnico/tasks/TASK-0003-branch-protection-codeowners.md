@@ -24,6 +24,6 @@ gate de documentação do [AGENTS.md](../../../AGENTS.md).
 
 ## 3. Critério de saída (evidência)
 
-- [ ] Push direto na `main` bloqueado (teste/print do erro).
-- [ ] `CODEOWNERS` versionado no repo.
-- [ ] Regra de status checks presente (mesmo sem check ainda registrado).
+- [x] Push direto na `main` bloqueado (teste/print do erro).
+- [x] `CODEOWNERS` versionado no repo.
+- [x] Regra de status checks presente (mesmo sem check ainda registrado).

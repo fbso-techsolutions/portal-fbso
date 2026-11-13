@@ -22,5 +22,5 @@ assets estáticos do portal.
 
 ## 3. Critério de saída (evidência)
 
-- [ ] Site `fbso.com.br` listado na dashboard Cloudflare (print).
-- [ ] `account_id` anotado para o secret `CLOUDFLARE_ACCOUNT_ID` (TASK-0004).
+- [x] Site `fbso.com.br` listado na dashboard Cloudflare (print).
+- [x] `account_id` anotado para o secret `CLOUDFLARE_ACCOUNT_ID` (TASK-0004).

@@ -1,6 +1,6 @@
 # 🗓️ Sprint 1 — Fundação · 16/11/2026 – 27/11/2026
 
-> **Status:** `Planejada` · **Sprint Goal:** "Repo + scaffold + CI/CD publicando o 'hello world' na Cloudflare" ·
+> **Status:** `Em execução` · **Sprint Goal:** "Repo + scaffold + CI/CD publicando o 'hello world' na Cloudflare" ·
 > **Board:** [board-sprint-0001.md](board-sprint-0001.md) · **Roteiro:** [roteiro-execucao-sprint-0001.md](roteiro-execucao-sprint-0001.md) · **Tasks:** [prj-tecnico/tasks/](../../prj-tecnico/tasks/README.md) ·
 > **Verdade única do corte:** [escopo-release-1](../escopo-release-1.md)
 
@@ -71,7 +71,25 @@
 - [ ] Stories com `✅ Entregue` no backlog (DoD + artefato verificável — PR/deploy).
 - [ ] `npm run build` verde no CI e deploy acessível.
 
-## 6. Decisões pendentes
+## 6. Execução (log)
+
+> 📓 **Diário de execução** — registra o **como** (comandos, decisões, desvios) de cada tarefa.
+> O **status** continua no [board](board-sprint-0001.md); aqui fica a **trilha de auditoria**.
+> Regra: **toda tarefa executada ganha uma linha aqui**, no mesmo passo.
+
+| Data | Item | O que foi feito (comandos/ações) | Decisões/desvios |
+|---|---|---|---|
+| 2026-11-11 | [TASK-0001](../../prj-tecnico/tasks/TASK-0001-criar-repositorio-org-github.md) | `gh repo create fbso-techsolutions/portal-fbso --public` | público "por enquanto" |
+| 2026-11-11 | [TASK-0002](../../prj-tecnico/tasks/TASK-0002-inicializar-git-espelho-push.md) | `git init -b main` · `git commit -m "primeiro commit"` · `git push -u origin main` | — |
+| 2026-11-11 | [TASK-0003](../../prj-tecnico/tasks/TASK-0003-branch-protection-codeowners.md) | branch protection (PR + 1 aprovação + enforce admins) + `CODEOWNERS` | `@bolismar69` como owner · PR #1 |
+| 2026-11-12 | [TASK-0004](../../prj-tecnico/tasks/TASK-0004-secrets-cloudflare-github.md) | 5 secrets no Environment (`ACCOUNT_ID` · `API_TOKEN` · 3× S3/R2) | desvio: 3 secrets extras S3/R2 |
+| 2026-11-12 | [TASK-0005](../../prj-tecnico/tasks/TASK-0005-conta-cloudflare-zona-dominio.md) | conta Cloudflare ativada + zona `fbso.com.br` | — |
+| 2026-11-12 | [TASK-0006](../../prj-tecnico/tasks/TASK-0006-nameservers-delegacao-registro-br.md) | nameservers `ray` + `tess.ns.cloudflare.com` | registrados no [DEPLOYMENT.md](../../../../docs/tecnico/arquitetura/DEPLOYMENT.md) |
+| 2026-11-12 | [TASK-0007](../../prj-tecnico/tasks/TASK-0007-api-token-escopo-minimo.md) | API token criado | rotação a cada 30 dias |
+| 2026-11-12 | [TASK-0008](../../prj-tecnico/tasks/TASK-0008-scaffold-vite-react-ts.md) | `npm create vite@latest . -- --template react-ts` · deps pinadas (`--save-exact`) | scaffold na **raiz** (não `frontend/`) · PR #3 |
+| 2026-11-12 | [TASK-0009](../../prj-tecnico/tasks/TASK-0009-tailwind-css-v4.md) | `npm install --save-dev --save-exact tailwindcss @tailwindcss/vite` · plugin no `vite.config.ts` · entry `src/styles/index.css` | tokens em [design-tokens.md](../../../../docs/tecnico/ux-ui/design-tokens.md); tema `@theme` na S2 · PR #4 |
+
+## 7. Decisões pendentes
 
 1. ✅ **Capacidade calibrada** no planning (2026-11-11) — ver §3.
 2. ✅ **Gate DoR aprovado** (2026-11-11) — 5 stories + 2 enablers marcados `✅ Revisado`
