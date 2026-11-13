@@ -90,6 +90,7 @@
 | 2026-11-12 | [TASK-0009](../../prj-tecnico/tasks/TASK-0009-tailwind-css-v4.md) | `npm install --save-dev --save-exact tailwindcss @tailwindcss/vite` · plugin no `vite.config.ts` · entry `src/styles/index.css` | tokens em [design-tokens.md](../../../../docs/tecnico/ux-ui/design-tokens.md); tema `@theme` na S2 · PR #4 |
 | 2026-11-12 | [TASK-0010](../../prj-tecnico/tasks/TASK-0010-react-router-v8-prerender.md) | `npm install react-router @react-router/dev @react-router/node` · scripts `react-router dev/build` · `src/app/{root,routes}.tsx` + `src/pages/Home.tsx` | adotado **v8** (docs v7→v8); prerender → `dist/client/index.html` |
 | 2026-11-12 | [TASK-0011](../../prj-tecnico/tasks/TASK-0011-meta-seo-prerender.md) | `meta` export na Home (`title`/`description`/`og:*`) | `lang`/charset/viewport no `root.tsx`; build → `dist/client/index.html` com meta/OG |
+| 2026-11-12 | [TASK-0016](../../prj-tecnico/tasks/TASK-0016-estrutura-pastas-src.md) | `mkdir -p src/components/{layout,ui,sections} src/content src/lib` + `.gitkeep` | pastas vazias com `.gitkeep`; `app/`/`pages/`/`styles/` já existiam |
 
 ## 7. Decisões pendentes
 
