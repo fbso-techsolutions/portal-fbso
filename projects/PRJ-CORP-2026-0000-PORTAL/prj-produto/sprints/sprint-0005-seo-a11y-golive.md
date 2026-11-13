@@ -70,6 +70,7 @@
 | 2026-11-13 | [TASK-0052](../../prj-tecnico/tasks/TASK-0052-responsividade.md) | `AppLayout`: `overflow-x-hidden` · revisão de breakpoints responsivos nas páginas | páginas já responsivas (construídas mobile-first) · US-0005.0002-0024 concluída |
 | 2026-11-13 | [TASK-0053](../../prj-tecnico/tasks/TASK-0053-acessibilidade-basica.md) | `AppLayout`: skip link + `id="conteudo"` no main | semântica/foco/aria já presentes · US-0005.0002 concluída |
 | 2026-11-13 | [TASK-0054](../../prj-tecnico/tasks/TASK-0054-dominio-custom-https.md) | `DEPLOYMENT.md` §5: runbook de delegação NS + Custom Domain (Workers) + HTTPS | **bloqueada — ação externa** (registro.br + dashboard Cloudflare, Lourival) |
+| 2026-11-13 | [TASK-0055](../../prj-tecnico/tasks/TASK-0055-homologacao-golive.md) | smoke no deploy atual (`workers.dev`): 8 rotas `200` · checklist de homologação documentado | go-live **bloqueado** na delegação NS (TASK-0054) |
 
 ## 7. Sprint Review — `[Encerramento]`
 
