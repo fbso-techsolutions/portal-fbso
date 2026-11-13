@@ -1,6 +1,6 @@
 import type { MetaFunction } from 'react-router';
-import { homeContent } from '../content/home';
-import { siteContent } from '../content/site';
+import { homeContent } from '@/content/home';
+import { siteContent } from '@/content/site';
 
 export const meta: MetaFunction = () => [
   { title: siteContent.title },

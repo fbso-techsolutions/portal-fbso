@@ -1,6 +1,6 @@
 import { Links, Meta, Outlet, Scripts } from 'react-router';
-import AppLayout from '../components/layout/AppLayout';
-import '../styles/index.css';
+import AppLayout from '@/components/layout/AppLayout';
+import '@/styles/index.css';
 
 export default function Root() {
   return (
