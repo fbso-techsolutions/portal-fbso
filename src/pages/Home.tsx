@@ -1,4 +1,4 @@
-function App() {
+export default function Home() {
   return (
     <main className="flex min-h-screen items-center justify-center bg-[#0b192c] p-8">
       <section className="max-w-3xl text-center">
@@ -21,5 +21,3 @@ function App() {
     </main>
   )
 }
-
-export default App

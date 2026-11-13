@@ -21,7 +21,7 @@ relacionamento comercial e do acesso aos produtos.
 
 ## Stack (Release 1 — MVP estático)
 
-React + TypeScript · Vite · Tailwind CSS v4 · React Router v7 (framework mode, `prerender`)
+React + TypeScript · Vite · Tailwind CSS v4 · React Router v8 (framework mode, `prerender`)
 → build estático em `dist/` publicado na **Cloudflare (Workers + Static Assets)**.
 
 ## Desenvolvimento

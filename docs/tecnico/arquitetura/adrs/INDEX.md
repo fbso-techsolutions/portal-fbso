@@ -6,4 +6,4 @@
 
 | ID | Decisão | Status | Data | Arquivo |
 |---|---|---|---|---|
-| ADR-001 | Stack do portal (React + TS + Vite + Router v7 + prerender + Cloudflare) | 📝 Proposta | 2026-11-11 | [adr-001-stack-portal.md](adr-001-stack-portal.md) |
+| ADR-001 | Stack do portal (React + TS + Vite + Router v8 + prerender + Cloudflare) | 📝 Proposta | 2026-11-11 | [adr-001-stack-portal.md](adr-001-stack-portal.md) |
