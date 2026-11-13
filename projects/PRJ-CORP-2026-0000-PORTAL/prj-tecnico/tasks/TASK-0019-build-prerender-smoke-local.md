@@ -21,5 +21,5 @@ Confirmar que a Home "hello world" pré-renderiza corretamente e fecha a story d
 
 ## 3. Critério de saída (evidência)
 
-- [ ] `dist/index.html` contém o "hello world" renderizado (grep/print).
+- [ ] `dist/client/index.html` contém o "hello world" renderizado (grep/print).
 - [ ] Preview sem erro de console.

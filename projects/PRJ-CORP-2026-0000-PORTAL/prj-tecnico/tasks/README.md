@@ -26,7 +26,7 @@
 | [TASK-0008 — Scaffold Vite + React + TS](TASK-0008-scaffold-vite-react-ts.md) | US-FEAT-0001.0001-0001 | Alfredo Bento | 3h | TASK-0002 |
 | [TASK-0009 — Tailwind CSS v4](TASK-0009-tailwind-css-v4.md) | US-FEAT-0001.0001-0001 | Alfredo Bento | 3h | TASK-0008 |
 | [TASK-0010 — React Router v8 (prerender)](TASK-0010-react-router-v8-prerender.md) | US-FEAT-0001.0001-0001 | Alfredo Bento | 4h | TASK-0008 |
-| [TASK-0011 — index.html pt-BR + build](TASK-0011-index-html-pt-br-build.md) | US-FEAT-0001.0001-0001 | Alfredo Bento | 2h | TASK-0009 · TASK-0010 |
+| [TASK-0011 — Meta/SEO pré-render](TASK-0011-meta-seo-prerender.md) | US-FEAT-0001.0001-0001 | Alfredo Bento | 2h | TASK-0009 · TASK-0010 |
 | [TASK-0012 — ESLint flat config](TASK-0012-eslint-flat-config.md) | US-FEAT-0001.0001-0002 | Alfredo Bento | 3h | TASK-0008 |
 | [TASK-0013 — Prettier + integração ESLint](TASK-0013-prettier-eslint-config.md) | US-FEAT-0001.0001-0002 | Alfredo Bento | 2h | TASK-0012 |
 | [TASK-0014 — tsconfig strict + alias](TASK-0014-tsconfig-strict-alias.md) | US-FEAT-0001.0001-0002 | Alfredo Bento | 2h | TASK-0008 |
