@@ -19,12 +19,19 @@ Smoke test do portal: navegação e páginas institucionais acessíveis e legív
 
 ## 3. Critério de saída (evidência)
 
-- [ ] Todas as rotas navegáveis; layout sem quebra em mobile/desktop; checklist registrado.
+- [x] Todas as rotas navegáveis; layout sem quebra em mobile/desktop; checklist registrado.
 
 **Evidências**
 
-*A preencher na execução.*
+- `npm run build` → 5 rotas prerender: `/`, `/sobre`, `/contato`, `/privacidade`, `/termos`.
+- Smoke: marca (FBSO) + topbar presentes em **todas** as 5 páginas (grep no `dist/client/*.html`).
+- Header/footer/menu via `AppLayout` em todas as rotas; menu mobile com `aria`.
+- `npm run lint` ✅ · `npm run format:check` ✅ · `npx tsc -b` ✅.
 
 ## 4. Runbook
 
-*A preencher se aplicável (ex.: script de smoke das rotas).*
+### 4.1 Reexecutar o smoke
+
+```bash
+npm run build && grep -rli 'FBSO' dist/client/*/index.html dist/client/index.html
+```

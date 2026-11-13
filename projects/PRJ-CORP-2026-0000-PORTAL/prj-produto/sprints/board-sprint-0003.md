@@ -13,7 +13,7 @@
 |---|---|---|---|---|
 | [US-FEAT-0002.0001-0008 — Header + navegação](../user-stories/US-FEAT-0002.0001-0008-header-navegacao.md) | Alfredo Bento | [TASK-0033…0034](../../prj-tecnico/tasks/README.md) | ✅ Entregue | — |
 | [US-FEAT-0002.0001-0009 — Footer institucional](../user-stories/US-FEAT-0002.0001-0009-footer-institucional.md) | Alfredo Bento | [TASK-0035](../../prj-tecnico/tasks/README.md) | ✅ Entregue | — |
-| [US-FEAT-0002.0001-0010 — Menu responsivo](../user-stories/US-FEAT-0002.0001-0010-menu-responsivo.md) | Alfredo Bento | [TASK-0036 · 0043](../../prj-tecnico/tasks/README.md) | 🔄 Em execução | — |
+| [US-FEAT-0002.0001-0010 — Menu responsivo](../user-stories/US-FEAT-0002.0001-0010-menu-responsivo.md) | Alfredo Bento | [TASK-0036 · 0043](../../prj-tecnico/tasks/README.md) | ✅ Entregue | — |
 | [US-FEAT-0002.0002-0011 — Hero institucional](../user-stories/US-FEAT-0002.0002-0011-hero-institucional.md) | Alfredo Bento | [TASK-0037](../../prj-tecnico/tasks/README.md) | ✅ Entregue | — |
 | [US-FEAT-0002.0002-0012 — Posicionamento e diferenciais](../user-stories/US-FEAT-0002.0002-0012-posicionamento-diferenciais.md) | Alfredo Bento | [TASK-0038](../../prj-tecnico/tasks/README.md) | ✅ Entregue | — |
 | [US-FEAT-0002.0002-0013 — Ecossistema SaaS + CTA](../user-stories/US-FEAT-0002.0002-0013-ecossistema-saas-cta.md) | Alfredo Bento | [TASK-0039](../../prj-tecnico/tasks/README.md) | ✅ Entregue | — |
@@ -37,7 +37,7 @@
 | 🏁 | [TASK-0040 — Página Sobre](../../prj-tecnico/tasks/TASK-0040-pagina-sobre.md) | [US-0002.0003-0014](../user-stories/US-FEAT-0002.0003-0014-pagina-sobre.md) | ✅ Entregue | 3 | S3 | Alfredo Bento | [PR #38](https://github.com/fbso-techsolutions/portal-fbso/pull/38) |
 | 🏁 | [TASK-0041 — Página Contato](../../prj-tecnico/tasks/TASK-0041-pagina-contato.md) | [US-0002.0004-0015](../user-stories/US-FEAT-0002.0004-0015-pagina-contato.md) | ✅ Entregue | 3 | S3 | Alfredo Bento | [PR #38](https://github.com/fbso-techsolutions/portal-fbso/pull/38) |
 | 🏁 | [TASK-0042 — Páginas legais](../../prj-tecnico/tasks/TASK-0042-paginas-legais.md) | [US-0002.0005-0016](../user-stories/US-FEAT-0002.0005-0016-paginas-legais.md) | ✅ Entregue | 2 | S3 | Alfredo Bento | [PR #38](https://github.com/fbso-techsolutions/portal-fbso/pull/38) |
-| 💡 | [TASK-0043 — QA smoke do portal](../../prj-tecnico/tasks/TASK-0043-qa-smoke-portal.md) | [US-0002.0001-0010](../user-stories/US-FEAT-0002.0001-0010-menu-responsivo.md) | ⬜ A fazer | 3 | S3 | Patricia Varra | — |
+| 🏁 | [TASK-0043 — QA smoke do portal](../../prj-tecnico/tasks/TASK-0043-qa-smoke-portal.md) | [US-0002.0001-0010](../user-stories/US-FEAT-0002.0001-0010-menu-responsivo.md) | ✅ Entregue | 3 | S3 | Patricia Varra | [PR #38](https://github.com/fbso-techsolutions/portal-fbso/pull/38) |
 
 **Total de esforço:** 37h.
 

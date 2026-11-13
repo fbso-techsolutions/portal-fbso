@@ -83,6 +83,7 @@
 | 2026-11-13 | [TASK-0040](../../prj-tecnico/tasks/TASK-0040-pagina-sobre.md) | rota `/sobre` (`Sobre.tsx` + `sobre.ts`: quem somos/missão/valores) | prerender `/sobre` ok · US-0002.0003 concluída |
 | 2026-11-13 | [TASK-0041](../../prj-tecnico/tasks/TASK-0041-pagina-contato.md) | rota `/contato` (`Contato.tsx` + `contato.ts`: e-mail) | sem formulário (R2); prerender `/contato` ok · US-0002.0004 concluída |
 | 2026-11-13 | [TASK-0042](../../prj-tecnico/tasks/TASK-0042-paginas-legais.md) | rotas `/privacidade` e `/termos` (`Privacidade.tsx`/`Termos.tsx` + `legais.ts`: texto padrão) | texto fixo/padrão (`PENDENCY-0005`) · US-0002.0005 concluída |
+| 2026-11-13 | [TASK-0043](../../prj-tecnico/tasks/TASK-0043-qa-smoke-portal.md) | QA smoke: 5 rotas prerender + marca/topbar presentes em todas as páginas | smoke aprovado · US-0002.0001-0010 concluída · **Sprint 3 completa** |
 
 ## 7. Sprint Review — `[Encerramento]`
 
