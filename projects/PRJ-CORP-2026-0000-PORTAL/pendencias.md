@@ -5,7 +5,9 @@
 
 ## Abertas
 
-> ✅ Nenhuma pendência em aberto — todas as decisões foram tomadas até 2026-11-13.
+| ID | Pendência | Dono | Prazo | Status |
+|---|---|---|---|---|
+| PENDENCY-0011 | Logo / identidade visual definitiva (símbolo/brand mark) — o molde usa um SVG geométrico provisório; confirmar arte final com o PO | Arquiteto + PM/PO | — | 🟡 aberta |
 
 ## Respondidas
 
