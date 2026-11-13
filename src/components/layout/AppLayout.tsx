@@ -12,7 +12,7 @@ export default function AppLayout({ children }: AppLayoutProps) {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <div className="flex min-h-screen flex-col bg-white text-ink">
+    <div className="flex min-h-screen flex-col overflow-x-hidden bg-white text-ink">
       {/* Topbar */}
       <div className="bg-navy text-sm text-mist">
         <div className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-5 py-2">

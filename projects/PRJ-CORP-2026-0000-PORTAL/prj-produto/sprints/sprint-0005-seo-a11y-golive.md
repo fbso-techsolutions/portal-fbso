@@ -67,6 +67,7 @@
 |---|---|---|---|
 | 2026-11-13 | [TASK-0050](../../prj-tecnico/tasks/TASK-0050-metadados-pagina.md) | `src/lib/seo.ts` (helper `seo()`) · 8 páginas refatoradas para usá-lo (title/description/OG) | fonte única de SEO · US-0005.0001-0022 concluída |
 | 2026-11-13 | [TASK-0051](../../prj-tecnico/tasks/TASK-0051-sitemap-robots.md) | `public/robots.txt` + hook `buildEnd` gerando `sitemap.xml` no build | sitemap gerado (11 URLs) via catálogo · US-0005.0001 concluída |
+| 2026-11-13 | [TASK-0052](../../prj-tecnico/tasks/TASK-0052-responsividade.md) | `AppLayout`: `overflow-x-hidden` · revisão de breakpoints responsivos nas páginas | páginas já responsivas (construídas mobile-first) · US-0005.0002-0024 concluída |
 
 ## 7. Sprint Review — `[Encerramento]`
 
