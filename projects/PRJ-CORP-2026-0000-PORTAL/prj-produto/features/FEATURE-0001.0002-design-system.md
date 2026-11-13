@@ -27,9 +27,10 @@ Estabelecer a identidade visual (tokens) e os componentes base que darão consis
 
 | ID | História |
 |---|---|
-| (a detalhar) | Definir design tokens (cores/tipografia/espaçamento) |
-| (a detalhar) | Criar componentes base `ui/` (Button, Card, Section, Badge) |
+| [US-FEAT-0001.0002-0006](../user-stories/US-FEAT-0001.0002-0006-design-tokens.md) | Definir design tokens (cores/tipografia/espaçamento) |
+| [US-FEAT-0001.0002-0007](../user-stories/US-FEAT-0001.0002-0007-componentes-ui.md) | Criar componentes base `ui/` (Button, Card, Section, Badge) |
 
 ## 7. Critérios de aceite (DoD)
 
 - [ ] Tokens consumíveis via Tailwind theme, sem valores hardcoded nos componentes.
+- [ ] Componentes base `ui/` (Button, Card, Section, Badge) tipados, acessíveis e responsivos.
