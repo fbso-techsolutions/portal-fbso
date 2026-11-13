@@ -19,9 +19,11 @@ para o time (humano e IA).
 - Rodar `npm run lint` e `npm run format:check` até saírem limpos (corrigir o que aparecer).
 - Documentar no [README do repo](../../../README.md) a seção "Desenvolvimento" com os comandos
   (`dev`, `build`, `preview`, `lint`, `format`, `typecheck`).
+- Fechar o item **D-03** do parecer [TASK-0027](../../../../docs/tecnico/arquitetura/revisoes/revisao-2026-11-13-aderencia-adr-001.md):
+  `isbot@^5` era a única dependência não pinada → pinada em `5.2.3`.
 
 ## 3. Critério de saída (evidência)
 
-- [ ] `npm run lint` exit 0.
-- [ ] `npm run format:check` exit 0.
-- [ ] README com a seção de comandos de desenvolvimento.
+- [x] `npm run lint` exit 0.
+- [x] `npm run format:check` exit 0.
+- [x] README com a seção de comandos de desenvolvimento.

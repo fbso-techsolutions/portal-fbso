@@ -42,6 +42,15 @@ React + TypeScript · Vite · Tailwind CSS v4 · React Router v8 (framework mode
 | `npm audit` | checa vulnerabilidades (total) |
 | `npm audit --omit=dev` | checa vulnerabilidades só de produção |
 
+**Gate antes do PR** — os três precisam sair limpos (exit 0):
+
+```bash
+npm run lint && npm run format:check && npm run typecheck
+```
+
+**Imports**: use o alias `@/` → `src/` (`@/components/...`, `@/content/...`, `@/lib/...`),
+declarado em `tsconfig.app.json` e `vite.config.ts`.
+
 > 🔧 **Como a base foi criada** (scaffold, one-time): ver [docs/tecnico/setup.md](docs/tecnico/setup.md).
 
 ## Regras

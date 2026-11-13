@@ -33,15 +33,15 @@ Verificação direta no repositório (não por leitura de cards): `package.json`
 | A12 | `sitemap.xml` / `robots.txt` (ARCHITECTURE §4) | gerados no build | ausentes | ⏳ FEATURE-0005.0001 |
 | A13 | Sitemap do MVP (ARCHITECTURE §5) | 6 rotas | só `/` (scaffold) | ⏳ S2–S4 |
 | A14 | Scaffold na raiz do repo (ADR-001/PR #3) | sem `frontend/` | na raiz | ✅ |
-| A15 | Dependências pinadas (padrão do repo) | sem `^`/`~` | todas exatas, exceto `isbot@^5` | ✅ (ver D-03) |
+| A15 | Dependências pinadas (padrão do repo) | sem `^`/`~` | todas exatas (inclui `isbot@5.2.3` desde a TASK-0015) | ✅ |
 
 ## 3. Desvios e observações
 
 | ID | Severidade | Achado | Ação |
 |---|---|---|---|
 | **D-01** | 🟡 média (doc) | Docs normativos citam o alvo de deploy como `dist/`; o framework mode gera `dist/client/` (HTML + assets) e `dist/server/` (build-time, **não** publicado) | Corrigido nesta revisão em ARCHITECTURE, DEPLOYMENT, README, setup, AGENTS e cards TASK-0023/0024; ADR-001 recebeu emenda editorial (decisão inalterada) |
-| **D-02** | 🟢 baixa (dep) | `@vitejs/plugin-react` segue em `devDependencies` sem uso desde a TASK-0010 | Remover na TASK-0012/TASK-0015 |
-| **D-03** | 🟢 baixa (dep) | `isbot` é dependência direta sem `entry.server` custom (já vem via `@react-router/dev`) | Remover na TASK-0015 se continuar sem uso |
+| **D-02** | 🟢 baixa (dep) | `@vitejs/plugin-react` segue em `devDependencies` sem uso desde a TASK-0010 | ✅ Resolvido na TASK-0012 (removido) |
+| **D-03** | 🟢 baixa (dep) | `isbot` é dependência direta sem `entry.server` custom (já vem via `@react-router/dev`) | ✅ Resolvido na TASK-0015: pinada em `5.2.3` (mantida — o `entry.server` padrão gerado pelo `@react-router/dev` a importa; remover dependeria do hoisting da dep transitiva) |
 | **D-04** | 🟡 média (qualidade) | `tsconfig.app.json` sem `strict: true` | TASK-0014 (fora do escopo do ADR, mas bloqueia o DoD de lint/typecheck) |
 | **D-05** | 🟢 baixa (doc) | `setup.md` §4 ainda descreve a estrutura do Vite SPA (`index.html`/`main.tsx`) | Corrigido nesta revisão |
 | **D-06** | 🟢 baixa (doc) | README lista `public/` como existente | Corrigido (marcado como previsto) |
