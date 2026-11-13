@@ -16,7 +16,7 @@
 | [US-FEAT-0001.0001-0001 — Inicializar projeto](../user-stories/US-FEAT-0001.0001-0001-inicializar-projeto-vite.md) | Alfredo Bento | [TASK-0008…0011 · 0027](../../prj-tecnico/tasks/README.md) | ✅ Entregue | [PR #8](https://github.com/fbso-techsolutions/portal-fbso/pull/8) |
 | [US-FEAT-0001.0001-0002 — Lint/tsconfig](../user-stories/US-FEAT-0001.0001-0002-configurar-lint-tsconfig.md) | Alfredo Bento | [TASK-0012…0015](../../prj-tecnico/tasks/README.md) | ✅ Entregue | — |
 | [US-FEAT-0001.0001-0003 — Estrutura + Home](../user-stories/US-FEAT-0001.0001-0003-estruturar-pastas-home.md) | Alfredo Bento | [TASK-0016…0019](../../prj-tecnico/tasks/README.md) | ✅ Entregue | [PR #7](https://github.com/fbso-techsolutions/portal-fbso/pull/7) |
-| [US-FEAT-0001.0003-0004 — Pipeline CI/CD](../user-stories/US-FEAT-0001.0003-0004-pipeline-cicd.md) | Lourival Louro | [TASK-0020…0022](../../prj-tecnico/tasks/README.md) | 🔄 Em execução | — |
+| [US-FEAT-0001.0003-0004 — Pipeline CI/CD](../user-stories/US-FEAT-0001.0003-0004-pipeline-cicd.md) | Lourival Louro | [TASK-0020…0022](../../prj-tecnico/tasks/README.md) | ✅ Entregue | — |
 | [US-FEAT-0001.0003-0005 — Deploy Cloudflare](../user-stories/US-FEAT-0001.0003-0005-deploy-cloudflare.md) | Lourival Louro | [TASK-0023…0026](../../prj-tecnico/tasks/README.md) | ⬜ A fazer | — |
 
 > Evidência aponta para **PR/deploy** (artefato real), não planilha.
@@ -50,7 +50,7 @@
 | 🏁 | [TASK-0019 — build + smoke local](../../prj-tecnico/tasks/TASK-0019-build-prerender-smoke-local.md) | [US-0001.0001-0003](../user-stories/US-FEAT-0001.0001-0003-estruturar-pastas-home.md) | ✅ Entregue | 1 | S1 | Alfredo Bento | [PR #7](https://github.com/fbso-techsolutions/portal-fbso/pull/7) |
 | 🏁 | [TASK-0020 — workflow ci.yml](../../prj-tecnico/tasks/TASK-0020-workflow-ci-github-actions.md) | [US-0001.0003-0004](../user-stories/US-FEAT-0001.0003-0004-pipeline-cicd.md) | ✅ Entregue | 4 | S1 | Lourival Louro | [PR #14](https://github.com/fbso-techsolutions/portal-fbso/pull/14) |
 | 🏁 | [TASK-0021 — setup node/cache](../../prj-tecnico/tasks/TASK-0021-setup-node-cache-steps.md) | [US-0001.0003-0004](../user-stories/US-FEAT-0001.0003-0004-pipeline-cicd.md) | ✅ Entregue | 2 | S1 | Lourival Louro | [PR #16](https://github.com/fbso-techsolutions/portal-fbso/pull/16) |
-| 💡 | [TASK-0022 — status checks](../../prj-tecnico/tasks/TASK-0022-branch-protection-status-checks.md) | [US-0001.0003-0004](../user-stories/US-FEAT-0001.0003-0004-pipeline-cicd.md) | ⬜ A fazer | 1 | S1 | Lourival Louro | — |
+| 🏁 | [TASK-0022 — status checks](../../prj-tecnico/tasks/TASK-0022-branch-protection-status-checks.md) | [US-0001.0003-0004](../user-stories/US-FEAT-0001.0003-0004-pipeline-cicd.md) | ✅ Entregue | 1 | S1 | Lourival Louro | [PR #18](https://github.com/fbso-techsolutions/portal-fbso/pull/18) |
 | 💡 | [TASK-0023 — wrangler.jsonc](../../prj-tecnico/tasks/TASK-0023-wrangler-jsonc-static-assets.md) | [US-0001.0003-0005](../user-stories/US-FEAT-0001.0003-0005-deploy-cloudflare.md) | ⬜ A fazer | 3 | S1 | Lourival Louro | — |
 | 💡 | [TASK-0024 — step deploy](../../prj-tecnico/tasks/TASK-0024-step-wrangler-deploy-secrets.md) | [US-0001.0003-0005](../user-stories/US-FEAT-0001.0003-0005-deploy-cloudflare.md) | ⬜ A fazer | 3 | S1 | Lourival Louro | — |
 | 💡 | [TASK-0025 — deploy preview](../../prj-tecnico/tasks/TASK-0025-deploy-preview-smoke-cloudflare.md) | [US-0001.0003-0005](../user-stories/US-FEAT-0001.0003-0005-deploy-cloudflare.md) | ⬜ A fazer | 2 | S1 | Lourival Louro | — |
