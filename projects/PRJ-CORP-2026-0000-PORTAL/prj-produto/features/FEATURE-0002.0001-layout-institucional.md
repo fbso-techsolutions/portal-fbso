@@ -7,7 +7,7 @@
 | B-REQ dona | B-REQ-01 |
 | Prioridade | Onda 1-Must (MVP) |
 | 🔒 Travada por | — (livre) |
-| Status | 📝 Rascunho (2026-11-11) |
+| Status | ✅ Revisado (2026-11-13) |
 
 ## 1. Objetivo de negócio
 
