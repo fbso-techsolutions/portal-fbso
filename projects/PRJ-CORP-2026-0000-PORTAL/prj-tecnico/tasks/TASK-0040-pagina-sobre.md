@@ -19,12 +19,16 @@ Criar a rota `/sobre` com posicionamento institucional (quem somos, missão, val
 
 ## 3. Critério de saída (evidência)
 
-- [ ] `/sobre` acessível pela nav e com conteúdo institucional.
+- [x] `/sobre` acessível pela nav e com conteúdo institucional.
 
 **Evidências**
 
-*A preencher na execução.*
+- `src/pages/Sobre.tsx` + `src/content/sobre.ts` (quem somos, missão, valores) + rota `sobre` em `routes.ts`.
+- `npm run build` → `Prerender (html): /sobre -> dist/client/sobre/index.html`.
+- `npx tsc -b` ✅ · `npm run lint` ✅ · `npm run format:check` ✅.
 
 ## 4. Runbook
 
-*A preencher se aplicável.*
+### 4.1 Alterar o conteúdo da página
+
+Edite `sobreContent` em `src/content/sobre.ts`.
