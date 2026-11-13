@@ -2,6 +2,8 @@ import type { MetaFunction } from 'react-router';
 import { homeContent } from '@/content/home';
 import { siteContent } from '@/content/site';
 import Button from '@/components/ui/Button';
+import Card from '@/components/ui/Card';
+import Badge from '@/components/ui/Badge';
 
 export const meta: MetaFunction = () => [
   { title: siteContent.title },
@@ -12,7 +14,7 @@ export const meta: MetaFunction = () => [
 ];
 
 export default function Home() {
-  const { hero } = homeContent;
+  const { hero, positioning, services } = homeContent;
 
   return (
     <>
@@ -43,6 +45,49 @@ export default function Home() {
           </div>
 
           <p className="mt-8 text-sm text-mist">{hero.note}</p>
+        </div>
+      </section>
+
+      {/* Posicionamento + diferenciais */}
+      <section className="py-16 md:py-24">
+        <div className="mx-auto max-w-6xl px-5">
+          <div className="max-w-2xl">
+            <Badge>{positioning.kicker}</Badge>
+            <h2 className="mt-3 text-3xl font-bold tracking-tight text-navy md:text-4xl">
+              {positioning.title}
+            </h2>
+            <p className="mt-4 text-base text-muted">{positioning.description}</p>
+          </div>
+
+          <div className="mt-10 grid gap-5 md:grid-cols-3">
+            {positioning.pillars.map((pillar) => (
+              <Card key={pillar.title}>
+                <h3 className="text-lg font-bold text-navy">{pillar.title}</h3>
+                <p className="mt-2 text-sm text-muted">{pillar.description}</p>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Resumo TechServices */}
+      <section className="bg-paper py-16 md:py-24">
+        <div className="mx-auto max-w-6xl px-5">
+          <div className="max-w-2xl">
+            <Badge>{services.kicker}</Badge>
+            <h2 className="mt-3 text-3xl font-bold tracking-tight text-navy md:text-4xl">
+              {services.title}
+            </h2>
+            <p className="mt-4 text-base text-muted">{services.description}</p>
+          </div>
+
+          <ul className="mt-8 grid gap-3 sm:grid-cols-2">
+            {services.services.map((service) => (
+              <li key={service} className="flex items-center gap-2 text-sm text-ink">
+                <span className="font-bold text-mint">✓</span> {service}
+              </li>
+            ))}
+          </ul>
         </div>
       </section>
     </>
