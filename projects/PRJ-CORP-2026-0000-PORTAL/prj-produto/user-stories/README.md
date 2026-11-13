@@ -17,5 +17,8 @@
 | [US-FEAT-0002.0002-0011 — Hero institucional](US-FEAT-0002.0002-0011-hero-institucional.md) | 0002.0002 | S4 | 📝 Rascunho |
 | [US-FEAT-0002.0002-0012 — Posicionamento e diferenciais](US-FEAT-0002.0002-0012-posicionamento-diferenciais.md) | 0002.0002 | S4 | 📝 Rascunho |
 | [US-FEAT-0002.0002-0013 — Ecossistema SaaS + CTA](US-FEAT-0002.0002-0013-ecossistema-saas-cta.md) | 0002.0002 | S4 | 📝 Rascunho |
+| [US-FEAT-0002.0003-0014 — Página Sobre](US-FEAT-0002.0003-0014-pagina-sobre.md) | 0002.0003 | S4 | 📝 Rascunho |
+| [US-FEAT-0002.0004-0015 — Página Contato](US-FEAT-0002.0004-0015-pagina-contato.md) | 0002.0004 | S4 | 📝 Rascunho |
+| [US-FEAT-0002.0005-0016 — Páginas legais](US-FEAT-0002.0005-0016-paginas-legais.md) | 0002.0005 | S4 | 📝 Rascunho |
 
-> Stories das demais features (S4–S8) são detalhadas no refinamento de cada sprint.
+> Stories das demais features (S5–S8) são detalhadas no refinamento de cada sprint.
