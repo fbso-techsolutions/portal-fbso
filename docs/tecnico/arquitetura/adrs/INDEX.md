@@ -6,4 +6,5 @@
 
 | ID | Decisão | Status | Data | Arquivo |
 |---|---|---|---|---|
-| ADR-001 | Stack do portal (React + TS + Vite + Router v8 + prerender + Cloudflare) | 📝 Proposta | 2026-11-11 | [adr-001-stack-portal.md](adr-001-stack-portal.md) |
+| ADR-001 | Stack do portal (React + TS + Vite + Router v8 + prerender + Cloudflare) | ✅ Decidida | 2026-11-11 | [adr-001-stack-portal.md](adr-001-stack-portal.md) |
+| ADR-002 | Modelo de domínios dos SaaS (domínio próprio por produto) | ✅ Decidida | 2026-11-13 | [adr-002-dominios-saas.md](adr-002-dominios-saas.md) |

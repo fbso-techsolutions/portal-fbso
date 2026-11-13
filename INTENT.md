@@ -41,8 +41,7 @@ dados** preserva a evolução para fonte externa (API/CMS) na Release 2 sem rees
 
 ## 5. Decisões ainda abertas (não bloqueiam o MVP)
 
-1. **Subdomínio × domínio próprio** para os SaaS (`educatio.fbso.com.br` × `fbsoeducatio.com.br`) —
-   afeta a compra de domínios e o desenho do SSO (Release 3).
+1. ~~**Subdomínio × domínio próprio** para os SaaS~~ ✅ **decidido** (2026-11-13): **domínio próprio por SaaS** ([ADR-002](docs/tecnico/arquitetura/adrs/adr-002-dominios-saas.md)) — `fbsomercator.com.br` · `fbsofiscalia.com.br` · `fbsoeducatio.com.br` · `fbsomateriae.com.br` · `fbsotechservices.com.br` (+ reserva `fbsotechsolutions.com.br`/`fbsotech.com.br`).
 2. ~~**Renome** `saas-rmr` → `saas-materiae`~~ ✅ **feito** (2026-11-13) — repo `saas-materiae`.
 3. ~~**`coding-standards-react.md`** a escrever na platform-standards~~ ✅ **criado** (2026-11-13) — padrão React/TS publicado (ADR-007).
 4. **Nomenclatura** — empresa "FBSO Technology Solutions" · marca "FBSO TechSolutions" · divisão "FBSO TechServices" (ver [BRAND-GUIDELINES](docs/negocio/branding/BRAND-GUIDELINES.md)).
