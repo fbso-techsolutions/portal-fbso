@@ -20,5 +20,10 @@
 | [US-FEAT-0002.0003-0014 — Página Sobre](US-FEAT-0002.0003-0014-pagina-sobre.md) | 0002.0003 | S4 | 📝 Rascunho |
 | [US-FEAT-0002.0004-0015 — Página Contato](US-FEAT-0002.0004-0015-pagina-contato.md) | 0002.0004 | S4 | 📝 Rascunho |
 | [US-FEAT-0002.0005-0016 — Páginas legais](US-FEAT-0002.0005-0016-paginas-legais.md) | 0002.0005 | S4 | 📝 Rascunho |
+| [US-FEAT-0003.0001-0017 — Página TechServices](US-FEAT-0003.0001-0017-pagina-techservices.md) | 0003.0001 | S5 | 📝 Rascunho |
+| [US-FEAT-0004.0001-0018 — Catálogo SaaS (dados)](US-FEAT-0004.0001-0018-catalogo-saas-dados.md) | 0004.0001 | S6 | 📝 Rascunho |
+| [US-FEAT-0004.0001-0019 — Página /solucoes](US-FEAT-0004.0001-0019-pagina-solucoes.md) | 0004.0001 | S6 | 📝 Rascunho |
+| [US-FEAT-0004.0002-0020 — Rota detalhe produto](US-FEAT-0004.0002-0020-rota-detalhe-produto.md) | 0004.0002 | S6 | 📝 Rascunho |
+| [US-FEAT-0004.0002-0021 — Conteúdo/link produto](US-FEAT-0004.0002-0021-conteudo-link-produto.md) | 0004.0002 | S6 | 📝 Rascunho |
 
-> Stories das demais features (S5–S8) são detalhadas no refinamento de cada sprint.
+> Stories das demais features (S7–S8) são detalhadas no refinamento de cada sprint.

@@ -7,19 +7,19 @@
 | Prioridade | Must |
 | Estimativa | 5 SP |
 | Rastreio | B-REQ-01 · B-REQ-02 |
-| Status | 📝 Rascunho (2026-11-13) |
+| Status | ✅ Revisado (2026-11-13) |
 
 ## 1. Declaração
 
 - **Como** visitante, **quero** seções de posicionamento ("quem somos") e diferenciais (pilares +
-  resumo TechServices), **para** entender a proposta de valor da FBSO.
+  resumo TechServices + resumo dos SaaS), **para** entender a proposta de valor da FBSO.
 
 ## 2. Cenários (Gherkin)
 
 - **Dado que** acesso a Home, **quando** rolo além do hero, **então** as seções de posicionamento e
   diferenciais renderizam.
 - **Dado que** as seções renderizam, **quando** visualizo os diferenciais, **então** cada pilar
-  (engenharia · visão consultiva · inovação) e o resumo TechServices aparecem com seus textos.
+  (engenharia · visão consultiva · inovação), o resumo TechServices, e o resumo os SaaS, aparecem com seus textos.
 
 ## 3. Não funcionais
 

@@ -7,7 +7,7 @@
 | B-REQ dona | B-REQ-05 |
 | Prioridade | Onda 1-Must (MVP) |
 | 🔒 Travada por | FEATURE-0004.0001 (catálogo) |
-| Status | 📝 Rascunho (2026-11-11) |
+| Status | ✅ Revisado (2026-11-13) |
 
 ## 1. Objetivo de negócio
 
@@ -26,8 +26,8 @@ Permitir navegar para a página específica de cada produto (`/solucoes/:slug`).
 
 | ID | História |
 |---|---|
-| (a detalhar) | Rota de detalhe `/solucoes/:slug` |
-| (a detalhar) | Conteúdo/link externo por produto |
+| [US-FEAT-0004.0002-0020](../user-stories/US-FEAT-0004.0002-0020-rota-detalhe-produto.md) | Rota de detalhe `/solucoes/:slug` |
+| [US-FEAT-0004.0002-0021](../user-stories/US-FEAT-0004.0002-0021-conteudo-link-produto.md) | Conteúdo/link externo por produto |
 
 ## 7. Critérios de aceite (DoD)
 

@@ -7,7 +7,7 @@
 | B-REQ dona | B-REQ-07 |
 | Prioridade | Onda 1-Must (MVP) |
 | 🔒 Travada por | FEATURE-0005.0001 (SEO) · FEATURE-0005.0002 (a11y) |
-| Status | 📝 Rascunho (2026-11-11) |
+| Status | ✅ Revisado (2026-11-13) |
 
 ## 1. Objetivo de negócio
 
