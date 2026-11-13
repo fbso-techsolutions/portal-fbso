@@ -53,6 +53,15 @@ declarado em `tsconfig.app.json` e `vite.config.ts`.
 
 > 🔧 **Como a base foi criada** (scaffold, one-time): ver [docs/tecnico/setup.md](docs/tecnico/setup.md).
 
+### Scripts utilitários (git/merge)
+
+| Script | O que faz |
+|---|---|
+| `./merge-sync.sh <pr>` | merge com **bypass de regras** + delete da branch + sincroniza local (equivalente à UI) |
+| `./sync-main.sh` | sincroniza `main` após merge manual (checkout + pull --ff-only + prune + limpa branches mergeadas) |
+
+Ambos têm proteções (working tree sujo, repo correto) para evitar falhas de execução.
+
 ## Regras
 
 - "Promover o genérico, manter o específico" — [platform-standards/standards/](https://github.com/fbso-techsolutions/platform-standards).
