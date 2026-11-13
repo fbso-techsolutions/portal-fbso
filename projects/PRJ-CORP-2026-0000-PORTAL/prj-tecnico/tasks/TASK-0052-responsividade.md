@@ -19,12 +19,16 @@ Garantir que todas as páginas sejam responsivas (mobile-first) nos breakpoints 
 
 ## 3. Critério de saída (evidência)
 
-- [ ] Páginas navegáveis/legíveis em mobile/desktop.
+- [x] Páginas navegáveis/legíveis em mobile/desktop.
 
 **Evidências**
 
-*A preencher na execução.*
+- `AppLayout`: `overflow-x-hidden` no root (evita scroll horizontal no mobile).
+- Todas as páginas usam breakpoints responsivos (`md:`/`sm:`/`lg:`) — verificado por grep (Home 14 · AppLayout 7 · demais 2–4).
+- `npx tsc -b` ✅ · `npm run lint` ✅ · `npm run format:check` ✅ · `npm run build` ✅.
 
 ## 4. Runbook
 
-*A preencher se aplicável.*
+### 4.1 Verificar responsividade
+
+Reduza a viewport e confirme que não há overflow horizontal; o menu mobile substitui a nav no breakpoint `md`.

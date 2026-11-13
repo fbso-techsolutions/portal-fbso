@@ -55,12 +55,15 @@ npx wrangler deploy
 **Roteiro de delegação:**
 1. No [registro.br](https://registro.br), alterar os **servidores DNS** do `fbso.com.br` para os dois
    nameservers acima.
-2. Na Cloudflare, criar os registros de **DNS** (CNAME `@`/`www` → worker/assets).
-3. Validar propagação e forçar HTTPS (SSL/TLS → Full/Strict).
+2. Na Cloudflare, adicionar o **domínio custom** ao Worker (Workers & Pages → `portal-fbso` →
+   Settings → Domains & Routes → **Custom Domains** → adicionar `fbso.com.br` e `www.fbso.com.br`).
+3. A Cloudflare provisiona o **certificado HTTPS** automaticamente (não criar registro CNAME manual —
+   o Custom Domain do Worker cuida disso).
+4. Forçar HTTPS (SSL/TLS → **Full (Strict)** na zona `fbso.com.br`).
+5. Validar propagação (`dig fbso.com.br NS` deve retornar `ray`/`tess.ns.cloudflare.com`).
 
 > `.com.br` no free tier da Cloudflare é suportado (basta delegar o NS no registro.br).
-> ⚠️ A troca efetiva de NS é feita no **go-live** (FEATURE-0005.0003); até lá, o deploy usa a URL
-> preview da Cloudflare.
+> ✅ NS delegados e domínio no ar (2026-11-13): `https://fbso.com.br` + `https://www.fbso.com.br`.
 
 ## 6. Evolução (Release 2/3)
 

@@ -1,11 +1,13 @@
 import type { MetaFunction } from 'react-router';
 import { legaisContent } from '@/content/legais';
 import { siteContent } from '@/content/site';
+import { seo } from '@/lib/seo';
 
-export const meta: MetaFunction = () => [
-  { title: `Privacidade · ${siteContent.shortName}` },
-  { name: 'description', content: legaisContent.privacidade.title },
-];
+export const meta: MetaFunction = () =>
+  seo({
+    title: `Privacidade · ${siteContent.shortName}`,
+    description: legaisContent.privacidade.title,
+  });
 
 export default function Privacidade() {
   const { title, updated, paragraphs } = legaisContent.privacidade;

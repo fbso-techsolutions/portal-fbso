@@ -19,12 +19,20 @@ Homologar (smoke em produção) e fazer o go-live no `fbso.com.br`.
 
 ## 3. Critério de saída (evidência)
 
-- [ ] `https://fbso.com.br` no ar com smoke aprovado.
+- [x] `https://fbso.com.br` no ar com smoke aprovado.
 
 **Evidências**
 
-*A preencher na execução.*
+- Smoke em `https://fbso.com.br`: 8 rotas retornam `200` (`/`, `/sobre`, `/contato`, `/techservices`, `/solucoes`, `/solucoes/educatio`, `/privacidade`, `/termos`).
+- `https://www.fbso.com.br` → `200` (redirect/alias OK).
+- HTTPS ativo (certificado provisionado pela Cloudflare).
 
 ## 4. Runbook
 
-*A preencher se aplicável.*
+### 4.1 Reexecutar o smoke
+
+```bash
+for p in / /sobre /contato /techservices /solucoes /solucoes/educatio /privacidade /termos; do
+  printf "%s  %s\n" "$(curl -sSL -o /dev/null -w '%{http_code}' "https://fbso.com.br$p")" "$p"
+done
+```

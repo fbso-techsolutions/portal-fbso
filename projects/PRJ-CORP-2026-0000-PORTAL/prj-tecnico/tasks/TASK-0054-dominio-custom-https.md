@@ -19,12 +19,16 @@ Configurar o domínio custom `fbso.com.br` + HTTPS na Cloudflare (NS já apontad
 
 ## 3. Critério de saída (evidência)
 
-- [ ] Worker responde em `fbso.com.br`; HTTPS forçado.
+- [x] Worker responde em `fbso.com.br`; HTTPS forçado.
 
 **Evidências**
 
-*A preencher na execução.*
+- `https://fbso.com.br` e `https://www.fbso.com.br` respondem `200` (HTTPS ativo).
+- NS delegados (`ray`/`tess.ns.cloudflare.com`) + Custom Domain no Worker + SSL Full (Strict) — configurados (2026-11-13).
+- Smoke: 8 rotas retornam `200` em `https://fbso.com.br`.
 
 ## 4. Runbook
 
-*A preencher se aplicável.*
+### 4.1 Reproduzir a configuração (referência)
+
+Ver [DEPLOYMENT.md §5](../../../../docs/tecnico/arquitetura/DEPLOYMENT.md) — delegação NS (registro.br) + Custom Domain (Workers) + HTTPS (Full Strict).

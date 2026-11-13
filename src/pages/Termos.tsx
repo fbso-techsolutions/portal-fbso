@@ -1,11 +1,10 @@
 import type { MetaFunction } from 'react-router';
 import { legaisContent } from '@/content/legais';
 import { siteContent } from '@/content/site';
+import { seo } from '@/lib/seo';
 
-export const meta: MetaFunction = () => [
-  { title: `Termos · ${siteContent.shortName}` },
-  { name: 'description', content: legaisContent.termos.title },
-];
+export const meta: MetaFunction = () =>
+  seo({ title: `Termos · ${siteContent.shortName}`, description: legaisContent.termos.title });
 
 export default function Termos() {
   const { title, updated, paragraphs } = legaisContent.termos;
