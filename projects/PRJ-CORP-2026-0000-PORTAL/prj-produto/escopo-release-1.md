@@ -1,6 +1,7 @@
 # 🚀 Escopo da Release 1 (MVP estático)
 
 > Fatiamento vertical da primeira entrega. Fonte: [PRD](../../PRD.md) · [rastreabilidade](rastreabilidade.md).
+> **Status:** ✅ **Concluída** (2026-11-13) — 5 sprints entregues, portal no ar em `https://fbso.com.br`.
 
 ## 1. O que entra
 

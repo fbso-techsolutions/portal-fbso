@@ -1,6 +1,6 @@
 # 🗓️ Sprint 5 — SEO, a11y e go-live · 25/01/2027 – 05/02/2027
 
-> **Status:** `📋 Planejada` · **Sprint Goal:** "Portal encontrável (SEO), acessível (a11y) e publicado no domínio próprio `fbso.com.br`" ·
+> **Status:** `✅ Concluída (executada antecipadamente em 2026-11-13; janela prevista 25/01–05/02)` · **Sprint Goal:** "Portal encontrável (SEO), acessível (a11y) e publicado no domínio próprio `fbso.com.br`" ·
 > **Board:** [board-sprint-0005.md](board-sprint-0005.md) · **Tasks:** [prj-tecnico/tasks/](../../prj-tecnico/tasks/README.md) ·
 > **Verdade única do corte:** [escopo-release-1](../escopo-release-1.md)
 
@@ -19,9 +19,9 @@
 **Objetivo:** fechar a Release 1 — portal encontrável, acessível e publicado no `fbso.com.br` com homologação.
 
 **Resultados esperados:**
-- [ ] Metadados por página + `sitemap.xml`/`robots.txt` (0005.0001).
-- [ ] Responsividade e acessibilidade básica de todas as páginas (0005.0002).
-- [ ] `https://fbso.com.br` no ar com HTTPS e smoke aprovado (0005.0003).
+- [x] Metadados por página + `sitemap.xml`/`robots.txt` (0005.0001).
+- [x] Responsividade e acessibilidade básica de todas as páginas (0005.0002).
+- [x] `https://fbso.com.br` no ar com HTTPS e smoke aprovado (0005.0003).
 
 ## 2. Escopo (o corte)
 
@@ -55,9 +55,9 @@
 
 ## 5. Definition of Done
 
-- [ ] Stories `✅ Entregue` no backlog (DoD + artefato verificável — PR/deploy).
-- [ ] `npm run lint` · `format:check` · `typecheck` verdes no CI.
-- [ ] `https://fbso.com.br` no ar com HTTPS e smoke test aprovado.
+- [x] Stories `✅ Entregue` no backlog (DoD + artefato verificável — PR/deploy).
+- [x] `npm run lint` · `format:check` · `typecheck` verdes no CI.
+- [x] `https://fbso.com.br` no ar com HTTPS e smoke test aprovado.
 
 ## 6. Execução (log)
 
@@ -74,15 +74,67 @@
 
 ## 7. Sprint Review — `[Encerramento]`
 
-*A preencher no encerramento.*
+### 7.1 Demonstração das entregas
+
+Portal no ar em `https://fbso.com.br` com SEO (metadados + sitemap/robots), acessibilidade (skip link, foco, semântica) e HTTPS.
+
+### 7.2 Validação dos resultados
+
+| Item | Resultado | Observações |
+|---|---|---|
+| US-FEAT-0005.0001-0022/0023 — Metadados + sitemap | ✅ Aceito | `seo()` + sitemap gerado no build |
+| US-FEAT-0005.0002-0024/0025 — Responsividade + a11y | ✅ Aceito | skip link + breakpoints |
+| US-FEAT-0005.0003-0026/0027 — Domínio + go-live | ✅ Aceito | `fbso.com.br` no ar + smoke |
+
+### 7.3 Novas necessidades identificadas
+
+- [ ] Analytics/leads (B-REQ-08) — Release 2.
+- [ ] SSO/OIDC (B-REQ-09) — Release 3.
+
+---
 
 ## 8. Retrospectiva — `[Encerramento]`
 
-*A preencher no encerramento.*
+### 8.1 Pontos positivos / de atenção / melhorias
+
+- **Positivos:** go-live no domínio próprio · SEO centralizado (`seo()` + sitemap gerado) · a11y básica aplicada.
+- **Atenção:** sitemap/robots ainda dependem do merge da PR #42 para entrar no deploy.
+- **Melhorias:** auditoria WCAG formal · definir o logo (`PENDENCY-0011`).
+
+### 8.2 Plano de ação
+
+| Ação | ID | Responsável | Prazo | Status |
+|---|---|---|---|---|
+| Auditoria WCAG formal | RETRO-ACTION-0008 | QA | pós-MVP | Pendente |
+| Logo definitivo | PENDENCY-0011 | Arquiteto + PM/PO | — | Pendente |
+
+---
 
 ## 9. Encerramento — `[Encerramento]`
 
-*A preencher no encerramento.*
+### 9.1 Resultado do Sprint Goal
+
+**Status:** `[x]` Alcançado — portal encontrável, acessível e publicado em `fbso.com.br`.
+
+### 9.2 Indicadores finais
+
+| Indicador | Resultado |
+|---|---|
+| Story Points concluídos | 20 (6 stories) |
+| Itens concluídos / não concluídos | 6 / 0 |
+| Tasks concluídas | 6 / 6 (20h) |
+| Bugs identificados / corrigidos | 0 / 0 |
+
+### 9.3 Pendências para próximas sprints
+
+| ID | Descrição | Origem | Destino |
+|---|---|---|---|
+| B-REQ-08 | Analytics/origem de acessos/leads | Release 1 | Release 2 |
+| B-REQ-09 | SSO/OIDC | Release 1 | Release 3 |
+| PENDENCY-0011 | logo definitivo | — | pendencias |
+
+> **Nota:** Sprint concluída **antecipadamente** (2026-11-13). O go-live (NS + Custom Domain + HTTPS)
+> foi executado operacionalmente (Lourival) e validado com smoke em `fbso.com.br`.
 
 ## 10. Decisões pendentes deste documento
 
