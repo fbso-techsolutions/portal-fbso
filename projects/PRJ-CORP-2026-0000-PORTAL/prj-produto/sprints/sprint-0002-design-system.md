@@ -69,6 +69,7 @@
 | 2026-11-13 | [TASK-0029](../../prj-tecnico/tasks/TASK-0029-aplicar-tokens-app.md) | `AppLayout`/`Home` migrados para tokens (`bg-navy`/`text-mint`/`text-mist`/`border-blue`/`text-sky`) | grep `[#` limpo; US-0001.0002-0006 concluída |
 | 2026-11-13 | [TASK-0030](../../prj-tecnico/tasks/TASK-0030-componente-button.md) | `src/components/ui/Button.tsx` — variantes `primary`/`outline`, pill, hover/focus, polimórfico `button`/`a` | consome tokens; sem lógica de negócio |
 | 2026-11-13 | [TASK-0031](../../prj-tecnico/tasks/TASK-0031-componentes-card-section.md) | `src/components/ui/Card.tsx` (borda/raio/hover) + `src/components/ui/Section.tsx` (kicker/título/copy) | consomem tokens; composição sem reimplementar estilos |
+| 2026-11-13 | [TASK-0032](../../prj-tecnico/tasks/TASK-0032-badge-responsividade-qa.md) | `src/components/ui/Badge.tsx` + barrel `index.ts` · responsividade fluída · smoke (tsc/lint/format/build) | QA visual de composição fica para a S3 (FEATURE-0002.0001) · US-0001.0002-0007 concluída |
 
 ## 7. Sprint Review — `[Encerramento]`
 

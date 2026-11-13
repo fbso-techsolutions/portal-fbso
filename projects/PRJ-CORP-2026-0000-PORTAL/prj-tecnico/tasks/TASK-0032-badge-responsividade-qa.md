@@ -22,13 +22,20 @@ componentes `ui/` nos breakpoints do tema, com smoke de QA.
 
 ## 3. Critério de saída (evidência)
 
-- [ ] `Badge` renderiza o kicker uppercase + marcador.
-- [ ] Componentes responsivos (mobile/desktop) e smoke QA aprovado.
+- [x] `Badge` renderiza o kicker uppercase + marcador.
+- [x] Componentes responsivos (mobile/desktop) e smoke QA aprovado.
 
 **Evidências**
 
-*A preencher na execução.*
+- `src/components/ui/Badge.tsx` (kicker uppercase + marcador mint) + barrel `src/components/ui/index.ts` (Button/Card/Section/Badge) criados.
+- Responsividade: classes fluídas/breakpoints (`Section` usa `md:text-4xl`; componentes sem largura fixa).
+- Smoke QA: `npx tsc -b` ✅ · `npm run lint` ✅ · `npm run format:check` ✅ · `npm run build` ✅ (prerender ok).
+- **Decisão de escopo:** o QA visual de composição (página de exemplo com os 4 componentes) fica para a **S3** (FEATURE-0002.0001) — os componentes-base ainda não são consumidos pelas páginas de produto.
 
 ## 4. Runbook
 
-*A preencher se aplicável (ex.: página de exemplo para QA).*
+### 4.1 Consumir os componentes
+
+```tsx
+import { Badge, Button, Card, Section } from '@/components/ui';
+```
