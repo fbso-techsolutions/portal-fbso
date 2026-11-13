@@ -22,13 +22,23 @@ molde (borda `line`, raio `20px`, hover lift; `Section` = kicker + título + cop
 
 ## 3. Critério de saída (evidência)
 
-- [ ] `Card` e `Section` renderizam estilizados e responsivos.
-- [ ] Compõem sem reimplementar estilos (usa tokens).
+- [x] `Card` e `Section` renderizam estilizados e responsivos.
+- [x] Compõem sem reimplementar estilos (usa tokens).
 
 **Evidências**
 
-*A preencher na execução.*
+- `src/components/ui/Card.tsx` (borda `line`, raio `soft`, fundo branco, hover opcional) e `src/components/ui/Section.tsx` (kicker + título + copy + conteúdo) criados, consumindo tokens.
+- `npx tsc -b` ✅ · `npm run lint` ✅ · `npm run format:check` ✅.
 
 ## 4. Runbook
 
-*A preencher se aplicável.*
+### 4.1 Uso
+
+```tsx
+import Card from '@/components/ui/Card';
+import Section from '@/components/ui/Section';
+
+<Section kicker="Quem somos" title="Tecnologia com visão de negócio." description="...">
+  <Card hoverable>Conteúdo</Card>
+</Section>
+```
