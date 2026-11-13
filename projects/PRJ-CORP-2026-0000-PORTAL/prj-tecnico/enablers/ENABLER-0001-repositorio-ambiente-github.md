@@ -16,6 +16,6 @@ Criar o repo `fbso-techsolutions/portal-fbso`, espelhar localmente, e preparar o
 
 ## 2. Critério de saída
 
-- [ ] Repo criado na org + espelho local sincronizado.
-- [ ] `main` protegida (PR obrigatório).
-- [ ] Secrets `CLOUDFLARE_API_TOKEN` / `CLOUDFLARE_ACCOUNT_ID` configurados.
+- [x] Repo criado na org + espelho local sincronizado.
+- [x] `main` protegida (PR obrigatório).
+- [x] Secrets `CLOUDFLARE_API_TOKEN` / `CLOUDFLARE_ACCOUNT_ID` configurados.

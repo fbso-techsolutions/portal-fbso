@@ -1,6 +1,6 @@
 # 🗓️ Sprint 1 — Fundação · 16/11/2026 – 27/11/2026
 
-> **Status:** `Em execução` · **Sprint Goal:** "Repo + scaffold + CI/CD publicando o 'hello world' na Cloudflare" ·
+> **Status:** `✅ Concluída (encerrada em 2026-11-13)` · **Sprint Goal:** "Repo + scaffold + CI/CD publicando o 'hello world' na Cloudflare" ·
 > **Board:** [board-sprint-0001.md](board-sprint-0001.md) · **Roteiro:** [roteiro-execucao-sprint-0001.md](roteiro-execucao-sprint-0001.md) · **Tasks:** [prj-tecnico/tasks/](../../prj-tecnico/tasks/README.md) ·
 > **Verdade única do corte:** [escopo-release-1](../escopo-release-1.md)
 
@@ -19,10 +19,10 @@
 **Objetivo:** fundação técnica — repo, scaffold da stack aprovada e pipeline publicando na Cloudflare.
 
 **Resultados esperados:**
-- [ ] Repo + espelho local + branch protection (ENABLER-0001).
-- [ ] Conta Cloudflare + domínio prontos (ENABLER-0002).
+- [x] Repo + espelho local + branch protection (ENABLER-0001).
+- [x] Conta Cloudflare + domínio prontos (ENABLER-0002).
 - [x] Scaffold Vite+TS+Tailwind+Router v8 com `dist/client/` pré-renderizado (0001.0001).
-- [ ] CI/CD publicando o "hello world" (0001.0003).
+- [x] CI/CD publicando o "hello world" (0001.0003).
 
 ## 2. Escopo (o corte)
 
@@ -68,8 +68,8 @@
 
 ## 5. Definition of Done
 
-- [ ] Stories com `✅ Entregue` no backlog (DoD + artefato verificável — PR/deploy).
-- [ ] `npm run build` verde no CI e deploy acessível.
+- [x] Stories com `✅ Entregue` no backlog (DoD + artefato verificável — PR/deploy).
+- [x] `npm run build` verde no CI e deploy acessível.
 
 ## 6. Execução (log)
 
@@ -113,6 +113,26 @@
 2. ✅ **Gate DoR aprovado** (2026-11-11) — 5 stories + 2 enablers marcados `✅ Revisado`
    ([checklist DoR](checklist-dor-sprint-0001.md)).
 3. ✅ **PENDENCY-0007 resolvida** (2026-11-11) — dev frontend confirmado: Alfredo Bento (100%).
+
+## 8. Fechamento (2026-11-13)
+
+**Resultado:** Sprint Goal ✅ — repo + scaffold + CI/CD publicando o "hello world" na Cloudflare.
+
+**Entregáveis:**
+- 2 enablers + 5 stories **✅ Entregue** · 27 tasks concluídas (59h) · board 100% ✅.
+- Portal no ar: [portal-fbso.bolismar69.workers.dev](https://portal-fbso.bolismar69.workers.dev) —
+  prerender, CI gating (`lint → typecheck → build`) e deploy automático no merge da `main`.
+
+**Pendências em aberto (fora do corte da Sprint 1):**
+
+| Item | Descrição | Dono |
+|---|---|---|
+| PENDENCY-0009 | Assinatura do ADR-001 (Tech lead + Arquiteto) | Tech lead + Arquiteto |
+| PENDENCY-0010 | `coding-standards-react.md` inexistente na platform-standards (`RISK-0002`) | Arquiteto |
+| Limitação R2 | `/__manifest` (route discovery) retorna 404 no deploy estático — exige Worker/binding `ASSETS` | Infra |
+| Go-live | Delegação NS `fbso.com.br` no registro.br (FEATURE-0005.0003) | Infra/DevOps |
+
+> As pendências PENDENCY-0004/0006 seguem em [pendencias.md](../pendencias.md) (não pertencem à fundação).
 
 ---
 
