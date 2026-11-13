@@ -2,13 +2,15 @@ import type { MetaFunction } from 'react-router';
 import { homeContent } from '@/content/home';
 import { saasCatalog } from '@/content/saas-catalog';
 import { siteContent } from '@/content/site';
+import { seo } from '@/lib/seo';
 import Badge from '@/components/ui/Badge';
 import Card from '@/components/ui/Card';
 
-export const meta: MetaFunction = () => [
-  { title: `Soluções · ${siteContent.shortName}` },
-  { name: 'description', content: homeContent.products.description },
-];
+export const meta: MetaFunction = () =>
+  seo({
+    title: `Soluções · ${siteContent.shortName}`,
+    description: homeContent.products.description,
+  });
 
 export default function Solucoes() {
   const { products } = homeContent;

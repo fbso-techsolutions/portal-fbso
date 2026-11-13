@@ -2,15 +2,16 @@ import type { MetaFunction } from 'react-router';
 import { useParams } from 'react-router';
 import { saasCatalog } from '@/content/saas-catalog';
 import { siteContent } from '@/content/site';
+import { seo } from '@/lib/seo';
 import Badge from '@/components/ui/Badge';
 import Button from '@/components/ui/Button';
 
 export const meta: MetaFunction = ({ params }) => {
   const product = saasCatalog.find((p) => p.slug === params.slug);
-  return [
-    { title: product ? `${product.name} · ${siteContent.shortName}` : 'Produto' },
-    { name: 'description', content: product?.tagline ?? '' },
-  ];
+  return seo({
+    title: product ? `${product.name} · ${siteContent.shortName}` : 'Produto',
+    description: product?.tagline ?? '',
+  });
 };
 
 export default function Produto() {

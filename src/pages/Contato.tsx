@@ -1,13 +1,12 @@
 import type { MetaFunction } from 'react-router';
 import { contatoContent } from '@/content/contato';
 import { siteContent } from '@/content/site';
+import { seo } from '@/lib/seo';
 import Badge from '@/components/ui/Badge';
 import Button from '@/components/ui/Button';
 
-export const meta: MetaFunction = () => [
-  { title: `Contato · ${siteContent.shortName}` },
-  { name: 'description', content: contatoContent.description },
-];
+export const meta: MetaFunction = () =>
+  seo({ title: `Contato · ${siteContent.shortName}`, description: contatoContent.description });
 
 export default function Contato() {
   const { kicker, title, description, channels } = contatoContent;

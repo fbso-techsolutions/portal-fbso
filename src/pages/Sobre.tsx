@@ -1,13 +1,12 @@
 import type { MetaFunction } from 'react-router';
 import { sobreContent } from '@/content/sobre';
 import { siteContent } from '@/content/site';
+import { seo } from '@/lib/seo';
 import Badge from '@/components/ui/Badge';
 import Card from '@/components/ui/Card';
 
-export const meta: MetaFunction = () => [
-  { title: `Sobre · ${siteContent.shortName}` },
-  { name: 'description', content: sobreContent.description },
-];
+export const meta: MetaFunction = () =>
+  seo({ title: `Sobre · ${siteContent.shortName}`, description: sobreContent.description });
 
 export default function Sobre() {
   const { kicker, title, description, mission, values } = sobreContent;

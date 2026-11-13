@@ -1,13 +1,15 @@
 import type { MetaFunction } from 'react-router';
 import { techServicesContent } from '@/content/techservices';
 import { siteContent } from '@/content/site';
+import { seo } from '@/lib/seo';
 import Badge from '@/components/ui/Badge';
 import Card from '@/components/ui/Card';
 
-export const meta: MetaFunction = () => [
-  { title: `TechServices · ${siteContent.shortName}` },
-  { name: 'description', content: techServicesContent.description },
-];
+export const meta: MetaFunction = () =>
+  seo({
+    title: `TechServices · ${siteContent.shortName}`,
+    description: techServicesContent.description,
+  });
 
 export default function TechServices() {
   const { kicker, title, description, fronts } = techServicesContent;

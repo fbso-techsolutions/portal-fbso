@@ -65,7 +65,7 @@
 
 | Data | Item | O que foi feito (comandos/ações) | Decisões/desvios |
 |---|---|---|---|
-| — | — | — | — |
+| 2026-11-13 | [TASK-0050](../../prj-tecnico/tasks/TASK-0050-metadados-pagina.md) | `src/lib/seo.ts` (helper `seo()`) · 8 páginas refatoradas para usá-lo (title/description/OG) | fonte única de SEO · US-0005.0001-0022 concluída |
 
 ## 7. Sprint Review — `[Encerramento]`
 

@@ -19,12 +19,16 @@ Garantir `<title>`, meta description e Open Graph próprios em cada página pré
 
 ## 3. Critério de saída (evidência)
 
-- [ ] Cada rota pré-renderizada tem title/description/og próprios.
+- [x] Cada rota pré-renderizada tem title/description/og próprios.
 
 **Evidências**
 
-*A preencher na execução.*
+- `src/lib/seo.ts`: helper `seo()` (title + description + Open Graph) — fonte única.
+- Refatoração: as 8 páginas (`Home`, `Sobre`, `Contato`, `Privacidade`, `Termos`, `TechServices`, `Solucoes`, `Produto`) passaram a usar `seo()`.
+- `npx tsc -b` ✅ · `npm run lint` ✅ · `npm run format:check` ✅ · `npm run build` ✅.
 
 ## 4. Runbook
 
-*A preencher se aplicável.*
+### 4.1 Adicionar metadados a uma página
+
+Use `seo({ title, description })` em `src/lib/seo.ts`.
