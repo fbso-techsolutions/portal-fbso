@@ -23,5 +23,5 @@ provando o funcionamento do roteamento + prerender.
 
 ## 3. Critério de saída (evidência)
 
-- [ ] Acessar `/` renderiza a Home sem erro.
-- [ ] Layout mínimo carrega (estrutura de página presente no HTML pré-renderizado).
+- [x] Acessar `/` renderiza a Home sem erro.
+- [x] Layout mínimo carrega (estrutura de página presente no HTML pré-renderizado).

@@ -27,5 +27,5 @@ tenha um lugar claro nas próximas features.
 
 ## 3. Critério de saída (evidência)
 
-- [ ] Pastas criadas e versionadas.
-- [ ] Nenhuma pasta vazia sem propósito (cada uma com `README.md` ou artefato inicial).
+- [x] Pastas criadas e versionadas.
+- [x] Nenhuma pasta vazia sem propósito (cada uma com `README.md` ou artefato inicial — usamos `.gitkeep`).

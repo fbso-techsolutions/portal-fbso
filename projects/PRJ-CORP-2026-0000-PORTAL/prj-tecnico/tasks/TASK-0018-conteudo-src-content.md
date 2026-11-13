@@ -23,5 +23,5 @@ Estabelecer o padrão **"conteúdo como dados"** (INTENT §4): textos/placeholde
 
 ## 3. Critério de saída (evidência)
 
-- [ ] Texto da Home vindo de `src/content/` (não literal no componente).
-- [ ] Estrutura tipada (sem `any`).
+- [x] Texto da Home vindo de `src/content/` (não literal no componente).
+- [x] Estrutura tipada (sem `any`).

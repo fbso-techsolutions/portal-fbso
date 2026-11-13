@@ -90,6 +90,10 @@
 | 2026-11-12 | [TASK-0009](../../prj-tecnico/tasks/TASK-0009-tailwind-css-v4.md) | `npm install --save-dev --save-exact tailwindcss @tailwindcss/vite` · plugin no `vite.config.ts` · entry `src/styles/index.css` | tokens em [design-tokens.md](../../../../docs/tecnico/ux-ui/design-tokens.md); tema `@theme` na S2 · PR #4 |
 | 2026-11-12 | [TASK-0010](../../prj-tecnico/tasks/TASK-0010-react-router-v8-prerender.md) | `npm install react-router @react-router/dev @react-router/node` · scripts `react-router dev/build` · `src/app/{root,routes}.tsx` + `src/pages/Home.tsx` | adotado **v8** (docs v7→v8); prerender → `dist/client/index.html` |
 | 2026-11-12 | [TASK-0011](../../prj-tecnico/tasks/TASK-0011-meta-seo-prerender.md) | `meta` export na Home (`title`/`description`/`og:*`) | `lang`/charset/viewport no `root.tsx`; build → `dist/client/index.html` com meta/OG |
+| 2026-11-12 | [TASK-0016](../../prj-tecnico/tasks/TASK-0016-estrutura-pastas-src.md) | `mkdir -p src/components/{layout,ui,sections} src/content src/lib` + `.gitkeep` | pastas vazias com `.gitkeep`; `app/`/`pages/`/`styles/` já existiam |
+| 2026-11-13 | [TASK-0017](../../prj-tecnico/tasks/TASK-0017-rota-home-hello-world.md) | `src/components/layout/AppLayout.tsx` (header/main/footer) no `root.tsx` · Home em `src/pages/Home.tsx` | layout mínimo aplicado a todas as rotas via `root.tsx`; eslint ignora `.react-router/` e libera `meta` no react-refresh (config completa = TASK-0012) |
+| 2026-11-13 | [TASK-0018](../../prj-tecnico/tasks/TASK-0018-conteudo-src-content.md) | `src/content/site.ts` + `src/content/home.ts` com `SiteContent`/`HomeContent` | conteúdo como dados; meta da Home lê `siteContent` (sem literal no JSX) |
+| 2026-11-13 | [TASK-0019](../../prj-tecnico/tasks/TASK-0019-build-prerender-smoke-local.md) | `npm run build` → `dist/client/index.html` com "hello world"/header/footer · `npm run preview` (HTTP 200) | script `preview` = `vite preview --outDir dist/client`; sem erro no preview |
 
 ## 7. Decisões pendentes
 
