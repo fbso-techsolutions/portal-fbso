@@ -59,8 +59,8 @@
 
 | Enabler / Runway | Habilita | Sprint | Status |
 |---|---|---|---|
-| [ENABLER-0001 — Repositório e ambiente GitHub](../prj-tecnico/enablers/ENABLER-0001-repositorio-ambiente-github.md) | FEATURE-0001.0001 (stories 0001–0003) · FEATURE-0001.0003 | [Sprint 1 — Fundação · 16/11–27/11](sprints/sprint-0001-fundacao.md) | ⬜ A fazer |
-| [ENABLER-0002 — Conta Cloudflare + domínio](../prj-tecnico/enablers/ENABLER-0002-conta-cloudflare-dominio.md) | FEATURE-0001.0003 · FEATURE-0005.0003 | [Sprint 1 — Fundação · 16/11–27/11](sprints/sprint-0001-fundacao.md) | ⬜ A fazer |
+| [ENABLER-0001 — Repositório e ambiente GitHub](../prj-tecnico/enablers/ENABLER-0001-repositorio-ambiente-github.md) | FEATURE-0001.0001 (stories 0001–0003) · FEATURE-0001.0003 | [Sprint 1 — Fundação · 16/11–27/11](sprints/sprint-0001-fundacao.md) | ✅ Entregue |
+| [ENABLER-0002 — Conta Cloudflare + domínio](../prj-tecnico/enablers/ENABLER-0002-conta-cloudflare-dominio.md) | FEATURE-0001.0003 · FEATURE-0005.0003 | [Sprint 1 — Fundação · 16/11–27/11](sprints/sprint-0001-fundacao.md) | ✅ Entregue |
 
 > **Nota:** enabler/runway **não** tracejam para B-REQ/épico/feature — o vínculo deles é o **"Habilita"**
 > (declarado no card do enabler e refletido no `🔒 Travada por`/`Depende de` da feature). Esta tabela é só o espelho.
@@ -71,8 +71,8 @@
 |---|---|
 | 🚩 | 2 |
 | 💡 | 12 |
-| 👷 | 5 |
-| 🏁 | 0 |
+| 👷 | 0 |
+| 🏁 | 5 |
 | 🚫 | 0 |
 
 > **Requisitos 🚩** (não-iniciado, sem épico): **B-REQ-08** (analytics/origem de acessos/leads) e

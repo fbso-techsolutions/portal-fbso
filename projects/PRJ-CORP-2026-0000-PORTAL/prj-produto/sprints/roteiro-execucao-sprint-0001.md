@@ -1,5 +1,8 @@
 # 🏁 Roteiro de Execução — Sprint 1 (Fundação) · kickoff 16/11
 
+> **Status:** ✅ **Executado** — as 27 tasks das ondas 1–11 foram concluídas (encerramento 2026-11-13;
+> detalhes no [sprint doc §8 Fechamento](sprint-0001-fundacao.md)).
+
 > **O que é:** a ordem de execução das 27 tasks do corte, por dependência — o "plano de voo" do
 > kickoff. Complementa o [sprint doc](sprint-0001-fundacao.md) (o **quê/porquê**) e o
 > [board](board-sprint-0001.md) (o **status**). Aqui só a **sequência**.
