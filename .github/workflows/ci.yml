@@ -19,7 +19,8 @@ concurrency:
 jobs:
   ci:
     name: lint → typecheck → build
-    runs-on: ubuntu-latest
+    # Runner pinado: `ubuntu-latest` migra silenciosamente de imagem (ex.: Ubuntu 26).
+    runs-on: ubuntu-24.04
     timeout-minutes: 10
 
     steps:
