@@ -23,5 +23,40 @@ versionada no repositório.
 
 ## 3. Critério de saída (evidência)
 
-- [ ] Deploy automático ao merge na `main`.
-- [ ] Nenhum secret no repo (grep `CLOUDFLARE`/token vazio).
+- [x] Deploy automático ao merge na `main`.
+- [x] Nenhum secret no repo (grep `CLOUDFLARE`/token vazio).
+
+**Evidências**
+
+- `.github/workflows/deploy.yml` versionado: gatilho `push` na `main` (+ `workflow_dispatch`) →
+  `npm ci` → `npm run build` → `npx wrangler deploy`, com `CLOUDFLARE_API_TOKEN` /
+  `CLOUDFLARE_ACCOUNT_ID` lidos de `secrets.*` (nada versionado).
+- **Grep de segredos limpo** — nenhum valor real (token `cfat_…`/account id) no repo; só referências
+  a `secrets.CLOUDFLARE_*` no próprio workflow:
+  ```text
+  .github/workflows/deploy.yml:43  CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+  .github/workflows/deploy.yml:44  CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+  ```
+- A execução **real** dispara no merge desta PR (push na `main`) — o smoke do deploy publicado é a
+  TASK-0025.
+
+## 4. Runbook
+
+### 4.1 Redeploy manual (sem novo commit)
+
+```bash
+gh workflow run deploy.yml --ref main
+```
+
+### 4.2 Acompanhar o deploy
+
+```bash
+gh run list --workflow=deploy.yml
+gh run watch <id>          # segue até concluir (exit 0 = publicado)
+```
+
+### 4.3 Não expor credenciais
+
+- Tokens vivem **só** em GitHub Secrets (`CLOUDFLARE_API_TOKEN`, `CLOUDFLARE_ACCOUNT_ID`).
+- Nunca commitar valor de token/account id; usar `secrets.CLOUDFLARE_*` no workflow.
+
