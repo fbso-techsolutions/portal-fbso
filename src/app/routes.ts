@@ -8,4 +8,5 @@ export default [
   route('termos', '../pages/Termos.tsx'),
   route('techservices', '../pages/TechServices.tsx'),
   route('solucoes', '../pages/Solucoes.tsx'),
+  route('solucoes/:slug', '../pages/Produto.tsx'),
 ] satisfies RouteConfig;
