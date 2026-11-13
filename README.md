@@ -26,7 +26,7 @@ React + TypeScript · Vite · Tailwind CSS v4 · React Router v8 (framework mode
 
 ## Desenvolvimento
 
-> Comandos do dia a dia. Requisito: Node.js (LTS) + npm.
+> Comandos do dia a dia. Requisito: Node.js **24.22.1** (`.nvmrc` — use `nvm use`) + npm 11.
 
 | Comando | O que faz |
 |---|---|
