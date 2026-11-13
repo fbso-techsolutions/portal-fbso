@@ -23,6 +23,6 @@
 
 ## 3. Não funcionais
 
-- Alinhar ao futuro `coding-standards-react.md` da platform-standards (referência).
+- Alinhar a config ao [`coding-standards-react.md`](https://github.com/fbso-techsolutions/platform-standards/blob/main/standards/engineering/coding-standards-react.md) da platform-standards (criado 2026-11-13).
 
 **Verificação INVEST:** I ✅ · N ✅ · V ✅ · E ✅ · S ✅ · T ✅

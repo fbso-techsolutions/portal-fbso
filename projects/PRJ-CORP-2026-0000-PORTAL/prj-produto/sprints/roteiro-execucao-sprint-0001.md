@@ -90,7 +90,7 @@ TASK-0001 → 0002 → 0008 → 0016 → 0017 → 0019 → 0020 → 0021 → 002
 | # | Atenção | Impacto | Ação |
 |---|---|---|---|
 | 1 | Delegacão NS no registro.br (`RISK-0001`) | não bloqueia | deploy em URL preview até o NS propagar |
-| 2 | `coding-standards-react.md` ainda não existe (`RISK-0002`) | baixo | alinhar por referência; registrar pendência se divergir |
+| 2 | ~~`coding-standards-react.md` ainda não existe (`RISK-0002`)~~ ✅ criado (2026-11-13, ADR-007) | baixo | alinhar por referência; registrar pendência se divergir |
 | 3 | `TASK-0004` (secrets) depende do token (`TASK-0007`) | médio | token antes de configurar o secret |
 
 ---

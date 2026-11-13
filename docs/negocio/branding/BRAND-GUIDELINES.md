@@ -26,7 +26,7 @@
 | **Mercator** | Plataforma de Varejo — gestão de operações e processos comerciais — by FBSO |
 | **Materiae** | Gestão integrada do ciclo de vida de ativos e economia circular — by FBSO |
 
-> **Materiae** = novo nome do repo `saas-rmr` (renome **a decidir** — ação separada).
+> **Materiae** = nome do repo `saas-materiae` (antigo `saas-rmr` — renome **feito** em 2026-11-13).
 
 ## 3. Domínios (registro.br)
 
