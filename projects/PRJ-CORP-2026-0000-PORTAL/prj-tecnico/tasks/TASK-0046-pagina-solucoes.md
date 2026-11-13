@@ -19,12 +19,16 @@ Criar a rota `/solucoes` com grid de cards dos 4 produtos, a partir do catálogo
 
 ## 3. Critério de saída (evidência)
 
-- [ ] `/solucoes` acessível pela nav; 4 cards renderizam a partir dos dados.
+- [x] `/solucoes` acessível pela nav; 4 cards renderizam a partir dos dados.
 
 **Evidências**
 
-*A preencher na execução.*
+- `src/pages/Solucoes.tsx` (grid de `Card` consumindo `saasCatalog`) + rota `solucoes`.
+- `npm run build` → `Prerender (html): /solucoes -> dist/client/solucoes/index.html`.
+- `npx tsc -b` ✅ · `npm run lint` ✅ · `npm run format:check` ✅.
 
 ## 4. Runbook
 
-*A preencher se aplicável.*
+### 4.1 Alterar os cards
+
+Edite `saasCatalog` em `src/content/saas-catalog.ts`.

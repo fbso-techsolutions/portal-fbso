@@ -65,6 +65,7 @@
 |---|---|---|---|
 | 2026-11-13 | [TASK-0044](../../prj-tecnico/tasks/TASK-0044-pagina-techservices.md) | rota `/techservices` (`TechServices.tsx` + `techservices.ts`: 5 frentes) | prerender `/techservices` ok · US-0003.0001 concluída |
 | 2026-11-13 | [TASK-0045](../../prj-tecnico/tasks/TASK-0045-catalogo-saas-dados.md) | `src/content/saas-catalog.ts` (SaasProduct tipado + 4 produtos) · `Home.tsx` passou a consumir `saasCatalog` | fonte única do catálogo (removida a duplicação em `home.ts`) · US-0004.0001-0018 concluída |
+| 2026-11-13 | [TASK-0046](../../prj-tecnico/tasks/TASK-0046-pagina-solucoes.md) | rota `/solucoes` (`Solucoes.tsx`: grid de `Card` do `saasCatalog`) | prerender `/solucoes` ok · US-0004.0001 concluída |
 
 ## 7. Sprint Review — `[Encerramento]`
 

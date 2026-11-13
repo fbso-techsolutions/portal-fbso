@@ -7,4 +7,5 @@ export default [
   route('privacidade', '../pages/Privacidade.tsx'),
   route('termos', '../pages/Termos.tsx'),
   route('techservices', '../pages/TechServices.tsx'),
+  route('solucoes', '../pages/Solucoes.tsx'),
 ] satisfies RouteConfig;
