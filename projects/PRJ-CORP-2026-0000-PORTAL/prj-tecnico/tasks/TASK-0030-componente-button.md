@@ -22,13 +22,21 @@ Criar o componente base `Button` em `src/components/ui/`, com variantes `primary
 
 ## 3. Critério de saída (evidência)
 
-- [ ] `Button` renderiza `primary`/`outline` com `hover`/`focus` corretos.
-- [ ] Acessível (foco visível) e responsivo.
+- [x] `Button` renderiza `primary`/`outline` com `hover`/`focus` corretos.
+- [x] Acessível (foco visível) e responsivo.
 
 **Evidências**
 
-*A preencher na execução.*
+- `src/components/ui/Button.tsx` criado: variantes `primary`/`outline`, raio pill (`rounded-full`), estados `hover`/`focus-visible`, tipado (polimórfico `button`/`a`), consome tokens (`bg-blue` · `text-navy` · `border-line` · `shadow-soft`).
+- `npx tsc -b` ✅ · `npm run lint` ✅ · `npm run format:check` ✅.
 
 ## 4. Runbook
 
-*A preencher se aplicável (ex.: como usar as variantes).*
+### 4.1 Uso
+
+```tsx
+import Button from '@/components/ui/Button';
+
+<Button variant="primary">Ação</Button>
+<Button variant="outline" href="#contato">Saiba mais</Button>
+```
