@@ -24,7 +24,7 @@ substituído pelo `root.tsx` + `meta` export das rotas.
 
 ## 3. Critério de saída (evidência)
 
-- [ ] `npm run build` sai com exit 0.
-- [ ] `dist/client/index.html` contém `<title>` e `<meta name="description">` (grep).
-- [ ] `lang="pt-BR"` presente no `dist/client/index.html`.
-- [ ] Open Graph (`og:title` / `og:description`) presente no HTML de saída.
+- [x] `npm run build` sai com exit 0.
+- [x] `dist/client/index.html` contém `<title>` e `<meta name="description">` (grep).
+- [x] `lang="pt-BR"` presente no `dist/client/index.html`.
+- [x] Open Graph (`og:title` / `og:description`) presente no HTML de saída.
