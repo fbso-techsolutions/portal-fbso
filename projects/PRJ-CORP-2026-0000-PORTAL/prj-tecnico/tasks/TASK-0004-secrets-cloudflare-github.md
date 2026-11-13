@@ -23,5 +23,5 @@ Disponibilizar as credenciais de deploy do Cloudflare ao GitHub Actions **sem ex
 
 ## 3. Critério de saída (evidência)
 
-- [ ] Secrets visíveis em Settings → Environments (print, valores mascarados).
-- [ ] Nenhum valor de secret presente em arquivo do repo (`grep` limpo).
+- [x] Secrets visíveis em Settings → Environments (print, valores mascarados).
+- [x] Nenhum valor de secret presente em arquivo do repo (`grep` limpo).

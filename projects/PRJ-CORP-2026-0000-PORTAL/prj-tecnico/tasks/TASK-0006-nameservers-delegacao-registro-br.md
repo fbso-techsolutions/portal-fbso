@@ -23,5 +23,5 @@ preview (mitigação do `RISK-0001`).
 
 ## 3. Critério de saída (evidência)
 
-- [ ] Nameservers anotados.
-- [ ] Roteiro de delegação NS documentado e linkado no [DEPLOYMENT.md](../../../../docs/tecnico/arquitetura/DEPLOYMENT.md).
+- [x] Nameservers anotados.
+- [x] Roteiro de delegação NS documentado e linkado no [DEPLOYMENT.md](../../../../docs/tecnico/arquitetura/DEPLOYMENT.md).

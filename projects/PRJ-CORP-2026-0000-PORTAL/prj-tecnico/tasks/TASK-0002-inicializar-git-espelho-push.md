@@ -25,6 +25,6 @@ preservando toda a documentação já existente.
 
 ## 3. Critério de saída (evidência)
 
-- [ ] `git remote -v` aponta para `fbso-techsolutions/portal-fbso`.
-- [ ] `git log` mostra o commit inicial com a documentação atual.
-- [ ] `main` espelhada no GitHub (conteúdo idêntico ao local).
+- [x] `git remote -v` aponta para `fbso-techsolutions/portal-fbso`.
+- [x] `git log` mostra o commit inicial com a documentação atual.
+- [x] `main` espelhada no GitHub (conteúdo idêntico ao local).

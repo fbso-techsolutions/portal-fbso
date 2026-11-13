@@ -25,6 +25,6 @@ para dar início ao scaffold e ao CI/CD.
 
 ## 3. Critério de saída (evidência)
 
-- [ ] Repo acessível em `https://github.com/fbso-techsolutions/portal-fbso` (URL/print).
-- [ ] Branch padrão `main` confirmada.
-- [ ] Health files da org visíveis na interface (issue/PR templates ativos).
+- [x] Repo acessível em `https://github.com/fbso-techsolutions/portal-fbso` (URL/print).
+- [x] Branch padrão `main` confirmada.
+- [x] Health files da org visíveis na interface (issue/PR templates ativos).
