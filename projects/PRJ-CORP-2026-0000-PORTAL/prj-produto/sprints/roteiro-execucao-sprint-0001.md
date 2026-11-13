@@ -40,7 +40,7 @@
 - [TASK-0016 — pastas src/](../../prj-tecnico/tasks/TASK-0016-estrutura-pastas-src.md) · 2h
 
 ### Onda 5 — composição sobre a base
-- [TASK-0011 — index.html pt-BR](../../prj-tecnico/tasks/TASK-0011-index-html-pt-br-build.md) · 2h
+- [TASK-0011 — Meta/SEO pré-render](../../prj-tecnico/tasks/TASK-0011-meta-seo-prerender.md) · 2h
 - [TASK-0013 — Prettier](../../prj-tecnico/tasks/TASK-0013-prettier-eslint-config.md) · 2h
 - [TASK-0017 — rota / Home](../../prj-tecnico/tasks/TASK-0017-rota-home-hello-world.md) · 3h
 - [TASK-0018 — conteúdo content/](../../prj-tecnico/tasks/TASK-0018-conteudo-src-content.md) · 2h

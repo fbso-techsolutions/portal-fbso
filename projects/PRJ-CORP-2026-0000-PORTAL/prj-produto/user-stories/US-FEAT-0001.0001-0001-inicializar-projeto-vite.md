@@ -24,6 +24,6 @@
 
 ## 3. Não funcionais
 
-- `lang="pt-BR"` no `index.html` · build estático sem servidor Node em produção.
+- `lang="pt-BR"` no HTML pré-renderizado · build estático sem servidor Node em produção.
 
 **Verificação INVEST:** I ✅ · N ✅ · V ✅ · E ✅ · S ✅ · T ✅

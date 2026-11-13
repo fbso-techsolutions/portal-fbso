@@ -1,3 +1,21 @@
+import type { MetaFunction } from 'react-router'
+
+export const meta: MetaFunction = () => [
+  { title: 'FBSO TechSolutions | Tecnologia, Consultoria e Software' },
+  {
+    name: 'description',
+    content:
+      'FBSO Technology Solutions: tecnologia, consultoria e software para construir um futuro mais eficiente.',
+  },
+  { property: 'og:title', content: 'FBSO TechSolutions | Tecnologia, Consultoria e Software' },
+  {
+    property: 'og:description',
+    content:
+      'FBSO Technology Solutions: tecnologia, consultoria e software para construir um futuro mais eficiente.',
+  },
+  { property: 'og:type', content: 'website' },
+]
+
 export default function Home() {
   return (
     <main className="flex min-h-screen items-center justify-center bg-[#0b192c] p-8">
