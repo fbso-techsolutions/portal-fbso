@@ -24,6 +24,6 @@ utilitárias funcionem no build estático.
 
 ## 3. Critério de saída (evidência)
 
-- [ ] Classes Tailwind aplicam no `dev` e no `build`.
-- [ ] Nenhum `tailwind.config.js`/`postcss.config.js` desnecessário (v4 usa plugin Vite) — a menos
+- [x] Classes Tailwind aplicam no `dev` e no `build`.
+- [x] Nenhum `tailwind.config.js`/`postcss.config.js` desnecessário (v4 usa plugin Vite) — a menos
   que haja decisão contrária registrada.
