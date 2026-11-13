@@ -43,6 +43,7 @@ npm run dev              # dev server → http://localhost:5173
 npm run build            # gera dist/client/ (tsc -b && react-router build)
 npm run preview          # serve dist/client/ localmente
 npm run lint             # ESLint
+npm run format:check     # Prettier (modo verificação)
 npm run typecheck        # tsc -b
 npm audit                # vulnerabilidades (total)
 npm audit --omit=dev     # vulnerabilidades só de produção

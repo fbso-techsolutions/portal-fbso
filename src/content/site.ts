@@ -4,17 +4,17 @@
  */
 export interface SiteContent {
   /** Nome completo da empresa (títulos, meta tags). */
-  name: string
+  name: string;
   /** Marca curta exibida no header. */
-  shortName: string
+  shortName: string;
   /** Assinatura/slogan institucional. */
-  tagline: string
+  tagline: string;
   /** `<title>` padrão das páginas. */
-  title: string
+  title: string;
   /** `meta description` padrão das páginas. */
-  description: string
+  description: string;
   /** Texto do rodapé. */
-  footer: string
+  footer: string;
 }
 
 export const siteContent: SiteContent = {
@@ -25,4 +25,4 @@ export const siteContent: SiteContent = {
   description:
     'FBSO Technology Solutions: tecnologia, consultoria e software para construir um futuro mais eficiente.',
   footer: '© 2026 FBSO Technology Solutions',
-}
+};

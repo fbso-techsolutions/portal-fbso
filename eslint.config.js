@@ -1,9 +1,10 @@
-import js from '@eslint/js'
-import globals from 'globals'
-import reactHooks from 'eslint-plugin-react-hooks'
-import reactRefresh from 'eslint-plugin-react-refresh'
-import tseslint from 'typescript-eslint'
-import { defineConfig, globalIgnores } from 'eslint/config'
+import js from '@eslint/js';
+import globals from 'globals';
+import reactHooks from 'eslint-plugin-react-hooks';
+import reactRefresh from 'eslint-plugin-react-refresh';
+import prettierConfig from 'eslint-config-prettier/flat';
+import tseslint from 'typescript-eslint';
+import { defineConfig, globalIgnores } from 'eslint/config';
 
 // Flat config (ESLint 10). Sem `.eslintrc`/`extends` de config legada.
 // Referência de estilo da org: platform-standards/standards/engineering
@@ -41,4 +42,7 @@ export default defineConfig([
       globals: globals.node,
     },
   },
-])
+
+  // Desliga regras de formatação que conflitam com o Prettier (sempre por último).
+  prettierConfig,
+]);
