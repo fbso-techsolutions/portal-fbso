@@ -5,9 +5,7 @@
 
 ## Abertas
 
-| ID | Pendência | Dono | Prazo | Status |
-|---|---|---|---|---|
-| PENDENCY-0004 | Subdomínio × domínio próprio para os SaaS (afeta B-REQ-05 e Release 3) | Arquiteto + PM/PO | — | 🟡 aberta |
+> ✅ Nenhuma pendência em aberto — todas as decisões foram tomadas até 2026-11-13.
 
 ## Respondidas
 
@@ -22,5 +20,6 @@
 | PENDENCY-0006 | Renome `saas-rmr` → `saas-materiae` | ✅ repo renomeado no GitHub (`gh repo rename`); redirect do antigo para o novo | 2026-11-13 |
 | PENDENCY-0010 | `coding-standards-react.md` inexistente na platform-standards | ✅ criado `coding-standards-react.md` (ADR-007) alinhado ao ESLint/Prettier/tsconfig do portal; ressalva do `eslint.config.js` removida | 2026-11-13 |
 | PENDENCY-0009 | Assinatura do ADR-001 (Tech lead + Arquiteto) | ✅ assinado no próprio documento (Tech lead + Arquiteto) — status `✅ Decidida` | 2026-11-13 |
+| PENDENCY-0004 | Subdomínio × domínio próprio para os SaaS | ✅ **domínio próprio por SaaS** (não subdomínio) — `fbso.com.br`, `fbsotechservices.com.br`, `fbsomercator.com.br`, `fbsofiscalia.com.br`, `fbsoeducatio.com.br`, `fbsomateriae.com.br` (+ reserva `fbsotechsolutions.com.br`/`fbsotech.com.br`) — [ADR-002](../../docs/tecnico/arquitetura/adrs/adr-002-dominios-saas.md) | 2026-11-13 |
 
 > **Ritual:** atualizar a cada decisão; dono deve existir no [equipe.md](equipe.md).

@@ -33,15 +33,16 @@
 | Domínio | Papel | Status |
 |---|---|---|
 | `fbso.com.br` | **Default da empresa** | em contratação |
-| `fbsotech.com.br` | Reserva (2º master) | em contratação |
-| `fbsotechservices.com.br` | Consultoria | em contratação |
+| `fbsotechservices.com.br` | Consultoria (TechServices) | em contratação |
 | `fbsomercator.com.br` | SaaS Varejo | em contratação |
 | `fbsofiscalia.com.br` | SaaS Fiscal/Contábil | em contratação |
 | `fbsoeducatio.com.br` | SaaS Educação | em contratação |
 | `fbsomateriae.com.br` | SaaS Ciclo de Vida | em contratação |
+| `fbsotechsolutions.com.br` | Reserva (backup) | em contratação |
+| `fbsotech.com.br` | Reserva (backup) | em contratação |
 
-> **Decisão em aberto:** subdomínio (`educatio.fbso.com.br`) × domínio próprio (`fbsoeducatio.com.br`)
-> para os SaaS — afeta quais domínios comprar e o SSO da Release 3.
+> **Decisão tomada (2026-11-13):** **domínio próprio por SaaS** (não subdomínio) — ver
+> [ADR-002](../../tecnico/arquitetura/adrs/adr-002-dominios-saas.md).
 
 ## 4. Identidade visual (a definir na Sprint 2)
 
