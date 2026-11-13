@@ -1,6 +1,6 @@
 # 🗓️ Sprint 2 — Design System · 30/11/2026 – 11/12/2026
 
-> **Status:** `📋 Planejada` · **Sprint Goal:** "Design System base: tokens + componentes `ui/` prontos para compor as páginas institucionais (S3/S4)" ·
+> **Status:** `✅ Concluída (executada antecipadamente em 2026-11-13; janela prevista 30/11–11/12)` · **Sprint Goal:** "Design System base: tokens + componentes `ui/` prontos para compor as páginas institucionais (S3/S4)" ·
 > **Board:** [board-sprint-0002.md](board-sprint-0002.md) · **Tasks:** [prj-tecnico/tasks/](../../prj-tecnico/tasks/README.md) ·
 > **Verdade única do corte:** [escopo-release-1](../escopo-release-1.md)
 
@@ -19,8 +19,8 @@
 **Objetivo:** estabelecer o design system base — tokens e componentes `ui/` — como fundação visual das páginas institucionais das próximas sprints.
 
 **Resultados esperados:**
-- [ ] Design tokens (cor/tipografia/espaçamento) definidos e consumíveis via Tailwind `@theme` (0001.0002-0006).
-- [ ] Componentes base `ui/` (Button, Card, Section, Badge) tipados, acessíveis e responsivos (0001.0002-0007).
+- [x] Design tokens (cor/tipografia/espaçamento) definidos e consumíveis via Tailwind `@theme` (0001.0002-0006).
+- [x] Componentes base `ui/` (Button, Card, Section, Badge) tipados, acessíveis e responsivos (0001.0002-0007).
 
 ## 2. Escopo (o corte)
 
@@ -55,13 +55,13 @@
 
 ## 5. Definition of Done
 
-- [ ] Stories `✅ Entregue` no backlog (DoD + artefato verificável — PR).
-- [ ] `npm run lint` · `format:check` · `typecheck` verdes no CI.
-- [ ] Tokens consumíveis via Tailwind `@theme`, sem valor hardcoded nos componentes.
+- [x] Stories `✅ Entregue` no backlog (DoD + artefato verificável — PR).
+- [x] `npm run lint` · `format:check` · `typecheck` verdes no CI.
+- [x] Tokens consumíveis via Tailwind `@theme`, sem valor hardcoded nos componentes.
 
 ## 6. Execução (log)
 
-> 📓 Diário de execução — preenchido a cada tarefa executada (regra viva). Vazio nesta sprint planejada.
+> 📓 Diário de execução — registra o **como** (comandos, decisões, desvios) de cada tarefa.
 
 | Data | Item | O que foi feito (comandos/ações) | Decisões/desvios |
 |---|---|---|---|
@@ -73,15 +73,66 @@
 
 ## 7. Sprint Review — `[Encerramento]`
 
-*A preencher no encerramento da sprint.*
+### 7.1 Demonstração das entregas
+
+Tokens (`@theme`) + componentes base `src/components/ui/` (`Button`, `Card`, `Section`, `Badge`)
+consumindo os tokens, com build/prerender verde e **zero cor hardcoded**.
+
+### 7.2 Validação dos resultados
+
+| Item | Resultado | Observações |
+|---|---|---|
+| US-FEAT-0001.0002-0006 — Design tokens | ✅ Aceito | `@theme` + aplicação no app (grep `[#` limpo) |
+| US-FEAT-0001.0002-0007 — Componentes ui/ | ✅ Aceito | 4 componentes tipados/accessíveis + barrel |
+
+### 7.3 Novas necessidades identificadas
+
+- [ ] Consumir os componentes-base nas páginas reais — S3 (FEATURE-0002.0001, layout institucional).
+- [ ] Logo/identidade visual definitiva (`PENDENCY-0011`) — os componentes usam símbolo placeholder.
+
+---
 
 ## 8. Retrospectiva — `[Encerramento]`
 
-*A preencher no encerramento da sprint.*
+### 8.1 Pontos positivos / de atenção / melhorias
+
+- **Positivos:** tokens como fonte única (zero hardcode) · componentes-base reutilizáveis · 5 tasks entregues num único PR com commit por task (rastreabilidade limpa).
+- **Atenção:** sprint executada **antes** da janela (13/11 × 30/11) — capacidade "antecipada", sem prejuízo; o QA visual de composição ficou para a S3.
+- **Melhorias:** compor os componentes numa página (S3) para validar visual; definir o logo para fechar a identidade.
+
+### 8.2 Plano de ação
+
+| Ação | ID | Responsável | Prazo | Status |
+|---|---|---|---|---|
+| Consumir componentes `ui/` nas páginas | RETRO-ACTION-0004 | Alfredo Bento | S3 | Pendente |
+| Resolver logo definitivo | RETRO-ACTION-0005 | Arquiteto + PM/PO | — | Pendente |
+
+---
 
 ## 9. Encerramento — `[Encerramento]`
 
-*A preencher no encerramento da sprint.*
+### 9.1 Resultado do Sprint Goal
+
+**Status:** `[x]` Alcançado — tokens + componentes `ui/` prontos para as páginas institucionais.
+
+### 9.2 Indicadores finais
+
+| Indicador | Resultado |
+|---|---|
+| Story Points concluídos | 8 (2 stories) |
+| Itens concluídos / não concluídos | 2 / 0 |
+| Tasks concluídas | 5 / 5 (13h) |
+| Bugs identificados / corrigidos | 0 / 0 |
+
+### 9.3 Pendências para próximas sprints
+
+| ID | Descrição | Origem | Destino |
+|---|---|---|---|
+| QA visual de composição | consumir componentes nas páginas reais | Sprint 2 | S3 (FEATURE-0002.0001) |
+| PENDENCY-0011 | logo/identidade visual definitiva | Sprint 2 | pendencias (Arquiteto + PM/PO) |
+
+> **Nota de execução:** a Sprint 2 foi concluída **antecipadamente** (2026-11-13), antes da janela
+> prevista (30/11–11/12) — o corte foi pequeno (2 stories / 8 SP / 13h) e a equipe tinha disponibilidade.
 
 ## 10. Decisões pendentes deste documento
 

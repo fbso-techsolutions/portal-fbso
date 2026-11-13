@@ -26,7 +26,7 @@
 | Sprint | Período | Features |
 |---|---|---|
 | **S1 — Fundação** ✅ | 16/11 – 27/11 | FEATURE-0001.0001 (scaffold) · FEATURE-0001.0003 (CI/CD) |
-| **S2 — Design System** 📋 | 30/11 – 11/12 | FEATURE-0001.0002 |
+| **S2 — Design System** ✅ | 30/11 – 11/12 | FEATURE-0001.0002 |
 | **S3 — Estrutura e navegação** | 14/12 – 24/12 | FEATURE-0002.0001 (layout) |
 | **S4 — Home e institucional** | 28/12 – 08/01 | FEATURE-0002.0002 (Home) · 0002.0003 (Sobre) · 0002.0004 (Contato) · 0002.0005 (Legais) |
 | **S5 — TechServices** | 11/01 – 22/01 | FEATURE-0003.0001 |
