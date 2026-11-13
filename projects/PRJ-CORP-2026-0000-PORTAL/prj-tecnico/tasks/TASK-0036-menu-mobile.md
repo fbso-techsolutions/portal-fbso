@@ -19,12 +19,15 @@ Tornar a navegação responsiva com menu mobile (toggle), acessível.
 
 ## 3. Critério de saída (evidência)
 
-- [ ] Menu mobile abre/fecha e fecha ao navegar; acessível (aria).
+- [x] Menu mobile abre/fecha e fecha ao navegar; acessível (aria).
 
 **Evidências**
 
-*A preencher na execução.*
+- `AppLayout.tsx`: menu-toggle (mobile) + menu dropdown; `aria-expanded`/`aria-controls`; fecha ao clicar num link.
+- `npx tsc -b` ✅ · `npm run lint` ✅ · `npm run format:check` ✅ · `npm run build` ✅.
 
 ## 4. Runbook
 
-*A preencher se aplicável.*
+### 4.1 Verificar o menu mobile
+
+Reduza a viewport (< `md`) e confirme o toggle abrir/fechar o menu; os itens fecham o menu ao navegar.

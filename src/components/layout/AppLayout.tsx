@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import type { ReactNode } from 'react';
 import { siteContent } from '@/content/site';
 import Button from '@/components/ui/Button';
@@ -6,8 +7,10 @@ interface AppLayoutProps {
   children: ReactNode;
 }
 
-/** Layout do portal: topbar + header (marca + CTA) + main + footer. */
+/** Layout do portal: topbar + header (marca + nav + CTA + menu mobile) + main + footer. */
 export default function AppLayout({ children }: AppLayoutProps) {
+  const [menuOpen, setMenuOpen] = useState(false);
+
   return (
     <div className="flex min-h-screen flex-col bg-white text-ink">
       {/* Topbar */}
@@ -37,6 +40,7 @@ export default function AppLayout({ children }: AppLayoutProps) {
             </span>
           </a>
 
+          {/* Nav desktop */}
           <nav className="hidden items-center gap-7 text-sm font-semibold text-ink md:flex">
             {siteContent.navItems.map((item) => (
               <a key={item.href} href={item.href} className="hover:text-blue">
@@ -45,10 +49,45 @@ export default function AppLayout({ children }: AppLayoutProps) {
             ))}
           </nav>
 
-          <Button variant="primary" href="/contato">
-            {siteContent.navCta}
-          </Button>
+          {/* CTA (desktop) */}
+          <div className="hidden md:block">
+            <Button variant="primary" href="/contato">
+              {siteContent.navCta}
+            </Button>
+          </div>
+
+          {/* Toggle mobile */}
+          <button
+            type="button"
+            className="text-2xl text-navy md:hidden"
+            aria-label={menuOpen ? 'Fechar menu' : 'Abrir menu'}
+            aria-expanded={menuOpen}
+            aria-controls="main-nav-mobile"
+            onClick={() => setMenuOpen((v) => !v)}
+          >
+            {menuOpen ? '×' : '☰'}
+          </button>
         </div>
+
+        {/* Menu mobile */}
+        {menuOpen ? (
+          <nav
+            id="main-nav-mobile"
+            aria-label="Navegação principal"
+            className="flex flex-col border-t border-line px-5 py-3 md:hidden"
+          >
+            {siteContent.navItems.map((item) => (
+              <a
+                key={item.href}
+                href={item.href}
+                className="border-b border-line py-3 text-sm font-semibold text-ink"
+                onClick={() => setMenuOpen(false)}
+              >
+                {item.label}
+              </a>
+            ))}
+          </nav>
+        ) : null}
       </header>
 
       <main className="flex-1">{children}</main>
