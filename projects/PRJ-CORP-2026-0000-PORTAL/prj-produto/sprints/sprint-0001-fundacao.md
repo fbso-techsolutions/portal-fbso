@@ -100,6 +100,7 @@
 | 2026-11-13 | [TASK-0014](../../prj-tecnico/tasks/TASK-0014-tsconfig-strict-alias.md) | `strict: true` nos dois tsconfigs · `paths @/* → src/*` · `resolve.alias` no Vite · imports da Home/root migrados para `@/` | alias validado no build; `tsc -b`/lint/format limpos |
 | 2026-11-13 | [TASK-0015](../../prj-tecnico/tasks/TASK-0015-lint-limpo-documentar.md) | gate `lint && format:check && typecheck` documentado no README · alias `@/` documentado · `isbot@^5` → `5.2.3` (**D-03** fechado) | 100% das deps pinadas; `lint`/`format:check`/`tsc -b` exit 0 · US-0001.0001-0002 concluída |
 | 2026-11-13 | [TASK-0020](../../prj-tecnico/tasks/TASK-0020-workflow-ci-github-actions.md) | `.github/workflows/ci.yml` (push/PR em `main`): `npm ci` → lint → typecheck → build → guarda `dist/client/index.html`; Node `24.x` + cache npm; `contents: read`; concorrência por ref | run `43362460685` verde (53s) · negativo `43362583760` falhou no lint e interrompeu typecheck/build |
+| 2026-11-13 | [TASK-0021](../../prj-tecnico/tasks/TASK-0021-setup-node-cache-steps.md) | `.nvmrc` `24.22.1` como fonte única (CI lê via `node-version-file`) · `engines` no `package.json` · cache npm | run `43363856972`: `node: v24.22.1` + `Cache restored from key: node-cache-Linux-x64-npm-…` (hit) |
 
 ## 7. Decisões pendentes
 

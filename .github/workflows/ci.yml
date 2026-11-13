@@ -30,7 +30,8 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v7
         with:
-          node-version: 24.x
+          # Versão única, lida do `.nvmrc` (a mesma do ambiente local).
+          node-version-file: .nvmrc
           cache: npm
 
       # `npm ci` respeita o lockfile — nunca `npm install` no CI.
