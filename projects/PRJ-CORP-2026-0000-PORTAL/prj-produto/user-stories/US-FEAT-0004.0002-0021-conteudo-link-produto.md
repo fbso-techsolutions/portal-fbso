@@ -7,7 +7,7 @@
 | Prioridade | Must |
 | Estimativa | 2 SP |
 | Rastreio | B-REQ-05 |
-| Status | 📝 Rascunho (2026-11-13) |
+| Status | ✅ Revisado (2026-11-13) |
 
 ## 1. Declaração
 

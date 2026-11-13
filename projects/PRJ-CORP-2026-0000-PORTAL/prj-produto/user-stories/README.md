@@ -14,20 +14,20 @@
 | [US-FEAT-0002.0001-0008 — Header + navegação](US-FEAT-0002.0001-0008-header-navegacao.md) | 0002.0001 | S3 | ✅ Revisado |
 | [US-FEAT-0002.0001-0009 — Footer institucional](US-FEAT-0002.0001-0009-footer-institucional.md) | 0002.0001 | S3 | ✅ Revisado |
 | [US-FEAT-0002.0001-0010 — Menu responsivo](US-FEAT-0002.0001-0010-menu-responsivo.md) | 0002.0001 | S3 | ✅ Revisado |
-| [US-FEAT-0002.0002-0011 — Hero institucional](US-FEAT-0002.0002-0011-hero-institucional.md) | 0002.0002 | S4 | 📝 Rascunho |
-| [US-FEAT-0002.0002-0012 — Posicionamento e diferenciais](US-FEAT-0002.0002-0012-posicionamento-diferenciais.md) | 0002.0002 | S4 | 📝 Rascunho |
-| [US-FEAT-0002.0002-0013 — Ecossistema SaaS + CTA](US-FEAT-0002.0002-0013-ecossistema-saas-cta.md) | 0002.0002 | S4 | 📝 Rascunho |
-| [US-FEAT-0002.0003-0014 — Página Sobre](US-FEAT-0002.0003-0014-pagina-sobre.md) | 0002.0003 | S4 | 📝 Rascunho |
-| [US-FEAT-0002.0004-0015 — Página Contato](US-FEAT-0002.0004-0015-pagina-contato.md) | 0002.0004 | S4 | 📝 Rascunho |
-| [US-FEAT-0002.0005-0016 — Páginas legais](US-FEAT-0002.0005-0016-paginas-legais.md) | 0002.0005 | S4 | 📝 Rascunho |
-| [US-FEAT-0003.0001-0017 — Página TechServices](US-FEAT-0003.0001-0017-pagina-techservices.md) | 0003.0001 | S5 | 📝 Rascunho |
-| [US-FEAT-0004.0001-0018 — Catálogo SaaS (dados)](US-FEAT-0004.0001-0018-catalogo-saas-dados.md) | 0004.0001 | S6 | 📝 Rascunho |
-| [US-FEAT-0004.0001-0019 — Página /solucoes](US-FEAT-0004.0001-0019-pagina-solucoes.md) | 0004.0001 | S6 | 📝 Rascunho |
-| [US-FEAT-0004.0002-0020 — Rota detalhe produto](US-FEAT-0004.0002-0020-rota-detalhe-produto.md) | 0004.0002 | S6 | 📝 Rascunho |
-| [US-FEAT-0004.0002-0021 — Conteúdo/link produto](US-FEAT-0004.0002-0021-conteudo-link-produto.md) | 0004.0002 | S6 | 📝 Rascunho |
-| [US-FEAT-0005.0001-0022 — Metadados por página](US-FEAT-0005.0001-0022-metadados-pagina.md) | 0005.0001 | S7 | 📝 Rascunho |
-| [US-FEAT-0005.0001-0023 — sitemap + robots](US-FEAT-0005.0001-0023-sitemap-robots.md) | 0005.0001 | S7 | 📝 Rascunho |
-| [US-FEAT-0005.0002-0024 — Responsividade](US-FEAT-0005.0002-0024-responsividade.md) | 0005.0002 | S7 | 📝 Rascunho |
-| [US-FEAT-0005.0002-0025 — Acessibilidade básica](US-FEAT-0005.0002-0025-acessibilidade-basica.md) | 0005.0002 | S7 | 📝 Rascunho |
-| [US-FEAT-0005.0003-0026 — Domínio custom + HTTPS](US-FEAT-0005.0003-0026-dominio-custom-https.md) | 0005.0003 | S8 | 📝 Rascunho |
-| [US-FEAT-0005.0003-0027 — Homologação e go-live](US-FEAT-0005.0003-0027-homologacao-golive.md) | 0005.0003 | S8 | 📝 Rascunho |
+| [US-FEAT-0002.0002-0011 — Hero institucional](US-FEAT-0002.0002-0011-hero-institucional.md) | 0002.0002 | S4 | ✅ Revisado |
+| [US-FEAT-0002.0002-0012 — Posicionamento e diferenciais](US-FEAT-0002.0002-0012-posicionamento-diferenciais.md) | 0002.0002 | S4 | ✅ Revisado |
+| [US-FEAT-0002.0002-0013 — Ecossistema SaaS + CTA](US-FEAT-0002.0002-0013-ecossistema-saas-cta.md) | 0002.0002 | S4 | ✅ Revisado |
+| [US-FEAT-0002.0003-0014 — Página Sobre](US-FEAT-0002.0003-0014-pagina-sobre.md) | 0002.0003 | S4 | ✅ Revisado |
+| [US-FEAT-0002.0004-0015 — Página Contato](US-FEAT-0002.0004-0015-pagina-contato.md) | 0002.0004 | S4 | ✅ Revisado |
+| [US-FEAT-0002.0005-0016 — Páginas legais](US-FEAT-0002.0005-0016-paginas-legais.md) | 0002.0005 | S4 | ✅ Revisado |
+| [US-FEAT-0003.0001-0017 — Página TechServices](US-FEAT-0003.0001-0017-pagina-techservices.md) | 0003.0001 | S5 | ✅ Revisado |
+| [US-FEAT-0004.0001-0018 — Catálogo SaaS (dados)](US-FEAT-0004.0001-0018-catalogo-saas-dados.md) | 0004.0001 | S6 | ✅ Revisado |
+| [US-FEAT-0004.0001-0019 — Página /solucoes](US-FEAT-0004.0001-0019-pagina-solucoes.md) | 0004.0001 | S6 | ✅ Revisado |
+| [US-FEAT-0004.0002-0020 — Rota detalhe produto](US-FEAT-0004.0002-0020-rota-detalhe-produto.md) | 0004.0002 | S6 | ✅ Revisado |
+| [US-FEAT-0004.0002-0021 — Conteúdo/link produto](US-FEAT-0004.0002-0021-conteudo-link-produto.md) | 0004.0002 | S6 | ✅ Revisado |
+| [US-FEAT-0005.0001-0022 — Metadados por página](US-FEAT-0005.0001-0022-metadados-pagina.md) | 0005.0001 | S7 | ✅ Revisado |
+| [US-FEAT-0005.0001-0023 — sitemap + robots](US-FEAT-0005.0001-0023-sitemap-robots.md) | 0005.0001 | S7 | ✅ Revisado |
+| [US-FEAT-0005.0002-0024 — Responsividade](US-FEAT-0005.0002-0024-responsividade.md) | 0005.0002 | S7 | ✅ Revisado |
+| [US-FEAT-0005.0002-0025 — Acessibilidade básica](US-FEAT-0005.0002-0025-acessibilidade-basica.md) | 0005.0002 | S7 | ✅ Revisado |
+| [US-FEAT-0005.0003-0026 — Domínio custom + HTTPS](US-FEAT-0005.0003-0026-dominio-custom-https.md) | 0005.0003 | S8 | ✅ Revisado |
+| [US-FEAT-0005.0003-0027 — Homologação e go-live](US-FEAT-0005.0003-0027-homologacao-golive.md) | 0005.0003 | S8 | ✅ Revisado |
