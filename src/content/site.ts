@@ -2,6 +2,11 @@
  * Conteúdo institucional base do site.
  * Fonte única de textos globais — componentes não devem ter literais hardcoded.
  */
+export interface NavItem {
+  label: string;
+  href: string;
+}
+
 export interface SiteContent {
   /** Nome completo da empresa (títulos, meta tags). */
   name: string;
@@ -19,8 +24,14 @@ export interface SiteContent {
   title: string;
   /** `meta description` padrão das páginas. */
   description: string;
-  /** Texto do rodapé. */
+  /** E-mail de contato. */
+  contactEmail: string;
+  /** Texto do rodapé (nome). */
   footer: string;
+  /** Links institucionais do rodapé. */
+  footerInstitutional: NavItem[];
+  /** Links legais do rodapé. */
+  footerLegal: NavItem[];
 }
 
 export const siteContent: SiteContent = {
@@ -33,5 +44,15 @@ export const siteContent: SiteContent = {
   title: 'FBSO TechSolutions | Tecnologia, Consultoria e Software',
   description:
     'FBSO Technology Solutions: tecnologia, consultoria e software para construir um futuro mais eficiente.',
-  footer: '© 2026 FBSO Technology Solutions',
+  contactEmail: 'contato@fbso.com.br',
+  footer: 'FBSO Technology Solutions',
+  footerInstitutional: [
+    { label: 'A empresa', href: '/sobre' },
+    { label: 'FBSO TechServices', href: '/techservices' },
+    { label: 'Soluções SaaS', href: '/solucoes' },
+  ],
+  footerLegal: [
+    { label: 'Privacidade', href: '/privacidade' },
+    { label: 'Termos', href: '/termos' },
+  ],
 };

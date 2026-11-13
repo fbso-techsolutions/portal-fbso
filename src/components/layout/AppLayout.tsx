@@ -45,8 +45,60 @@ export default function AppLayout({ children }: AppLayoutProps) {
 
       <main className="flex-1">{children}</main>
 
-      <footer className="border-t border-white/10 bg-navy px-6 py-4 text-center text-sm text-mist">
-        {siteContent.footer}
+      <footer className="bg-navy text-mist">
+        <div className="mx-auto max-w-6xl px-5 pb-6 pt-12">
+          <div className="grid gap-10 md:grid-cols-[1.5fr_1fr_1fr]">
+            <div>
+              <div className="text-xl font-extrabold text-white">
+                {siteContent.shortName} <span className="text-sky">{siteContent.brandAccent}</span>
+              </div>
+              <p className="mt-3 text-sm text-mist">{siteContent.tagline}</p>
+            </div>
+
+            <div>
+              <h4 className="mb-3 text-sm font-bold text-white">Institucional</h4>
+              <div className="grid gap-2">
+                {siteContent.footerInstitutional.map((item) => (
+                  <a
+                    key={item.href}
+                    href={item.href}
+                    className="text-sm text-mist hover:text-white"
+                  >
+                    {item.label}
+                  </a>
+                ))}
+              </div>
+            </div>
+
+            <div>
+              <h4 className="mb-3 text-sm font-bold text-white">Legal</h4>
+              <div className="grid gap-2">
+                {siteContent.footerLegal.map((item) => (
+                  <a
+                    key={item.href}
+                    href={item.href}
+                    className="text-sm text-mist hover:text-white"
+                  >
+                    {item.label}
+                  </a>
+                ))}
+                <a
+                  href={`mailto:${siteContent.contactEmail}`}
+                  className="text-sm text-mist hover:text-white"
+                >
+                  {siteContent.contactEmail}
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div className="mt-10 flex flex-col justify-between gap-3 border-t border-white/10 pt-5 text-xs text-mist sm:flex-row">
+            <span>
+              © {new Date().getFullYear()} {siteContent.footer}. Todos os direitos reservados.
+            </span>
+            <span>{siteContent.topbarNote}</span>
+          </div>
+        </div>
       </footer>
     </div>
   );

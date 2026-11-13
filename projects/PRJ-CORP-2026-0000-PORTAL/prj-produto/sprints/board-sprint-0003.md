@@ -12,7 +12,7 @@
 | Item | Dono | Tasks | Etapa | Evidência |
 |---|---|---|---|---|
 | [US-FEAT-0002.0001-0008 — Header + navegação](../user-stories/US-FEAT-0002.0001-0008-header-navegacao.md) | Alfredo Bento | [TASK-0033…0034](../../prj-tecnico/tasks/README.md) | 🔄 Em execução | — |
-| [US-FEAT-0002.0001-0009 — Footer institucional](../user-stories/US-FEAT-0002.0001-0009-footer-institucional.md) | Alfredo Bento | [TASK-0035](../../prj-tecnico/tasks/README.md) | ⬜ A fazer | — |
+| [US-FEAT-0002.0001-0009 — Footer institucional](../user-stories/US-FEAT-0002.0001-0009-footer-institucional.md) | Alfredo Bento | [TASK-0035](../../prj-tecnico/tasks/README.md) | ✅ Entregue | — |
 | [US-FEAT-0002.0001-0010 — Menu responsivo](../user-stories/US-FEAT-0002.0001-0010-menu-responsivo.md) | Alfredo Bento | [TASK-0036 · 0043](../../prj-tecnico/tasks/README.md) | ⬜ A fazer | — |
 | [US-FEAT-0002.0002-0011 — Hero institucional](../user-stories/US-FEAT-0002.0002-0011-hero-institucional.md) | Alfredo Bento | [TASK-0037](../../prj-tecnico/tasks/README.md) | ⬜ A fazer | — |
 | [US-FEAT-0002.0002-0012 — Posicionamento e diferenciais](../user-stories/US-FEAT-0002.0002-0012-posicionamento-diferenciais.md) | Alfredo Bento | [TASK-0038](../../prj-tecnico/tasks/README.md) | ⬜ A fazer | — |
@@ -29,7 +29,7 @@
 |---|---|---|---|---|---|---|---|
 | 🏁 | [TASK-0033 — Header + topbar](../../prj-tecnico/tasks/TASK-0033-header-topbar.md) | [US-0002.0001-0008](../user-stories/US-FEAT-0002.0001-0008-header-navegacao.md) | ✅ Entregue | 4 | S3 | Alfredo Bento | [PR #38](https://github.com/fbso-techsolutions/portal-fbso/pull/38) |
 | 💡 | [TASK-0034 — Navegação](../../prj-tecnico/tasks/TASK-0034-navegacao.md) | [US-0002.0001-0008](../user-stories/US-FEAT-0002.0001-0008-header-navegacao.md) | ⬜ A fazer | 2 | S3 | Alfredo Bento | — |
-| 💡 | [TASK-0035 — Footer institucional](../../prj-tecnico/tasks/TASK-0035-footer-institucional.md) | [US-0002.0001-0009](../user-stories/US-FEAT-0002.0001-0009-footer-institucional.md) | ⬜ A fazer | 3 | S3 | Alfredo Bento | — |
+| 🏁 | [TASK-0035 — Footer institucional](../../prj-tecnico/tasks/TASK-0035-footer-institucional.md) | [US-0002.0001-0009](../user-stories/US-FEAT-0002.0001-0009-footer-institucional.md) | ✅ Entregue | 3 | S3 | Alfredo Bento | [PR #38](https://github.com/fbso-techsolutions/portal-fbso/pull/38) |
 | 💡 | [TASK-0036 — Menu mobile](../../prj-tecnico/tasks/TASK-0036-menu-mobile.md) | [US-0002.0001-0010](../user-stories/US-FEAT-0002.0001-0010-menu-responsivo.md) | ⬜ A fazer | 3 | S3 | Alfredo Bento | — |
 | 💡 | [TASK-0037 — Hero institucional](../../prj-tecnico/tasks/TASK-0037-hero-institucional.md) | [US-0002.0002-0011](../user-stories/US-FEAT-0002.0002-0011-hero-institucional.md) | ⬜ A fazer | 5 | S3 | Alfredo Bento | — |
 | 💡 | [TASK-0038 — Posicionamento + diferenciais](../../prj-tecnico/tasks/TASK-0038-posicionamento-diferenciais.md) | [US-0002.0002-0012](../user-stories/US-FEAT-0002.0002-0012-posicionamento-diferenciais.md) | ⬜ A fazer | 5 | S3 | Alfredo Bento | — |
