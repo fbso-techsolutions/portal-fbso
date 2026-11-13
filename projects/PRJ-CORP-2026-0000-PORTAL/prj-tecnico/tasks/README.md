@@ -65,8 +65,14 @@
 | [TASK-0047 — Rota /solucoes/:slug](TASK-0047-rota-detalhe-produto.md) | US-FEAT-0004.0002-0020 | Alfredo Bento | 5h | TASK-0045 |
 | [TASK-0048 — Conteúdo/link por produto](TASK-0048-conteudo-link-produto.md) | US-FEAT-0004.0002-0021 | Alfredo Bento | 2h | TASK-0047 |
 | [TASK-0049 — QA smoke do portal](TASK-0049-qa-smoke-portal.md) | US-FEAT-0004.0002-0021 | Patricia Varra | 2h | TASK-0044 · TASK-0048 |
+| [TASK-0050 — Metadados por página](TASK-0050-metadados-pagina.md) | US-FEAT-0005.0001-0022 | Alfredo Bento | 3h | — |
+| [TASK-0051 — sitemap + robots](TASK-0051-sitemap-robots.md) | US-FEAT-0005.0001-0023 | Alfredo Bento | 3h | TASK-0050 |
+| [TASK-0052 — Responsividade](TASK-0052-responsividade.md) | US-FEAT-0005.0002-0024 | Alfredo Bento | 5h | — |
+| [TASK-0053 — Acessibilidade básica](TASK-0053-acessibilidade-basica.md) | US-FEAT-0005.0002-0025 | Alfredo Bento | 3h | — |
+| [TASK-0054 — Domínio custom + HTTPS](TASK-0054-dominio-custom-https.md) | US-FEAT-0005.0003-0026 | Lourival Louro | 3h | — |
+| [TASK-0055 — Homologação e go-live](TASK-0055-homologacao-golive.md) | US-FEAT-0005.0003-0027 | Lourival Louro + Patricia Varra | 3h | TASK-0051 · TASK-0053 · TASK-0054 |
 
-**Totais:** 49 tasks · ~129h de esforço estimado (a calibrar na execução).
+**Totais:** 55 tasks · ~149h de esforço estimado (a calibrar na execução).
 
 ## Formato do card
 
