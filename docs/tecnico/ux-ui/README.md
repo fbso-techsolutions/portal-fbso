@@ -8,7 +8,7 @@
 ## 1. O que vai viver aqui
 
 - Wireframes / fluxos das páginas do MVP (Home, Sobre, TechServices, Soluções, Contato).
-- Design tokens (cores, tipografia, espaçamento) — referência de `src/styles/`.
+- Design tokens (cores, tipografia, espaçamento) — referência em [design-tokens.md](design-tokens.md).
 - Guias de acessibilidade e responsividade.
 
 ## 2. Estrutura da Home (referência)
