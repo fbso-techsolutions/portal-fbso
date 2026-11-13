@@ -77,6 +77,7 @@
 | 2026-11-13 | [TASK-0035](../../prj-tecnico/tasks/TASK-0035-footer-institucional.md) | `AppLayout`: footer institucional (marca + links + e-mail + copyright dinâmico) · `site.ts` ganhou `contactEmail`/`footerInstitutional`/`footerLegal` | conteúdo como dados; ano do copyright dinâmico |
 | 2026-11-13 | [TASK-0034](../../prj-tecnico/tasks/TASK-0034-navegacao.md) | `AppLayout`: nav desktop (Home/Sobre/TechServices/Soluções/Contato) · `site.ts` ganhou `navItems` | links para rotas futuras são placeholder até a feature chegar · US-0002.0001-0008 concluída |
 | 2026-11-13 | [TASK-0036](../../prj-tecnico/tasks/TASK-0036-menu-mobile.md) | `AppLayout`: menu mobile (toggle + dropdown) com `aria-expanded`/`aria-controls`, fecha ao navegar | layout responsivo; CTA oculto no mobile |
+| 2026-11-13 | [TASK-0037](../../prj-tecnico/tasks/TASK-0037-hero-institucional.md) | `Home`: hero institucional (eyebrow + título + copy + CTAs) · `home.ts` ganhou `hero` | substitui o "hello world"; CTAs `Button` + link; textos de `src/content/` |
 
 ## 7. Sprint Review — `[Encerramento]`
 
