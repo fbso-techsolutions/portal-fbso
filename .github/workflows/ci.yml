@@ -1,0 +1,52 @@
+name: CI
+
+# Gate de merge: nenhum PR entra em `main` com lint, tipos ou build quebrados.
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+# Somente leitura: o workflow valida, não publica nada.
+permissions:
+  contents: read
+
+# Um run por ref; push novo cancela o anterior.
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  ci:
+    name: lint → typecheck → build
+    # Runner pinado: `ubuntu-latest` migra silenciosamente de imagem (ex.: Ubuntu 26).
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v7
+
+      - name: Setup Node
+        uses: actions/setup-node@v7
+        with:
+          node-version: 24.x
+          cache: npm
+
+      # `npm ci` respeita o lockfile — nunca `npm install` no CI.
+      - name: Instalar dependências
+        run: npm ci
+
+      - name: Lint
+        run: npm run lint
+
+      - name: Typecheck
+        run: npm run typecheck
+
+      # `typecheck` roda `tsc -b`, que já deixou os `.d.ts`/`.tsbuildinfo` prontos;
+      # `build` refaz `tsc -b` (no-op) e então `react-router build` → `dist/client/`.
+      - name: Build
+        run: npm run build
+
+      - name: Verificar artefato de build
+        run: test -f dist/client/index.html
