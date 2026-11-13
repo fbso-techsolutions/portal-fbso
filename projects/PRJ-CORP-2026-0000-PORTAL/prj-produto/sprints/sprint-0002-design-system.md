@@ -65,7 +65,7 @@
 
 | Data | Item | O que foi feito (comandos/ações) | Decisões/desvios |
 |---|---|---|---|
-| — | — | — | — |
+| 2026-11-13 | [TASK-0028](../../prj-tecnico/tasks/TASK-0028-design-tokens.md) | `@theme` no `src/styles/index.css`: paleta (navy/blue/mint/ink/muted/paper/line/mist/sky) + `--font-sans` Inter + `--radius-soft`/`--shadow-soft` | tokens como fonte única; valores do molde = ponto de partida |
 
 ## 7. Sprint Review — `[Encerramento]`
 

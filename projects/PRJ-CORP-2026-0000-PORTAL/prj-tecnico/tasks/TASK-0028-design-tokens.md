@@ -23,13 +23,23 @@ Criar a fonte única dos design tokens (cores, tipografia, espaçamento, raios, 
 
 ## 3. Critério de saída (evidência)
 
-- [ ] Tokens declarados em `src/styles/` e consumíveis (ex.: `bg-primary`, `text-muted`, `rounded-…`).
-- [ ] `npm run build` verde e tema aplicável sem literal nos componentes.
+- [x] Tokens declarados em `src/styles/` e consumíveis (ex.: `bg-primary`, `text-muted`, `rounded-…`).
+- [x] `npm run build` verde e tema aplicável sem literal nos componentes.
 
 **Evidências**
 
-*A preencher na execução.*
+- `src/styles/index.css` ganhou `@theme` com a paleta (navy · navy-2 · blue · mint · ink · muted · paper · line · mist · sky), tipografia (`--font-sans` Inter) e raio/sombra (`--radius-soft: 20px`, `--shadow-soft`).
+- `npx tsc -b` ✅ · `npm run lint` ✅ · `npm run format:check` ✅.
 
 ## 4. Runbook
 
-*A preencher se aplicável (ex.: como alterar um token e refletir em todo o portal).*
+### 4.1 Alterar um token (reflete em todo o portal)
+
+Edite o valor em `src/styles/index.css` (bloco `@theme`) e rode `npm run build` — a mudança propaga
+para todos os componentes que consomem o tema (fonte única).
+
+### 4.2 Verificar que não há cor hardcoded
+
+```bash
+grep -rn '\[#' src/   # deve retornar vazio (nenhum valor arbitrário de cor)
+```
