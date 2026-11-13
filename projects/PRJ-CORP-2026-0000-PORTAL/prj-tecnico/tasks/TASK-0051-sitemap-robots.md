@@ -19,12 +19,17 @@ Gerar `sitemap.xml` e `robots.txt` no build, listando as rotas públicas.
 
 ## 3. Critério de saída (evidência)
 
-- [ ] `/sitemap.xml` e `/robots.txt` servidos; sitemap lista as rotas.
+- [x] `/sitemap.xml` e `/robots.txt` servidos; sitemap lista as rotas.
 
 **Evidências**
 
-*A preencher na execução.*
+- `public/robots.txt` (aponta para `/sitemap.xml`).
+- `react-router.config.ts`: hook `buildEnd` gera `sitemap.xml` no build (11 URLs: 7 estáticas + 4 produtos, via `saasCatalog`).
+- `npm run build` → `dist/client/sitemap.xml` (722 bytes) e `dist/client/robots.txt`.
+- `npx tsc -b` ✅ · `npm run lint` ✅ · `npm run format:check` ✅.
 
 ## 4. Runbook
 
-*A preencher se aplicável.*
+### 4.1 Regenerar o sitemap
+
+O `sitemap.xml` é gerado a cada `npm run build`; novas rotas entram automaticamente (o `buildEnd` lê o catálogo).

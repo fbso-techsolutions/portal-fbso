@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://fbso.com.br/sitemap.xml

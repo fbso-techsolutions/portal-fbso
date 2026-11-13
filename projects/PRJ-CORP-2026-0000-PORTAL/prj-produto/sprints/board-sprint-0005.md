@@ -12,7 +12,7 @@
 | Item | Dono | Tasks | Etapa | Evidência |
 |---|---|---|---|---|
 | [US-FEAT-0005.0001-0022 — Metadados por página](../user-stories/US-FEAT-0005.0001-0022-metadados-pagina.md) | Alfredo Bento | [TASK-0050](../../prj-tecnico/tasks/README.md) | ✅ Entregue | — |
-| [US-FEAT-0005.0001-0023 — sitemap + robots](../user-stories/US-FEAT-0005.0001-0023-sitemap-robots.md) | Alfredo Bento | [TASK-0051](../../prj-tecnico/tasks/README.md) | ⬜ A fazer | — |
+| [US-FEAT-0005.0001-0023 — sitemap + robots](../user-stories/US-FEAT-0005.0001-0023-sitemap-robots.md) | Alfredo Bento | [TASK-0051](../../prj-tecnico/tasks/README.md) | ✅ Entregue | — |
 | [US-FEAT-0005.0002-0024 — Responsividade](../user-stories/US-FEAT-0005.0002-0024-responsividade.md) | Alfredo Bento | [TASK-0052](../../prj-tecnico/tasks/README.md) | ⬜ A fazer | — |
 | [US-FEAT-0005.0002-0025 — Acessibilidade básica](../user-stories/US-FEAT-0005.0002-0025-acessibilidade-basica.md) | Alfredo Bento | [TASK-0053](../../prj-tecnico/tasks/README.md) | ⬜ A fazer | — |
 | [US-FEAT-0005.0003-0026 — Domínio custom + HTTPS](../user-stories/US-FEAT-0005.0003-0026-dominio-custom-https.md) | Lourival Louro | [TASK-0054](../../prj-tecnico/tasks/README.md) | ⬜ A fazer | — |
@@ -23,7 +23,7 @@
 | Check | Task | Origem | Status | Esforço (h) | Previsão | Dono | Evidência |
 |---|---|---|---|---|---|---|---|
 | 🏁 | [TASK-0050 — Metadados por página](../../prj-tecnico/tasks/TASK-0050-metadados-pagina.md) | [US-0005.0001-0022](../user-stories/US-FEAT-0005.0001-0022-metadados-pagina.md) | ✅ Entregue | 3 | S5 | Alfredo Bento | [PR #42](https://github.com/fbso-techsolutions/portal-fbso/pull/42) |
-| 💡 | [TASK-0051 — sitemap + robots](../../prj-tecnico/tasks/TASK-0051-sitemap-robots.md) | [US-0005.0001-0023](../user-stories/US-FEAT-0005.0001-0023-sitemap-robots.md) | ⬜ A fazer | 3 | S5 | Alfredo Bento | — |
+| 🏁 | [TASK-0051 — sitemap + robots](../../prj-tecnico/tasks/TASK-0051-sitemap-robots.md) | [US-0005.0001-0023](../user-stories/US-FEAT-0005.0001-0023-sitemap-robots.md) | ✅ Entregue | 3 | S5 | Alfredo Bento | [PR #42](https://github.com/fbso-techsolutions/portal-fbso/pull/42) |
 | 💡 | [TASK-0052 — Responsividade](../../prj-tecnico/tasks/TASK-0052-responsividade.md) | [US-0005.0002-0024](../user-stories/US-FEAT-0005.0002-0024-responsividade.md) | ⬜ A fazer | 5 | S5 | Alfredo Bento | — |
 | 💡 | [TASK-0053 — Acessibilidade básica](../../prj-tecnico/tasks/TASK-0053-acessibilidade-basica.md) | [US-0005.0002-0025](../user-stories/US-FEAT-0005.0002-0025-acessibilidade-basica.md) | ⬜ A fazer | 3 | S5 | Alfredo Bento | — |
 | 💡 | [TASK-0054 — Domínio custom + HTTPS](../../prj-tecnico/tasks/TASK-0054-dominio-custom-https.md) | [US-0005.0003-0026](../user-stories/US-FEAT-0005.0003-0026-dominio-custom-https.md) | ⬜ A fazer | 3 | S5 | Lourival Louro | — |
