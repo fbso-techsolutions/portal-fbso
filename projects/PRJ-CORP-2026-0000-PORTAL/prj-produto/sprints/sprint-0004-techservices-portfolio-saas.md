@@ -68,6 +68,7 @@
 | 2026-11-13 | [TASK-0046](../../prj-tecnico/tasks/TASK-0046-pagina-solucoes.md) | rota `/solucoes` (`Solucoes.tsx`: grid de `Card` do `saasCatalog`) | prerender `/solucoes` ok · US-0004.0001 concluída |
 | 2026-11-13 | [TASK-0047](../../prj-tecnico/tasks/TASK-0047-rota-detalhe-produto.md) | rota dinâmica `/solucoes/:slug` (`Produto.tsx`) + `prerender` dinâmico no `react-router.config.ts` | 4 páginas de produto prerender · slug inválido → placeholder · US-0004.0002-0020 concluída |
 | 2026-11-13 | [TASK-0048](../../prj-tecnico/tasks/TASK-0048-conteudo-link-produto.md) | `saas-catalog.ts` ganhou `description` · `Produto.tsx` mostra descrição + link externo condicional | link omitido enquanto `link` vazio |
+| 2026-11-13 | [TASK-0049](../../prj-tecnico/tasks/TASK-0049-qa-smoke-portal.md) | QA smoke: 11 rotas prerender + conteúdo presente em todas | smoke aprovado · **Sprint 4 completa** |
 
 ## 7. Sprint Review — `[Encerramento]`
 
