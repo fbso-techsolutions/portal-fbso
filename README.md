@@ -24,6 +24,22 @@ relacionamento comercial e do acesso aos produtos.
 React + TypeScript · Vite · Tailwind CSS v4 · React Router v7 (framework mode, `prerender`)
 → build estático em `dist/` publicado na **Cloudflare (Workers + Static Assets)**.
 
+## Desenvolvimento
+
+> Comandos do dia a dia. Requisito: Node.js (LTS) + npm.
+
+| Comando | O que faz |
+|---|---|
+| `npm install` | instala as dependências |
+| `npm run dev` | sobe o dev server → `http://localhost:5173` |
+| `npm run build` | compila para `dist/` (`tsc -b && vite build`) |
+| `npm run preview` | serve o build de `dist/` localmente |
+| `npm run lint` | roda o ESLint |
+| `npm audit` | checa vulnerabilidades (total) |
+| `npm audit --omit=dev` | checa vulnerabilidades só de produção |
+
+> 🔧 **Como a base foi criada** (scaffold, one-time): ver [docs/tecnico/setup.md](docs/tecnico/setup.md).
+
 ## Regras
 
 - "Promover o genérico, manter o específico" — [platform-standards/standards/](https://github.com/fbso-techsolutions/platform-standards).
