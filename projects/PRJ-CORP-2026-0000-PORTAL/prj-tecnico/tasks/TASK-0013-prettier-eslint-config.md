@@ -22,8 +22,9 @@ formatação seja automática e consistente.
 - Adicionar `eslint-config-prettier` como última config do `eslint.config.js` (desliga conflitos).
 - Adicionar scripts `format` e `format:check` no `package.json`.
 - Adicionar `.prettierignore` (cobrir `dist/`, `node_modules/`).
+  → Inclui também `*.md`: tabelas longas do projeto são formatadas à mão (evita reformatação em massa).
 
 ## 3. Critério de saída (evidência)
 
-- [ ] `npm run format` formata sem erro.
-- [ ] `npm run lint` continua verde após a integração (sem conflito Prettier×ESLint).
+- [x] `npm run format` formata sem erro.
+- [x] `npm run lint` continua verde após a integração (sem conflito Prettier×ESLint).

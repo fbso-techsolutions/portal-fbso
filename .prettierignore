@@ -1,0 +1,12 @@
+# Dependências e build
+node_modules
+dist
+build
+.react-router
+coverage
+
+# Lockfile (gerado pelo npm)
+package-lock.json
+
+# Markdown: tabelas longas do projeto são formatadas à mão
+*.md

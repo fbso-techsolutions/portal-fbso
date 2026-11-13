@@ -1,6 +1,6 @@
-import type { MetaFunction } from 'react-router'
-import { homeContent } from '../content/home'
-import { siteContent } from '../content/site'
+import type { MetaFunction } from 'react-router';
+import { homeContent } from '../content/home';
+import { siteContent } from '../content/site';
 
 export const meta: MetaFunction = () => [
   { title: siteContent.title },
@@ -8,7 +8,7 @@ export const meta: MetaFunction = () => [
   { property: 'og:title', content: siteContent.title },
   { property: 'og:description', content: siteContent.description },
   { property: 'og:type', content: 'website' },
-]
+];
 
 export default function Home() {
   return (
@@ -21,5 +21,5 @@ export default function Home() {
         {homeContent.badge}
       </span>
     </section>
-  )
+  );
 }

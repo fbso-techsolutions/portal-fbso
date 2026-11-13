@@ -1,6 +1,6 @@
-import { Links, Meta, Outlet, Scripts } from 'react-router'
-import AppLayout from '../components/layout/AppLayout'
-import '../styles/index.css'
+import { Links, Meta, Outlet, Scripts } from 'react-router';
+import AppLayout from '../components/layout/AppLayout';
+import '../styles/index.css';
 
 export default function Root() {
   return (
@@ -18,5 +18,5 @@ export default function Root() {
         <Scripts />
       </body>
     </html>
-  )
+  );
 }

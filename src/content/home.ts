@@ -4,15 +4,15 @@
  */
 export interface HomeContent {
   /** Título principal (h1). */
-  title: string
+  title: string;
   /** Texto de apoio sob o título. */
-  lead: string
+  lead: string;
   /** Selo/status exibido abaixo do texto. */
-  badge: string
+  badge: string;
 }
 
 export const homeContent: HomeContent = {
   title: 'hello world',
   lead: 'Portal em construção — a base do FBSO Corporate Portal está no ar.',
   badge: 'Sprint 1 · Fundação',
-}
+};

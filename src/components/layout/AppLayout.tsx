@@ -1,8 +1,8 @@
-import type { ReactNode } from 'react'
-import { siteContent } from '../../content/site'
+import type { ReactNode } from 'react';
+import { siteContent } from '../../content/site';
 
 interface AppLayoutProps {
-  children: ReactNode
+  children: ReactNode;
 }
 
 /** Layout mínimo do portal: header + main + footer. */
@@ -21,5 +21,5 @@ export default function AppLayout({ children }: AppLayoutProps) {
         {siteContent.footer}
       </footer>
     </div>
-  )
+  );
 }
