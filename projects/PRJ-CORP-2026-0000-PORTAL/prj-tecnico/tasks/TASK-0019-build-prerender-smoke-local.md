@@ -16,7 +16,7 @@ Confirmar que a Home "hello world" pré-renderiza corretamente e fecha a story d
 ## 2. O que implementar/entregar
 
 - Rodar `npm run build` e `npm run preview`.
-- Verificar o HTML gerado em `dist/` (rota `/`) contém o conteúdo da Home **sem depender de JS**.
+- Verificar o HTML gerado em `dist/client/` (rota `/`) contém o conteúdo da Home **sem depender de JS**.
 - Checar ausência de erros no console do preview.
 
 ## 3. Critério de saída (evidência)

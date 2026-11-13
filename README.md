@@ -17,12 +17,12 @@ relacionamento comercial e do acesso aos produtos.
 | [docs/](docs) | **Produto** — visão, negócio, branding, arquitetura, segurança (persistente) |
 | [projects/](projects) | **Projetos** — um folder por entrega (PRD → negócio → produto → técnico) |
 | [src/](src) | Código do portal (React + TypeScript + Vite) — criado no scaffold (Sprint 1) |
-| [public/](public) | Assets estáticos (robots.txt, favicon, imagens OG) |
+| [public/](public) | Assets estáticos — `robots.txt`, favicon, imagens OG (previsto; FEATURE-0005.0001) |
 
 ## Stack (Release 1 — MVP estático)
 
 React + TypeScript · Vite · Tailwind CSS v4 · React Router v8 (framework mode, `prerender`)
-→ build estático em `dist/` publicado na **Cloudflare (Workers + Static Assets)**.
+→ build estático em `dist/client/` publicado na **Cloudflare (Workers + Static Assets)**.
 
 ## Desenvolvimento
 
@@ -32,8 +32,9 @@ React + TypeScript · Vite · Tailwind CSS v4 · React Router v8 (framework mode
 |---|---|
 | `npm install` | instala as dependências |
 | `npm run dev` | sobe o dev server → `http://localhost:5173` |
-| `npm run build` | compila para `dist/` (`tsc -b && vite build`) |
-| `npm run preview` | serve o build de `dist/` localmente |
+| `npm run build` | compila para `dist/client/` (`tsc -b && react-router build`) |
+| `npm run preview` | serve o build de `dist/client/` localmente |
+| `npm run typecheck` | checa os tipos (`tsc -b`) |
 | `npm run lint` | roda o ESLint |
 | `npm audit` | checa vulnerabilidades (total) |
 | `npm audit --omit=dev` | checa vulnerabilidades só de produção |

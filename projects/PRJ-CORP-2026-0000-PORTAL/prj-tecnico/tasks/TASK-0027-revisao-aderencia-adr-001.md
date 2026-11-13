@@ -21,8 +21,10 @@ nas próximas sprints.
   [ARCHITECTURE.md](../../../../docs/tecnico/arquitetura/ARCHITECTURE.md).
 - Verificar estrutura de pastas e o padrão "conteúdo como dados" (`src/content/`).
 - Apontar desvios ou registrar ADR complementar se algo divergir do decidido.
+- Parecer: [revisão 2026-11-13](../../../../docs/tecnico/arquitetura/revisoes/revisao-2026-11-13-aderencia-adr-001.md)
+  (aderente, com ressalvas editoriais D-01…D-09).
 
 ## 3. Critério de saída (evidência)
 
-- [ ] Parecer registrado (comentário no PR ou ADR/nota), aprovando ou listando ajustes.
-- [ ] Desvios (se houver) registrados como pendência/ADR — nunca ajuste silencioso.
+- [x] Parecer registrado (comentário no PR ou ADR/nota), aprovando ou listando ajustes.
+- [x] Desvios (se houver) registrados como pendência/ADR — nunca ajuste silencioso.

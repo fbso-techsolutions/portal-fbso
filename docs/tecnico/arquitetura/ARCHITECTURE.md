@@ -10,7 +10,7 @@
 
 | Release | Forma | Onde roda |
 |---|---|---|
-| **1 — Institucional (MVP)** | Frontend **estático** (React + Vite + Router v8, `prerender: true`) | Cloudflare Workers + Static Assets (`dist/`) |
+| **1 — Institucional (MVP)** | Frontend **estático** (React + Vite + Router v8, `prerender: true`) | Cloudflare Workers + Static Assets (`dist/client/`) |
 | **2 — Comercial** | + Cloudflare Workers (APIs, analytics, lead capture) | Cloudflare (Workers + KV/analytics) |
 | **3 — Plataforma** | + FBSO Identity (OIDC) federando os SaaS | Identidade central + SaaS independentes |
 
@@ -26,6 +26,10 @@ independentes**:
   sessões e permissões próprias.
 
 ## 3. Estrutura do frontend (MVP)
+
+> **Build (framework mode):** `dist/client/` concentra o HTML pré-renderizado + assets — é o alvo de
+> publicação; `dist/server/` é artefato de build-time e **não** é publicado. Detalhe em
+> [revisão de aderência ADR-001](revisoes/revisao-2026-11-13-aderencia-adr-001.md).
 
 ```
 src/

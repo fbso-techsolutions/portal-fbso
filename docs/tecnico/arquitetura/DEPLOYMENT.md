@@ -11,7 +11,7 @@
 registro.br (compra fbso.com.br)
    → apontar NS do domínio para a Cloudflare
         → adicionar o site na Cloudflare (free tier)
-             → deploy do dist/ (wrangler deploy) via GitHub Actions
+             → deploy do dist/client/ (wrangler deploy) via GitHub Actions
                   → domínio custom + HTTPS
 ```
 
@@ -26,13 +26,13 @@ registro.br (compra fbso.com.br)
 
 ```bash
 npm ci
-npm run build        # gera dist/ (prerender + assets estáticos)
+npm run build        # gera dist/client/ (prerender + assets estáticos)
 npm run preview      # valida localmente
 ```
 
 ## 4. Deploy (Cloudflare Workers + Static Assets)
 
-`wrangler.jsonc` declara os assets estáticos (`assets.directory = "./dist"`); o deploy é
+`wrangler.jsonc` declara os assets estáticos (`assets.directory = "./dist/client"`); o deploy é
 `wrangler deploy`. O CI (push na `main`) roda lint → typecheck → build → deploy.
 
 ```bash

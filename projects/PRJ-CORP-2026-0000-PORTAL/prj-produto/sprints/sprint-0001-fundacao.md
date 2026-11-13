@@ -21,7 +21,7 @@
 **Resultados esperados:**
 - [ ] Repo + espelho local + branch protection (ENABLER-0001).
 - [ ] Conta Cloudflare + domínio prontos (ENABLER-0002).
-- [ ] Scaffold Vite+TS+Tailwind+Router v8 com `dist/` pré-renderizado (0001.0001).
+- [x] Scaffold Vite+TS+Tailwind+Router v8 com `dist/client/` pré-renderizado (0001.0001).
 - [ ] CI/CD publicando o "hello world" (0001.0003).
 
 ## 2. Escopo (o corte)
@@ -94,6 +94,7 @@
 | 2026-11-13 | [TASK-0017](../../prj-tecnico/tasks/TASK-0017-rota-home-hello-world.md) | `src/components/layout/AppLayout.tsx` (header/main/footer) no `root.tsx` · Home em `src/pages/Home.tsx` | layout mínimo aplicado a todas as rotas via `root.tsx`; eslint ignora `.react-router/` e libera `meta` no react-refresh (config completa = TASK-0012) |
 | 2026-11-13 | [TASK-0018](../../prj-tecnico/tasks/TASK-0018-conteudo-src-content.md) | `src/content/site.ts` + `src/content/home.ts` com `SiteContent`/`HomeContent` | conteúdo como dados; meta da Home lê `siteContent` (sem literal no JSX) |
 | 2026-11-13 | [TASK-0019](../../prj-tecnico/tasks/TASK-0019-build-prerender-smoke-local.md) | `npm run build` → `dist/client/index.html` com "hello world"/header/footer · `npm run preview` (HTTP 200) | script `preview` = `vite preview --outDir dist/client`; sem erro no preview |
+| 2026-11-13 | [TASK-0027](../../prj-tecnico/tasks/TASK-0027-revisao-aderencia-adr-001.md) | revisão direta do repo vs ADR-001/ARCHITECTURE (stack, prerender, pastas, conteúdo-como-dados) | parecer em [revisões/](../../../../docs/tecnico/arquitetura/revisoes/revisao-2026-11-13-aderencia-adr-001.md); D-01 `dist/client` corrigido nos docs; D-02/D-03 → TASK-0012/0015; D-04 → TASK-0014; PENDENCY-0009 (assinatura ADR-001) |
 
 ## 7. Decisões pendentes
 
