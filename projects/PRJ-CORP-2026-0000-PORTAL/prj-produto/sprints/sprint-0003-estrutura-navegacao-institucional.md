@@ -82,6 +82,7 @@
 | 2026-11-13 | [TASK-0039](../../prj-tecnico/tasks/TASK-0039-ecossistema-saas-cta.md) | `Home`: ecossistema SaaS (4 `Card` de produto) + CTA "vamos conversar" · `home.ts` ganhou `products`/`cta` | cards linkam para `/solucoes/:slug` (rota da S4) · US-0002.0002 concluída |
 | 2026-11-13 | [TASK-0040](../../prj-tecnico/tasks/TASK-0040-pagina-sobre.md) | rota `/sobre` (`Sobre.tsx` + `sobre.ts`: quem somos/missão/valores) | prerender `/sobre` ok · US-0002.0003 concluída |
 | 2026-11-13 | [TASK-0041](../../prj-tecnico/tasks/TASK-0041-pagina-contato.md) | rota `/contato` (`Contato.tsx` + `contato.ts`: e-mail) | sem formulário (R2); prerender `/contato` ok · US-0002.0004 concluída |
+| 2026-11-13 | [TASK-0042](../../prj-tecnico/tasks/TASK-0042-paginas-legais.md) | rotas `/privacidade` e `/termos` (`Privacidade.tsx`/`Termos.tsx` + `legais.ts`: texto padrão) | texto fixo/padrão (`PENDENCY-0005`) · US-0002.0005 concluída |
 
 ## 7. Sprint Review — `[Encerramento]`
 

@@ -4,4 +4,6 @@ export default [
   index('../pages/Home.tsx'),
   route('sobre', '../pages/Sobre.tsx'),
   route('contato', '../pages/Contato.tsx'),
+  route('privacidade', '../pages/Privacidade.tsx'),
+  route('termos', '../pages/Termos.tsx'),
 ] satisfies RouteConfig;

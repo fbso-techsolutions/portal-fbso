@@ -19,12 +19,16 @@ Criar as rotas `/privacidade` e `/termos` com texto fixo/padrão (decisão `PEND
 
 ## 3. Critério de saída (evidência)
 
-- [ ] `/privacidade` e `/termos` acessíveis pelo footer, com texto padrão.
+- [x] `/privacidade` e `/termos` acessíveis pelo footer, com texto padrão.
 
 **Evidências**
 
-*A preencher na execução.*
+- `src/pages/Privacidade.tsx` + `src/pages/Termos.tsx` + `src/content/legais.ts` (texto padrão) + rotas.
+- `npm run build` → prerender de `/privacidade` e `/termos` ok.
+- `npx tsc -b` ✅ · `npm run lint` ✅ · `npm run format:check` ✅.
 
 ## 4. Runbook
 
-*A preencher se aplicável.*
+### 4.1 Alterar o texto legal
+
+Edite `legaisContent` em `src/content/legais.ts` (substituir o padrão pela versão jurídica pós-MVP).
