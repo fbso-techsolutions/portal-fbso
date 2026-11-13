@@ -41,9 +41,11 @@ if ! git diff --quiet || ! git diff --cached --quiet; then
 fi
 
 CURRENT_BRANCH="$(git branch --show-current)"
+# Branch do PR sendo mergeado (para limpeza residual correta — não confundir com a branch atual).
+PR_BRANCH="$(gh pr view "$PR_REF" --json headRefName -q .headRefName 2>/dev/null || true)"
 
 # ── 4. Preview + merge com bypass ────────────────────────────────────────────
-echo "ℹ️  PR: $PR_REF · base: $BASE_BRANCH · branch atual: $CURRENT_BRANCH"
+echo "ℹ️  PR: $PR_REF (branch: ${PR_BRANCH:-?}) · base: $BASE_BRANCH · branch atual: $CURRENT_BRANCH"
 echo "🚀 gh pr merge (bypass rules) + delete branch..."
 gh pr merge "$PR_REF" --merge --admin --delete-branch
 
@@ -53,10 +55,10 @@ git checkout "$BASE_BRANCH"
 git pull --ff-only origin "$BASE_BRANCH"
 git fetch --prune
 
-# ── 6. Remove branch local residual (gh não apaga branch checkeada) ──────────
-if [ "$CURRENT_BRANCH" != "$BASE_BRANCH" ] && git show-ref --verify --quiet "refs/heads/$CURRENT_BRANCH"; then
-  echo "🧹 removendo branch local residual '$CURRENT_BRANCH'..."
-  git branch -d "$CURRENT_BRANCH" 2>/dev/null || git branch -D "$CURRENT_BRANCH"
+# ── 6. Remove branch local residual do PR (gh não apaga branch checkeada) ─────
+if [ -n "$PR_BRANCH" ] && [ "$PR_BRANCH" != "$BASE_BRANCH" ] && git show-ref --verify --quiet "refs/heads/$PR_BRANCH"; then
+  echo "🧹 removendo branch local residual '$PR_BRANCH'..."
+  git branch -d "$PR_BRANCH" 2>/dev/null || git branch -D "$PR_BRANCH"
 fi
 
 echo "🎉 Merge concluído e repositório sincronizado."
