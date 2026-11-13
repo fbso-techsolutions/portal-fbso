@@ -79,6 +79,7 @@
 | 2026-11-13 | [TASK-0036](../../prj-tecnico/tasks/TASK-0036-menu-mobile.md) | `AppLayout`: menu mobile (toggle + dropdown) com `aria-expanded`/`aria-controls`, fecha ao navegar | layout responsivo; CTA oculto no mobile |
 | 2026-11-13 | [TASK-0037](../../prj-tecnico/tasks/TASK-0037-hero-institucional.md) | `Home`: hero institucional (eyebrow + título + copy + CTAs) · `home.ts` ganhou `hero` | substitui o "hello world"; CTAs `Button` + link; textos de `src/content/` |
 | 2026-11-13 | [TASK-0038](../../prj-tecnico/tasks/TASK-0038-posicionamento-diferenciais.md) | `Home`: posicionamento (3 pilares em `Card`) + resumo TechServices (check-list) · `home.ts` ganhou `positioning`/`services` | usa `Card`/`Badge`; textos de `src/content/` |
+| 2026-11-13 | [TASK-0039](../../prj-tecnico/tasks/TASK-0039-ecossistema-saas-cta.md) | `Home`: ecossistema SaaS (4 `Card` de produto) + CTA "vamos conversar" · `home.ts` ganhou `products`/`cta` | cards linkam para `/solucoes/:slug` (rota da S4) · US-0002.0002 concluída |
 
 ## 7. Sprint Review — `[Encerramento]`
 

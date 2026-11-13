@@ -36,10 +36,33 @@ export interface ServicesContent {
   services: string[];
 }
 
+export interface Product {
+  name: string;
+  slug: string;
+  symbol: string;
+  tagline: string;
+}
+
+export interface ProductsContent {
+  kicker: string;
+  title: string;
+  description: string;
+  products: Product[];
+}
+
+export interface CtaContent {
+  eyebrow: string;
+  title: string;
+  description: string;
+  button: CtaLink;
+}
+
 export interface HomeContent {
   hero: HeroContent;
   positioning: PositioningContent;
   services: ServicesContent;
+  products: ProductsContent;
+  cta: CtaContent;
 }
 
 export const homeContent: HomeContent = {
@@ -88,5 +111,43 @@ export const homeContent: HomeContent = {
       'Cloud, DevOps e SRE',
       'Suporte e sustentação',
     ],
+  },
+  products: {
+    kicker: 'Nosso ecossistema',
+    title: 'Soluções para diferentes desafios.',
+    description:
+      'Plataformas SaaS concebidas para apoiar operações, organizar processos e gerar eficiência em diferentes segmentos.',
+    products: [
+      {
+        name: 'Educatio',
+        slug: 'educatio',
+        symbol: 'E',
+        tagline: 'Gestão de processos e serviços educacionais em uma plataforma integrada.',
+      },
+      {
+        name: 'Fiscalia',
+        slug: 'fiscalia',
+        symbol: 'F',
+        tagline: 'Gestão de processos e operações contábeis com organização e controle.',
+      },
+      {
+        name: 'Mercator',
+        slug: 'mercator',
+        symbol: 'M',
+        tagline: 'Gestão de operações e processos comerciais para o varejo.',
+      },
+      {
+        name: 'Materiae',
+        slug: 'materiae',
+        symbol: 'Ma',
+        tagline: 'Gestão do ciclo de vida de ativos eletrônicos e economia circular.',
+      },
+    ],
+  },
+  cta: {
+    eyebrow: 'Vamos construir o próximo passo?',
+    title: 'Seu próximo desafio pode começar aqui.',
+    description: 'Converse com a FBSO sobre consultoria, tecnologia ou nossas plataformas.',
+    button: { label: 'Entre em contato', href: '/contato' },
   },
 };
