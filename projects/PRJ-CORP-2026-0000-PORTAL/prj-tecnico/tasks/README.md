@@ -48,8 +48,31 @@
 | [TASK-0030 — Componente Button](TASK-0030-componente-button.md) | US-FEAT-0001.0002-0007 | Alfredo Bento | 3h | TASK-0028 |
 | [TASK-0031 — Componentes Card + Section](TASK-0031-componentes-card-section.md) | US-FEAT-0001.0002-0007 | Alfredo Bento | 3h | TASK-0028 |
 | [TASK-0032 — Badge + responsividade + QA](TASK-0032-badge-responsividade-qa.md) | US-FEAT-0001.0002-0007 | Alfredo Bento + Patricia Varra | 2h | TASK-0030 · TASK-0031 |
+| [TASK-0033 — Header + topbar](TASK-0033-header-topbar.md) | US-FEAT-0002.0001-0008 | Alfredo Bento | 4h | — |
+| [TASK-0034 — Navegação](TASK-0034-navegacao.md) | US-FEAT-0002.0001-0008 | Alfredo Bento | 2h | TASK-0033 |
+| [TASK-0035 — Footer institucional](TASK-0035-footer-institucional.md) | US-FEAT-0002.0001-0009 | Alfredo Bento | 3h | — |
+| [TASK-0036 — Menu mobile](TASK-0036-menu-mobile.md) | US-FEAT-0002.0001-0010 | Alfredo Bento | 3h | TASK-0034 |
+| [TASK-0037 — Hero institucional](TASK-0037-hero-institucional.md) | US-FEAT-0002.0002-0011 | Alfredo Bento | 5h | TASK-0034 · TASK-0035 |
+| [TASK-0038 — Posicionamento + diferenciais](TASK-0038-posicionamento-diferenciais.md) | US-FEAT-0002.0002-0012 | Alfredo Bento | 5h | TASK-0037 |
+| [TASK-0039 — Ecossistema SaaS + CTA](TASK-0039-ecossistema-saas-cta.md) | US-FEAT-0002.0002-0013 | Alfredo Bento | 4h | TASK-0038 |
+| [TASK-0040 — Página Sobre](TASK-0040-pagina-sobre.md) | US-FEAT-0002.0003-0014 | Alfredo Bento | 3h | TASK-0034 · TASK-0035 |
+| [TASK-0041 — Página Contato](TASK-0041-pagina-contato.md) | US-FEAT-0002.0004-0015 | Alfredo Bento | 3h | TASK-0034 · TASK-0035 |
+| [TASK-0042 — Páginas legais](TASK-0042-paginas-legais.md) | US-FEAT-0002.0005-0016 | Alfredo Bento | 2h | TASK-0034 · TASK-0035 |
+| [TASK-0043 — QA smoke do portal](TASK-0043-qa-smoke-portal.md) | US-FEAT-0002.0001-0010 | Patricia Varra | 3h | TASK-0036 · TASK-0042 |
+| [TASK-0044 — Página TechServices](TASK-0044-pagina-techservices.md) | US-FEAT-0003.0001-0017 | Alfredo Bento | 4h | — |
+| [TASK-0045 — Catálogo SaaS (dados)](TASK-0045-catalogo-saas-dados.md) | US-FEAT-0004.0001-0018 | Alfredo Bento | 3h | — |
+| [TASK-0046 — Página /solucoes](TASK-0046-pagina-solucoes.md) | US-FEAT-0004.0001-0019 | Alfredo Bento | 4h | TASK-0045 |
+| [TASK-0047 — Rota /solucoes/:slug](TASK-0047-rota-detalhe-produto.md) | US-FEAT-0004.0002-0020 | Alfredo Bento | 5h | TASK-0045 |
+| [TASK-0048 — Conteúdo/link por produto](TASK-0048-conteudo-link-produto.md) | US-FEAT-0004.0002-0021 | Alfredo Bento | 2h | TASK-0047 |
+| [TASK-0049 — QA smoke do portal](TASK-0049-qa-smoke-portal.md) | US-FEAT-0004.0002-0021 | Patricia Varra | 2h | TASK-0044 · TASK-0048 |
+| [TASK-0050 — Metadados por página](TASK-0050-metadados-pagina.md) | US-FEAT-0005.0001-0022 | Alfredo Bento | 3h | — |
+| [TASK-0051 — sitemap + robots](TASK-0051-sitemap-robots.md) | US-FEAT-0005.0001-0023 | Alfredo Bento | 3h | TASK-0050 |
+| [TASK-0052 — Responsividade](TASK-0052-responsividade.md) | US-FEAT-0005.0002-0024 | Alfredo Bento | 5h | — |
+| [TASK-0053 — Acessibilidade básica](TASK-0053-acessibilidade-basica.md) | US-FEAT-0005.0002-0025 | Alfredo Bento | 3h | — |
+| [TASK-0054 — Domínio custom + HTTPS](TASK-0054-dominio-custom-https.md) | US-FEAT-0005.0003-0026 | Lourival Louro | 3h | — |
+| [TASK-0055 — Homologação e go-live](TASK-0055-homologacao-golive.md) | US-FEAT-0005.0003-0027 | Lourival Louro + Patricia Varra | 3h | TASK-0051 · TASK-0053 · TASK-0054 |
 
-**Totais:** 32 tasks · ~72h de esforço estimado (a calibrar na execução).
+**Totais:** 55 tasks · ~149h de esforço estimado (a calibrar na execução).
 
 ## Formato do card
 
