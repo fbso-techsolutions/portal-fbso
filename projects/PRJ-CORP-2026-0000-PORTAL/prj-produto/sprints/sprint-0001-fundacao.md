@@ -107,31 +107,83 @@
 | 2026-11-13 | [TASK-0025](../../prj-tecnico/tasks/TASK-0025-deploy-preview-smoke-cloudflare.md) | deploy real no merge (run `43372504660`) → URL `https://portal-fbso.bolismar69.workers.dev` · smoke: HTTP 200 + `hello world` + title/meta/header/footer + assets `.css`/`.js` 200 | deploy contínuo comprovado; URL registrada no board; `preview_urls` ausente (aviso inócuo na R1) |
 | 2026-11-13 | [TASK-0026](../../prj-tecnico/tasks/TASK-0026-qa-smoke-test-deploy.md) | QA smoke na URL publicada: `hello world` inline (prerender sem JS) · `lang="pt-BR"` · 7 assets `200` (0× 404) | US-0001.0003-0005 concluída; limitação registrada: `/__manifest` 404 no estático (rota única → nunca requisitado; ação na R2) |
 
-## 7. Decisões pendentes
+## 7. Sprint Review — `[Encerramento]`
+
+### 7.1 Demonstração das entregas
+
+Portal no ar em [portal-fbso.bolismar69.workers.dev](https://portal-fbso.bolismar69.workers.dev):
+"hello world" pré-renderizado (`lang="pt-BR"`, meta/OG), CI gating e deploy automático no merge da `main`.
+
+### 7.2 Validação dos resultados
+
+| Item | Resultado | Observações |
+|---|---|---|
+| ENABLER-0001 — Repo e ambiente | ✅ Aceito | repo público + branch protection + secrets |
+| ENABLER-0002 — Cloudflare + domínio | ✅ Aceito | conta/zona + nameservers; delegação NS no go-live |
+| US-FEAT-0001.0001-0001 — Inicializar projeto | ✅ Aceito | scaffold Vite+TS+Tailwind+Router v8 + prerender |
+| US-FEAT-0001.0001-0002 — Lint/tsconfig | ✅ Aceito | ESLint flat · Prettier · tsconfig strict + `@/` |
+| US-FEAT-0001.0001-0003 — Estrutura + Home | ✅ Aceito | layout mínimo + conteúdo como dados + smoke |
+| US-FEAT-0001.0003-0004 — Pipeline CI/CD | ✅ Aceito | `ci.yml` (PR gate) + required status check |
+| US-FEAT-0001.0003-0005 — Deploy Cloudflare | ✅ Aceito | `wrangler.jsonc` assets-only + deploy.yml + QA smoke |
+
+### 7.3 Novas necessidades identificadas
+
+- [ ] `/__manifest` (route discovery) 404 no estático — adicionar Worker/binding `ASSETS` na R2.
+- [ ] Delegação NS `fbso.com.br` + registro dos 8 domínios (ADR-002) — go-live (FEATURE-0005.0003).
+
+---
+
+## 8. Retrospectiva — `[Encerramento]`
+
+### 8.1 Pontos positivos / de atenção / melhorias
+
+- **Positivos:** pipeline completo (CI gating → deploy automático) · decisões registradas em ADR (001/002/006/007) · "promover o genérico" aplicado (task template, coding-standards-react, commits/branches).
+- **Atenção:** stacked PRs exigem rebase manual a cada merge; `npm uninstall` podou devDeps inesperadamente (recuperado com `npm install`).
+- **Melhorias:** formalizar convenção de commits/branches · documentar convenções de CI/CD no blueprint · alinhar este doc ao `template-sprint-v1`.
+
+### 8.2 Plano de ação
+
+| Ação | ID | Responsável | Prazo | Status |
+|---|---|---|---|---|
+| Formalizar `convencao-commits.md`/`convencao-branches.md` | RETRO-ACTION-0001 | Tech lead | 2026-11-13 | ✅ Feito |
+| Documentar convenções de CI/CD no blueprint | RETRO-ACTION-0002 | Infra | 2026-11-13 | ✅ Feito |
+| Adicionar Worker/binding `ASSETS` (`/__manifest`) | RETRO-ACTION-0003 | Infra | R2 | Pendente |
+
+---
+
+## 9. Encerramento — `[Encerramento]`
+
+### 9.1 Resultado do Sprint Goal
+
+**Status:** `[x]` Alcançado — repo + scaffold + CI/CD publicando o "hello world" na Cloudflare.
+
+### 9.2 Indicadores finais
+
+| Indicador | Resultado |
+|---|---|
+| Story Points concluídos | 17 (5 stories) |
+| Itens concluídos / não concluídos | 7 / 0 (5 stories + 2 enablers) |
+| Tasks concluídas | 27 / 27 (59h) |
+| Bugs identificados / corrigidos | 0 / 0 |
+
+### 9.3 Pendências para próximas sprints
+
+| ID | Descrição | Origem | Destino |
+|---|---|---|---|
+| Limitação R2 | `/__manifest` 404 no estático (Worker/binding `ASSETS`) | Sprint 1 | Release 2 (Infra) |
+| Go-live | Delegação NS `fbso.com.br` + domínios (ADR-002) | Sprint 1 | FEATURE-0005.0003 |
+
+> As pendências de **decisão** (`PENDENCY-0004/0006/0009/0010`) foram todas respondidas até
+> 2026-11-13 — ver [pendencias.md](../pendencias.md).
+
+---
+
+## 10. Decisões pendentes deste documento
 
 1. ✅ **Capacidade calibrada** no planning (2026-11-11) — ver §3.
 2. ✅ **Gate DoR aprovado** (2026-11-11) — 5 stories + 2 enablers marcados `✅ Revisado`
    ([checklist DoR](checklist-dor-sprint-0001.md)).
 3. ✅ **PENDENCY-0007 resolvida** (2026-11-11) — dev frontend confirmado: Alfredo Bento (100%).
-
-## 8. Fechamento (2026-11-13)
-
-**Resultado:** Sprint Goal ✅ — repo + scaffold + CI/CD publicando o "hello world" na Cloudflare.
-
-**Entregáveis:**
-- 2 enablers + 5 stories **✅ Entregue** · 27 tasks concluídas (59h) · board 100% ✅.
-- Portal no ar: [portal-fbso.bolismar69.workers.dev](https://portal-fbso.bolismar69.workers.dev) —
-  prerender, CI gating (`lint → typecheck → build`) e deploy automático no merge da `main`.
-
-**Pendências em aberto (fora do corte da Sprint 1):**
-
-| Item | Descrição | Dono |
-|---|---|---|
-| Limitação R2 | `/__manifest` (route discovery) retorna 404 no deploy estático — exige Worker/binding `ASSETS` | Infra |
-| Go-live | Delegação NS `fbso.com.br` no registro.br (FEATURE-0005.0003) | Infra/DevOps |
-
-> Todas as pendências de decisão (`PENDENCY-0004/0006/0009/0010`) foram respondidas até 2026-11-13
-> — ver [pendencias.md](../pendencias.md).
 
 ---
 

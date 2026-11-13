@@ -49,3 +49,12 @@ React + TS + Vite + Tailwind CSS v4 + React Router v8 (framework mode, `prerende
 Conteúdo institucional e catálogo SaaS são **dados** em `src/content/` (nunca JSX hardcoded).
 Pré-renderização por página (título, meta, Open Graph, `sitemap.xml`, `robots.txt`).
 Build estático → `dist/client/`; deploy via `wrangler` (Cloudflare Workers + Static Assets), domínio `fbso.com.br`.
+
+**Convenções de código** — segue o padrão da org
+[`coding-standards-react.md`](https://github.com/fbso-techsolutions/platform-standards/blob/main/standards/engineering/coding-standards-react.md)
+(ESLint flat · Prettier · `tsconfig` `strict` · alias `@/` → `src/`).
+
+**Operação (detalhes):**
+- Node **24.22.1** — `.nvmrc` + `engines` (use `nvm use`).
+- Gate local antes do PR: `npm run lint && npm run format:check && npm run typecheck`.
+- CI (PR): check obrigatório `lint → typecheck → build`; merge → **deploy automático** na Cloudflare.
