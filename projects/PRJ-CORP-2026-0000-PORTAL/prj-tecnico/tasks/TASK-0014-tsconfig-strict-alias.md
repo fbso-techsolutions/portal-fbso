@@ -23,5 +23,5 @@ pastas (`@/components`, `@/content`, `@/lib`) das próximas features.
 
 ## 3. Critério de saída (evidência)
 
-- [ ] `tsc` (via `npm run build`) passa com `strict`.
-- [ ] Import com `@/` compila sem erro.
+- [x] `tsc` (via `npm run build`) passa com `strict`.
+- [x] Import com `@/` compila sem erro.

@@ -75,6 +75,9 @@ npm audit --omit=dev     # vulnerabilidades só de produção
 ## 5. Observações
 
 - **Dependências pinadas** (`--save-exact`): sem `^`/`~` no `package.json`.
+- **Path alias `@/` → `src/`**: declarado em `tsconfig.app.json` (`paths`) e no `vite.config.ts`
+  (`resolve.alias`) — use `@/components/...`, `@/content/...`, `@/lib/...`.
+- **TypeScript `strict: true`** nos dois projetos (`tsconfig.app.json` e `tsconfig.node.json`).
 - **Tailwind e React Router NÃO entram no scaffold** — são etapas seguintes (TASK-0009 e TASK-0010).
 - A estrutura de pastas definitiva (`src/app`, `components/{layout,ui,sections}`, `content`, `lib`,
   `styles`) é criada em etapa posterior (TASK-0016), conforme
