@@ -7,7 +7,8 @@ name: Deploy
 # Mapeamento (fonte: ADR-011 / blueprints/ci-cd):
 #   develop            → dev  (wrangler deploy --env dev)    · sem tag
 #   release/vX.Y.Z     → hml  (wrangler deploy --env hml)    · tag vX.Y.Z-rcN (N auto)
-#   main               → prd  (wrangler deploy, default)     · tag vX.Y.Z (derivada da rc)
+#   main               → prd  (wrangler deploy, default)     · tag vX.Y.Z
+#     release/vX.Y.Z → vX.Y.Z (release) · hotfix/vX.Y.Z-<slug> → vX.Y.Z (PATCH+1, hotfix)
 on:
   push:
     branches:
@@ -74,6 +75,9 @@ jobs:
       - name: Determinar ambiente e tag
         id: target
         shell: bash
+        env:
+          # Commit message (texto arbitrário) — via env evita injeção de shell.
+          HEAD_COMMIT_MESSAGE: ${{ github.event.head_commit.message }}
         run: |
           if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
             env_name="${{ github.event.inputs.environment }}"
@@ -97,13 +101,30 @@ jobs:
                 ;;
               main)
                 env_name="prd"; wrangler_env=""
-                latest="$(git tag -l 'v*-rc*' | sort -V | tail -1)"
-                if [ -z "$latest" ]; then
-                  echo "::warning::nenhuma tag -rc encontrada — produção sem tag automática (hotfix direto?)"
-                  tag=""
-                else
-                  tag="${latest%-rc*}"
-                fi
+                # 1) Origem do merge: `gh pr merge --merge` grava "Merge pull request #N from owner/<branch>".
+                src="$(echo "${HEAD_COMMIT_MESSAGE}" | sed -nE 's/.*Merge pull request #[0-9]+ from [^/]+\/(.+)/\1/p')"
+                case "$src" in
+                  release/v*|hotfix/v*)
+                    # A branch declara a versão: release/vX.Y.Z | hotfix/vX.Y.Z-<slug>.
+                    tag="$(echo "$src" | grep -oE 'v[0-9]+\.[0-9]+\.[0-9]+' | head -1)"
+                    ;;
+                  *)
+                    # 2) Fallback (merge squash/rebase, sem origem legível): deriva das tags.
+                    latest_rc="$(git tag -l 'v*-rc*' | sort -V | tail -1)"
+                    latest_final="$(git tag -l 'v[0-9]*.[0-9]*.[0-9]*' | sort -V | tail -1)"
+                    rc_ver="${latest_rc%-rc*}"
+                    if [ -n "$latest_rc" ] && { [ -z "$latest_final" ] || [ "$(printf '%s\n%s\n' "$rc_ver" "$latest_final" | sort -V | tail -1)" = "$rc_ver" ]; }; then
+                      tag="$rc_ver"
+                    elif [ -n "$latest_final" ]; then
+                      # hotfix: MAJOR/MINOR preservados, PATCH +1 (ex.: v1.4.0 → v1.4.1).
+                      IFS=. read -r major minor patch <<< "${latest_final#v}"
+                      tag="v${major}.${minor}.$((patch + 1))"
+                    else
+                      echo "::warning::sem tag para derivar a versão de produção — sem tag automática"
+                      tag=""
+                    fi
+                    ;;
+                esac
                 ;;
               *)
                 echo "::error::branch não-publicável: $GITHUB_REF_NAME" >&2; exit 1
