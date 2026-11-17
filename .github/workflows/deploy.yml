@@ -61,17 +61,11 @@ jobs:
       - name: Instalar dependências
         run: npm ci
 
-      - name: Build
-        run: npm run build
-
-      # Guarda do artefato (blueprints/ci-cd §1.2): falha se o build não gerar o esperado.
-      - name: Guarda do artefato
-        run: test -f dist/client/index.html
-
-      # Determina ambiente + tag a partir da branch (ou do input manual).
-      #   env_name     → dev | hml | prd  (lógico; para logs e p/ GitHub Environments na Fase 5)
+      # Determina ambiente + tag + versão do app a partir da branch (ou do input manual).
+      #   env_name     → dev | hml | prd  (lógico; p/ logs, p/ GitHub Environments e p/ o build)
       #   wrangler_env → dev | hml | ""   (vazio = produção/default, sem --env)
       #   tag          → "" (develop/dispatch) | vX.Y.Z-rcN (release) | vX.Y.Z (main)
+      #   app_version  → tag, ou env-<sha7> quando não há tag (develop/dispatch)
       - name: Determinar ambiente e tag
         id: target
         shell: bash
@@ -131,10 +125,24 @@ jobs:
                 ;;
             esac
           fi
+          # Versão exibível no build: a tag quando existe; senão env-<sha7> (develop/dispatch).
+          app_version="${tag:-${env_name}-${GITHUB_SHA::7}}"
           echo "env_name=$env_name" >> "$GITHUB_OUTPUT"
           echo "wrangler_env=$wrangler_env" >> "$GITHUB_OUTPUT"
           echo "tag=$tag" >> "$GITHUB_OUTPUT"
-          echo "▶ alvo: env=$env_name wrangler_env='${wrangler_env:-<produção>}' tag='${tag:-<nenhuma>}'"
+          echo "app_version=$app_version" >> "$GITHUB_OUTPUT"
+          echo "▶ alvo: env=$env_name wrangler_env='${wrangler_env:-<produção>}' tag='${tag:-<nenhuma>}' app_version=$app_version"
+
+      - name: Build
+        run: npm run build
+        env:
+          # Versão e ambiente injetados no build (import.meta.env.VITE_*) — rodapé/status/Sentry.
+          VITE_APP_VERSION: ${{ steps.target.outputs.app_version }}
+          VITE_APP_ENV: ${{ steps.target.outputs.env_name }}
+
+      # Guarda do artefato (blueprints/ci-cd §1.2): falha se o build não gerar o esperado.
+      - name: Guarda do artefato
+        run: test -f dist/client/index.html
 
       - name: Deploy
         run: |
