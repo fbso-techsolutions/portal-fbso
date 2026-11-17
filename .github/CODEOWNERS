@@ -1,3 +1,5 @@
 # CODEOWNERS do portal-fbso
-
-/. @bolismar69
+# Dono de código (@bolismar69) + aprovador de mudança (change-approvers) — ADR-011 / Fase 5.
+# A revisão obrigatória por code owner é habilitada via branch protection apenas na `main`
+# (gate humano de produção). O time precisa existir na org antes de ligar essa proteção.
+* @bolismar69 @fbso-techsolutions/change-approvers
