@@ -1,10 +1,10 @@
 name: CI
 
-# Gate de merge: nenhum PR entra em `main` com lint, tipos ou build quebrados.
-# Roda **só em PR** — no merge, quem valida/rebuild é o `deploy.yml` (evita run duplicado).
+# Gate de merge: nenhum PR entra em `develop` com lint, tipos ou testes quebrados.
+# Roda **só em PR** — no merge, quem valida/rebuild é o `deploy.yml` (ADR-009/ADR-011).
 on:
   pull_request:
-    branches: [main]
+    branches: [develop]
 
 # Somente leitura: o workflow valida, não publica nada.
 permissions:
@@ -17,7 +17,7 @@ concurrency:
 
 jobs:
   ci:
-    name: lint → typecheck → build
+    name: lint → typecheck → test
     # Runner pinado: `ubuntu-latest` migra silenciosamente de imagem (ex.: Ubuntu 26).
     runs-on: ubuntu-24.04
     timeout-minutes: 10
@@ -43,10 +43,7 @@ jobs:
       - name: Typecheck
         run: npm run typecheck
 
-      # `typecheck` roda `tsc -b`, que já deixou os `.d.ts`/`.tsbuildinfo` prontos;
-      # `build` refaz `tsc -b` (no-op) e então `react-router build` → `dist/client/`.
-      - name: Build
-        run: npm run build
-
-      - name: Verificar artefato de build
-        run: test -f dist/client/index.html
+      # Sem `build` no PR (ADR-011): o build (e o artefato) acontece pós-merge, no deploy.
+      # SAST roda em workflow separado (`codeql.yml`).
+      - name: Test
+        run: npm run test

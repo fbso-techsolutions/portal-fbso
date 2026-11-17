@@ -1,14 +1,36 @@
 name: Deploy
 
-# Publica o portal na Cloudflare a cada merge na `main` (nunca em PR — branch não-publicada).
+# Publica o portal na Cloudflare por ambiente (ADR-011): cada push numa branch
+# "publicável" dispara o build + deploy no ambiente correspondente. Nunca em PR
+# (branch não-publicada) — quem valida o PR é o `ci.yml`; quem publica é este workflow.
+#
+# Mapeamento (fonte: ADR-011 / blueprints/ci-cd):
+#   develop            → dev  (wrangler deploy --env dev)    · sem tag
+#   release/vX.Y.Z     → hml  (wrangler deploy --env hml)    · tag vX.Y.Z-rcN (N auto)
+#   main               → prd  (wrangler deploy, default)     · tag vX.Y.Z
+#     release/vX.Y.Z → vX.Y.Z (release) · hotfix/vX.Y.Z-<slug> → vX.Y.Z (PATCH+1, hotfix)
 on:
   push:
-    branches: [main]
-  # Redeploy manual (operator) sem novo commit — continua restrito à `main`.
+    branches:
+      - develop
+      - 'release/v*'
+      - main
+  # Redeploy manual (operator) — escolhe o ambiente; não gera tag (tags são do fluxo de push).
   workflow_dispatch:
+    inputs:
+      environment:
+        description: 'Ambiente a publicar'
+        type: choice
+        required: true
+        default: dev
+        options:
+          - dev
+          - hml
+          - prd
 
 permissions:
-  contents: read
+  # `contents: write` é necessário para criar/push a tag (release/main) via GITHUB_TOKEN.
+  contents: write
   deployments: write
 
 concurrency:
@@ -25,6 +47,10 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v7
+        with:
+          # Histórico + tags completos — a geração da tag (release/main) lê as tags existentes.
+          fetch-depth: 0
+          fetch-tags: true
 
       - name: Setup Node
         uses: actions/setup-node@v7
@@ -38,9 +64,102 @@ jobs:
       - name: Build
         run: npm run build
 
+      # Guarda do artefato (blueprints/ci-cd §1.2): falha se o build não gerar o esperado.
+      - name: Guarda do artefato
+        run: test -f dist/client/index.html
+
+      # Determina ambiente + tag a partir da branch (ou do input manual).
+      #   env_name     → dev | hml | prd  (lógico; para logs e p/ GitHub Environments na Fase 5)
+      #   wrangler_env → dev | hml | ""   (vazio = produção/default, sem --env)
+      #   tag          → "" (develop/dispatch) | vX.Y.Z-rcN (release) | vX.Y.Z (main)
+      - name: Determinar ambiente e tag
+        id: target
+        shell: bash
+        env:
+          # Commit message (texto arbitrário) — via env evita injeção de shell.
+          HEAD_COMMIT_MESSAGE: ${{ github.event.head_commit.message }}
+        run: |
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            env_name="${{ github.event.inputs.environment }}"
+            case "$env_name" in
+              dev) wrangler_env="dev" ;;
+              hml) wrangler_env="hml" ;;
+              prd) wrangler_env="" ;;
+              *)   echo "::error::ambiente inválido: $env_name" >&2; exit 1 ;;
+            esac
+            tag=""
+          else
+            case "${{ github.ref_name }}" in
+              develop)
+                env_name="dev"; wrangler_env="dev"; tag=""
+                ;;
+              release/v*)
+                env_name="hml"; wrangler_env="hml"
+                ver="${GITHUB_REF_NAME#release/v}"
+                n="$(git tag -l "v${ver}-rc*" | sed -E 's/.*-rc([0-9]+)$/\1/' | sort -n | tail -1)"
+                tag="v${ver}-rc$(( ${n:-0} + 1 ))"
+                ;;
+              main)
+                env_name="prd"; wrangler_env=""
+                # 1) Origem do merge: `gh pr merge --merge` grava "Merge pull request #N from owner/<branch>".
+                src="$(echo "${HEAD_COMMIT_MESSAGE}" | sed -nE 's/.*Merge pull request #[0-9]+ from [^/]+\/(.+)/\1/p')"
+                case "$src" in
+                  release/v*|hotfix/v*)
+                    # A branch declara a versão: release/vX.Y.Z | hotfix/vX.Y.Z-<slug>.
+                    tag="$(echo "$src" | grep -oE 'v[0-9]+\.[0-9]+\.[0-9]+' | head -1)"
+                    ;;
+                  *)
+                    # 2) Fallback (merge squash/rebase, sem origem legível): deriva das tags.
+                    latest_rc="$(git tag -l 'v*-rc*' | sort -V | tail -1)"
+                    latest_final="$(git tag -l 'v[0-9]*.[0-9]*.[0-9]*' | sort -V | tail -1)"
+                    rc_ver="${latest_rc%-rc*}"
+                    if [ -n "$latest_rc" ] && { [ -z "$latest_final" ] || [ "$(printf '%s\n%s\n' "$rc_ver" "$latest_final" | sort -V | tail -1)" = "$rc_ver" ]; }; then
+                      tag="$rc_ver"
+                    elif [ -n "$latest_final" ]; then
+                      # hotfix: MAJOR/MINOR preservados, PATCH +1 (ex.: v1.4.0 → v1.4.1).
+                      IFS=. read -r major minor patch <<< "${latest_final#v}"
+                      tag="v${major}.${minor}.$((patch + 1))"
+                    else
+                      echo "::warning::sem tag para derivar a versão de produção — sem tag automática"
+                      tag=""
+                    fi
+                    ;;
+                esac
+                ;;
+              *)
+                echo "::error::branch não-publicável: $GITHUB_REF_NAME" >&2; exit 1
+                ;;
+            esac
+          fi
+          echo "env_name=$env_name" >> "$GITHUB_OUTPUT"
+          echo "wrangler_env=$wrangler_env" >> "$GITHUB_OUTPUT"
+          echo "tag=$tag" >> "$GITHUB_OUTPUT"
+          echo "▶ alvo: env=$env_name wrangler_env='${wrangler_env:-<produção>}' tag='${tag:-<nenhuma>}'"
+
       - name: Deploy
-        run: npx wrangler deploy
+        run: |
+          if [ -n "${{ steps.target.outputs.wrangler_env }}" ]; then
+            npx wrangler deploy --env "${{ steps.target.outputs.wrangler_env }}"
+          else
+            # produção é o bloco de topo do wrangler.jsonc (default) — sem --env.
+            npx wrangler deploy
+          fi
         env:
           # Credenciais vêm do GitHub Secrets — nada versionado no repo.
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+
+      # Tag só após deploy OK (não tagueia commit que falhou em publicar).
+      # Tag leve (sem committer) — a identidade da tag é o commit deployado.
+      - name: Criar tag (release/main)
+        if: steps.target.outputs.tag != ''
+        shell: bash
+        run: |
+          tag="${{ steps.target.outputs.tag }}"
+          if git rev-parse -q --verify "refs/tags/$tag" >/dev/null 2>&1; then
+            echo "⚠️ tag $tag já existe — pulando (redeploy)."
+          else
+            git tag "$tag"
+            git push origin "$tag"
+            echo "✅ tag $tag criada e publicada."
+          fi
