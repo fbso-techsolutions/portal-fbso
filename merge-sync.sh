@@ -3,8 +3,8 @@
 #
 # Uso:
 #   ./merge-sync.sh <numero-do-pr|url|branch> [branch-base]
-#   ./merge-sync.sh 38            # PR #38, base main
-#   ./merge-sync.sh feat/x main   # por nome de branch
+#   ./merge-sync.sh 38               # PR #38, base develop
+#   ./merge-sync.sh feat/x develop   # por nome de branch
 #
 # Equivale, em um comando, a: UI (bypass + merge + delete branch) + sync local.
 set -euo pipefail
@@ -14,7 +14,7 @@ cd "$REPO_DIR"
 
 # ── 1. Argumentos ────────────────────────────────────────────────────────────
 PR_REF="${1:-}"
-BASE_BRANCH="${2:-main}"
+BASE_BRANCH="${2:-develop}"
 
 if [ -z "$PR_REF" ]; then
   echo "❌ Informe o PR (número, URL ou branch) a mergear."

@@ -1,13 +1,13 @@
 #!/usr/bin/env bash
-# sync-main.sh — sincroniza o repositório local após merge na UI do GitHub.
+# sync-develop.sh — sincroniza o repositório local após merge na UI do GitHub.
 #
 # Uso:
-#   ./sync-main.sh                    # roda no repo atual
-#   ./sync-main.sh /caminho/do/repo   # roda em outro caminho
+#   ./sync-develop.sh                    # roda no repo atual
+#   ./sync-develop.sh /caminho/do/repo   # roda em outro caminho
 #
 # Passos equivalentes (manuais):
-#   git checkout main && git pull --ff-only origin main && git fetch --prune
-#   + apaga branches locais já mergeadas (exceto main)
+#   git checkout develop && git pull --ff-only origin develop && git fetch --prune
+#   + apaga branches locais já mergeadas (exceto develop/main)
 set -euo pipefail
 
 REPO="${1:-$(pwd)}"
@@ -24,27 +24,27 @@ if ! git diff --quiet || ! git diff --cached --quiet; then
   exit 1
 fi
 
-# 2. Vai para a main.
-echo "▶ git checkout main"
-git checkout main
+# 2. Vai para a develop.
+echo "▶ git checkout develop"
+git checkout develop
 
-# 3. Atualiza a main local (fast-forward only — nunca cria merge local).
-echo "▶ git pull --ff-only origin main"
-git pull --ff-only origin main
+# 3. Atualiza a develop local (fast-forward only — nunca cria merge local).
+echo "▶ git pull --ff-only origin develop"
+git pull --ff-only origin develop
 
 # 4. Remove refs remotas de branches já deletadas na UI.
 echo "▶ git fetch --prune"
 git fetch --prune
 
-# 5. Apaga branches locais que já foram mergeadas na main (exceto a própria main).
+# 5. Apaga branches locais já mergeadas na develop (exceto develop/main).
 echo "▶ apagando branches locais mergeadas..."
-merged=$(git branch --merged main | sed 's/^[* ]*//' | grep -v '^main$' || true)
+merged=$(git branch --merged develop | sed 's/^[* ]*//' | grep -vE '^(develop|main)$' || true)
 if [ -n "$merged" ]; then
   echo "$merged" | while IFS= read -r b; do
     [ -n "$b" ] && git branch -d "$b"
   done
 else
-  echo "  (nenhuma branch local mergeada além de main)"
+  echo "  (nenhuma branch local mergeada além de develop/main)"
 fi
 
 echo "════════════════════════════════════════════════"

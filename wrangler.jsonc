@@ -6,4 +6,14 @@
     "directory": "./dist/client",
     "not_found_handling": "none",
   },
+  // Ambientes: cada `--env` vira um Worker separado (`portal-fbso-dev`, `portal-fbso-hml`).
+  // Os Custom Domains (fbso/www/dev/hml) são apontados no dashboard para o Worker correto.
+  "env": {
+    "dev": {
+      "vars": { "ENV_NAME": "dev" },
+    },
+    "hml": {
+      "vars": { "ENV_NAME": "hml" },
+    },
+  },
 }

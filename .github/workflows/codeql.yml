@@ -1,0 +1,41 @@
+name: CodeQL
+
+# SAST (Análise estática de segurança) — CodeQL nativo do GitHub (ADR-011: começar com CodeQL).
+# Roda em PR (gate) e em push nas branches protegidas, sem publicar nada.
+on:
+  push:
+    branches: [develop, main]
+  pull_request:
+    branches: [develop]
+
+# Menor privilégio: somente leitura no topo; o job de análise pede só o que precisa.
+permissions:
+  contents: read
+
+jobs:
+  analyze:
+    name: Analyze (javascript-typescript)
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    permissions:
+      contents: read
+      security-events: write
+    strategy:
+      fail-fast: false
+      matrix:
+        language: [javascript-typescript]
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v7
+
+      - name: Initialize CodeQL
+        uses: github/codeql-action/init@v3
+        with:
+          languages: ${{ matrix.language }}
+
+      - name: Autobuild
+        uses: github/codeql-action/autobuild@v3
+
+      - name: Perform CodeQL Analysis
+        uses: github/codeql-action/analyze@v3

@@ -3,6 +3,12 @@ import type { ReactNode } from 'react';
 import { siteContent } from '@/content/site';
 import Button from '@/components/ui/Button';
 
+// Versão e ambiente injetados no build (deploy.yml → VITE_APP_VERSION / VITE_APP_ENV).
+// Só preenchidos em deploys reais; em `npm run dev` ficam vazios (sem selo/versão).
+const appVersion = (import.meta.env.VITE_APP_VERSION as string | undefined) ?? '';
+const appEnv = (import.meta.env.VITE_APP_ENV as string | undefined) ?? '';
+const isNonProd = appEnv === 'dev' || appEnv === 'hml';
+
 interface AppLayoutProps {
   children: ReactNode;
 }
@@ -150,8 +156,20 @@ export default function AppLayout({ children }: AppLayoutProps) {
           </div>
 
           <div className="mt-10 flex flex-col justify-between gap-3 border-t border-white/10 pt-5 text-xs text-mist sm:flex-row">
-            <span>
-              © {new Date().getFullYear()} {siteContent.footer}. Todos os direitos reservados.
+            <span className="flex flex-wrap items-center gap-2">
+              <span>
+                © {new Date().getFullYear()} {siteContent.footer}. Todos os direitos reservados.
+              </span>
+              {appVersion ? <span className="text-mist/70">· {appVersion}</span> : null}
+              {isNonProd ? (
+                <span
+                  className={`rounded-sm px-1.5 py-0.5 text-[10px] font-bold uppercase tracking-wider text-navy ${
+                    appEnv === 'hml' ? 'bg-mint' : 'bg-sky'
+                  }`}
+                >
+                  {appEnv}
+                </span>
+              ) : null}
             </span>
             <span>{siteContent.topbarNote}</span>
           </div>
