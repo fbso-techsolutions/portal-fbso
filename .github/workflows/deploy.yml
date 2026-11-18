@@ -53,6 +53,10 @@ jobs:
           # Histórico + tags completos — a geração da tag (release/main) lê as tags existentes.
           fetch-depth: 0
           fetch-tags: true
+          # PAT (admin) para o push do back-merge na develop — o GITHUB_TOKEN não consegue bypassar
+          # a proteção (o app github-actions não é aceito na bypass list). O PAT também dispara o
+          # deploy de dev (push de usuário → sem anti-recursion), dispensando o re-disparo manual.
+          token: ${{ secrets.GH_PAT }}
 
       - name: Setup Node
         uses: actions/setup-node@v7
@@ -174,46 +178,39 @@ jobs:
             echo "✅ tag $tag criada e publicada."
           fi
 
-      # Pós-produção (ADR-011): back-merge main → develop via PR + apaga a branch de origem
-      # (release/hotfix já mergeada). Só roda no deploy de produção (main → env prd).
-      - name: Back-merge e limpeza (pós-produção)
+      # Pós-produção (ADR-011): back-merge direto main → develop (git merge --no-ff), com fallback
+      # a PR em caso de conflito. Só roda no deploy de produção (main → env prd).
+      # A deleção da branch release/hotfix é feita pelo GitHub (delete_branch_on_merge=true).
+      - name: Back-merge (pós-produção)
         if: steps.target.outputs.env_name == 'prd'
         shell: bash
         env:
-          # Prefere um PAT (secrets.GH_PAT) se existir — PR criado por PAT dispara o CI do PR;
-          # o GITHUB_TOKEN (fallback) pode não disparar CI no PR auto-criado (limitação do GitHub).
-          GH_TOKEN: ${{ secrets.GH_PAT || github.token }}
+          GH_TOKEN: ${{ github.token }}
           HEAD_COMMIT_MESSAGE: ${{ github.event.head_commit.message }}
         run: |
           tag="${{ steps.target.outputs.tag }}"
           src="$(echo "${HEAD_COMMIT_MESSAGE}" | sed -nE 's/.*Merge pull request #[0-9]+ from [^/]+\/(.+)/\1/p')"
           case "$src" in
             release/v*|hotfix/v*)
-              # 1) Back-merge main → develop (idempotente: pula se já existir PR aberto).
-              if gh pr list --base develop --head main --state open --limit 1 | grep -q .; then
-                echo "⚠️ já existe PR de back-merge (main → develop) aberto — pulando."
+              git config user.name "github-actions[bot]"
+              git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+              git fetch origin develop
+              git checkout -B develop origin/develop
+              # Merge direto (3-way merge seguro: nunca sobrescreve código da develop).
+              if git merge --no-ff "origin/main" -m "chore(release): back-merge main (${tag}) into develop"; then
+                git push origin develop
+                echo "✅ develop sincronizada automaticamente com ${tag}."
               else
-                pr_url="$(gh pr create --base develop --head main \
-                  --title "Back-merge main → develop (${tag})" \
-                  --body "Sincroniza a \`develop\` com a produção (\`${tag}\`). Automático pós-deploy.")"
-                echo "✅ PR de back-merge criado: $pr_url"
-                # Auto-merge: mergeia sozinho quando o CI passar. Se indisponível, deixa p/ merge manual
-                # (não derruba o passo — a deleção da branch abaixo ainda roda).
-                if gh pr merge "$pr_url" --auto --merge; then
-                  echo "✅ auto-merge habilitado."
-                else
-                  echo "⚠️ auto-merge indisponível — PR fica para merge manual."
+                git merge --abort
+                echo "⚠️ Conflito entre main (${tag}) e develop. Abrindo PR para resolução manual..."
+                if ! gh pr list --base develop --head main --state open --limit 1 | grep -q .; then
+                  gh pr create --base develop --head main \
+                    --title "⚠️ [Conflito] Back-merge main → develop (${tag})" \
+                    --body "Houve conflito automático ao descer a \`${tag}\` para a \`develop\`. Resolva os conflitos manualmente para não perder alterações."
                 fi
-              fi
-              # 2) Apaga a branch de origem (release/hotfix) — já mergeada na main.
-              if git ls-remote --exit-code --heads origin "$src" >/dev/null 2>&1; then
-                git push origin --delete "$src"
-                echo "✅ branch $src apagada."
-              else
-                echo "ℹ️ branch $src já não existe."
               fi
               ;;
             *)
-              echo "⚠️ origem não identificada (${src:-<nenhuma>}) — back-merge/limpeza manuais."
+              echo "⚠️ origem não identificada (${src:-<nenhuma>}) — back-merge manual."
               ;;
           esac
