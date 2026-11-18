@@ -180,7 +180,9 @@ jobs:
         if: steps.target.outputs.env_name == 'prd'
         shell: bash
         env:
-          GH_TOKEN: ${{ github.token }}
+          # Prefere um PAT (secrets.GH_PAT) se existir — PR criado por PAT dispara o CI do PR;
+          # o GITHUB_TOKEN (fallback) pode não disparar CI no PR auto-criado (limitação do GitHub).
+          GH_TOKEN: ${{ secrets.GH_PAT || github.token }}
           HEAD_COMMIT_MESSAGE: ${{ github.event.head_commit.message }}
         run: |
           tag="${{ steps.target.outputs.tag }}"
@@ -191,10 +193,13 @@ jobs:
               if gh pr list --base develop --head main --state open --limit 1 | grep -q .; then
                 echo "⚠️ já existe PR de back-merge (main → develop) aberto — pulando."
               else
-                gh pr create --base develop --head main \
+                pr_url="$(gh pr create --base develop --head main \
                   --title "Back-merge main → develop (${tag})" \
-                  --body "Sincroniza a \`develop\` com a produção (\`${tag}\`). Automático pós-deploy."
-                echo "✅ PR de back-merge criado."
+                  --body "Sincroniza a \`develop\` com a produção (\`${tag}\`). Automático pós-deploy.")"
+                echo "✅ PR de back-merge criado: $pr_url"
+                # Auto-merge: mergeia sozinho quando o CI (lint → typecheck → test) passar.
+                gh pr merge "$pr_url" --auto --merge
+                echo "✅ auto-merge habilitado."
               fi
               # 2) Apaga a branch de origem (release/hotfix) — já mergeada na main.
               if git ls-remote --exit-code --heads origin "$src" >/dev/null 2>&1; then
