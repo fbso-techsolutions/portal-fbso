@@ -197,9 +197,13 @@ jobs:
                   --title "Back-merge main → develop (${tag})" \
                   --body "Sincroniza a \`develop\` com a produção (\`${tag}\`). Automático pós-deploy.")"
                 echo "✅ PR de back-merge criado: $pr_url"
-                # Auto-merge: mergeia sozinho quando o CI (lint → typecheck → test) passar.
-                gh pr merge "$pr_url" --auto --merge
-                echo "✅ auto-merge habilitado."
+                # Auto-merge: mergeia sozinho quando o CI passar. Se indisponível, deixa p/ merge manual
+                # (não derruba o passo — a deleção da branch abaixo ainda roda).
+                if gh pr merge "$pr_url" --auto --merge; then
+                  echo "✅ auto-merge habilitado."
+                else
+                  echo "⚠️ auto-merge indisponível — PR fica para merge manual."
+                fi
               fi
               # 2) Apaga a branch de origem (release/hotfix) — já mergeada na main.
               if git ls-remote --exit-code --heads origin "$src" >/dev/null 2>&1; then
