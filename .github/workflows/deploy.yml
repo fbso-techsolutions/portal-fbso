@@ -29,9 +29,11 @@ on:
           - prd
 
 permissions:
-  # `contents: write` é necessário para criar/push a tag (release/main) via GITHUB_TOKEN.
+  # `contents: write` cria/push a tag e apaga a branch release/hotfix;
+  # `pull-requests: write` cria o PR de back-merge (main → develop) pós-produção.
   contents: write
   deployments: write
+  pull-requests: write
 
 concurrency:
   group: deploy-${{ github.ref }}
@@ -171,3 +173,38 @@ jobs:
             git push origin "$tag"
             echo "✅ tag $tag criada e publicada."
           fi
+
+      # Pós-produção (ADR-011): back-merge main → develop via PR + apaga a branch de origem
+      # (release/hotfix já mergeada). Só roda no deploy de produção (main → env prd).
+      - name: Back-merge e limpeza (pós-produção)
+        if: steps.target.outputs.env_name == 'prd'
+        shell: bash
+        env:
+          GH_TOKEN: ${{ github.token }}
+          HEAD_COMMIT_MESSAGE: ${{ github.event.head_commit.message }}
+        run: |
+          tag="${{ steps.target.outputs.tag }}"
+          src="$(echo "${HEAD_COMMIT_MESSAGE}" | sed -nE 's/.*Merge pull request #[0-9]+ from [^/]+\/(.+)/\1/p')"
+          case "$src" in
+            release/v*|hotfix/v*)
+              # 1) Back-merge main → develop (idempotente: pula se já existir PR aberto).
+              if gh pr list --base develop --head main --state open --limit 1 | grep -q .; then
+                echo "⚠️ já existe PR de back-merge (main → develop) aberto — pulando."
+              else
+                gh pr create --base develop --head main \
+                  --title "Back-merge main → develop (${tag})" \
+                  --body "Sincroniza a \`develop\` com a produção (\`${tag}\`). Automático pós-deploy."
+                echo "✅ PR de back-merge criado."
+              fi
+              # 2) Apaga a branch de origem (release/hotfix) — já mergeada na main.
+              if git ls-remote --exit-code --heads origin "$src" >/dev/null 2>&1; then
+                git push origin --delete "$src"
+                echo "✅ branch $src apagada."
+              else
+                echo "ℹ️ branch $src já não existe."
+              fi
+              ;;
+            *)
+              echo "⚠️ origem não identificada (${src:-<nenhuma>}) — back-merge/limpeza manuais."
+              ;;
+          esac
