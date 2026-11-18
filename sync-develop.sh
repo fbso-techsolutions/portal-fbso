@@ -6,7 +6,7 @@
 #   ./sync-develop.sh /caminho/do/repo   # roda em outro caminho
 #
 # Passos equivalentes (manuais):
-#   git checkout develop && git pull --ff-only origin develop && git fetch --prune
+#   git checkout develop && git pull --ff-only origin develop && git fetch --prune --tags
 #   + apaga branches locais já mergeadas (exceto develop/main)
 set -euo pipefail
 
@@ -32,9 +32,9 @@ git checkout develop
 echo "▶ git pull --ff-only origin develop"
 git pull --ff-only origin develop
 
-# 4. Remove refs remotas de branches já deletadas na UI.
-echo "▶ git fetch --prune"
-git fetch --prune
+# 4. Remove refs remotas de branches já deletadas na UI + traz as tags (vX.Y.Z criadas pelo CI).
+echo "▶ git fetch --prune --tags"
+git fetch --prune --tags
 
 # 5. Apaga branches locais já mergeadas na develop (exceto develop/main).
 echo "▶ apagando branches locais mergeadas..."
