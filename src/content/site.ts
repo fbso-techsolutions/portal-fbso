@@ -40,7 +40,7 @@ export const siteContent: SiteContent = {
   name: 'FBSO Technology Solutions',
   shortName: 'FBSO',
   brandAccent: 'TechSolutions',
-  tagline: 'Tecnologia para transformar desafios em soluções.',
+  tagline: 'Tecnologia para transformar desafios em soluções digitais.',
   topbarNote: 'Technology · Consulting · Software',
   navCta: 'Fale com a FBSO',
   title: 'FBSO TechSolutions | Tecnologia, Consultoria e Software',
