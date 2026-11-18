@@ -53,6 +53,10 @@ jobs:
           # Histórico + tags completos — a geração da tag (release/main) lê as tags existentes.
           fetch-depth: 0
           fetch-tags: true
+          # PAT (admin) para o push do back-merge na develop — o GITHUB_TOKEN não consegue bypassar
+          # a proteção (o app github-actions não é aceito na bypass list). O PAT também dispara o
+          # deploy de dev (push de usuário → sem anti-recursion), dispensando o re-disparo manual.
+          token: ${{ secrets.GH_PAT }}
 
       - name: Setup Node
         uses: actions/setup-node@v7
@@ -196,9 +200,6 @@ jobs:
               if git merge --no-ff "origin/main" -m "chore(release): back-merge main (${tag}) into develop"; then
                 git push origin develop
                 echo "✅ develop sincronizada automaticamente com ${tag}."
-                # O push via GITHUB_TOKEN não dispara o deploy.yml (anti-recursion); re-dispara dev.
-                gh workflow run deploy.yml -f environment=dev
-                echo "✅ deploy de dev re-disparado."
               else
                 git merge --abort
                 echo "⚠️ Conflito entre main (${tag}) e develop. Abrindo PR para resolução manual..."
