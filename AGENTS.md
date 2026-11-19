@@ -26,6 +26,7 @@
 | Escrever / alterar código | [standards/engineering/](https://github.com/fbso-techsolutions/platform-standards/tree/main/standards/engineering) · [agile/](https://github.com/fbso-techsolutions/platform-standards/tree/main/standards/agile) | Padrões de código, commits, IDs de entidade |
 | Especificar entregas | [projects/PRJ-CORP-2026-0000-PORTAL/](projects/PRJ-CORP-2026-0000-PORTAL) | PRD, B-REQ, épicos, features, stories, sprints |
 | Implementar | [src/](src) · [public/](public) | Código e assets |
+| Configurar o repositório (branches/merge/proteção) | [docs/tecnico/operacao/repo-settings-branch-protection.md](docs/tecnico/operacao/repo-settings-branch-protection.md) | Config de GitHub (branch protection, merge settings, CODEOWNERS, secrets) |
 
 ## 3. Fluxo de trabalho (este projeto)
 
