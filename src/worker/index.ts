@@ -1,9 +1,9 @@
 /**
- * Worker do portal — entry point do Cloudflare Workers (ENABLER-0003 · TASK-0056).
+ * Worker do portal — entry point do Cloudflare Workers (ENABLER-0003).
  *
- * Pass-through: todo request é delegado ao binding `ASSETS` (assets estáticos),
- * preservando o comportamento atual (assets-only) sem regressão. O roteamento de
- * rotas server-side (`/api/*`) entra na TASK-0057.
+ * Roteamento:
+ * - `GET /api/health` → endpoint server-side de smoke (TASK-0057).
+ * - demais rotas → delegadas ao binding `ASSETS` (assets estáticos, pass-through).
  */
 
 export interface Env {
@@ -18,6 +18,14 @@ interface Fetcher {
 
 export default {
   async fetch(request: Request, env: Env): Promise<Response> {
+    const url = new URL(request.url);
+
+    // Rotas server-side (`/api/*`). Base para o formulário de leads da S7.
+    if (url.pathname === '/api/health') {
+      return Response.json({ status: 'ok' });
+    }
+
+    // Demais rotas: assets estáticos (pass-through, sem regressão).
     return env.ASSETS.fetch(request);
   },
 };

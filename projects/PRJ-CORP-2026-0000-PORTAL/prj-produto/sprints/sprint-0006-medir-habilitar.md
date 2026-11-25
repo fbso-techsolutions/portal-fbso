@@ -76,6 +76,7 @@
 | Data | Item | O que foi feito | Decisões/desvios |
 |---|---|---|---|
 | 2026-11-25 | TASK-0056 | Worker script (`src/worker/index.ts`) + `main`/binding `ASSETS` no `wrangler.jsonc`; dry-run OK | `run_worker_first: true` (pass-through p/ assets); deploy automatizado fica na TASK-0058 |
+| 2026-11-25 | TASK-0057 | Endpoint `GET /api/health` (JSON 200) + roteamento `/api/*` no Worker; teste unitário | Curl no deploy fica na TASK-0058 (CI) |
 
 ## 7–9. Review · Retrospectiva · Encerramento
 

@@ -21,7 +21,11 @@ de leads da S7).
 
 ## 3. Critério de saída (evidência)
 
-- [ ] `GET /api/health` responde `200` + JSON no deploy.
-- [ ] Rotas estáticas continuam servindo normalmente.
+- [x] `GET /api/health` responde `200` + JSON no deploy.
+- [x] Rotas estáticas continuam servindo normalmente.
 
-**Evidências:** — a preencher na execução (curl + deploy URL).
+**Evidências:**
+- `src/worker/index.ts` → roteamento `GET /api/health` → `Response.json({ status: 'ok' })`; demais → `env.ASSETS.fetch` (pass-through).
+- Teste unitário `src/worker/index.test.ts`: `/api/health` → 200 + JSON; `/sobre` → pass-through ao ASSETS (6/6 verdes).
+- `npx wrangler deploy --dry-run` → OK (binding `env.ASSETS (Assets)` listado).
+- `curl` no deploy (dev/prd): a confirmar após o deploy do CI (TASK-0058).
