@@ -2,8 +2,9 @@
  * Worker do portal — entry point do Cloudflare Workers (ENABLER-0003 · ENABLER-0005).
  *
  * Roteamento:
- * - `maintenance = on` (KV) → página de manutenção (HTTP 503 + Retry-After), todas as rotas.
- * - `GET /api/health` → endpoint server-side de smoke (TASK-0057).
+ * - `GET /health` e `/api/health` → health check (responde 200 sempre, mesmo em manutenção).
+ * - `maintenance = on` (KV) → página de manutenção (HTTP 503 + Retry-After), exceto exceções.
+ * - Exceções de rota: `/robots.txt` e `/privacidade` servem normalmente mesmo em `on`.
  * - demais rotas → binding `ASSETS` (assets estáticos, pass-through).
  */
 
@@ -26,6 +27,12 @@ interface KVNamespace {
 
 /** Chave que liga/desliga o modo manutenção (ENABLER-0005). */
 const MAINTENANCE_KEY = 'maintenance';
+
+/** Rotas de health check — respondem 200 mesmo em manutenção (monitoramento). */
+const HEALTH_PATHS = new Set(['/health', '/api/health']);
+
+/** Rotas que NÃO entram em modo manutenção (SEO/legal) — TASK-0061. */
+const MAINTENANCE_EXEMPT = new Set(['/robots.txt', '/privacidade']);
 
 /** Página de manutenção (branding + mensagem neutra, sem assets externos). */
 const MAINTENANCE_HTML = `<!doctype html>
@@ -75,16 +82,17 @@ function maintenanceResponse(): Response {
 
 export default {
   async fetch(request: Request, env: Env): Promise<Response> {
-    // Modo manutenção (catch-all): o flag em KV desliga o site sem redeploy.
-    if ((await env.KV.get(MAINTENANCE_KEY)) === 'on') {
-      return maintenanceResponse();
-    }
-
     const url = new URL(request.url);
 
-    // Rotas server-side (`/api/*`). Base para o formulário de leads da S7.
-    if (url.pathname === '/api/health') {
+    // Health check: sempre responde, mesmo em manutenção (monitoramento).
+    if (HEALTH_PATHS.has(url.pathname)) {
       return Response.json({ status: 'ok' });
+    }
+
+    // Modo manutenção (catch-all), com exceções de rota (TASK-0061).
+    const maintenanceOn = (await env.KV.get(MAINTENANCE_KEY)) === 'on';
+    if (maintenanceOn && !MAINTENANCE_EXEMPT.has(url.pathname)) {
+      return maintenanceResponse();
     }
 
     // Demais rotas: assets estáticos (pass-through, sem regressão).

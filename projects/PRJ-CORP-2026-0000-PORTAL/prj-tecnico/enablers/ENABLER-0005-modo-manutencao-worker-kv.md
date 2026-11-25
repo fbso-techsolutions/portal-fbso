@@ -21,7 +21,8 @@ deploy** para ligar/desligar.
 - O Worker (ENABLER-0003) com rota catch-all lê um flag em **Cloudflare KV** (`maintenance`):
   - `on` → retorna HTML de manutenção (HTTP **503** + `Retry-After`).
   - `off` → serve os assets estáticos normalmente.
-- **Toggle sem deploy**: `wrangler kv key put maintenance on/off` (ou dashboard/API).
+- **Toggle sem deploy**: `wrangler kv key put maintenance on/off --binding KV --remote` (ou dashboard/API).
+  ⚠️ `--remote` é obrigatório — sem ele o `wrangler kv` escreve só na instância local do `wrangler dev`.
 
 > 📌 Preferir **KV Instant** (namespace pequeno, propagação proativa) para ativação quase imediata
 > global — evita o eventual-consistency de até ~60s do KV clássico.

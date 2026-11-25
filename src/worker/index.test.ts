@@ -40,11 +40,42 @@ describe('worker (smoke)', () => {
     expect(await response.text()).toContain('FBSO');
   });
 
-  it('maintenance = on → todas as rotas públicas retornam 503 (catch-all)', async () => {
-    const request = new Request('https://fbso.com.br/api/health');
+  it('maintenance = on → rotas públicas (não-exceção) retornam 503', async () => {
+    const request = new Request('https://fbso.com.br/sobre');
     const response = await worker.fetch(request, makeEnv('on'));
 
     expect(response.status).toBe(503);
+  });
+
+  it('/health responde 200 mesmo com maintenance = on', async () => {
+    const request = new Request('https://fbso.com.br/health');
+    const response = await worker.fetch(request, makeEnv('on'));
+
+    expect(response.status).toBe(200);
+    expect(await response.json()).toEqual({ status: 'ok' });
+  });
+
+  it('/api/health responde 200 mesmo com maintenance = on', async () => {
+    const request = new Request('https://fbso.com.br/api/health');
+    const response = await worker.fetch(request, makeEnv('on'));
+
+    expect(response.status).toBe(200);
+  });
+
+  it('/robots.txt serve normalmente mesmo com maintenance = on', async () => {
+    const request = new Request('https://fbso.com.br/robots.txt');
+    const response = await worker.fetch(request, makeEnv('on'));
+
+    expect(response.status).toBe(200);
+    expect(await response.text()).toBe('asset');
+  });
+
+  it('/privacidade serve normalmente mesmo com maintenance = on', async () => {
+    const request = new Request('https://fbso.com.br/privacidade');
+    const response = await worker.fetch(request, makeEnv('on'));
+
+    expect(response.status).toBe(200);
+    expect(await response.text()).toBe('asset');
   });
 
   it('maintenance = null (chave ausente) → comportamento normal (off)', async () => {
