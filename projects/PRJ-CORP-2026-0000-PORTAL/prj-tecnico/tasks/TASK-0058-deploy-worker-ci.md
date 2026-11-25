@@ -24,4 +24,8 @@ Automatizar o deploy do **Worker + assets** no CI (develop/release/main), sem re
 - [ ] Merge em `main` publica Worker + assets (deploy contínuo comprovado).
 - [ ] Sem regressão do estático (páginas continuam no ar).
 
-**Evidências:** — a preencher na execução (run do GitHub Actions + URL).
+**Evidências:**
+- `deploy.yml` → passo `Validar Worker + assets (dry-run)` adicionado antes do `Deploy` (fail-fast de config, sem publicar).
+- Dry-run validado nos 3 ambientes: `--env dev` (`ENV_NAME=dev`) · `--env hml` (`ENV_NAME=hml`) · `prd` (sem `--env`) — Worker bundlado + 45 assets lidos + binding `env.ASSETS`.
+- `build` (prerender) + `wrangler deploy` seguem no mesmo fluxo (assets sem regressão; pass-through validado na TASK-0057).
+- Comprovação do deploy contínuo (`merge → main` → Worker + assets no ar): a confirmar no release flow (aprovação humana).
