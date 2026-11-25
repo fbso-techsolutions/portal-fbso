@@ -1,8 +1,9 @@
 /**
- * Consent Mode v2 (US-0028 · TASK-0063) — estado de consentimento do GA4.
+ * Consent Mode v2 + persistência (US-0028 · TASK-0063/0064).
  *
  * Default = tudo `denied` (analytics bloqueado antes da escolha). Após a escolha
- * no banner, `updateConsent` dispara `gtag('consent', 'update', …)`.
+ * no banner, `updateConsent` dispara `gtag('consent', 'update', …)` e `saveConsent`
+ * persiste a escolha (1ª parte, localStorage) para não reexibir o banner.
  */
 
 export type ConsentValue = 'granted' | 'denied';
@@ -31,6 +32,24 @@ export function consentUpdate(accepted: boolean): { analytics_storage: ConsentVa
 /** Atualiza o Consent Mode após a escolha do visitante (aceite → granted; recusa → denied). */
 export function updateConsent(accepted: boolean): void {
   window.gtag('consent', 'update', consentUpdate(accepted));
+}
+
+/** Chave 1ª parte que persiste a escolha do banner (localStorage). */
+export const CONSENT_STORAGE_KEY = 'fbso.consent';
+
+/** Lê a escolha persistida (true = aceitou, false = recusou, null = sem escolha). */
+export function readConsent(): boolean | null {
+  if (typeof window === 'undefined') return null;
+  const raw = window.localStorage.getItem(CONSENT_STORAGE_KEY);
+  if (raw === 'granted') return true;
+  if (raw === 'denied') return false;
+  return null;
+}
+
+/** Persiste a escolha (1ª parte, localStorage). */
+export function saveConsent(accepted: boolean): void {
+  if (typeof window === 'undefined') return;
+  window.localStorage.setItem(CONSENT_STORAGE_KEY, accepted ? 'granted' : 'denied');
 }
 
 declare global {

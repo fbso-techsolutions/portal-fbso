@@ -34,6 +34,8 @@ export interface SiteContent {
   footerInstitutional: NavItem[];
   /** Links legais do rodapé. */
   footerLegal: NavItem[];
+  /** Ação do rodapé que reabre o banner de consentimento (revogação). */
+  privacyPreferencesLabel: string;
 }
 
 export const siteContent: SiteContent = {
@@ -64,4 +66,5 @@ export const siteContent: SiteContent = {
     { label: 'Privacidade', href: '/privacidade' },
     { label: 'Termos', href: '/termos' },
   ],
+  privacyPreferencesLabel: 'Preferências de Privacidade',
 };

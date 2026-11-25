@@ -1,9 +1,9 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import type { ReactNode } from 'react';
 import { siteContent } from '@/content/site';
 import Button from '@/components/ui/Button';
 import CookieBanner from '@/components/sections/CookieBanner';
-import { updateConsent } from '@/lib/consent';
+import { readConsent, saveConsent, updateConsent } from '@/lib/consent';
 
 // Versão e ambiente injetados no build (deploy.yml → VITE_APP_VERSION / VITE_APP_ENV).
 // Só preenchidos em deploys reais; em `npm run dev` ficam vazios (sem selo/versão).
@@ -22,8 +22,19 @@ export default function AppLayout({ children }: AppLayoutProps) {
   // O valor (true/false) alimenta o Consent Mode (TASK-0063) e a persistência (TASK-0064).
   const [consent, setConsent] = useState<boolean | null>(null);
 
+  // Restaura a escolha persistida (1ª parte) — não reexibe o banner a cada visita (TASK-0064).
+  useEffect(() => {
+    const stored = readConsent();
+    if (stored !== null) {
+      // eslint-disable-next-line react-hooks/set-state-in-effect -- restaura o consentimento persistido (localStorage) pós-hidratação; evita mismatch de SSR.
+      setConsent(stored);
+      updateConsent(stored); // reaplica o granted/denied salvo.
+    }
+  }, []);
+
   function handleConsentChoice(accepted: boolean) {
     setConsent(accepted);
+    saveConsent(accepted); // persistência 1ª parte (TASK-0064).
     updateConsent(accepted); // Consent Mode v2: granted/denied (TASK-0063).
   }
 
@@ -155,6 +166,13 @@ export default function AppLayout({ children }: AppLayoutProps) {
                     {item.label}
                   </a>
                 ))}
+                <button
+                  type="button"
+                  onClick={() => setConsent(null)}
+                  className="text-left text-sm text-mist hover:text-white"
+                >
+                  {siteContent.privacyPreferencesLabel}
+                </button>
                 <a
                   href={`mailto:${siteContent.contactEmail}`}
                   className="text-sm text-mist hover:text-white"
@@ -186,7 +204,7 @@ export default function AppLayout({ children }: AppLayoutProps) {
         </div>
       </footer>
 
-      {/* Banner de consentimento (US-0030) — some após a escolha; persistência na TASK-0064. */}
+      {/* Banner de consentimento (US-0030) — reabre via "Preferências de Privacidade" (revogação). */}
       {consent === null ? <CookieBanner onChoice={handleConsentChoice} /> : null}
     </div>
   );

@@ -35,7 +35,7 @@
 | 🔎 | [TASK-0061 — Exceções + runbook toggle](../../prj-tecnico/tasks/TASK-0061-excecoes-rota-runbook-toggle.md) | ENABLER-0005 | Em review | 2 | S6 | Lourival Louro | [PR #58](https://github.com/fbso-techsolutions/portal-fbso/pull/58) |
 | 🔎 | [TASK-0062 — Banner de consentimento (UI)](../../prj-tecnico/tasks/TASK-0062-banner-consentimento-ui.md) | US-0030 | Em review | 4 | S6 | Alfredo Bento | [PR #58](https://github.com/fbso-techsolutions/portal-fbso/pull/58) |
 | 🔎 | [TASK-0063 — Consent Mode v2](../../prj-tecnico/tasks/TASK-0063-consent-mode-v2.md) | US-0030 | Em review | 3 | S6 | Alfredo Bento | [PR #58](https://github.com/fbso-techsolutions/portal-fbso/pull/58) |
-| ⬜ | [TASK-0064 — Persistência + revogação + link](../../prj-tecnico/tasks/TASK-0064-persistencia-revogacao-link.md) | US-0030 | A fazer | 3 | S6 | Alfredo Bento | — |
+| 🔎 | [TASK-0064 — Persistência + revogação + link](../../prj-tecnico/tasks/TASK-0064-persistencia-revogacao-link.md) | US-0030 | Em review | 3 | S6 | Alfredo Bento | [PR #58](https://github.com/fbso-techsolutions/portal-fbso/pull/58) |
 | ⬜ | [TASK-0065 — Tag gtag consentida](../../prj-tecnico/tasks/TASK-0065-tag-gtag-consentida.md) | US-0028 | A fazer | 3 | S6 | Alfredo Bento | — |
 | ⬜ | [TASK-0066 — Eventos-chave + origem](../../prj-tecnico/tasks/TASK-0066-eventos-chave-origem.md) | US-0029 | A fazer | 3 | S6 | Alfredo Bento | — |
 | ⬜ | [TASK-0067 — Política/termos (LGPD)](../../prj-tecnico/tasks/TASK-0067-politica-termos-lgpd.md) | US-0031 | A fazer | 2 | S6 | Alfredo Bento | — |

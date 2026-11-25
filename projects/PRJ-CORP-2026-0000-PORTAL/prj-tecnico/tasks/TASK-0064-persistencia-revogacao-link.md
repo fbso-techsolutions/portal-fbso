@@ -22,8 +22,14 @@ Privacidade" no rodapé.
 
 ## 3. Critério de saída (evidência)
 
-- [ ] Escolha persistida entre navegações.
-- [ ] Link "Preferências de Privacidade" no rodapé.
-- [ ] Revogação funciona (muda estado para `denied`).
+- [x] Escolha persistida entre navegações.
+- [x] Link "Preferências de Privacidade" no rodapé.
+- [x] Revogação funciona (muda estado para `denied`).
 
-**Evidências:** — a preencher na execução (PR + screenshot).
+**Evidências:**
+- `src/lib/consent.ts` → `readConsent`/`saveConsent` (localStorage 1ª parte, chave `fbso.consent`).
+- `AppLayout` → restaura a escolha no mount (`useEffect`) e persiste em `handleConsentChoice`.
+- `site.ts` → `privacyPreferencesLabel` + botão no rodapé (reabre o banner → reescolher/revogar).
+- Testes 20/20 (round-trip da persistência + valor desconhecido → null).
+- Prerender: "Preferências de Privacidade" presente no rodapé de todas as páginas.
+- Screenshot: a capturar na revisão visual (QA).
