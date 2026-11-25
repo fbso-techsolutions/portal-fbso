@@ -25,4 +25,8 @@ Registrar os **eventos-chave** (clique em CTA · contato · visualização de pr
 - [ ] Eventos-chave disparando e visíveis no GA4 (Real-time/Relatórios).
 - [ ] Origem (UTM/referrer) registrada nas dimensões de tráfego.
 
-**Evidências:** — a preencher na execução (print do GA4 + link com UTM).
+**Evidências:**
+- `src/lib/analytics.ts` → `trackEvent(name, params?)` (respeita o Consent Mode v2).
+- Eventos ligados: `cta_click` (header + hero + CTA final da Home) · `contato` (canais da página Contato) · `produto_view` (página `/solucoes/:slug`).
+- Testes 24/24 (`trackEvent` emite `gtag('event', …)`).
+- ⏳ Pendente (console GA4 + deploy): marcar `cta_click`/`contato`/`produto_view` como **key events** e validar no Real-time/Relatórios (UTM/referrer são automáticos nas dimensões de tráfego).

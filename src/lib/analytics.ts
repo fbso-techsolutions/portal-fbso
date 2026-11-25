@@ -21,3 +21,12 @@ export const GA4_CONFIG_SNIPPET = `(function () {
   document.head.appendChild(s);
 })();
 window.gtag('config', '${GA4_MEASUREMENT_ID}');`;
+
+/**
+ * Emite um evento custom no GA4 (TASK-0066). Respeita o Consent Mode v2 — só é coletado
+ * após o aceite (default `denied`); antes disso o gtag descarta o evento (sem cookies).
+ */
+export function trackEvent(name: string, params?: Record<string, unknown>): void {
+  if (typeof window === 'undefined') return;
+  window.gtag('event', name, params);
+}

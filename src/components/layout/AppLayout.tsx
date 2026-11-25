@@ -4,6 +4,7 @@ import { siteContent } from '@/content/site';
 import Button from '@/components/ui/Button';
 import CookieBanner from '@/components/sections/CookieBanner';
 import { readConsent, saveConsent, updateConsent } from '@/lib/consent';
+import { trackEvent } from '@/lib/analytics';
 
 // Versão e ambiente injetados no build (deploy.yml → VITE_APP_VERSION / VITE_APP_ENV).
 // Só preenchidos em deploys reais; em `npm run dev` ficam vazios (sem selo/versão).
@@ -86,7 +87,11 @@ export default function AppLayout({ children }: AppLayoutProps) {
 
           {/* CTA (desktop) */}
           <div className="hidden md:block">
-            <Button variant="primary" href="/contato">
+            <Button
+              variant="primary"
+              href="/contato"
+              onClick={() => trackEvent('cta_click', { cta: siteContent.navCta, href: '/contato' })}
+            >
               {siteContent.navCta}
             </Button>
           </div>

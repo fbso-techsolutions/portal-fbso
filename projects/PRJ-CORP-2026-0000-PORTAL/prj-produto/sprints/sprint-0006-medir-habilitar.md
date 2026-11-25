@@ -85,6 +85,7 @@
 | 2026-11-25 | TASK-0063 | Consent Mode v2: `consent.ts` (default denied + update) + snippet no `<head>`; testes 18/18 | `gtag.js` (TASK-0065) carrega após o snippet; validação no Tag Assistant pós-deploy |
 | 2026-11-25 | TASK-0064 | Persistência (localStorage `fbso.consent`) + revogação via "Preferências de Privacidade" no rodapé; testes 20/20 | Restauração pós-hidratação (`useEffect`) para evitar mismatch de SSR |
 | 2026-11-25 | TASK-0065 | GA4 `gtag.js` (`G-LCBF75K8KW`) com carga dinâmica após o consent default; testes 22/22 | `<script async src>` era hoisted pelo React 19 → carga via `createElement` para preservar a ordem |
+| 2026-11-25 | TASK-0066 | Eventos `cta_click`/`contato`/`produto_view` via `trackEvent` (header, Home, Contato, Produto); testes 24/24 | Marcar key events + validar UTM no console GA4 (pós-deploy) |
 
 ## 7–9. Review · Retrospectiva · Encerramento
 

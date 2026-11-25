@@ -1,5 +1,5 @@
-import { describe, expect, it } from 'vitest';
-import { GA4_CONFIG_SNIPPET, GA4_GTAG_SRC, GA4_MEASUREMENT_ID } from './analytics';
+import { afterEach, describe, expect, it, vi } from 'vitest';
+import { GA4_CONFIG_SNIPPET, GA4_GTAG_SRC, GA4_MEASUREMENT_ID, trackEvent } from './analytics';
 
 describe('analytics (GA4)', () => {
   it('usa o Measurement ID do portal', () => {
@@ -13,5 +13,27 @@ describe('analytics (GA4)', () => {
     expect(GA4_CONFIG_SNIPPET).toContain(GA4_GTAG_SRC);
     expect(GA4_CONFIG_SNIPPET).toContain("gtag('config'");
     expect(GA4_CONFIG_SNIPPET).toContain(GA4_MEASUREMENT_ID);
+  });
+});
+
+describe('trackEvent', () => {
+  afterEach(() => vi.unstubAllGlobals());
+
+  it('emite gtag("event", nome, params)', () => {
+    const gtag = vi.fn();
+    vi.stubGlobal('window', { gtag });
+
+    trackEvent('cta_click', { cta: 'Fale com a FBSO' });
+
+    expect(gtag).toHaveBeenCalledWith('event', 'cta_click', { cta: 'Fale com a FBSO' });
+  });
+
+  it('emite evento sem params quando omitido', () => {
+    const gtag = vi.fn();
+    vi.stubGlobal('window', { gtag });
+
+    trackEvent('produto_view');
+
+    expect(gtag).toHaveBeenCalledWith('event', 'produto_view', undefined);
   });
 });
