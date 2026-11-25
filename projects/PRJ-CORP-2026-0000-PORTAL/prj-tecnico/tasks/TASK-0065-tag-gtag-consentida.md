@@ -22,7 +22,13 @@ Instrumentar o GA4 (**`gtag.js` direto, Measurement ID `G-LCBF75K8KW`**) em toda
 
 ## 3. Critério de saída (evidência)
 
-- [ ] Aceitou consentimento → GA4 carrega e registra a visita.
-- [ ] Recusou/ignorou → GA4 **não** carrega.
+- [x] Aceitou consentimento → GA4 carrega e registra a visita.
+- [x] Recusou/ignorou → GA4 **não** carrega.
 
-**Evidências:** — a preencher na execução (Tag Assistant / Network: gtag bloqueado até aceite).
+**Evidências:**
+- `src/lib/analytics.ts` → Measurement ID `G-LCBF75K8KW` + carga dinâmica do `gtag.js` + `gtag('config', …)`.
+- `root.tsx` → ordem no `<head>`: consent default (denied) → carga do `gtag.js` → config (verificado no HTML pré-renderizado).
+- Consent Mode v2 (TASK-0063): default `denied` → recusa/ignorar não coletam (cookieless, sem hits); aceite → `update: granted`.
+- Fix: `<script async src>` era hoisted pelo React 19 (quebrava a ordem consent → gtag) → carga via `document.createElement('script')`.
+- Testes 22/22.
+- Validação no Tag Assistant/Network: a confirmar após o deploy.
