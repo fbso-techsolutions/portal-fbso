@@ -22,11 +22,16 @@ hoje uma rota sem asset devolve `404` (limitação registrada na Sprint 1).
 
 ## 3. Critério de saída (evidência)
 
-- [ ] `wrangler.jsonc` com `main` + binding `ASSETS` versionados.
-- [ ] `wrangler deploy --dry-run` conclui sem erro (assets + Worker).
-- [ ] Assets estáticos continuam servindo (sem `404` nas rotas existentes).
+- [x] `wrangler.jsonc` com `main` + binding `ASSETS` versionados.
+- [x] `wrangler deploy --dry-run` conclui sem erro (assets + Worker).
+- [x] Assets estáticos continuam servindo (sem `404` nas rotas existentes).
 
-**Evidências:** — a preencher na execução (dry-run + deploy).
+**Evidências:**
+- `wrangler.jsonc` → `main: "src/worker/index.ts"` + `assets.binding: "ASSETS"` + `run_worker_first: true` (PR #58).
+- `src/worker/index.ts` criado — handler mínimo pass-through para `env.ASSETS.fetch(request)`.
+- `npx wrangler deploy --dry-run` → OK: 45 arquivos lidos do `dist/client/`; binding `env.ASSETS (Assets)` listado.
+- Gate local OK: `build` + `lint` + `format:check` + `typecheck` + `test` (4/4).
+- Serving em produção (sem 404 nas rotas): a confirmar no deploy do CI (TASK-0058).
 
 ## 4. Runbook
 

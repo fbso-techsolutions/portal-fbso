@@ -1,9 +1,12 @@
 {
   "$schema": "./node_modules/wrangler/config-schema.json",
   "name": "portal-fbso",
+  "main": "src/worker/index.ts",
   "compatibility_date": "2026-11-13",
   "assets": {
     "directory": "./dist/client",
+    "binding": "ASSETS",
+    "run_worker_first": true,
     "not_found_handling": "none",
   },
   // Ambientes: cada `--env` vira um Worker separado (`portal-fbso-dev`, `portal-fbso-hml`).
