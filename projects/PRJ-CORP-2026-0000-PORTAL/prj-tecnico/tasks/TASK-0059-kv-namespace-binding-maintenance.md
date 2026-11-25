@@ -24,11 +24,22 @@ proativa) para ativação quase imediata.
 - [ ] KV namespace + binding versionados no `wrangler.jsonc`.
 - [ ] `wrangler kv key put maintenance off` cria/atualiza a chave com sucesso.
 
-**Evidências:** — a preencher na execução (output do `wrangler kv`).
+**Evidências:**
+- `wrangler.jsonc` → `kv_namespaces: [{ "binding": "KV", "id": "<placeholder>" }]` versionado (id a substituir).
+- `npx wrangler deploy --dry-run` → OK: binding `env.KV (KV Namespace)` + `env.ASSETS (Assets)` listados.
+- ⚠️ **Bloqueado:** criar o namespace e gravar a chave exigem credenciais da org Cloudflare
+  (`CLOUDFLARE_API_TOKEN`/`CLOUDFLARE_ACCOUNT_ID` — em GitHub Secrets, não disponíveis neste ambiente).
+  O `wrangler` local está logado numa conta pessoal com token somente-leitura.
 
 ## 4. Runbook
 
 ```bash
+# Provisionamento (uma vez — credenciais da org Cloudflare). Preferir KV Instant:
+npx wrangler kv namespace create MAINTENANCE --experimental-mode instant --binding KV --update-config
+# Se o modo instant não estiver habilitado na conta (private beta), usar KV clássico:
+npx wrangler kv namespace create MAINTENANCE --binding KV --update-config
+
+# Toggle (recorrente — sem deploy):
 wrangler kv key put maintenance on    # entra em manutenção
 wrangler kv key put maintenance off   # volta ao normal
 ```

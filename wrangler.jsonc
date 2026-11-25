@@ -9,6 +9,13 @@
     "run_worker_first": true,
     "not_found_handling": "none",
   },
+  // KV do modo manutenção (ENABLER-0005 · TASK-0059): flag `maintenance` (on/off).
+  // ⚠️ TASK-0059 pendente: substituir o `id` pelo real. Gerar com (credenciais da org):
+  //   npx wrangler kv namespace create MAINTENANCE --experimental-mode instant --binding KV --update-config
+  // O `--update-config` grava o `id` real aqui automaticamente (remove o placeholder).
+  "kv_namespaces": [
+    { "binding": "KV", "id": "REPLACE_WITH_KV_NAMESPACE_ID" },
+  ],
   // Ambientes: cada `--env` vira um Worker separado (`portal-fbso-dev`, `portal-fbso-hml`).
   // Os Custom Domains (fbso/www/dev/hml) são apontados no dashboard para o Worker correto.
   "env": {

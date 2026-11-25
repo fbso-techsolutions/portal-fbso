@@ -78,6 +78,7 @@
 | 2026-11-25 | TASK-0056 | Worker script (`src/worker/index.ts`) + `main`/binding `ASSETS` no `wrangler.jsonc`; dry-run OK | `run_worker_first: true` (pass-through p/ assets); deploy automatizado fica na TASK-0058 |
 | 2026-11-25 | TASK-0057 | Endpoint `GET /api/health` (JSON 200) + roteamento `/api/*` no Worker; teste unitário | Curl no deploy fica na TASK-0058 (CI) |
 | 2026-11-25 | TASK-0058 | Passo `Validar Worker + assets (dry-run)` no `deploy.yml`; dry-run OK nos 3 ambientes | Deploy contínuo (merge → main) a comprovar no release flow |
+| 2026-11-25 | TASK-0059 | Binding `kv_namespaces` (`KV`) no `wrangler.jsonc` (placeholder) + runbook; dry-run OK | ⚠️ Bloqueado: criar namespace + `kv key put` exigem credenciais da org Cloudflare (GitHub Secrets) |
 
 ## 7–9. Review · Retrospectiva · Encerramento
 
