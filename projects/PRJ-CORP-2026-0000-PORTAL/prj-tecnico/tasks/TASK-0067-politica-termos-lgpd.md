@@ -23,7 +23,12 @@ transferência internacional art. 33, retenção 14 meses, direitos art. 18, DPO
 
 ## 3. Critério de saída (evidência)
 
-- [ ] `/privacidade` e `/termos` com o conteúdo LGPD final.
-- [ ] Gate verde (`typecheck` · `lint` · `format:check` · `test`).
+- [x] `/privacidade` e `/termos` com o conteúdo LGPD final.
+- [x] Gate verde (`typecheck` · `lint` · `format:check` · `test`).
 
-**Evidências:** — a preencher na execução (PR + deploy + screenshot).
+**Evidências:**
+- `src/content/legais.ts` + `Privacidade.tsx`/`Termos.tsx` — conteúdo LGPD final: controlador (CNPJ), finalidade, base legal (art. 7º-I), transferência internacional (art. 33 — SCCs/DPF), retenção (14 meses), direitos (art. 18) e DPO (Daniel Vini).
+- `/privacidade` (pré-render) contém art. 7º/33/18, "14 meses" e "Daniel Vini"; `/termos` contém os termos.
+- Link "Preferências de Privacidade" (TASK-0064) confirmado no rodapé e referenciado na política (revogação).
+- Gate verde: `typecheck` · `lint` · `format:check` · `test` (24/24).
+- Revisão de Segurança (Daniel Vini): sob demanda, a confirmar no PR.

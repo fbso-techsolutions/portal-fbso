@@ -38,7 +38,7 @@
 | 🔎 | [TASK-0064 — Persistência + revogação + link](../../prj-tecnico/tasks/TASK-0064-persistencia-revogacao-link.md) | US-0030 | Em review | 3 | S6 | Alfredo Bento | [PR #58](https://github.com/fbso-techsolutions/portal-fbso/pull/58) |
 | 🔎 | [TASK-0065 — Tag gtag consentida](../../prj-tecnico/tasks/TASK-0065-tag-gtag-consentida.md) | US-0028 | Em review | 3 | S6 | Alfredo Bento | [PR #58](https://github.com/fbso-techsolutions/portal-fbso/pull/58) |
 | 🔎 | [TASK-0066 — Eventos-chave + origem](../../prj-tecnico/tasks/TASK-0066-eventos-chave-origem.md) | US-0029 | Em review | 3 | S6 | Alfredo Bento | [PR #58](https://github.com/fbso-techsolutions/portal-fbso/pull/58) |
-| ⬜ | [TASK-0067 — Política/termos (LGPD)](../../prj-tecnico/tasks/TASK-0067-politica-termos-lgpd.md) | US-0031 | A fazer | 2 | S6 | Alfredo Bento | — |
+| 🔎 | [TASK-0067 — Política/termos (LGPD)](../../prj-tecnico/tasks/TASK-0067-politica-termos-lgpd.md) | US-0031 | Em review | 2 | S6 | Alfredo Bento | [PR #58](https://github.com/fbso-techsolutions/portal-fbso/pull/58) |
 
 **Total de esforço (estimado):** 34h.
 
