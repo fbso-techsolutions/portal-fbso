@@ -25,8 +25,8 @@
 
 | Feature | Título | Stories |
 |---|---|---|
-| [FEATURE-0005.0001](../features/FEATURE-0005.0001-seo-prerender.md) | SEO e prerender (meta/OG/sitemap/robots) | a detalhar (S7) |
-| [FEATURE-0005.0002](../features/FEATURE-0005.0002-acessibilidade-responsividade.md) | Acessibilidade e responsividade | a detalhar (S7) |
-| [FEATURE-0005.0003](../features/FEATURE-0005.0003-golive-dominio.md) | Homologação e go-live (domínio fbso.com.br) | a detalhar (S8) |
+| [FEATURE-0005.0001](../features/FEATURE-0005.0001-seo-prerender.md) | SEO e prerender (meta/OG/sitemap/robots) | ✅ S5 |
+| [FEATURE-0005.0002](../features/FEATURE-0005.0002-acessibilidade-responsividade.md) | Acessibilidade e responsividade | ✅ S5 |
+| [FEATURE-0005.0003](../features/FEATURE-0005.0003-golive-dominio.md) | Homologação e go-live (domínio fbso.com.br) | ✅ S5 |
 
 > 💡 **Rastreabilidade:** [matriz](../rastreabilidade.md) · **Backlog:** [BACKLOG-LIST](../../../../docs/produto/backlog/BACKLOG-LIST.md).

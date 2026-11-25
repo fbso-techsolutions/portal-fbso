@@ -1,4 +1,4 @@
-# ⚙️ Tasks — Sprint 1 (Fundação)
+# ⚙️ Tasks — Release 1 (S1–S5) · Release 2 (S6)
 
 > **O que é.** As `TASK-{NNNN}` são o **trabalho técnico executável** derivado no Planning de
 > cada item (story · enabler · runway · débito · bug · incidente). Por decisão do projeto, **tasks
@@ -71,8 +71,20 @@
 | [TASK-0053 — Acessibilidade básica](TASK-0053-acessibilidade-basica.md) | US-FEAT-0005.0002-0025 | Alfredo Bento | 3h | — |
 | [TASK-0054 — Domínio custom + HTTPS](TASK-0054-dominio-custom-https.md) | US-FEAT-0005.0003-0026 | Lourival Louro | 3h | — |
 | [TASK-0055 — Homologação e go-live](TASK-0055-homologacao-golive.md) | US-FEAT-0005.0003-0027 | Lourival Louro + Patricia Varra | 3h | TASK-0051 · TASK-0053 · TASK-0054 |
+| [TASK-0056 — Worker script + binding ASSETS](TASK-0056-worker-script-binding-assets.md) | ENABLER-0003 | Lourival Louro | 3h | — |
+| [TASK-0057 — Endpoint server-side (smoke)](TASK-0057-endpoint-server-side-smoke.md) | ENABLER-0003 | Lourival Louro | 3h | TASK-0056 |
+| [TASK-0058 — Deploy Worker no CI](TASK-0058-deploy-worker-ci.md) | ENABLER-0003 | Lourival Louro | 3h | TASK-0057 |
+| [TASK-0059 — KV namespace + binding](TASK-0059-kv-namespace-binding-maintenance.md) | ENABLER-0005 | Lourival Louro | 2h | TASK-0056 |
+| [TASK-0060 — Worker catch-all (503)](TASK-0060-worker-catchall-maintenance-503.md) | ENABLER-0005 | Lourival Louro | 3h | TASK-0059 |
+| [TASK-0061 — Exceções + runbook toggle](TASK-0061-excecoes-rota-runbook-toggle.md) | ENABLER-0005 | Lourival Louro | 2h | TASK-0060 |
+| [TASK-0062 — Banner de consentimento (UI)](TASK-0062-banner-consentimento-ui.md) | US-FEAT-0006.0006-0030 | Alfredo Bento | 4h | — |
+| [TASK-0063 — Consent Mode v2](TASK-0063-consent-mode-v2.md) | US-FEAT-0006.0006-0030 | Alfredo Bento | 3h | TASK-0062 |
+| [TASK-0064 — Persistência + revogação + link](TASK-0064-persistencia-revogacao-link.md) | US-FEAT-0006.0006-0030 | Alfredo Bento | 3h | TASK-0063 |
+| [TASK-0065 — Tag gtag consentida](TASK-0065-tag-gtag-consentida.md) | US-FEAT-0006.0001-0028 | Alfredo Bento | 3h | TASK-0063 |
+| [TASK-0066 — Eventos-chave + origem](TASK-0066-eventos-chave-origem.md) | US-FEAT-0006.0001-0029 | Alfredo Bento | 3h | TASK-0065 |
+| [TASK-0067 — Política/termos (LGPD)](TASK-0067-politica-termos-lgpd.md) | US-FEAT-0006.0006-0031 | Alfredo Bento | 2h | TASK-0062 |
 
-**Totais:** 55 tasks · ~149h de esforço estimado (a calibrar na execução).
+**Totais:** 67 tasks · ~183h de esforço estimado (a calibrar na execução).
 
 ## Formato do card
 

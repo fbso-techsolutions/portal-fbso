@@ -3,6 +3,8 @@ name: Deploy
 # Publica o portal na Cloudflare por ambiente (ADR-011): cada push numa branch
 # "publicável" dispara o build + deploy no ambiente correspondente. Nunca em PR
 # (branch não-publicada) — quem valida o PR é o `ci.yml`; quem publica é este workflow.
+# Desde a TASK-0056, o `wrangler.jsonc` declara `main` (Worker) + assets: o `wrangler deploy`
+# publica Worker + assets juntos, validados por dry-run antes do deploy real.
 #
 # Mapeamento (fonte: ADR-011 / blueprints/ci-cd):
 #   develop            → dev  (wrangler deploy --env dev)    · sem tag
@@ -149,6 +151,16 @@ jobs:
       # Guarda do artefato (blueprints/ci-cd §1.2): falha se o build não gerar o esperado.
       - name: Guarda do artefato
         run: test -f dist/client/index.html
+
+      # Valida o bundle do Worker + a leitura dos assets antes do deploy real (ENABLER-0003 ·
+      # TASK-0058): pega erro de config (main/binding inválido) sem publicar nada.
+      - name: Validar Worker + assets (dry-run)
+        run: |
+          if [ -n "${{ steps.target.outputs.wrangler_env }}" ]; then
+            npx wrangler deploy --dry-run --env "${{ steps.target.outputs.wrangler_env }}"
+          else
+            npx wrangler deploy --dry-run
+          fi
 
       - name: Deploy
         run: |

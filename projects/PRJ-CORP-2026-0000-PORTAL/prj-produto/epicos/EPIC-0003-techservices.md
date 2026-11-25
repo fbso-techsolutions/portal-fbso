@@ -25,6 +25,6 @@
 
 | Feature | Título | Stories |
 |---|---|---|
-| [FEATURE-0003.0001](../features/FEATURE-0003.0001-pagina-techservices.md) | Página FBSO TechServices | a detalhar (S5) |
+| [FEATURE-0003.0001](../features/FEATURE-0003.0001-pagina-techservices.md) | Página FBSO TechServices | ✅ S4 |
 
 > 💡 **Rastreabilidade:** [matriz](../rastreabilidade.md) · **Backlog:** [BACKLOG-LIST](../../../../docs/produto/backlog/BACKLOG-LIST.md).

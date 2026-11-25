@@ -1,11 +1,20 @@
-# PRJ-CORP-2026-0000-PORTAL — Release 1 (MVP estático)
+# PRJ-CORP-2026-0000-PORTAL — FBSO Corporate Portal
 
-Projeto de criação do **FBSO Corporate Portal**: primeira entrega (Release 1 / MVP estático).
+Projeto de criação do **FBSO Corporate Portal** — portal institucional + divisão TechServices +
+portfólio SaaS (`fbso.com.br`).
 
 | Item | Valor |
 |---|---|
 | Produto | [FBSO Corporate Portal](../../docs/negocio/visao.md) |
 | PRD | [PRD.md](PRD.md) |
+
+## Releases
+
+| Release | Nome | Status | Escopo |
+|---|---|---|---|
+| 1 | Institucional (MVP estático) | ✅ Entregue | [escopo-release-1](prj-produto/escopo-release-1.md) |
+| 2 | Comercial | 📝 Em formação | [escopo-release-2](prj-produto/escopo-release-2.md) |
+| 3 | Plataforma (SSO) | 🕓 Horizonte | — |
 
 ## Estrutura
 

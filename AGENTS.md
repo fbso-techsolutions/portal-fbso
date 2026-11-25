@@ -26,6 +26,7 @@
 | Escrever / alterar código | [standards/engineering/](https://github.com/fbso-techsolutions/platform-standards/tree/main/standards/engineering) · [agile/](https://github.com/fbso-techsolutions/platform-standards/tree/main/standards/agile) | Padrões de código, commits, IDs de entidade |
 | Especificar entregas | [projects/PRJ-CORP-2026-0000-PORTAL/](projects/PRJ-CORP-2026-0000-PORTAL) | PRD, B-REQ, épicos, features, stories, sprints |
 | Implementar | [src/](src) · [public/](public) | Código e assets |
+| Configurar o repositório (branches/merge/proteção) | [docs/tecnico/operacao/repo-settings-branch-protection.md](docs/tecnico/operacao/repo-settings-branch-protection.md) | Config de GitHub (branch protection, merge settings, CODEOWNERS, secrets) |
 
 ## 3. Fluxo de trabalho (este projeto)
 
@@ -57,4 +58,4 @@ Build estático → `dist/client/`; deploy via `wrangler` (Cloudflare Workers + 
 **Operação (detalhes):**
 - Node **24.22.1** — `.nvmrc` + `engines` (use `nvm use`).
 - Gate local antes do PR: `npm run lint && npm run format:check && npm run typecheck && npm run test`.
-- CI (PR → `develop`): check obrigatório `lint → typecheck → test` (SAST via CodeQL); merge → deploy automático no ambiente.
+- CI (PR → `develop`): check obrigatório `lint → format:check → typecheck → test` (SAST via CodeQL); merge → deploy automático no ambiente.

@@ -1,5 +1,7 @@
 import { Links, Meta, Outlet, Scripts } from 'react-router';
 import AppLayout from '@/components/layout/AppLayout';
+import { CONSENT_DEFAULT_SNIPPET } from '@/lib/consent';
+import { GA4_CONFIG_SNIPPET } from '@/lib/analytics';
 import '@/styles/index.css';
 
 export default function Root() {
@@ -10,6 +12,10 @@ export default function Root() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <Meta />
         <Links />
+        {/* Consent Mode v2 (TASK-0063): default denied antes de qualquer script de analytics. */}
+        <script dangerouslySetInnerHTML={{ __html: CONSENT_DEFAULT_SNIPPET }} />
+        {/* GA4 gtag.js (TASK-0065): carrega dinamicamente após o consent default (evita o hoist do React 19). */}
+        <script dangerouslySetInnerHTML={{ __html: GA4_CONFIG_SNIPPET }} />
       </head>
       <body>
         <AppLayout>

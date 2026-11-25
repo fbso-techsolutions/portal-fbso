@@ -5,6 +5,7 @@
 
 | Data | Decisão | Justificativa |
 |---|---|---|
-| 2026-11-11 | Árvore inicial: 5 épicos · 13 features (Release 1) | [rastreabilidade](../rastreabilidade.md) |
+| 2026-11-11 | Árvore inicial: 5 épicos · 14 features (Release 1) | [rastreabilidade](../rastreabilidade.md) |
+| 2026-11-23 | EPIC-0006 (Comercial) movido ao projeto: 6 features · 14 stories (Release 2) | [rastreabilidade](../rastreabilidade.md) |
 
 > Priorização econômica (WSJF): [guia](https://github.com/fbso-techsolutions/platform-standards/blob/main/standards/agile/guia-wsjf-priorizacao.md).

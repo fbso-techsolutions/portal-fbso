@@ -1,19 +1,28 @@
 {
   "$schema": "./node_modules/wrangler/config-schema.json",
   "name": "portal-fbso",
+  "main": "src/worker/index.ts",
   "compatibility_date": "2026-11-13",
   "assets": {
     "directory": "./dist/client",
+    "binding": "ASSETS",
+    "run_worker_first": true,
     "not_found_handling": "none",
   },
+  // KV do modo manutenção (ENABLER-0005 · TASK-0059): flag `maintenance` (on/off).
+  // Namespace `MAINTENANCE` criado em 2026-11-25 (KV clássico — instant não habilitado na conta).
+  "kv_namespaces": [{ "binding": "KV", "id": "6387a3e92abf446da2c070b6ee68568d" }],
   // Ambientes: cada `--env` vira um Worker separado (`portal-fbso-dev`, `portal-fbso-hml`).
   // Os Custom Domains (fbso/www/dev/hml) são apontados no dashboard para o Worker correto.
+  // ⚠️ `kv_namespaces` NÃO é herdado do topo em ambientes nomeados (wrangler) — repetir por env.
   "env": {
     "dev": {
       "vars": { "ENV_NAME": "dev" },
+      "kv_namespaces": [{ "binding": "KV", "id": "6387a3e92abf446da2c070b6ee68568d" }],
     },
     "hml": {
       "vars": { "ENV_NAME": "hml" },
+      "kv_namespaces": [{ "binding": "KV", "id": "6387a3e92abf446da2c070b6ee68568d" }],
     },
   },
 }

@@ -35,6 +35,7 @@ React + TypeScript · Vite · Tailwind CSS v4 · React Router v8 (framework mode
 | `npm run build` | compila para `dist/client/` (`tsc -b && react-router build`) |
 | `npm run preview` | serve o build de `dist/client/` localmente |
 | `npm run typecheck` | checa os tipos (`tsc -b`) |
+| `npm run test` | roda os testes (Vitest) |
 | `npm run lint` | roda o ESLint |
 | `npm run lint:fix` | aplica as correções automáticas do ESLint |
 | `npm run format` | formata o código com Prettier |
@@ -42,10 +43,10 @@ React + TypeScript · Vite · Tailwind CSS v4 · React Router v8 (framework mode
 | `npm audit` | checa vulnerabilidades (total) |
 | `npm audit --omit=dev` | checa vulnerabilidades só de produção |
 
-**Gate antes do PR** — os três precisam sair limpos (exit 0):
+**Gate antes do PR** — os quatro precisam sair limpos (exit 0):
 
 ```bash
-npm run lint && npm run format:check && npm run typecheck
+npm run lint && npm run format:check && npm run typecheck && npm run test
 ```
 
 **Imports**: use o alias `@/` → `src/` (`@/components/...`, `@/content/...`, `@/lib/...`),

@@ -1,8 +1,10 @@
+import { useEffect } from 'react';
 import type { MetaFunction } from 'react-router';
 import { useParams } from 'react-router';
 import { saasCatalog } from '@/content/saas-catalog';
 import { siteContent } from '@/content/site';
 import { seo } from '@/lib/seo';
+import { trackEvent } from '@/lib/analytics';
 import Badge from '@/components/ui/Badge';
 import Button from '@/components/ui/Button';
 
@@ -17,6 +19,12 @@ export const meta: MetaFunction = ({ params }) => {
 export default function Produto() {
   const { slug } = useParams();
   const product = saasCatalog.find((p) => p.slug === slug);
+
+  useEffect(() => {
+    if (product) {
+      trackEvent('produto_view', { product: product.slug });
+    }
+  }, [product]);
 
   if (!product) {
     return (
