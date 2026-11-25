@@ -14,12 +14,15 @@
   "kv_namespaces": [{ "binding": "KV", "id": "6387a3e92abf446da2c070b6ee68568d" }],
   // Ambientes: cada `--env` vira um Worker separado (`portal-fbso-dev`, `portal-fbso-hml`).
   // Os Custom Domains (fbso/www/dev/hml) são apontados no dashboard para o Worker correto.
+  // ⚠️ `kv_namespaces` NÃO é herdado do topo em ambientes nomeados (wrangler) — repetir por env.
   "env": {
     "dev": {
       "vars": { "ENV_NAME": "dev" },
+      "kv_namespaces": [{ "binding": "KV", "id": "6387a3e92abf446da2c070b6ee68568d" }],
     },
     "hml": {
       "vars": { "ENV_NAME": "hml" },
+      "kv_namespaces": [{ "binding": "KV", "id": "6387a3e92abf446da2c070b6ee68568d" }],
     },
   },
 }

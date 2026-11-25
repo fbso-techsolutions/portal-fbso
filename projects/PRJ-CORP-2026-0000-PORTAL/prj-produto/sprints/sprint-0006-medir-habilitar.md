@@ -87,6 +87,7 @@
 | 2026-11-25 | TASK-0065 | GA4 `gtag.js` (`G-LCBF75K8KW`) com carga dinâmica após o consent default; testes 22/22 | `<script async src>` era hoisted pelo React 19 → carga via `createElement` para preservar a ordem |
 | 2026-11-25 | TASK-0066 | Eventos `cta_click`/`contato`/`produto_view` via `trackEvent` (header, Home, Contato, Produto); testes 24/24 | Marcar key events + validar UTM no console GA4 (pós-deploy) |
 | 2026-11-25 | TASK-0067 | Verificação do conteúdo LGPD (`/privacidade` + `/termos`): art. 7º/33/18, retenção, DPO; gate verde 24/24 | Revisão de Segurança (Daniel) sob demanda, a confirmar no PR |
+| 2026-11-25 | FIX (TASK-0059) | `kv_namespaces` não era herdado por `dev`/`hml` → `env.KV` ausente → `1101` em `/`; binding `KV` repetido nos envs | Descoberto no smoke do dev (`/api/health` ok, `/` 1101); deploy `dev` re-executado |
 
 ## 7–9. Review · Retrospectiva · Encerramento
 
