@@ -23,7 +23,11 @@ assets normalmente quando `off`.
 
 ## 3. Critério de saída (evidência)
 
-- [ ] `maintenance = on` → todas as rotas públicas retornam 503 + página.
-- [ ] `maintenance = off` → portal serve normalmente.
+- [x] `maintenance = on` → todas as rotas públicas retornam 503 + página.
+- [x] `maintenance = off` → portal serve normalmente.
 
-**Evidências:** — a preencher na execução (curl com flag on/off).
+**Evidências:**
+- `src/worker/index.ts` → lê `env.KV.get('maintenance')`: `on` → 503 + `Retry-After: 3600` + página HTML (branding FBSO, `noindex`); `off`/`null` → pass-through dos assets.
+- Testes unitários (`src/worker/index.test.ts`, 5 casos): `on`→503 (catch-all), `off`→pass-through, `null`→off, `/api/health`→200.
+- `npx wrangler deploy --dry-run` → OK (`env.KV` + `env.ASSETS` listados).
+- Curl em produção (flag on/off): a confirmar após o deploy (merge → develop/main).

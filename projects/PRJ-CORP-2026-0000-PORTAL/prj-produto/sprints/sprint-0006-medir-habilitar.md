@@ -79,6 +79,7 @@
 | 2026-11-25 | TASK-0057 | Endpoint `GET /api/health` (JSON 200) + roteamento `/api/*` no Worker; teste unitário | Curl no deploy fica na TASK-0058 (CI) |
 | 2026-11-25 | TASK-0058 | Passo `Validar Worker + assets (dry-run)` no `deploy.yml`; dry-run OK nos 3 ambientes | Deploy contínuo (merge → main) a comprovar no release flow |
 | 2026-11-25 | TASK-0059 | KV namespace `MAINTENANCE` criado (id `6387a3e…`); binding `KV` no `wrangler.jsonc`; `maintenance=off` gravado (`--remote`) | KV clássico (instant não habilitado, code 10062); toggle exige `--remote` |
+| 2026-11-25 | TASK-0060 | Worker lê `env.KV.get('maintenance')`: `on` → 503 + página; `off` → pass-through; testes 9/9 | Exceções de rota (`/health`, `robots.txt`, `/privacidade`) ficam na TASK-0061 |
 
 ## 7–9. Review · Retrospectiva · Encerramento
 

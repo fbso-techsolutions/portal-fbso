@@ -31,7 +31,7 @@
 | 🔎 | [TASK-0057 — Endpoint server-side (smoke)](../../prj-tecnico/tasks/TASK-0057-endpoint-server-side-smoke.md) | ENABLER-0003 | Em review | 3 | S6 | Lourival Louro | [PR #58](https://github.com/fbso-techsolutions/portal-fbso/pull/58) |
 | 🔎 | [TASK-0058 — Deploy Worker no CI](../../prj-tecnico/tasks/TASK-0058-deploy-worker-ci.md) | ENABLER-0003 | Em review | 3 | S6 | Lourival Louro | [PR #58](https://github.com/fbso-techsolutions/portal-fbso/pull/58) |
 | 🔎 | [TASK-0059 — KV namespace + binding](../../prj-tecnico/tasks/TASK-0059-kv-namespace-binding-maintenance.md) | ENABLER-0005 | Em review | 2 | S6 | Lourival Louro | [PR #58](https://github.com/fbso-techsolutions/portal-fbso/pull/58) |
-| ⬜ | [TASK-0060 — Worker catch-all (503)](../../prj-tecnico/tasks/TASK-0060-worker-catchall-maintenance-503.md) | ENABLER-0005 | A fazer | 3 | S6 | Lourival Louro | — |
+| 🔎 | [TASK-0060 — Worker catch-all (503)](../../prj-tecnico/tasks/TASK-0060-worker-catchall-maintenance-503.md) | ENABLER-0005 | Em review | 3 | S6 | Lourival Louro | [PR #58](https://github.com/fbso-techsolutions/portal-fbso/pull/58) |
 | ⬜ | [TASK-0061 — Exceções + runbook toggle](../../prj-tecnico/tasks/TASK-0061-excecoes-rota-runbook-toggle.md) | ENABLER-0005 | A fazer | 2 | S6 | Lourival Louro | — |
 | ⬜ | [TASK-0062 — Banner de consentimento (UI)](../../prj-tecnico/tasks/TASK-0062-banner-consentimento-ui.md) | US-0030 | A fazer | 4 | S6 | Alfredo Bento | — |
 | ⬜ | [TASK-0063 — Consent Mode v2](../../prj-tecnico/tasks/TASK-0063-consent-mode-v2.md) | US-0030 | A fazer | 3 | S6 | Alfredo Bento | — |
