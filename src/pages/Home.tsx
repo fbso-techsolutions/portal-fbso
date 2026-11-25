@@ -2,6 +2,7 @@ import type { MetaFunction } from 'react-router';
 import { homeContent } from '@/content/home';
 import { saasCatalog } from '@/content/saas-catalog';
 import { siteContent } from '@/content/site';
+import { techServicesContent } from '@/content/techservices';
 import { seo } from '@/lib/seo';
 import Button from '@/components/ui/Button';
 import Card from '@/components/ui/Card';
@@ -78,6 +79,11 @@ export default function Home() {
       <section className="bg-paper py-16 md:py-24">
         <div className="mx-auto max-w-6xl px-5">
           <div className="max-w-2xl">
+            <img
+              src={techServicesContent.icon}
+              alt="FBSO TechServices"
+              className="mb-4 h-12 w-12 object-contain"
+            />
             <Badge>{services.kicker}</Badge>
             <h2 className="mt-3 text-3xl font-bold tracking-tight text-navy md:text-4xl">
               {services.title}
@@ -109,9 +115,11 @@ export default function Home() {
           <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
             {saasCatalog.map((product) => (
               <Card key={product.slug} hoverable>
-                <div className="mb-4 grid h-12 w-12 place-items-center rounded-soft bg-paper text-lg font-extrabold text-blue">
-                  {product.symbol}
-                </div>
+                <img
+                  src={product.icon}
+                  alt={product.name}
+                  className="mb-4 h-12 w-12 object-contain"
+                />
                 <h3 className="text-lg font-bold text-navy">{product.name}</h3>
                 <p className="mt-2 text-sm text-muted">{product.tagline}</p>
                 <a

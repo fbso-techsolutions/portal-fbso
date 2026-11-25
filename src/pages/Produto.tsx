@@ -47,9 +47,7 @@ export default function Produto() {
       <div className="mx-auto max-w-4xl px-5">
         <Badge>Produto SaaS</Badge>
         <div className="mt-4 flex items-center gap-4">
-          <div className="grid h-16 w-16 place-items-center rounded-soft bg-paper text-2xl font-extrabold text-blue">
-            {product.symbol}
-          </div>
+          <img src={product.icon} alt={product.name} className="h-16 w-16 object-contain" />
           <div>
             <h1 className="text-3xl font-bold tracking-tight text-navy md:text-5xl">
               {product.name}

@@ -7,8 +7,10 @@ export interface SaasProduct {
   slug: string;
   /** Nome do produto. */
   name: string;
-  /** Símbolo curto exibido no card. */
+  /** Símbolo curto exibido no card (fallback textual). */
   symbol: string;
+  /** Caminho do ícone/logo do produto (public/logos/). */
+  icon: string;
   /** Texto descritivo curto (card). */
   tagline: string;
   /** Descrição detalhada (página do produto). */
@@ -24,6 +26,7 @@ export const saasCatalog: SaasProduct[] = [
     slug: 'educatio',
     name: 'Educatio',
     symbol: 'E',
+    icon: '/logos/educatio.jpeg',
     tagline: 'Gestão de processos e serviços educacionais em uma plataforma integrada.',
     description:
       'Plataforma integrada para gestão de processos e serviços educacionais — do acadêmico ao administrativo.',
@@ -34,6 +37,7 @@ export const saasCatalog: SaasProduct[] = [
     slug: 'fiscalia',
     name: 'Fiscalia',
     symbol: 'F',
+    icon: '/logos/fiscalia.jpeg',
     tagline: 'Gestão de processos e operações contábeis com organização e controle.',
     description:
       'Plataforma de contabilidade para gestão de processos e operações contábeis com organização e controle.',
@@ -44,6 +48,7 @@ export const saasCatalog: SaasProduct[] = [
     slug: 'mercator',
     name: 'Mercator',
     symbol: 'M',
+    icon: '/logos/mercator.jpeg',
     tagline: 'Gestão de operações e processos comerciais para o varejo.',
     description:
       'Plataforma de varejo para gestão de operações e processos comerciais, do estoque à venda.',
@@ -54,6 +59,7 @@ export const saasCatalog: SaasProduct[] = [
     slug: 'materiae',
     name: 'Materiae',
     symbol: 'Ma',
+    icon: '/logos/materiae.jpeg',
     tagline: 'Gestão do ciclo de vida de ativos eletrônicos e economia circular.',
     description: 'Plataforma de gestão do ciclo de vida de ativos eletrônicos e economia circular.',
     status: 'Em desenvolvimento',

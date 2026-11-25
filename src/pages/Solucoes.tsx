@@ -29,9 +29,11 @@ export default function Solucoes() {
         <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
           {saasCatalog.map((product) => (
             <Card key={product.slug} hoverable>
-              <div className="mb-4 grid h-12 w-12 place-items-center rounded-soft bg-paper text-lg font-extrabold text-blue">
-                {product.symbol}
-              </div>
+              <img
+                src={product.icon}
+                alt={product.name}
+                className="mb-4 h-12 w-12 object-contain"
+              />
               <h2 className="text-lg font-bold text-navy">{product.name}</h2>
               <p className="mt-2 text-sm text-muted">{product.tagline}</p>
               <a
