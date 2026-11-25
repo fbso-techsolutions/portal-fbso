@@ -21,25 +21,23 @@ proativa) para ativação quase imediata.
 
 ## 3. Critério de saída (evidência)
 
-- [ ] KV namespace + binding versionados no `wrangler.jsonc`.
-- [ ] `wrangler kv key put maintenance off` cria/atualiza a chave com sucesso.
+- [x] KV namespace + binding versionados no `wrangler.jsonc`.
+- [x] `wrangler kv key put maintenance off` cria/atualiza a chave com sucesso.
 
 **Evidências:**
-- `wrangler.jsonc` → `kv_namespaces: [{ "binding": "KV", "id": "<placeholder>" }]` versionado (id a substituir).
-- `npx wrangler deploy --dry-run` → OK: binding `env.KV (KV Namespace)` + `env.ASSETS (Assets)` listados.
-- ⚠️ **Bloqueado:** criar o namespace e gravar a chave exigem credenciais da org Cloudflare
-  (`CLOUDFLARE_API_TOKEN`/`CLOUDFLARE_ACCOUNT_ID` — em GitHub Secrets, não disponíveis neste ambiente).
-  O `wrangler` local está logado numa conta pessoal com token somente-leitura.
+- KV namespace `MAINTENANCE` criado (id `6387a3e92abf446da2c070b6ee68568d`) — **KV clássico** (instant não habilitado na conta: code 10062).
+- `wrangler.jsonc` → `kv_namespaces: [{ "binding": "KV", "id": "6387a3e92abf446da2c070b6ee68568d" }]`.
+- `npx wrangler kv key put maintenance off --binding KV --remote` → OK; `key get --remote` retorna `off`.
+- `npx wrangler deploy --dry-run` → OK: `env.KV (6387a3e…8668d)` + `env.ASSETS` listados.
 
 ## 4. Runbook
 
 ```bash
-# Provisionamento (uma vez — credenciais da org Cloudflare). Preferir KV Instant:
-npx wrangler kv namespace create MAINTENANCE --experimental-mode instant --binding KV --update-config
-# Se o modo instant não estiver habilitado na conta (private beta), usar KV clássico:
-npx wrangler kv namespace create MAINTENANCE --binding KV --update-config
+# Provisionamento (já executado em 2026-11-25 — não repetir):
+npx wrangler kv namespace create MAINTENANCE --binding KV
 
-# Toggle (recorrente — sem deploy):
-wrangler kv key put maintenance on    # entra em manutenção
-wrangler kv key put maintenance off   # volta ao normal
+# Toggle (recorrente — sem deploy). ⚠️ --remote grava no namespace de produção
+# (sem --remote, o `wrangler kv` escreve só na instância local do `wrangler dev`):
+wrangler kv key put maintenance on  --binding KV --remote   # entra em manutenção
+wrangler kv key put maintenance off --binding KV --remote   # volta ao normal
 ```
