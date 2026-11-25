@@ -11,12 +11,12 @@
 
 | Item | Dono | Tasks | Etapa | Evidência |
 |---|---|---|---|---|
-| [ENABLER-0003 — Cloudflare Workers + API](../../prj-tecnico/enablers/ENABLER-0003-cloudflare-workers-api.md) | Infra (Lourival Louro) | [TASK-0056…0058](../../prj-tecnico/tasks/README.md) | ⬜ A fazer | — |
-| [ENABLER-0005 — Modo manutenção (Worker + KV)](../../prj-tecnico/enablers/ENABLER-0005-modo-manutencao-worker-kv.md) | Infra (Lourival Louro) | [TASK-0059…0061](../../prj-tecnico/tasks/README.md) | ⬜ A fazer | — |
-| [US-FEAT-0006.0006-0030 — Banner de consentimento](../user-stories/US-FEAT-0006.0006-0030-banner-consentimento.md) | Alfredo Bento | [TASK-0062…0064](../../prj-tecnico/tasks/README.md) | ⬜ A fazer | — |
-| [US-FEAT-0006.0001-0028 — Analytics consentido](../user-stories/US-FEAT-0006.0001-0028-analytics-consentido.md) | Alfredo Bento | [TASK-0065](../../prj-tecnico/tasks/README.md) | ⬜ A fazer | — |
-| [US-FEAT-0006.0001-0029 — Origem + eventos-chave](../user-stories/US-FEAT-0006.0001-0029-origem-acessos-eventos.md) | Alfredo Bento | [TASK-0066](../../prj-tecnico/tasks/README.md) | ⬜ A fazer | — |
-| [US-FEAT-0006.0006-0031 — Política/termos (LGPD)](../user-stories/US-FEAT-0006.0006-0031-atualizar-politica-privacidade.md) | Alfredo Bento + Daniel Vini | [TASK-0067](../../prj-tecnico/tasks/README.md) | ⬜ A fazer | — |
+| [ENABLER-0003 — Cloudflare Workers + API](../../prj-tecnico/enablers/ENABLER-0003-cloudflare-workers-api.md) | Infra (Lourival Louro) | [TASK-0056…0058](../../prj-tecnico/tasks/README.md) | 🔎 Em review | [PR #58](https://github.com/fbso-techsolutions/portal-fbso/pull/58) |
+| [ENABLER-0005 — Modo manutenção (Worker + KV)](../../prj-tecnico/enablers/ENABLER-0005-modo-manutencao-worker-kv.md) | Infra (Lourival Louro) | [TASK-0059…0061](../../prj-tecnico/tasks/README.md) | 🔎 Em review | [PR #58](https://github.com/fbso-techsolutions/portal-fbso/pull/58) |
+| [US-FEAT-0006.0006-0030 — Banner de consentimento](../user-stories/US-FEAT-0006.0006-0030-banner-consentimento.md) | Alfredo Bento | [TASK-0062…0064](../../prj-tecnico/tasks/README.md) | 🔎 Em review | [PR #58](https://github.com/fbso-techsolutions/portal-fbso/pull/58) |
+| [US-FEAT-0006.0001-0028 — Analytics consentido](../user-stories/US-FEAT-0006.0001-0028-analytics-consentido.md) | Alfredo Bento | [TASK-0065](../../prj-tecnico/tasks/README.md) | 🔎 Em review | [PR #58](https://github.com/fbso-techsolutions/portal-fbso/pull/58) |
+| [US-FEAT-0006.0001-0029 — Origem + eventos-chave](../user-stories/US-FEAT-0006.0001-0029-origem-acessos-eventos.md) | Alfredo Bento | [TASK-0066](../../prj-tecnico/tasks/README.md) | 🔎 Em review | [PR #58](https://github.com/fbso-techsolutions/portal-fbso/pull/58) |
+| [US-FEAT-0006.0006-0031 — Política/termos (LGPD)](../user-stories/US-FEAT-0006.0006-0031-atualizar-politica-privacidade.md) | Alfredo Bento + Daniel Vini | [TASK-0067](../../prj-tecnico/tasks/README.md) | 🔎 Em review | [PR #58](https://github.com/fbso-techsolutions/portal-fbso/pull/58) |
 
 > Evidência aponta para **PR/deploy** (artefato real), não planilha.
 
