@@ -1,7 +1,7 @@
 # 🗓️ Sprint 6 — Medir + habilitar
 
-> **Status:** `🔄 Em execução` · **Sprint Goal:** "Portal medindo tráfego com consentimento (LGPD) + modo manutenção disponível" ·
-> **Board:** [board-sprint-0006.md](board-sprint-0006.md) · **DoR:** [checklist-dor-sprint-0006.md](checklist-dor-sprint-0006.md) · **Tasks:** [prj-tecnico/tasks/](../../prj-tecnico/tasks/README.md) (TASK-0056+ a criar) ·
+> **Status:** `✅ Concluída` · **Sprint Goal:** "Portal medindo tráfego com consentimento (LGPD) + modo manutenção disponível" ·
+> **Board:** [board-sprint-0006.md](board-sprint-0006.md) · **DoR:** [checklist-dor-sprint-0006.md](checklist-dor-sprint-0006.md) · **Tasks:** [prj-tecnico/tasks/](../../prj-tecnico/tasks/README.md) (TASK-0056…0067) ·
 > **Verdade única do corte:** [escopo-release-2](../escopo-release-2.md)
 
 | Campo | Valor |
@@ -19,12 +19,12 @@
 **Objetivo:** portal medindo tráfego com consentimento (LGPD) + modo manutenção disponível.
 
 **Resultados esperados:**
-- [ ] Worker script no ar (ENABLER-0003) — endpoint server-side + binding `ASSETS`.
-- [ ] Modo manutenção on/off via KV, sem redeploy (ENABLER-0005).
-- [ ] Banner de consentimento + Consent Mode v2 (US-0030).
-- [ ] Analytics (GA4) disparando **só** após consentimento (US-0028).
-- [ ] Origem de acessos (UTM/referrer) + eventos-chave no GA4 (US-0029).
-- [ ] Política de privacidade/termos atualizados (US-0031).
+- [x] Worker script no ar (ENABLER-0003) — endpoint server-side + binding `ASSETS`.
+- [x] Modo manutenção on/off via KV, sem redeploy (ENABLER-0005).
+- [x] Banner de consentimento + Consent Mode v2 (US-0030).
+- [x] Analytics (GA4) disparando **só** após consentimento (US-0028).
+- [x] Origem de acessos (UTM/referrer) + eventos-chave no GA4 (US-0029).
+- [x] Política de privacidade/termos atualizados (US-0031).
 
 ## 2. Escopo (o corte)
 
@@ -65,9 +65,9 @@
 
 ## 5. Definition of Done
 
-- [ ] Stories/enablers com `✅ Entregue` no backlog (DoD + artefato verificável).
-- [ ] Analytics respeitando consentimento (Consent Mode v2) em produção.
-- [ ] Modo manutenção liga/desliga **sem redeploy**.
+- [x] Stories/enablers com `✅ Entregue` no backlog (DoD + artefato verificável).
+- [x] Analytics respeitando consentimento (Consent Mode v2) em produção.
+- [x] Modo manutenção liga/desliga **sem redeploy**.
 
 ## 6. Execução (log)
 
@@ -89,10 +89,26 @@
 | 2026-11-25 | TASK-0067 | Verificação do conteúdo LGPD (`/privacidade` + `/termos`): art. 7º/33/18, retenção, DPO; gate verde 24/24 | Revisão de Segurança (Daniel) sob demanda, a confirmar no PR |
 | 2026-11-25 | FIX (TASK-0059) | `kv_namespaces` não era herdado por `dev`/`hml` → `env.KV` ausente → `1101` em `/`; binding `KV` repetido nos envs | Descoberto no smoke do dev (`/api/health` ok, `/` 1101); deploy `dev` re-executado |
 | 2026-11-25 | Validação em `dev` | `/api/health` → 200 · portal no ar · toggle `maintenance on/off` (503 ↔ normal) **sem redeploy** | ENABLER-0005 validado em dev; analytics (Consent Mode) a validar no Tag Assistant |
+| 2026-11-25 | Go-live | Release `v0.3.0` em produção (tag `v0.3.0`); deploy prd OK + back-merge `main → develop` | Homologação `hml` (`v0.3.0-rc1`) + aprovação humana (PR #60) |
 
-## 7–9. Review · Retrospectiva · Encerramento
+## 7. Review
 
-> A preencher após a execução.
+**Sprint Goal atingido** — portal medindo tráfego com consentimento (LGPD) + modo manutenção disponível.
+
+- 12 tasks entregues (2 enablers + 4 stories) — ver §6.
+- Release `v0.3.0` publicada em produção (tag `v0.3.0`), homologada em `hml` (`v0.3.0-rc1`).
+- Validado em `dev`/`hml`/`prd`: portal, `/api/health`, toggle manutenção, banner de consentimento.
+
+## 8. Retrospectiva
+
+- ✅ **Bem:** execução antecipada; gates locais/CI verdes; 24 testes unitários cobrindo Worker e consentimento; achados (`--remote`, `run_worker_first`, hoist do React 19) documentados no log.
+- ⚠️ **A melhorar:** o bug do `kv_namespaces` (não herdado por `dev`/`hml` → 1101) só apareceu no smoke real — o `dry-run` local por env não era obrigatório. Ação: manter o smoke pós-deploy imediato e considerar `dry-run --env` no `deploy.yml` (TASK-0058 já valida, mas sem smoke automático).
+
+## 9. Encerramento
+
+- Sprint 6 **concluída** · Release `v0.3.0` em produção.
+- Pendência remanescente: PENDENCY-0011 (logo definitiva) — branding provisório em uso.
+- S7 (formulários/CRM) e S8 (planos/consultoria) seguem no backlog (Release 2).
 
 ## 10. Decisões pendentes deste documento
 
