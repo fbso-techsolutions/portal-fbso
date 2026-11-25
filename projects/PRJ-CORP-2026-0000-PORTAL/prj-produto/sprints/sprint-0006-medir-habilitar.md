@@ -1,6 +1,6 @@
 # 🗓️ Sprint 6 — Medir + habilitar
 
-> **Status:** `📝 Planejada` · **Sprint Goal:** "Portal medindo tráfego com consentimento (LGPD) + modo manutenção disponível" ·
+> **Status:** `🔄 Em execução` · **Sprint Goal:** "Portal medindo tráfego com consentimento (LGPD) + modo manutenção disponível" ·
 > **Board:** [board-sprint-0006.md](board-sprint-0006.md) · **DoR:** [checklist-dor-sprint-0006.md](checklist-dor-sprint-0006.md) · **Tasks:** [prj-tecnico/tasks/](../../prj-tecnico/tasks/README.md) (TASK-0056+ a criar) ·
 > **Verdade única do corte:** [escopo-release-2](../escopo-release-2.md)
 
