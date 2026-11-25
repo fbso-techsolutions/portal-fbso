@@ -14,6 +14,8 @@ export interface SiteContent {
   shortName: string;
   /** Complemento da marca (parte em destaque). */
   brandAccent: string;
+  /** Logo institucional (public/logos/). */
+  logo: string;
   /** Assinatura/slogan institucional. */
   tagline: string;
   /** Texto do topbar. */
@@ -42,6 +44,7 @@ export const siteContent: SiteContent = {
   name: 'FBSO Technology Solutions',
   shortName: 'FBSO',
   brandAccent: 'TechSolutions',
+  logo: '/logos/fbso-techsolutions.png',
   tagline: 'Tecnologia para transformar desafios em soluções digitais.',
   topbarNote: 'Technology · Consulting · Software',
   navCta: 'Fale com a FBSO',

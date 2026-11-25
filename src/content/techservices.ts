@@ -10,6 +10,8 @@ export interface TechServicesContent {
   kicker: string;
   title: string;
   description: string;
+  /** Caminho do ícone da divisão (public/logos/). */
+  icon: string;
   fronts: ServiceFront[];
 }
 
@@ -18,6 +20,7 @@ export const techServicesContent: TechServicesContent = {
   title: 'Conhecimento técnico. Entrega consistente.',
   description:
     'A divisão de consultoria da FBSO apoia empresas na evolução de sistemas, plataformas e operações digitais.',
+  icon: '/logos/techservices.jpeg',
   fronts: [
     {
       title: 'Consultoria de TI',

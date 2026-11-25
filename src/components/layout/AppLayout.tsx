@@ -65,15 +65,10 @@ export default function AppLayout({ children }: AppLayoutProps) {
         <div className="mx-auto flex max-w-6xl items-center justify-between gap-6 px-5">
           <a
             href="/"
-            className="flex items-baseline gap-1 py-4"
+            className="flex items-center py-2"
             aria-label={`${siteContent.shortName} — início`}
           >
-            <span className="text-2xl font-extrabold tracking-tight text-navy">
-              {siteContent.shortName}
-            </span>
-            <span className="text-2xl font-extrabold tracking-tight text-blue">
-              {siteContent.brandAccent}
-            </span>
+            <img src={siteContent.logo} alt={siteContent.name} className="h-10 w-auto" />
           </a>
 
           {/* Nav desktop */}
@@ -138,9 +133,7 @@ export default function AppLayout({ children }: AppLayoutProps) {
         <div className="mx-auto max-w-6xl px-5 pb-6 pt-12">
           <div className="grid gap-10 md:grid-cols-[1.5fr_1fr_1fr]">
             <div>
-              <div className="text-xl font-extrabold text-white">
-                {siteContent.shortName} <span className="text-sky">{siteContent.brandAccent}</span>
-              </div>
+              <img src={siteContent.logo} alt={siteContent.name} className="h-10 w-auto" />
               <p className="mt-3 text-sm text-mist">{siteContent.tagline}</p>
             </div>
 
