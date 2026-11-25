@@ -81,6 +81,7 @@
 | 2026-11-25 | TASK-0059 | KV namespace `MAINTENANCE` criado (id `6387a3e…`); binding `KV` no `wrangler.jsonc`; `maintenance=off` gravado (`--remote`) | KV clássico (instant não habilitado, code 10062); toggle exige `--remote` |
 | 2026-11-25 | TASK-0060 | Worker lê `env.KV.get('maintenance')`: `on` → 503 + página; `off` → pass-through; testes 9/9 | Exceções de rota (`/health`, `robots.txt`, `/privacidade`) ficam na TASK-0061 |
 | 2026-11-25 | TASK-0061 | Exceções `/health`·`/api/health`·`/robots.txt`·`/privacidade` + runbook toggle (`--remote` + token escopo mínimo); testes 13/13 | Propaga `--remote` ao runbook do ENABLER-0005; `/health` também responde (alias do health check) |
+| 2026-11-25 | TASK-0062 | Banner de consentimento (UI) + conteúdo em `consent.ts`; render no layout raiz; prerender OK | Consent Mode (0063) e persistência (0064) registram a escolha depois |
 
 ## 7–9. Review · Retrospectiva · Encerramento
 

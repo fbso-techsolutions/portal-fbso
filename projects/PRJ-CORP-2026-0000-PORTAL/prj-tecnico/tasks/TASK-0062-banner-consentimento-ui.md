@@ -22,7 +22,11 @@ para a política de privacidade.
 
 ## 3. Critério de saída (evidência)
 
-- [ ] Banner renderiza em todas as páginas (antes da escolha).
-- [ ] Botões aceitar/recusar + link para `/privacidade` funcionando.
+- [x] Banner renderiza em todas as páginas (antes da escolha).
+- [x] Botões aceitar/recusar + link para `/privacidade` funcionando.
 
-**Evidências:** — a preencher na execução (PR + screenshot).
+**Evidências:**
+- `src/content/consent.ts` (texto) + `src/components/sections/CookieBanner.tsx` (componente acessível: `role="region"` + `aria-label`, foco via `Button`) + render no `AppLayout` (layout raiz).
+- Prerender: banner presente no HTML de todas as páginas (`grep` confirmou "Aceitar"/"Recusar"/"Política de Privacidade").
+- Testes 15/15 (smoke do `consentContent`).
+- Screenshot: a capturar na revisão visual (QA).
