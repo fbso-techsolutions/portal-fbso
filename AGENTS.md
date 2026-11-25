@@ -58,4 +58,4 @@ Build estático → `dist/client/`; deploy via `wrangler` (Cloudflare Workers + 
 **Operação (detalhes):**
 - Node **24.22.1** — `.nvmrc` + `engines` (use `nvm use`).
 - Gate local antes do PR: `npm run lint && npm run format:check && npm run typecheck && npm run test`.
-- CI (PR → `develop`): check obrigatório `lint → typecheck → test` (SAST via CodeQL); merge → deploy automático no ambiente.
+- CI (PR → `develop`): check obrigatório `lint → format:check → typecheck → test` (SAST via CodeQL); merge → deploy automático no ambiente.

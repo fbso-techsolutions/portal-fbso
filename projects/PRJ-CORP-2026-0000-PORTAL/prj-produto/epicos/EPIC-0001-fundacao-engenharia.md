@@ -26,8 +26,8 @@
 
 | Feature | Título | Stories |
 |---|---|---|
-| [FEATURE-0001.0001](../features/FEATURE-0001.0001-scaffold-portal.md) | Scaffold do portal (Vite + TS + Tailwind + Router v8) | a detalhar (S1) |
-| [FEATURE-0001.0002](../features/FEATURE-0001.0002-design-system.md) | Design System e identidade visual | a detalhar (S2) |
-| [FEATURE-0001.0003](../features/FEATURE-0001.0003-pipeline-cicd-deploy.md) | Pipeline CI/CD + deploy Cloudflare | a detalhar (S1) |
+| [FEATURE-0001.0001](../features/FEATURE-0001.0001-scaffold-portal.md) | Scaffold do portal (Vite + TS + Tailwind + Router v8) | ✅ S1 |
+| [FEATURE-0001.0002](../features/FEATURE-0001.0002-design-system.md) | Design System e identidade visual | ✅ S2 |
+| [FEATURE-0001.0003](../features/FEATURE-0001.0003-pipeline-cicd-deploy.md) | Pipeline CI/CD + deploy Cloudflare | ✅ S1 |
 
 > 💡 **Rastreabilidade:** [matriz](../rastreabilidade.md) · **Backlog:** [BACKLOG-LIST](../../../../docs/produto/backlog/BACKLOG-LIST.md).

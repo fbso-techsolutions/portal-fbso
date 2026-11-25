@@ -40,6 +40,10 @@ prospects.
 | [**EPIC-0003** — FBSO TechServices](prj-produto/epicos/EPIC-0003-techservices.md) | 0003.0001 Página TechServices |
 | [**EPIC-0004** — Portfólio de Produtos SaaS](prj-produto/epicos/EPIC-0004-portfolio-saas.md) | 0004.0001 Catálogo SaaS · 0004.0002 Página de produto |
 | [**EPIC-0005** — SEO, Acessibilidade e Publicação](prj-produto/epicos/EPIC-0005-seo-publicacao.md) | 0005.0001 SEO/prerender · 0005.0002 A11y/responsivo · 0005.0003 Go-live |
+| [**EPIC-0006** — Comercial (conversão e relacionamento)](prj-produto/epicos/EPIC-0006-comercial.md) | 0006.0001 Analytics · 0006.0002 Formulários/leads · 0006.0003 CRM · 0006.0004 Planos · 0006.0005 Consultoria · 0006.0006 LGPD |
+
+> **Release 2 (Comercial):** escopo em [prj-produto/escopo-release-2.md](prj-produto/escopo-release-2.md)
+> (corte S6/S7/S8 **sugerido** — a aprovar).
 
 ## 4. Estrutura de Engenharia
 
@@ -67,6 +71,7 @@ prospects.
 | Projeto | Demanda de origem | [prj-negocio/discovery/PEDIDO.md](prj-negocio/discovery/PEDIDO.md) |
 | Projeto | Requisitos (B-REQ) | [prj-negocio/requisitos/requisitos-negocio.md](prj-negocio/requisitos/requisitos-negocio.md) |
 | Projeto | Épicos, features, stories, sprints | [prj-produto/](prj-produto) |
+| Projeto | Escopo Release 2 (Comercial) | [prj-produto/escopo-release-2.md](prj-produto/escopo-release-2.md) |
 | Projeto | Enablers e runways | [prj-tecnico/](prj-tecnico) |
 | Projeto | Hub de pendências | [pendencias.md](pendencias.md) |
 | Projeto | Equipe | [equipe.md](equipe.md) |

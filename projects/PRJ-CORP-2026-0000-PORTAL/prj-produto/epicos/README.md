@@ -10,3 +10,4 @@
 | [EPIC-0003 — FBSO TechServices](EPIC-0003-techservices.md) | B-REQ-03 | 0003.0001 | ✅ v1 |
 | [EPIC-0004 — Portfólio de Produtos SaaS](EPIC-0004-portfolio-saas.md) | B-REQ-04 · 05 | 0004.0001 · 0004.0002 | ✅ v1 |
 | [EPIC-0005 — SEO, Acessibilidade e Publicação](EPIC-0005-seo-publicacao.md) | B-REQ-07 | 0005.0001…0005.0003 | ✅ v1 |
+| [EPIC-0006 — Comercial (conversão e relacionamento)](EPIC-0006-comercial.md) | B-REQ-08 | 0006.0001…0006.0006 | 📝 R2 (proposta) |
