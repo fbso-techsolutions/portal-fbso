@@ -24,10 +24,10 @@
 
 | Feature | Título | Stories |
 |---|---|---|
-| [FEATURE-0002.0001](../features/FEATURE-0002.0001-layout-institucional.md) | Layout institucional (Header/Footer/Nav) | a detalhar (S3) |
-| [FEATURE-0002.0002](../features/FEATURE-0002.0002-home-institucional.md) | Home institucional (hero → CTA) | a detalhar (S4) |
-| [FEATURE-0002.0003](../features/FEATURE-0002.0003-pagina-sobre.md) | Página Sobre (quem somos) | a detalhar (S4) |
-| [FEATURE-0002.0004](../features/FEATURE-0002.0004-pagina-contato.md) | Página Contato (canais) | a detalhar (S4) |
-| [FEATURE-0002.0005](../features/FEATURE-0002.0005-paginas-legais.md) | Páginas legais (privacidade/termos — texto fixo) | a detalhar (S4) |
+| [FEATURE-0002.0001](../features/FEATURE-0002.0001-layout-institucional.md) | Layout institucional (Header/Footer/Nav) | ✅ S3 |
+| [FEATURE-0002.0002](../features/FEATURE-0002.0002-home-institucional.md) | Home institucional (hero → CTA) | ✅ S3 |
+| [FEATURE-0002.0003](../features/FEATURE-0002.0003-pagina-sobre.md) | Página Sobre (quem somos) | ✅ S3 |
+| [FEATURE-0002.0004](../features/FEATURE-0002.0004-pagina-contato.md) | Página Contato (canais) | ✅ S3 |
+| [FEATURE-0002.0005](../features/FEATURE-0002.0005-paginas-legais.md) | Páginas legais (privacidade/termos — texto fixo) | ✅ S3 |
 
 > 💡 **Rastreabilidade:** [matriz](../rastreabilidade.md) · **Backlog:** [BACKLOG-LIST](../../../../docs/produto/backlog/BACKLOG-LIST.md).

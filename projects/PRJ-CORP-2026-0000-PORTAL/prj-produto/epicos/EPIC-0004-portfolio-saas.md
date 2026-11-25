@@ -25,8 +25,8 @@
 
 | Feature | Título | Stories |
 |---|---|---|
-| [FEATURE-0004.0001](../features/FEATURE-0004.0001-catalogo-saas.md) | Catálogo SaaS (dados + cards) | a detalhar (S6) |
-| [FEATURE-0004.0002](../features/FEATURE-0004.0002-pagina-produto.md) | Página de produto (detalhe por SaaS) | a detalhar (S6) |
+| [FEATURE-0004.0001](../features/FEATURE-0004.0001-catalogo-saas.md) | Catálogo SaaS (dados + cards) | ✅ S4 |
+| [FEATURE-0004.0002](../features/FEATURE-0004.0002-pagina-produto.md) | Página de produto (detalhe por SaaS) | ✅ S4 |
 
 > ✅ O catálogo já referencia **Materiae** — repo renomeado `saas-rmr` → `saas-materiae`
 > (2026-11-13, [PENDENCY-0006](../../pendencias.md) respondida).

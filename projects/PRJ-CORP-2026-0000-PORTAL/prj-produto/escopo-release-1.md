@@ -1,6 +1,6 @@
 # 🚀 Escopo da Release 1 (MVP estático)
 
-> Fatiamento vertical da primeira entrega. Fonte: [PRD](../../PRD.md) · [rastreabilidade](rastreabilidade.md).
+> Fatiamento vertical da primeira entrega. Fonte: [PRD](../PRD.md) · [rastreabilidade](rastreabilidade.md).
 > **Status:** ✅ **Concluída** (2026-11-13) — 5 sprints entregues, portal no ar em `https://fbso.com.br`.
 
 ## 1. O que entra
@@ -14,7 +14,7 @@
 | EPIC-0005 SEO/Publicação | 0005.0001…0005.0003 | SEO/a11y + go-live |
 
 > **Páginas legais** (`/privacidade`, `/termos`) entram no MVP com **texto fixo/padrão**
-> (decisão — [PENDENCY-0005](../../pendencias.md) ✅).
+> (decisão — [PENDENCY-0005](../pendencias.md) ✅).
 
 ## 2. O que **não** entra (Release 1)
 

@@ -6,6 +6,7 @@ import { seo } from '@/lib/seo';
 import Button from '@/components/ui/Button';
 import Card from '@/components/ui/Card';
 import Badge from '@/components/ui/Badge';
+import { trackEvent } from '@/lib/analytics';
 
 export const meta: MetaFunction = () =>
   seo({ title: siteContent.title, description: siteContent.description });
@@ -30,7 +31,13 @@ export default function Home() {
           <p className="mt-6 max-w-xl text-lg text-mist">{hero.copy}</p>
 
           <div className="mt-8 flex flex-wrap gap-3">
-            <Button variant="primary" href={hero.primaryCta.href}>
+            <Button
+              variant="primary"
+              href={hero.primaryCta.href}
+              onClick={() =>
+                trackEvent('cta_click', { cta: hero.primaryCta.label, href: hero.primaryCta.href })
+              }
+            >
               {hero.primaryCta.label}
             </Button>
             <a
@@ -130,7 +137,13 @@ export default function Home() {
               <h2 className="mt-2 text-2xl font-bold md:text-3xl">{cta.title}</h2>
               <p className="mt-2 text-mist">{cta.description}</p>
             </div>
-            <Button variant="primary" href={cta.button.href}>
+            <Button
+              variant="primary"
+              href={cta.button.href}
+              onClick={() =>
+                trackEvent('cta_click', { cta: cta.button.label, href: cta.button.href })
+              }
+            >
               {cta.button.label}
             </Button>
           </div>

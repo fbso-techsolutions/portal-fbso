@@ -6,8 +6,8 @@
 | Campo | Valor |
 |---|---|
 | Projeto | FBSO Corporate Portal · PRJ-CORP-2026-0000-PORTAL |
-| Status | ✅ §2/§3 preenchidos (2026-11-11) · dev frontend confirmado: Alfredo Bento (PENDENCY-0007 ✅) |
-| Atualizado | 2026-11-11 |
+| Status | ✅ §2/§3 preenchidos (2026-11-11) · dev frontend: Alfredo Bento (PENDENCY-0007 ✅) · design: Susy Hanamura · Paloma Zeni · Hugo Milo (PENDENCY-0011 🔄) · jurídico: — a preencher (PENDENCY-0012/0013 🔄) |
+| Atualizado | 2026-11-24 |
 
 ## 1. Como funciona
 
@@ -23,7 +23,7 @@
 
 | Papel | Nome | Alocação |
 |---|---|---|
-| **PM/PO** | Alessandra Neves | — |
+| **PM/PO** | Alessandra Neves | 25% |
 
 ### 2.2 Tecnologia
 
@@ -39,6 +39,28 @@
 > ✅ **PENDENCY-0007 (resolvida 2026-11-11):** dev frontend do portal confirmado = **Alfredo Bento**
 > (100%). Bruno Oliveira / Manoel Carlos seguem como devs do RMR (não atuam no portal).
 
+### 2.3 Design
+
+| Papel | Nome | Alocação |
+|---|---|---|
+| **Brand Designer / Designer Gráfico** | Susy Hanamura | sob demanda |
+| **UI Designer / Web Designer** | Paloma Zeni | sob demanda |
+| **UX Designer** | Hugo Milo | sob demanda |
+
+> 🎨 **PENDENCY-0011 (🔄 em andamento):** identidade visual do portal. Entregáveis por papel —
+> **Brand:** marca do zero (pesquisa, logotipo, manual completo, paleta institucional, tom de voz visual) ·
+> **UI:** visual do site sobre a marca (design system, botões, layouts, ícones, protótipos) ·
+> **UX:** usabilidade e jornada (pesquisa com usuários, arquitetura da informação, wireframes, testes).
+
+### 2.4 Jurídico / LGPD
+
+| Papel | Nome | Alocação |
+|---|---|---|
+| **Jurídico / LGPD** | Tarja Vertte | sob demanda |
+
+> ⚖️ **PENDENCY-0012/0013 (🔄 abertas):** transferência internacional (art. 33 LGPD) e texto de
+> privacidade. Dono jurídico ainda sem nome definido (a preencher).
+
 ## 3. Alocação (capacidade do projeto)
 
 | Papel | Qtd. | Quem (nome) | Alocação (%) | Observação |
@@ -49,6 +71,10 @@
 | Infra / DevOps (Cloudflare) | 1 | Lourival Louro | 50 | deploy, domínio, CI/CD |
 | QA / Testes | 1 | Patricia Varra | 50 | plano de testes, acessibilidade |
 | Segurança da Informação | 1 (pontual) | Daniel Vini | sob demanda | headers/CSP, baseline |
+| Brand Designer / Designer Gráfico | 1 | Susy Hanamura | sob demanda | identidade visual (PENDENCY-0011) |
+| UI Designer / Web Designer | 1 | Paloma Zeni | sob demanda | design system, telas, protótipos |
+| UX Designer | 1 | Hugo Milo | sob demanda | jornada, wireframes, testes |
+| Jurídico / LGPD | 1 | Tarja Vertte | sob demanda | base legal, transferência internacional (PENDENCY-0012/0013) |
 
 ## 4. Parâmetros
 
@@ -61,3 +87,5 @@
 ## 5. Pendências deste documento
 
 1. ✅ **PENDENCY-0007** — resolvida (2026-11-11): dev frontend = Alfredo Bento (100%).
+2. 🔄 **PENDENCY-0011** — em andamento (2026-11-19): time de design (Susy/Paloma/Hugo) adicionado ao §2.3/§3; identidade visual em produção.
+3. 🔄 **PENDENCY-0012/0013** — papel "Jurídico / LGPD" adicionado (nome a preencher); dono das pendências de LGPD.

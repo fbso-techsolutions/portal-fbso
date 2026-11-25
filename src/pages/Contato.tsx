@@ -4,6 +4,7 @@ import { siteContent } from '@/content/site';
 import { seo } from '@/lib/seo';
 import Badge from '@/components/ui/Badge';
 import Button from '@/components/ui/Button';
+import { trackEvent } from '@/lib/analytics';
 
 export const meta: MetaFunction = () =>
   seo({ title: `Contato · ${siteContent.shortName}`, description: contatoContent.description });
@@ -22,7 +23,12 @@ export default function Contato() {
 
         <div className="mt-8 flex flex-wrap gap-3">
           {channels.map((channel) => (
-            <Button key={channel.href} variant="primary" href={channel.href}>
+            <Button
+              key={channel.href}
+              variant="primary"
+              href={channel.href}
+              onClick={() => trackEvent('contato', { channel: channel.label })}
+            >
               {channel.label}
             </Button>
           ))}
