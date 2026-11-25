@@ -29,6 +29,7 @@ proativa) para ativação quase imediata.
 - `wrangler.jsonc` → `kv_namespaces: [{ "binding": "KV", "id": "6387a3e92abf446da2c070b6ee68568d" }]`.
 - `npx wrangler kv key put maintenance off --binding KV --remote` → OK; `key get --remote` retorna `off`.
 - `npx wrangler deploy --dry-run` → OK: `env.KV (6387a3e…8668d)` + `env.ASSETS` listados.
+- ⚠️ FIX (2026-11-25): `kv_namespaces` **não é herdado** por ambientes nomeados (wrangler) — o binding `KV` precisou ser repetido em `dev`/`hml`; sem isso `env.KV` fica `undefined` e o Worker estoura `1101` em `/`.
 
 ## 4. Runbook
 
