@@ -3,6 +3,7 @@ import type { ReactNode } from 'react';
 import { siteContent } from '@/content/site';
 import Button from '@/components/ui/Button';
 import CookieBanner from '@/components/sections/CookieBanner';
+import { updateConsent } from '@/lib/consent';
 
 // Versão e ambiente injetados no build (deploy.yml → VITE_APP_VERSION / VITE_APP_ENV).
 // Só preenchidos em deploys reais; em `npm run dev` ficam vazios (sem selo/versão).
@@ -18,8 +19,13 @@ interface AppLayoutProps {
 export default function AppLayout({ children }: AppLayoutProps) {
   const [menuOpen, setMenuOpen] = useState(false);
   // Escolha do visitante no banner: null = ainda não escolheu (banner visível).
-  // O valor (true/false) será consumido pelo Consent Mode (TASK-0063) e persistência (TASK-0064).
+  // O valor (true/false) alimenta o Consent Mode (TASK-0063) e a persistência (TASK-0064).
   const [consent, setConsent] = useState<boolean | null>(null);
+
+  function handleConsentChoice(accepted: boolean) {
+    setConsent(accepted);
+    updateConsent(accepted); // Consent Mode v2: granted/denied (TASK-0063).
+  }
 
   return (
     <div className="flex min-h-screen flex-col overflow-x-hidden bg-white text-ink">
@@ -180,8 +186,8 @@ export default function AppLayout({ children }: AppLayoutProps) {
         </div>
       </footer>
 
-      {/* Banner de consentimento (US-0030) — some após a escolha; Consent Mode/persistência nas TASK-0063/0064. */}
-      {consent === null ? <CookieBanner onChoice={(accepted) => setConsent(accepted)} /> : null}
+      {/* Banner de consentimento (US-0030) — some após a escolha; persistência na TASK-0064. */}
+      {consent === null ? <CookieBanner onChoice={handleConsentChoice} /> : null}
     </div>
   );
 }

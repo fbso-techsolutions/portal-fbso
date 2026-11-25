@@ -21,7 +21,12 @@ Integrar o **Consent Mode v2** ao banner: default `denied` antes da escolha, `up
 
 ## 3. Critério de saída (evidência)
 
-- [ ] Consent state default = `denied` (analytics bloqueado antes da escolha).
-- [ ] Aceite → `analytics_storage: granted`; recusa → permanece `denied`.
+- [x] Consent state default = `denied` (analytics bloqueado antes da escolha).
+- [x] Aceite → `analytics_storage: granted`; recusa → permanece `denied`.
 
-**Evidências:** — a preencher na execução (debug do Consent Mode / Tag Assistant).
+**Evidências:**
+- `src/lib/consent.ts` → `CONSENT_DEFAULT` (tudo denied) + snippet inline + `consentUpdate`/`updateConsent`.
+- Snippet injetado no `<head>` (`root.tsx`) e presente no HTML pré-renderizado (default denied).
+- `updateConsent` ligado ao `onChoice` do banner (`AppLayout`).
+- Testes 18/18 (consent: default denied, snippet, aceite→granted / recusa→denied).
+- Validação no Tag Assistant/debug: a confirmar após o deploy (TASK-0065 carrega o `gtag.js`).
