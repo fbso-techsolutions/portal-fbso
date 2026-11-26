@@ -11,7 +11,7 @@
 
 ## 1. Objetivo de negócio
 
-Expor planos/preços dos quatro SaaS e permitir contratar — via **lead/formulário**, **sem pagamento online**.
+Expor planos/preços dos cinco SaaS e permitir contratar — via **lead/formulário**, **sem pagamento online**.
 
 ## 2. Escopo
 

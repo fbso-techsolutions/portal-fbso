@@ -2,7 +2,7 @@
 
 > Tokens extraídos da maquete da Home (`estudo/ideias1/index.html`). Servem de **base para o tema
 > Tailwind** (FEATURE-0001.0002, Sprint 2). Fonte visual oficial:
-> [BRAND-GUIDELINES](../../negocio/branding/BRAND-GUIDELINES.md).
+> [BRAND-GUIDELINES](https://github.com/fbso-techsolutions/platform-standards/blob/main/standards/branding/BRAND-GUIDELINES.md).
 
 | Campo | Valor |
 |---|---|

@@ -9,8 +9,8 @@
 ## 1. O que se pede
 
 Criar o **site/portal corporativo** da FBSO Technology Solutions. Primeira versão **estática**
-(sem integrações), para apresentar a empresa, a divisão FBSO TechServices e os quatro produtos
-SaaS (Educatio, Fiscalia, Mercator, Materiae) a clientes e prospects.
+(sem integrações), para apresentar a empresa, a divisão FBSO TechServices e os cinco produtos
+SaaS (Educatio, Fiscalia, Mercator, Materiae, Sociera) a clientes e prospects.
 
 ## 2. Evolução esperada
 
@@ -30,7 +30,7 @@ SaaS (Educatio, Fiscalia, Mercator, Materiae) a clientes e prospects.
 - Marca: **FBSO TechSolutions** · Nome completo: **FBSO Technology Solutions**.
 - Divisão: **FBSO TechServices** / **FBSO Technology Services**.
 - SaaS: **Educatio** (educação) · **Fiscalia** (contábil) · **Mercator** (varejo) ·
-  **Materiae** (ciclo de vida de ativos/economia circular — novo nome do `saas-rmr`).
+- SaaS: **Materiae** (ciclo de vida de ativos/economia circular — novo nome do `saas-rmr`).
 
 ## 5. Domínios (registro.br)
 

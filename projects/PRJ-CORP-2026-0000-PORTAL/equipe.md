@@ -37,7 +37,7 @@
 | **Segurança da Informação** | Daniel Vini | sob demanda |
 
 > ✅ **PENDENCY-0007 (resolvida 2026-11-11):** dev frontend do portal confirmado = **Alfredo Bento**
-> (100%). Bruno Oliveira / Manoel Carlos seguem como devs do RMR (não atuam no portal).
+> (100%). Bruno Oliveira / Manoel Carlos seguem como devs do *SaaS Materiae* (não atuam no portal).
 
 ### 2.3 Design
 

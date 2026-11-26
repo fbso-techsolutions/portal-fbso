@@ -17,4 +17,4 @@
 5. Diferenciais e competências · 6. CTA "vamos conversar" · 7. Rodapé.
 
 > A criar na Sprint 2. Tokens finais em [`src/styles/`](../../../src/styles) e referência na
-> [BRAND-GUIDELINES](../../negocio/branding/BRAND-GUIDELINES.md).
+> [BRAND-GUIDELINES](https://github.com/fbso-techsolutions/platform-standards/blob/main/standards/branding/BRAND-GUIDELINES.md).

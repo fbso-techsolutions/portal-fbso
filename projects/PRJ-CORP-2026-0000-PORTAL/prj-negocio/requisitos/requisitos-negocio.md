@@ -9,7 +9,7 @@
 | B-REQ-01 | Conhecer a FBSO Technology Solutions | Must | 1 |
 | B-REQ-02 | Entender o posicionamento e os diferenciais da empresa | Must | 1 |
 | B-REQ-03 | Conhecer a divisão FBSO TechServices | Must | 1 |
-| B-REQ-04 | Conhecer os quatro produtos SaaS (Educatio, Fiscalia, Mercator, Materiae) | Must | 1 |
+| B-REQ-04 | Conhecer os cinco produtos SaaS (Educatio, Fiscalia, Mercator, Materiae, Sociera) | Must | 1 |
 | B-REQ-05 | Navegar para páginas específicas de produto/serviço, quando disponíveis | Must | 1 |
 | B-REQ-06 | Encontrar informações de contato e canais comerciais | Must | 1 |
 | B-REQ-07 | Encontrar o site via busca (SEO) e usá-lo em qualquer dispositivo (responsivo) | Must | 1 |

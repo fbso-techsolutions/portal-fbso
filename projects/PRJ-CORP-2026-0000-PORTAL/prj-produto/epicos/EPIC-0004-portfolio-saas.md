@@ -11,7 +11,7 @@
 
 ## 1. Objetivo
 
-- **Problema:** o visitante não conhece os quatro produtos (Educatio, Fiscalia, Mercator, Materiae).
+- **Problema:** o visitante não conhece os cinco produtos (Educatio, Fiscalia, Mercator, Materiae, Sociera).
 - **Solução:** catálogo SaaS + página de detalhe por produto, com conteúdo modelado **como dados**
   (`src/content/`).
 - **Impacto:** expõe o portfólio e direciona para os sites dos SaaS quando existirem.

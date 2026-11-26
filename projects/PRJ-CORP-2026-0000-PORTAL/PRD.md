@@ -9,7 +9,7 @@
 
 Publicar a **primeira versão** do site corporativo da FBSO Technology Solutions — **estática**,
 sem login, banco, formulários integrados, checkout ou APIs — para apresentar a empresa, a divisão
-FBSO TechServices e os quatro produtos SaaS (Educatio, Fiscalia, Mercator, Materiae) a clientes e
+FBSO TechServices e os cinco produtos SaaS (Educatio, Fiscalia, Mercator, Materiae, Sociera) a clientes e
 prospects.
 
 ## 2. Requisitos de negócio (B-REQ)
@@ -21,7 +21,7 @@ prospects.
 | B-REQ-01 | Conhecer a FBSO Technology Solutions | 1 |
 | B-REQ-02 | Entender posicionamento e diferenciais | 1 |
 | B-REQ-03 | Conhecer a divisão FBSO TechServices | 1 |
-| B-REQ-04 | Conhecer os quatro produtos SaaS | 1 |
+| B-REQ-04 | Conhecer os cinco produtos SaaS | 1 |
 | B-REQ-05 | Navegar para páginas de produto/serviço | 1 |
 | B-REQ-06 | Encontrar contato e canais comerciais | 1 |
 | B-REQ-07 | SEO e responsividade (encontrabilidade) | 1 |
@@ -65,7 +65,7 @@ prospects.
 | Frente | Documento | Caminho |
 |---|---|---|
 | Produto | Visão | [docs/negocio/visao.md](../../docs/negocio/visao.md) |
-| Produto | Branding | [docs/negocio/branding/BRAND-GUIDELINES.md](../../docs/negocio/branding/BRAND-GUIDELINES.md) |
+| Produto | Branding | [BRAND-GUIDELINES](https://github.com/fbso-techsolutions/platform-standards/blob/main/standards/branding/BRAND-GUIDELINES.md) |
 | Produto | Arquitetura / Deploy | [docs/tecnico/arquitetura/](../../docs/tecnico/arquitetura) |
 | Produto | Segurança | [docs/tecnico/seguranca/README.md](../../docs/tecnico/seguranca/README.md) |
 | Projeto | Demanda de origem | [prj-negocio/discovery/PEDIDO.md](prj-negocio/discovery/PEDIDO.md) |

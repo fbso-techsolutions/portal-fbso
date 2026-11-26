@@ -17,6 +17,9 @@ Fazer os leads capturados fluírem automaticamente para o CRM comercial.
 
 > 📌 **Decisão (2026-11-23):** o CRM será **próprio (simples)**, um **novo produto** da empresa,
 > criado em breve (dono: PM/PO + Comercial). Não é ferramenta externa.
+>
+> 📌 **Repo (2026-11-26):** produto criado — [`fbso-techsolutions/saas-sociera`](https://github.com/fbso-techsolutions/saas-sociera)
+> (projeto `PRJ-CORP-2026-0000-CRM`).
 
 ### Entra
 - Integração portal → **CRM próprio (simples)** (produto a criar em breve).

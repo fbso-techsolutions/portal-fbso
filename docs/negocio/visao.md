@@ -20,7 +20,7 @@ produtos.
 1. Conhecer a FBSO Technology Solutions.
 2. Entender o posicionamento e os diferenciais.
 3. Conhecer a divisão FBSO TechServices.
-4. Conhecer os quatro produtos SaaS.
+4. Conhecer os cinco produtos SaaS.
 5. Navegar para páginas específicas de produto/serviço.
 6. Encontrar informações de contato e canais comerciais.
 

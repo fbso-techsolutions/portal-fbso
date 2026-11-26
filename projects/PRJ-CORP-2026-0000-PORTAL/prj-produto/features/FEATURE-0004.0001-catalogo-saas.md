@@ -11,7 +11,7 @@
 
 ## 1. Objetivo de negócio
 
-Expor os quatro produtos SaaS (Educatio, Fiscalia, Mercator, Materiae) em cards, com conteúdo
+Expor os cinco produtos SaaS (Educatio, Fiscalia, Mercator, Materiae, Sociera) em cards, com conteúdo
 modelado **como dados** em `src/content/saas-catalog.ts`.
 
 ## 2. Escopo

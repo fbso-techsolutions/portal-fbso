@@ -18,7 +18,7 @@ Estabelecer a identidade visual (tokens) e os componentes base que darão consis
 ### Entra
 - Design tokens (cores, tipografia, espaçamento) em `src/styles/` (Tailwind theme / CSS variables).
 - Componentes base `ui/` (Button, Card, Section, Badge).
-- Referência de marca em [BRAND-GUIDELINES](../../../../docs/negocio/branding/BRAND-GUIDELINES.md).
+- Referência de marca em [BRAND-GUIDELINES](https://github.com/fbso-techsolutions/platform-standards/blob/main/standards/branding/BRAND-GUIDELINES.md).
 
 ### Fora
 - Identidade visual definitiva (logo) — a confirmar com o PO.
